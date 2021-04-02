@@ -1,0 +1,123 @@
+Restore Archived Project report for Micro
+Wed Dec 30 21:04:33 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Wed Dec 30 21:04:33 2020 ;
+; Revision Name                   ; Micro                                 ;
+; Top-level Entity Name           ; top_verif                             ;
+; Family                          ; Cyclone IV E                          ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Warning (292006): Can't contact license server "1717@158.42.250.86" -- this server will be ignored.
+Info: Successfully restored 'C:/Users/Pablo/Desktop/ISDIGI/MicroV3Final.qar' into the 'C:/Users/Pablo/Desktop/ISDIGI/MicroV3Final_restored/' directory
+Info: Generated report 'Micro.restore.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4856 megabytes
+    Info: Processing ended: Wed Dec 30 21:04:33 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++--------------------------------+
+; Files Restored                 ;
++--------------------------------+
+; File Name                      ;
++--------------------------------+
+; qar_info.json                  ;
+; ALU.sv                         ;
+; ALUControl.sv                  ;
+; FUnit.sv                       ;
+; HazardDet.sv                   ;
+; ImmGen.sv                      ;
+; MUX.sv                         ;
+; MUX3.sv                        ;
+; MUX9b.sv                       ;
+; Micro.qpf                      ;
+; Micro.qsf                      ;
+; adder.sv                       ;
+; assignment_defaults.qdf        ;
+; control.sv                     ;
+; memoriaRAM.sv                  ;
+; memoriaROM.sv                  ;
+; output_files/Micro.asm.rpt     ;
+; output_files/Micro.eda.rpt     ;
+; output_files/Micro.fit.rpt     ;
+; output_files/Micro.fit.smsg    ;
+; output_files/Micro.fit.summary ;
+; output_files/Micro.flow.rpt    ;
+; output_files/Micro.jdi         ;
+; output_files/Micro.map.rpt     ;
+; output_files/Micro.map.smsg    ;
+; output_files/Micro.map.summary ;
+; output_files/Micro.pin         ;
+; output_files/Micro.sld         ;
+; output_files/Micro.sof         ;
+; output_files/Micro.sta.rpt     ;
+; output_files/Micro.sta.summary ;
+; regEX_MEM.sv                   ;
+; regID_EX.sv                    ;
+; regIF_ID.sv                    ;
+; regMEM_WB.sv                   ;
+; regPC.sv                       ;
+; registers.sv                   ;
+; rom.txt                        ;
+; simulation/ImmGen_tb.sv        ;
+; simulation/ROM_tb.sv           ;
+; simulation/alu_tb.sv           ;
+; simulation/micro_tb.sv         ;
+; simulation/registers_tb.sv     ;
+; simulation/tb_MUX.sv           ;
+; simulation/tb_control.sv       ;
+; simulation/tb_memoriaRAM.sv    ;
+; simulation/tb_regPC.sv         ;
+; top.sv                         ;
+; top_verif.sv                   ;
++--------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

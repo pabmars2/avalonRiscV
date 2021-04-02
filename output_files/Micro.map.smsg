@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at top.sv(37): object "Reg1" differs only in case from object "REG1" in the same scope File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 37
+Info (10281): Verilog HDL Declaration information at top.sv(37): object "Reg2" differs only in case from object "REG2" in the same scope File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 37

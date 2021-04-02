@@ -1,0 +1,25 @@
+module memoryControl(CLK, RST_N, done, enable);
+
+parameter n = 4;
+
+input CLK, RST_N, done;
+output [n - 1 : 0] enable;
+
+reg [n - 1 : 0] ctr;
+
+assign ctr = enbale;
+
+always_ff @(posedge CLK or negedge RST_N)
+begin
+
+	if(!RST_N)
+		begin
+			
+		end
+	else
+		begin
+			
+		end
+end
+
+endmodule 
