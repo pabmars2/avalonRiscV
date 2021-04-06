@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
+vAvalonRiscV_QSYS_mm_interconnect_1_avalon_st_adapter
+!s110 1617735208
+!i10b 1
+!s100 j6D1ZGQ2baaBd[>R0hC;[3
+IY2`hMQz;KjU]GICdBO]aP1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1617734400
+8../../AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_avalon_st_adapter.v
+F../../AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_avalon_st_adapter.v
+L0 9
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1617735208.000000
+!s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_avalon_st_adapter.v|
+!s90 -reportprogress|300|../../AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_avalon_st_adapter.v|-work|avalon_st_adapter|
+!i113 1
+o-work avalon_st_adapter
+tCvgOpt 0
+n@avalon@risc@v_@q@s@y@s_mm_interconnect_1_avalon_st_adapter

@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
+vAvalonRiscV_QSYS_externalMemory
+!s110 1617735210
+!i10b 1
+!s100 j>a9XoOmVkg<_8oBE:VDi2
+IET1OG9CPhLjoNEAPPSl0k2
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1617734394
+8../../AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_externalMemory.v
+F../../AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_externalMemory.v
+L0 21
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1617735210.000000
+!s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_externalMemory.v|
+!s90 -reportprogress|300|../../AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_externalMemory.v|-work|externalMemory|
+!i113 1
+o-work externalMemory
+tCvgOpt 0
+n@avalon@risc@v_@q@s@y@s_external@memory

@@ -67,7 +67,7 @@ top top_RISC(
 	.debug(debug), 
 	.enable_ext(enable_ext), 
 	.enable_pc_ext(enable_pc_ext), 
-	.done_instr(done_ext), 
+	.done_instr(done_instr), 
 	.done_ext(done_ext));
 
 avalon_mm_master #(.width(32)) master_instr(

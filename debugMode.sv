@@ -23,6 +23,11 @@ wire [31 : 0] reg0_internal, reg1_internal, reg2_internal;
 wire [31 : 0] data_internal;
 wire we_internal;
 
+assign debug = 1'b0; //temporal
+assign enable_pc_ext = 1'b1; //temporal
+assign enable_ext = 4'b1111; //temporal
+
+
 enum {IDLE, RECEPT, SEND, DONE} state;
 
 avalon_slave_MM_interface	slave_debug(

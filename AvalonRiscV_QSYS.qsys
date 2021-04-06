@@ -125,7 +125,7 @@
  <module name="MasterUART" kind="AvalonMasterUART" version="2.1" enabled="1">
   <parameter name="c_CLKS_PER_BIT" value="434" />
  </module>
- <module name="RISC_V_AVALON_0" kind="RISC_V_AVALON" version="1.0" enabled="1" />
+ <module name="RISC_V_AVALON_0" kind="RISC_V_AVALON" version="1.3" enabled="1" />
  <module
    name="avalon_displays7seg_0"
    kind="avalon_displays7seg"
@@ -189,7 +189,7 @@
   <parameter name="enPRInitMode" value="false" />
   <parameter name="enableDiffWidth" value="false" />
   <parameter name="initMemContent" value="true" />
-  <parameter name="initializationFileName" value="onchip_mem.hex" />
+  <parameter name="initializationFileName">C:/Users/Pablo/Desktop/rom.hex</parameter>
   <parameter name="instanceID" value="NONE" />
   <parameter name="memorySize" value="4096" />
   <parameter name="readDuringWriteMode" value="DONT_CARE" />

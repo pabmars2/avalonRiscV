@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Micro
-Tue Apr 06 16:27:24 2021
+Tue Apr 06 20:37:34 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -54,7 +54,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 06 16:27:23 2021       ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 06 20:37:34 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Micro                                       ;
 ; Top-level Entity Name              ; top_Avalon                                  ;
@@ -326,14 +326,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------+---------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                             ;
-+---------------------------------------+---------------------------+---------------------------------------------------------------------+
-; Register name                         ; Reason for Removal        ; Registers Removed due to This Register                              ;
-+---------------------------------------+---------------------------+---------------------------------------------------------------------+
-; avalon_mm_master:master_ext|state[31] ; Stuck at GND              ; debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg3[0] ;
-;                                       ; due to stuck port data_in ;                                                                     ;
-+---------------------------------------+---------------------------+---------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                               ;
++-----------------------------------------+---------------------------+---------------------------------------------------------------------+
+; Register name                           ; Reason for Removal        ; Registers Removed due to This Register                              ;
++-----------------------------------------+---------------------------+---------------------------------------------------------------------+
+; avalon_mm_master:master_instr|state[31] ; Stuck at GND              ; debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg3[0] ;
+;                                         ; due to stuck port data_in ;                                                                     ;
++-----------------------------------------+---------------------------+---------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -435,16 +435,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "avalon_mm_master:master_instr"                                                               ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; done          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; data_to_write ; Input  ; Info     ; Stuck at GND                                                                        ;
-; rnw           ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; start         ; Input  ; Info     ; Stuck at VCC                                                                        ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "avalon_mm_master:master_instr" ;
++---------------+-------+----------+------------------------+
+; Port          ; Type  ; Severity ; Details                ;
++---------------+-------+----------+------------------------+
+; data_to_write ; Input ; Info     ; Stuck at GND           ;
+; rnw           ; Input ; Info     ; Stuck at VCC           ;
+; start         ; Input ; Info     ; Stuck at VCC           ;
++---------------+-------+----------+------------------------+
 
 
 +---------------------------------------------------------+
@@ -500,7 +499,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -510,7 +509,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 06 16:26:51 2021
+    Info: Processing started: Tue Apr 06 20:37:04 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Micro -c Micro
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -581,12 +580,9 @@ Info (12128): Elaborating entity "memoryControl" for hierarchy "top:top_RISC|mem
 Info (12128): Elaborating entity "memoryControl" for hierarchy "top:top_RISC|memoryControl:controlExt" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 352
 Info (12128): Elaborating entity "avalon_mm_master" for hierarchy "avalon_mm_master:master_instr" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 89
 Info (12128): Elaborating entity "debugMode" for hierarchy "debugMode:SystemDebug" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 123
-Warning (10240): Verilog HDL Always Construct warning at debugMode.sv(45): inferring latch(es) for variable "state", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 45
-Warning (10034): Output port "enable_ext" at debugMode.sv(16) has no driver File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 16
-Warning (10034): Output port "debug" at debugMode.sv(15) has no driver File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 15
-Warning (10034): Output port "enable_pc_ext" at debugMode.sv(17) has no driver File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 17
+Warning (10240): Verilog HDL Always Construct warning at debugMode.sv(50): inferring latch(es) for variable "state", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 50
 Warning (10034): Output port "tx_flag" at debugMode.sv(18) has no driver File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 18
-Info (12128): Elaborating entity "avalon_slave_MM_interface" for hierarchy "debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 41
+Info (12128): Elaborating entity "avalon_slave_MM_interface" for hierarchy "debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 46
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ADDRESS_instr[0]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 12
     Warning (13410): Pin "ADDRESS_instr[1]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 12
@@ -633,11 +629,11 @@ Info (21057): Implemented 4415 device resources after synthesis - the final reso
     Info (21058): Implemented 106 input pins
     Info (21059): Implemented 169 output pins
     Info (21061): Implemented 4140 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
-    Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Tue Apr 06 16:27:24 2021
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:58
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
+    Info: Peak virtual memory: 4793 megabytes
+    Info: Processing ended: Tue Apr 06 20:37:34 2021
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:55
 
 
 +------------------------------------------+

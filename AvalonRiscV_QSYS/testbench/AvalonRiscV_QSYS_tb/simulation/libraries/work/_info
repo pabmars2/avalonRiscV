@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
+vAvalonRiscV_QSYS_tb
+!s110 1617735213
+!i10b 1
+!s100 Kk@eHHW]@8_jXf[M@64211
+I7;U<3m:L]bojEX=d3]iXn0
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1617734389
+8../../AvalonRiscV_QSYS_tb/simulation/AvalonRiscV_QSYS_tb.v
+F../../AvalonRiscV_QSYS_tb/simulation/AvalonRiscV_QSYS_tb.v
+L0 6
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1617735213.000000
+!s107 ../../AvalonRiscV_QSYS_tb/simulation/AvalonRiscV_QSYS_tb.v|
+!s90 -reportprogress|300|../../AvalonRiscV_QSYS_tb/simulation/AvalonRiscV_QSYS_tb.v|
+!i113 1
+tCvgOpt 0
+n@avalon@risc@v_@q@s@y@s_tb
