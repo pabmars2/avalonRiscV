@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element avalon_displays7seg_qsys_inst
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element avalon_displays7seg_qsys_inst_clk_bfm
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element avalon_displays7seg_qsys_inst_reset_bfm
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="EP4CE115F29C7" />
+ <parameter name="deviceFamily" value="Cyclone IV E" />
+ <parameter name="deviceSpeedGrade" value="7" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName">avalon_displays7seg_qsys</parameter>
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="true" />
+ <instanceScript></instanceScript>
+ <module
+   name="avalon_displays7seg_qsys_inst"
+   kind="avalon_displays7seg_qsys"
+   version="1.0"
+   enabled="1">
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_UNIQUE_ID">avalon_displays7seg_qsys</parameter>
+ </module>
+ <module
+   name="avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm"
+   kind="altera_conduit_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input,input,input,input</parameter>
+  <parameter name="SIGNAL_ROLES">conduit0,conduit1,conduit2,conduit3,conduit4,conduit5,conduit6,conduit7</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="7,7,7,7,7,7,7,7" />
+ </module>
+ <module
+   name="avalon_displays7seg_qsys_inst_clk_bfm"
+   kind="altera_avalon_clock_source"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCK_RATE" value="50000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <module
+   name="avalon_displays7seg_qsys_inst_reset_bfm"
+   kind="altera_avalon_reset_source"
+   version="17.1"
+   enabled="1">
+  <parameter name="ASSERT_HIGH_RESET" value="0" />
+  <parameter name="INITIAL_RESET_CYCLES" value="50" />
+ </module>
+ <connection
+   kind="clock"
+   version="17.1"
+   start="avalon_displays7seg_qsys_inst_clk_bfm.clk"
+   end="avalon_displays7seg_qsys_inst.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="avalon_displays7seg_qsys_inst_clk_bfm.clk"
+   end="avalon_displays7seg_qsys_inst_reset_bfm.clk" />
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm.conduit"
+   end="avalon_displays7seg_qsys_inst.avalon_displays7seg_0_external_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="reset"
+   version="17.1"
+   start="avalon_displays7seg_qsys_inst_reset_bfm.reset"
+   end="avalon_displays7seg_qsys_inst.reset" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

@@ -1,0 +1,74 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation
+vavalon_slave_MM_interface
+Z1 !s110 1617713267
+!i10b 1
+!s100 5VM:@nQEHd9dH=7]GRO@f3
+Ic[R>_EFJ`acK`3<nLE;601
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1617713043
+8../../AvalonUARTQsys_tb/simulation/submodules/avalon_slave_MM_interface.v
+F../../AvalonUARTQsys_tb/simulation/submodules/avalon_slave_MM_interface.v
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1617713266.000000
+!s107 ../../AvalonUARTQsys_tb/simulation/submodules/avalon_slave_MM_interface.v|
+!s90 -reportprogress|300|../../AvalonUARTQsys_tb/simulation/submodules/avalon_slave_MM_interface.v|-work|avalon_timer_0|
+!i113 1
+Z6 o-work avalon_timer_0
+Z7 tCvgOpt 0
+navalon_slave_@m@m_interface
+vavalon_timer
+!s110 1617713266
+!i10b 1
+!s100 1z8]^]JCA=oVg3Y=jVM593
+IYz@`U1RIeWGTh4GhC;;581
+R2
+R0
+R3
+8../../AvalonUARTQsys_tb/simulation/submodules/avalon_timer.v
+F../../AvalonUARTQsys_tb/simulation/submodules/avalon_timer.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../AvalonUARTQsys_tb/simulation/submodules/avalon_timer.v|
+!s90 -reportprogress|300|../../AvalonUARTQsys_tb/simulation/submodules/avalon_timer.v|-work|avalon_timer_0|
+!i113 1
+R6
+R7
+vtimer
+R1
+!i10b 1
+!s100 ^4NATcCH]XQPH8<DYmaLA2
+I0:03PC_M;4LZOKAnPCZQ93
+R2
+R0
+R3
+8../../AvalonUARTQsys_tb/simulation/submodules/timer.v
+F../../AvalonUARTQsys_tb/simulation/submodules/timer.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1617713267.000000
+!s107 ../../AvalonUARTQsys_tb/simulation/submodules/timer.v|
+!s90 -reportprogress|300|../../AvalonUARTQsys_tb/simulation/submodules/timer.v|-work|avalon_timer_0|
+!i113 1
+R6
+R7

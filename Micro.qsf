@@ -83,8 +83,6 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id micro_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME micro_tb -section_id micro_tb
 set_global_assignment -name SYSTEMVERILOG_FILE registers.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
-set_global_assignment -name SYSTEMVERILOG_FILE memoriaRAM.sv
-set_global_assignment -name SYSTEMVERILOG_FILE memoriaROM.sv
 set_global_assignment -name SYSTEMVERILOG_FILE adder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE regPC.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ImmGen.sv

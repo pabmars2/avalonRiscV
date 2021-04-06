@@ -1,0 +1,21 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst AvalonRiscV_QSYS.avalon_displays7seg_0 -pg 1 -lvl 4 -y 30
+preplace inst AvalonRiscV_QSYS.RISC_V_AVALON_0 -pg 1 -lvl 3 -y 170
+preplace inst AvalonRiscV_QSYS.clk_0 -pg 1 -lvl 1 -y 170
+preplace inst AvalonRiscV_QSYS.instruccionMemory -pg 1 -lvl 4 -y 210
+preplace inst AvalonRiscV_QSYS.externalMemory -pg 1 -lvl 4 -y 130
+preplace inst AvalonRiscV_QSYS -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst AvalonRiscV_QSYS.MasterUART -pg 1 -lvl 2 -y 90
+preplace netloc FAN_OUT<net_container>AvalonRiscV_QSYS</net_container>(MASTER)clk_0.clk_reset,(SLAVE)RISC_V_AVALON_0.reset_sink,(SLAVE)MasterUART.reset,(SLAVE)instruccionMemory.reset1,(SLAVE)externalMemory.reset1,(SLAVE)avalon_displays7seg_0.reset_sink) 1 1 3 410 240 650 300 1000
+preplace netloc POINT_TO_POINT<net_container>AvalonRiscV_QSYS</net_container>(MASTER)RISC_V_AVALON_0.master_instruccions,(SLAVE)instruccionMemory.s1) 1 3 1 960
+preplace netloc EXPORT<net_container>AvalonRiscV_QSYS</net_container>(SLAVE)MasterUART.rs232,(SLAVE)AvalonRiscV_QSYS.avalonmasteruart_0_rs232) 1 0 2 NJ 160 NJ
+preplace netloc EXPORT<net_container>AvalonRiscV_QSYS</net_container>(SLAVE)AvalonRiscV_QSYS.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>AvalonRiscV_QSYS</net_container>(SLAVE)MasterUART.clock,(SLAVE)externalMemory.clk1,(SLAVE)avalon_displays7seg_0.clock_sink,(SLAVE)RISC_V_AVALON_0.clock,(MASTER)clk_0.clk,(SLAVE)instruccionMemory.clk1) 1 1 3 430 200 670 280 980
+preplace netloc EXPORT<net_container>AvalonRiscV_QSYS</net_container>(SLAVE)AvalonRiscV_QSYS.avalon_displays7seg_0_external_interface,(SLAVE)avalon_displays7seg_0.external_interface) 1 0 4 NJ 80 NJ 80 NJ 80 NJ
+preplace netloc FAN_OUT<net_container>AvalonRiscV_QSYS</net_container>(MASTER)RISC_V_AVALON_0.master_external,(SLAVE)avalon_displays7seg_0.avalon_slave,(SLAVE)externalMemory.s1) 1 3 1 960
+preplace netloc EXPORT<net_container>AvalonRiscV_QSYS</net_container>(SLAVE)AvalonRiscV_QSYS.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>AvalonRiscV_QSYS</net_container>(SLAVE)MasterUART.control,(SLAVE)RISC_V_AVALON_0.control_debug) 1 1 2 450 220 NJ
+preplace netloc POINT_TO_POINT<net_container>AvalonRiscV_QSYS</net_container>(SLAVE)RISC_V_AVALON_0.debug,(MASTER)MasterUART.avalon_master) 1 2 1 710
+levelinfo -pg 1 0 200 1230
+levelinfo -hier AvalonRiscV_QSYS 210 240 480 740 1060 1220

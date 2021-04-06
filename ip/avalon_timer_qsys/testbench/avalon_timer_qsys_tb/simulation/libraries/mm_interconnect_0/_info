@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Pablo/Desktop/CHS/Anyadir_perifericos/avalon_timer_qsys/testbench/avalon_timer_qsys_tb/simulation
+vavalon_timer_qsys_mm_interconnect_0
+!s110 1614775401
+!i10b 1
+!s100 ET69`Kd>OY6mB@VK;a6IR0
+I1bo[0bV@iKMUP3Uc0hkd40
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1614775004
+8../../avalon_timer_qsys_tb/simulation/submodules/avalon_timer_qsys_mm_interconnect_0.v
+F../../avalon_timer_qsys_tb/simulation/submodules/avalon_timer_qsys_mm_interconnect_0.v
+L0 9
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1614775401.000000
+!s107 ../../avalon_timer_qsys_tb/simulation/submodules/avalon_timer_qsys_mm_interconnect_0.v|
+!s90 -reportprogress|300|../../avalon_timer_qsys_tb/simulation/submodules/avalon_timer_qsys_mm_interconnect_0.v|-work|mm_interconnect_0|
+!i113 1
+o-work mm_interconnect_0
+tCvgOpt 0

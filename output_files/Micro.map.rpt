@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Micro
-Fri Apr 02 19:34:11 2021
+Tue Apr 06 16:27:24 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -25,11 +25,10 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  17. Port Connectivity Checks: "avalon_mm_master:master_instr"
  18. Port Connectivity Checks: "top:top_RISC|MUX9b:MuxContr"
  19. Port Connectivity Checks: "top:top_RISC|adder:Add"
- 20. Port Connectivity Checks: "top:top_RISC"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
- 24. Analysis & Synthesis Suppressed Messages
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -55,7 +54,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 02 19:34:11 2021       ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 06 16:27:23 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Micro                                       ;
 ; Top-level Entity Name              ; top_Avalon                                  ;
@@ -64,7 +63,7 @@ refer to the applicable agreement for further details.
 ;     Total combinational functions  ; 2,827                                       ;
 ;     Dedicated logic registers      ; 1,613                                       ;
 ; Total registers                    ; 1613                                        ;
-; Total pins                         ; 274                                         ;
+; Total pins                         ; 275                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -228,13 +227,13 @@ refer to the applicable agreement for further details.
 ;     -- Dedicated logic registers            ; 1613      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 274       ;
+; I/O pins                                    ; 275       ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
 ; Maximum fan-out                             ; 1613      ;
-; Total fan-out                               ; 17211     ;
+; Total fan-out                               ; 17212     ;
 ; Average fan-out                             ; 3.45      ;
 +---------------------------------------------+-----------+
 
@@ -244,7 +243,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Entity Name               ; Library Name ;
 +-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------------+--------------+
-; |top_Avalon                                   ; 2827 (1)            ; 1613 (0)                  ; 0           ; 0            ; 0       ; 0         ; 274  ; 0            ; |top_Avalon                                                             ; top_Avalon                ; work         ;
+; |top_Avalon                                   ; 2827 (1)            ; 1613 (0)                  ; 0           ; 0            ; 0       ; 0         ; 275  ; 0            ; |top_Avalon                                                             ; top_Avalon                ; work         ;
 ;    |avalon_mm_master:master_ext|              ; 71 (71)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|avalon_mm_master:master_ext                                 ; avalon_mm_master          ; work         ;
 ;    |avalon_mm_master:master_instr|            ; 34 (34)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|avalon_mm_master:master_instr                               ; avalon_mm_master          ; work         ;
 ;    |debugMode:SystemDebug|                    ; 70 (0)              ; 128 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug                                       ; debugMode                 ; work         ;
@@ -468,23 +467,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+-------+----------+--------------------+
 
 
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "top:top_RISC"                  ;
-+---------------+-------+----------+------------------------+
-; Port          ; Type  ; Severity ; Details                ;
-+---------------+-------+----------+------------------------+
-; debug         ; Input ; Info     ; Explicitly unconnected ;
-; enable_ext    ; Input ; Info     ; Explicitly unconnected ;
-; enable_pc_ext ; Input ; Info     ; Explicitly unconnected ;
-+---------------+-------+----------+------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 274                         ;
+; boundary_port         ; 275                         ;
 ; cycloneiii_ff         ; 1613                        ;
 ;     CLR               ; 11                          ;
 ;     ENA               ; 96                          ;
@@ -512,7 +500,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -522,7 +510,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Apr 02 19:33:53 2021
+    Info: Processing started: Tue Apr 06 16:26:51 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Micro -c Micro
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -530,10 +518,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file registe
     Info (12023): Found entity 1: registers File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/registers.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
     Info (12023): Found entity 1: ALU File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/ALU.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file memoriaram.sv
-    Info (12023): Found entity 1: memoriaRAM File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/memoriaRAM.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file memoriarom.sv
-    Info (12023): Found entity 1: memoriaROM File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/memoriaROM.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
     Info (12023): Found entity 1: adder File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regpc.sv
@@ -576,7 +560,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file memoryc
 Info (12021): Found 1 design units, including 1 entities, in source file debugmode.sv
     Info (12023): Found entity 1: debugMode File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 1
 Info (12127): Elaborating entity "top_Avalon" for the top level hierarchy
-Info (12128): Elaborating entity "top" for hierarchy "top:top_RISC" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 64
+Info (12128): Elaborating entity "top" for hierarchy "top:top_RISC" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 71
 Info (12128): Elaborating entity "regIF_ID" for hierarchy "top:top_RISC|regIF_ID:IF_ID" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 121
 Info (12128): Elaborating entity "regID_EX" for hierarchy "top:top_RISC|regID_EX:ID_EX" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 163
 Info (12128): Elaborating entity "regEX_MEM" for hierarchy "top:top_RISC|regEX_MEM:EX_MEM" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 191
@@ -595,59 +579,65 @@ Info (12128): Elaborating entity "HazardDet" for hierarchy "top:top_RISC|HazardD
 Info (12128): Elaborating entity "MUX9b" for hierarchy "top:top_RISC|MUX9b:MuxContr" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 337
 Info (12128): Elaborating entity "memoryControl" for hierarchy "top:top_RISC|memoryControl:controlInstr" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 346
 Info (12128): Elaborating entity "memoryControl" for hierarchy "top:top_RISC|memoryControl:controlExt" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 352
-Info (12128): Elaborating entity "avalon_mm_master" for hierarchy "avalon_mm_master:master_instr" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 82
-Info (12128): Elaborating entity "debugMode" for hierarchy "debugMode:SystemDebug" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 112
-Info (12128): Elaborating entity "avalon_slave_MM_interface" for hierarchy "debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 33
+Info (12128): Elaborating entity "avalon_mm_master" for hierarchy "avalon_mm_master:master_instr" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 89
+Info (12128): Elaborating entity "debugMode" for hierarchy "debugMode:SystemDebug" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 123
+Warning (10240): Verilog HDL Always Construct warning at debugMode.sv(45): inferring latch(es) for variable "state", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 45
+Warning (10034): Output port "enable_ext" at debugMode.sv(16) has no driver File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 16
+Warning (10034): Output port "debug" at debugMode.sv(15) has no driver File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 15
+Warning (10034): Output port "enable_pc_ext" at debugMode.sv(17) has no driver File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 17
+Warning (10034): Output port "tx_flag" at debugMode.sv(18) has no driver File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 18
+Info (12128): Elaborating entity "avalon_slave_MM_interface" for hierarchy "debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 41
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ADDRESS_instr[0]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 10
-    Warning (13410): Pin "ADDRESS_instr[1]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 10
-    Warning (13410): Pin "BeginTransfer_instr" is stuck at VCC File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 11
-    Warning (13410): Pin "WRITE_instr" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 13
-    Warning (13410): Pin "WriteData_instr[0]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[1]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[2]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[3]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[4]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[5]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[6]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[7]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[8]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[9]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[10]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[11]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[12]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[13]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[14]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[15]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[16]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[17]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[18]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[19]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[20]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[21]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[22]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[23]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[24]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[25]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[26]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[27]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[28]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[29]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[30]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
-    Warning (13410): Pin "WriteData_instr[31]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 14
+    Warning (13410): Pin "ADDRESS_instr[0]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 12
+    Warning (13410): Pin "ADDRESS_instr[1]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 12
+    Warning (13410): Pin "BeginTransfer_instr" is stuck at VCC File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 13
+    Warning (13410): Pin "WRITE_instr" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 15
+    Warning (13410): Pin "WriteData_instr[0]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[1]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[2]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[3]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[4]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[5]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[6]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[7]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[8]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[9]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[10]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[11]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[12]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[13]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[14]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[15]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[16]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[17]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[18]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[19]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[20]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[21]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[22]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[23]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[24]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[25]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[26]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[27]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[28]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[29]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[30]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "WriteData_instr[31]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 16
+    Warning (13410): Pin "tx_flag" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 9
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/output_files/Micro.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4414 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4415 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 106 input pins
-    Info (21059): Implemented 168 output pins
+    Info (21059): Implemented 169 output pins
     Info (21061): Implemented 4140 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Fri Apr 02 19:34:11 2021
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:32
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
+    Info: Peak virtual memory: 4791 megabytes
+    Info: Processing ended: Tue Apr 06 16:27:24 2021
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:58
 
 
 +------------------------------------------+

@@ -273,6 +273,7 @@ readdata_debug[28] << debugMode:SystemDebug.readdata_debug
 readdata_debug[29] << debugMode:SystemDebug.readdata_debug
 readdata_debug[30] << debugMode:SystemDebug.readdata_debug
 readdata_debug[31] << debugMode:SystemDebug.readdata_debug
+tx_flag << debugMode:SystemDebug.tx_flag
 
 
 |top_Avalon|top:top_RISC
@@ -11579,6 +11580,13 @@ readdata_debug[28] <= avalon_slave_MM_interface:slave_debug.readdata
 readdata_debug[29] <= avalon_slave_MM_interface:slave_debug.readdata
 readdata_debug[30] <= avalon_slave_MM_interface:slave_debug.readdata
 readdata_debug[31] <= avalon_slave_MM_interface:slave_debug.readdata
+debug <= <GND>
+enable_ext[0] <= <GND>
+enable_ext[1] <= <GND>
+enable_ext[2] <= <GND>
+enable_ext[3] <= <GND>
+enable_pc_ext <= <GND>
+tx_flag <= <GND>
 
 
 |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug

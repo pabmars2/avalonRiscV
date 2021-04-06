@@ -1,0 +1,74 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/avalon_displays7seg_qsys_tb/simulation
+vavalon_displays7seg
+Z1 !s110 1614070849
+!i10b 1
+!s100 7JlmIR]XcnL@fC?J_6cQ]0
+IE>WPl]1nC529<:G@A1Y?01
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1613999864
+8../../avalon_displays7seg_qsys_tb/simulation/submodules/avalon_displays7seg.v
+F../../avalon_displays7seg_qsys_tb/simulation/submodules/avalon_displays7seg.v
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1614070849.000000
+!s107 ../../avalon_displays7seg_qsys_tb/simulation/submodules/avalon_displays7seg.v|
+!s90 -reportprogress|300|../../avalon_displays7seg_qsys_tb/simulation/submodules/avalon_displays7seg.v|-work|avalon_displays7seg_0|
+!i113 1
+Z6 o-work avalon_displays7seg_0
+Z7 tCvgOpt 0
+vavalon_slave_MM_interface
+R1
+!i10b 1
+!s100 ;8cO:MaNTG5D5lhI0WPXd2
+I_?`CfFSSjSz:J:dN33NzM3
+R2
+R0
+R3
+8../../avalon_displays7seg_qsys_tb/simulation/submodules/avalon_slave_MM_interface.v
+F../../avalon_displays7seg_qsys_tb/simulation/submodules/avalon_slave_MM_interface.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../avalon_displays7seg_qsys_tb/simulation/submodules/avalon_slave_MM_interface.v|
+!s90 -reportprogress|300|../../avalon_displays7seg_qsys_tb/simulation/submodules/avalon_slave_MM_interface.v|-work|avalon_displays7seg_0|
+!i113 1
+R6
+R7
+navalon_slave_@m@m_interface
+vhex7seg
+R1
+!i10b 1
+!s100 L5LkV?oLhW]]ZJUQOh;J51
+I_=o66UmeMV6Lz3eZbPf_j2
+R2
+R0
+R3
+8../../avalon_displays7seg_qsys_tb/simulation/submodules/hex7seg.v
+F../../avalon_displays7seg_qsys_tb/simulation/submodules/hex7seg.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../avalon_displays7seg_qsys_tb/simulation/submodules/hex7seg.v|
+!s90 -reportprogress|300|../../avalon_displays7seg_qsys_tb/simulation/submodules/hex7seg.v|-work|avalon_displays7seg_0|
+!i113 1
+R6
+R7

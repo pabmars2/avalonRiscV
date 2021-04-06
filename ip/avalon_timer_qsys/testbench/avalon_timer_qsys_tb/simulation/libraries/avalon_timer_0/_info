@@ -1,0 +1,74 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Pablo/Desktop/CHS/Anyadir_perifericos/avalon_timer_qsys/testbench/avalon_timer_qsys_tb/simulation
+vavalon_slave_MM_interface
+Z1 !s110 1614775401
+!i10b 1
+!s100 5VM:@nQEHd9dH=7]GRO@f3
+I9aK3?KAW9`Sm[P_Go6[zl0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1614775003
+8../../avalon_timer_qsys_tb/simulation/submodules/avalon_slave_MM_interface.v
+F../../avalon_timer_qsys_tb/simulation/submodules/avalon_slave_MM_interface.v
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1614775401.000000
+!s107 ../../avalon_timer_qsys_tb/simulation/submodules/avalon_slave_MM_interface.v|
+!s90 -reportprogress|300|../../avalon_timer_qsys_tb/simulation/submodules/avalon_slave_MM_interface.v|-work|avalon_timer_0|
+!i113 1
+Z6 o-work avalon_timer_0
+Z7 tCvgOpt 0
+navalon_slave_@m@m_interface
+vavalon_timer
+R1
+!i10b 1
+!s100 1z8]^]JCA=oVg3Y=jVM593
+IJBOaT4e6MJkM`aGOEzO[b2
+R2
+R0
+R3
+8../../avalon_timer_qsys_tb/simulation/submodules/avalon_timer.v
+F../../avalon_timer_qsys_tb/simulation/submodules/avalon_timer.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../avalon_timer_qsys_tb/simulation/submodules/avalon_timer.v|
+!s90 -reportprogress|300|../../avalon_timer_qsys_tb/simulation/submodules/avalon_timer.v|-work|avalon_timer_0|
+!i113 1
+R6
+R7
+vtimer
+!s110 1614775402
+!i10b 1
+!s100 ^4NATcCH]XQPH8<DYmaLA2
+IO2VcUdJH3H[e4;`_NYZio0
+R2
+R0
+R3
+8../../avalon_timer_qsys_tb/simulation/submodules/timer.v
+F../../avalon_timer_qsys_tb/simulation/submodules/timer.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1614775402.000000
+!s107 ../../avalon_timer_qsys_tb/simulation/submodules/timer.v|
+!s90 -reportprogress|300|../../avalon_timer_qsys_tb/simulation/submodules/timer.v|-work|avalon_timer_0|
+!i113 1
+R6
+R7

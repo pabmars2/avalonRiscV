@@ -1,0 +1,231 @@
+Info: Starting: Create testbench Platform Designer system
+Info: C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/avalon_displays7seg_qsys.ipx
+Info: qsys-generate "C:\Users\Pablo\Desktop\CHS\Practica 2\avalon_displays7seg_qsys.qsys" --testbench=STANDARD --output-directory="C:\Users\Pablo\Desktop\CHS\Practica 2" --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Practica 2/avalon_displays7seg_qsys.qsys
+Progress: Reading input file
+Progress: Adding avalon_displays7seg_0 [avalon_displays7seg 1.0]
+Progress: Parameterizing module avalon_displays7seg_0
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding mm_master_bfm_0 [altera_avalon_mm_master_bfm 17.1]
+Progress: Parameterizing module mm_master_bfm_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Loading IP catalog for testbench.
+Progress: 
+Progress: 
+Progress: 
+Progress: (2) searching C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx: Loading now from components.ipx
+Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\ip_component_categories.ipx
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0,01 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0,01 seconds
+Info: C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/ip/**/* matched 0 files in 0,00 seconds
+Info: Reading index C:\Users\Pablo\Desktop\CHS\Practica 2\avalon_displays7seg_qsys\testbench\avalon_displays7seg_qsys.ipx
+Progress: Loading Practica 2/avalon_displays7seg_hw.tcl
+Progress: Loading Practica 2/avalon_displays7seg_qsys.qsys
+Info: C:/Users/Pablo/Desktop/CHS/Practica 2/* matched 15 files in 0,06 seconds
+Info: C:/Users/Pablo/Desktop/CHS/Practica 2/ip/**/* matched 0 files in 0,00 seconds
+Info: C:/Users/Pablo/Desktop/CHS/Practica 2/*/* matched 91 files in 0,02 seconds
+Info: C:\Users\Pablo\Desktop\CHS\Practica 2\avalon_displays7seg_qsys\testbench\avalon_displays7seg_qsys.ipx described 0 plugins, 3 paths, in 0,07 seconds
+Info: C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/* matched 4 files in 0,07 seconds
+Info: C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/*/* matched 0 files in 0,00 seconds
+Info: C:/Users/Pablo/.altera.quartus/ip/17.1/**/* matched 0 files in 0,00 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0,00 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0,00 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0,00 seconds
+Info: Reading index C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx
+Info: C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx described 2005 plugins, 0 paths, in 0,22 seconds
+Info: C:/intelfpga_lite/17.1/ip/**/* matched 138 files in 0,24 seconds
+Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0,00 seconds
+Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0,01 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/**/* matched 8 files in 0,01 seconds
+Info: Reading index C:\intelfpga_lite\17.1\quartus\common\librarian\factories\index.ipx
+Info: C:\intelfpga_lite\17.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0,02 seconds
+Info: C:/intelfpga_lite/17.1/quartus/common/librarian/factories/**/* matched 4 files in 0,02 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0,00 seconds
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0,35 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0,35 seconds
+Progress: 
+Progress: 
+Progress: 
+Info: Running script C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/tbgen.tcl
+Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: get_module_property NAME
+Info: send_message Info TB_Gen: System design is: avalon_displays7seg_qsys
+Info: TB_Gen: System design is: avalon_displays7seg_qsys
+Info: get_interfaces 
+Info: get_connections 
+Info: get_interface_property avalon_displays7seg_0_external_interface EXPORT_OF
+Info: get_instance_property avalon_displays7seg_0 CLASS_NAME
+Info: get_instance_assignment avalon_displays7seg_0 testbench.partner.map.external_interface
+Info: get_interface_property clk EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in
+Info: get_interface_property reset EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in_reset
+Info: send_message Info TB_Gen: Creating testbench system : avalon_displays7seg_qsys_tb with all standard BFMs
+Info: TB_Gen: Creating testbench system : avalon_displays7seg_qsys_tb with all standard BFMs
+Info: create_system avalon_displays7seg_qsys_tb
+Info: add_instance avalon_displays7seg_qsys_inst avalon_displays7seg_qsys 
+Info: set_use_testbench_naming_pattern true avalon_displays7seg_qsys
+Info: get_instance_interfaces avalon_displays7seg_qsys_inst
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface CLASS_NAME
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst clk CLASS_NAME
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst reset CLASS_NAME
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst clk CLASS_NAME
+Info: send_message Info TB_Gen: clock_sink found: clk
+Info: TB_Gen: clock_sink found: clk
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst clk CLASS_NAME
+Info: add_instance avalon_displays7seg_qsys_inst_clk_bfm altera_avalon_clock_source 
+Info: get_instance_property avalon_displays7seg_qsys_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value avalon_displays7seg_qsys_inst clk clockRate
+Info: set_instance_parameter_value avalon_displays7seg_qsys_inst_clk_bfm CLOCK_RATE 50000000.0
+Info: set_instance_parameter_value avalon_displays7seg_qsys_inst_clk_bfm CLOCK_UNIT 1
+Info: get_instance_property avalon_displays7seg_qsys_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst clk CLASS_NAME
+Info: get_instance_interfaces avalon_displays7seg_qsys_inst_clk_bfm
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst_clk_bfm clk CLASS_NAME
+Info: add_connection avalon_displays7seg_qsys_inst_clk_bfm.clk avalon_displays7seg_qsys_inst.clk
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst reset CLASS_NAME
+Info: send_message Info TB_Gen: reset_sink found: reset
+Info: TB_Gen: reset_sink found: reset
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst reset CLASS_NAME
+Info: add_instance avalon_displays7seg_qsys_inst_reset_bfm altera_avalon_reset_source 
+Info: get_instance_property avalon_displays7seg_qsys_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_ports avalon_displays7seg_qsys_inst reset
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst reset reset_reset_n ROLE
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst reset reset_reset_n ROLE
+Info: set_instance_parameter_value avalon_displays7seg_qsys_inst_reset_bfm ASSERT_HIGH_RESET 0
+Info: set_instance_parameter_value avalon_displays7seg_qsys_inst_reset_bfm INITIAL_RESET_CYCLES 50
+Info: get_instance_property avalon_displays7seg_qsys_inst_reset_bfm CLASS_NAME
+Info: get_instance_interfaces avalon_displays7seg_qsys_inst_reset_bfm
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst_reset_bfm reset CLASS_NAME
+Info: get_instance_property avalon_displays7seg_qsys_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value avalon_displays7seg_qsys_inst reset associatedClock
+Info: get_instance_interfaces avalon_displays7seg_qsys_inst_clk_bfm
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst_clk_bfm clk CLASS_NAME
+Info: send_message Warning TB_Gen: avalon_displays7seg_qsys_inst_reset_bfm is not associated to any clock; connecting avalon_displays7seg_qsys_inst_reset_bfm to 'avalon_displays7seg_qsys_inst_clk_bfm.clk'
+Warning: TB_Gen: avalon_displays7seg_qsys_inst_reset_bfm is not associated to any clock; connecting avalon_displays7seg_qsys_inst_reset_bfm to 'avalon_displays7seg_qsys_inst_clk_bfm.clk'
+Info: add_connection avalon_displays7seg_qsys_inst_clk_bfm.clk avalon_displays7seg_qsys_inst_reset_bfm.clk
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst reset CLASS_NAME
+Info: get_instance_interfaces avalon_displays7seg_qsys_inst_reset_bfm
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst_reset_bfm reset CLASS_NAME
+Info: add_connection avalon_displays7seg_qsys_inst_reset_bfm.reset avalon_displays7seg_qsys_inst.reset
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: avalon_displays7seg_0_external_interface
+Info: TB_Gen: conduit_end found: avalon_displays7seg_0_external_interface
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface CLASS_NAME
+Info: add_instance avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm altera_conduit_bfm 
+Info: get_instance_property avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface associatedClock
+Info: get_instance_interface_parameter_value avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface associatedReset
+Info: get_instance_interface_ports avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit0 ROLE
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit0 WIDTH
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit0 DIRECTION
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit1 ROLE
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit1 WIDTH
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit1 DIRECTION
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit2 ROLE
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit2 WIDTH
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit2 DIRECTION
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit3 ROLE
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit3 WIDTH
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit3 DIRECTION
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit4 ROLE
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit4 WIDTH
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit4 DIRECTION
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit5 ROLE
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit5 WIDTH
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit5 DIRECTION
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit6 ROLE
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit6 WIDTH
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit6 DIRECTION
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit7 ROLE
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit7 WIDTH
+Info: get_instance_interface_port_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit7 DIRECTION
+Info: set_instance_parameter_value avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm SIGNAL_ROLES conduit0 conduit1 conduit2 conduit3 conduit4 conduit5 conduit6 conduit7
+Info: set_instance_parameter_value avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm SIGNAL_WIDTHS 7 7 7 7 7 7 7 7
+Info: set_instance_parameter_value avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm SIGNAL_DIRECTIONS input input input input input input input input
+Info: get_instance_property avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm CLASS_NAME
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst avalon_displays7seg_0_external_interface CLASS_NAME
+Info: get_instance_interfaces avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm
+Info: get_instance_interface_property avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm conduit CLASS_NAME
+Info: add_connection avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm.conduit avalon_displays7seg_qsys_inst.avalon_displays7seg_0_external_interface
+Info: send_message Info TB_Gen: Saving testbench system: avalon_displays7seg_qsys_tb.qsys
+Info: TB_Gen: Saving testbench system: avalon_displays7seg_qsys_tb.qsys
+Info: save_system avalon_displays7seg_qsys_tb.qsys
+Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
+Info: TB_Gen: TBGEN SUCCESSFUL
+Info: Testbench system: C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/avalon_displays7seg_qsys_tb.qsys
+Info: Done
+Info: qsys-generate "C:\Users\Pablo\Desktop\CHS\Practica 2\avalon_displays7seg_qsys.qsys" --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory="C:\Users\Pablo\Desktop\CHS\Practica 2\avalon_displays7seg_qsys\testbench\avalon_displays7seg_qsys_tb\simulation" --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading testbench/avalon_displays7seg_qsys_tb.qsys
+Progress: Reading input file
+Progress: Adding avalon_displays7seg_qsys_inst [avalon_displays7seg_qsys 1.0]
+Progress: Parameterizing module avalon_displays7seg_qsys_inst
+Progress: Adding avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm [altera_conduit_bfm 17.1]
+Progress: Parameterizing module avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm
+Progress: Adding avalon_displays7seg_qsys_inst_clk_bfm [altera_avalon_clock_source 17.1]
+Progress: Parameterizing module avalon_displays7seg_qsys_inst_clk_bfm
+Progress: Adding avalon_displays7seg_qsys_inst_reset_bfm [altera_avalon_reset_source 17.1]
+Progress: Parameterizing module avalon_displays7seg_qsys_inst_reset_bfm
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: avalon_displays7seg_qsys_tb.avalon_displays7seg_qsys_inst_clk_bfm: Elaborate: altera_clock_source
+Info: avalon_displays7seg_qsys_tb.avalon_displays7seg_qsys_inst_clk_bfm:            $Revision: #3 $
+Info: avalon_displays7seg_qsys_tb.avalon_displays7seg_qsys_inst_clk_bfm:            $Date: 2017/09/19 $
+Info: avalon_displays7seg_qsys_tb.avalon_displays7seg_qsys_inst_reset_bfm: Elaborate: altera_reset_source
+Info: avalon_displays7seg_qsys_tb.avalon_displays7seg_qsys_inst_reset_bfm:            $Revision: #3 $
+Info: avalon_displays7seg_qsys_tb.avalon_displays7seg_qsys_inst_reset_bfm:            $Date: 2017/09/19 $
+Info: avalon_displays7seg_qsys_tb.avalon_displays7seg_qsys_inst_reset_bfm: Reset is negatively asserted.
+Info: avalon_displays7seg_qsys_tb: Generating avalon_displays7seg_qsys_tb "avalon_displays7seg_qsys_tb" for SIM_VERILOG
+Info: Interconnect is inserted between master mm_master_bfm_0.m0 and slave avalon_displays7seg_0.avalon_slave because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: avalon_displays7seg_qsys_inst: "avalon_displays7seg_qsys_tb" instantiated avalon_displays7seg_qsys "avalon_displays7seg_qsys_inst"
+Info: avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm: "avalon_displays7seg_qsys_tb" instantiated altera_conduit_bfm "avalon_displays7seg_qsys_inst_avalon_displays7seg_0_external_interface_bfm"
+Info: avalon_displays7seg_qsys_inst_clk_bfm: "avalon_displays7seg_qsys_tb" instantiated altera_avalon_clock_source "avalon_displays7seg_qsys_inst_clk_bfm"
+Info: Reusing file C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/avalon_displays7seg_qsys_tb/simulation/submodules/verbosity_pkg.sv
+Info: avalon_displays7seg_qsys_inst_reset_bfm: "avalon_displays7seg_qsys_tb" instantiated altera_avalon_reset_source "avalon_displays7seg_qsys_inst_reset_bfm"
+Info: Reusing file C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/avalon_displays7seg_qsys_tb/simulation/submodules/verbosity_pkg.sv
+Info: avalon_displays7seg_0: "avalon_displays7seg_qsys_inst" instantiated avalon_displays7seg "avalon_displays7seg_0"
+Info: mm_master_bfm_0: "avalon_displays7seg_qsys_inst" instantiated altera_avalon_mm_master_bfm "mm_master_bfm_0"
+Info: Reusing file C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/avalon_displays7seg_qsys_tb/simulation/submodules/verbosity_pkg.sv
+Info: mm_interconnect_0: "avalon_displays7seg_qsys_inst" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "avalon_displays7seg_qsys_inst" instantiated altera_reset_controller "rst_controller"
+Info: mm_master_bfm_0_m0_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "mm_master_bfm_0_m0_translator"
+Info: avalon_displays7seg_0_avalon_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "avalon_displays7seg_0_avalon_slave_translator"
+Info: avalon_displays7seg_qsys_tb: Done "avalon_displays7seg_qsys_tb" with 11 modules, 18 files
+Info: qsys-generate succeeded.
+Info: sim-script-gen --spd="C:\Users\Pablo\Desktop\CHS\Practica 2\avalon_displays7seg_qsys_tb.spd" --output-directory="C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/" --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\Users\Pablo\Desktop\CHS\Practica 2\avalon_displays7seg_qsys_tb.spd --output-directory=C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	11 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/Pablo/Desktop/CHS/Practica 2/avalon_displays7seg_qsys/testbench/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create testbench Platform Designer system

@@ -1,0 +1,359 @@
+Info: Starting: Create testbench Platform Designer system
+Info: C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/AvalonUARTQsys.ipx
+Info: qsys-generate C:\Users\Pablo\Desktop\TFG\CHS\Anyadir_perifericos\AvalonUARTQsys.qsys --testbench=STANDARD --output-directory=C:\Users\Pablo\Desktop\TFG\CHS\Anyadir_perifericos --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Anyadir_perifericos/AvalonUARTQsys.qsys
+Progress: Reading input file
+Progress: Adding AvalonMasterUART_0 [AvalonMasterUART 1.5]
+Warning: AvalonMasterUART_0: Used AvalonMasterUART 2.0 (instead of 1.5)
+Progress: Parameterizing module AvalonMasterUART_0
+Progress: Adding avalon_timer_0 [avalon_timer 1.1]
+Progress: Parameterizing module avalon_timer_0
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: AvalonUARTQsys.avalon_timer_0: Interrupt sender avalon_timer_0.interrupt_sender is not connected to an interrupt receiver
+Info: qsys-generate succeeded.
+Info: Loading IP catalog for testbench.
+Progress: 
+Progress: 
+Progress: 
+Progress: (2) searching C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx: Loading now from components.ipx
+Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\ip_component_categories.ipx
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0,01 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0,01 seconds
+Info: C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/ip/**/* matched 0 files in 0,00 seconds
+Info: Reading index C:\Users\Pablo\Desktop\TFG\CHS\Anyadir_perifericos\AvalonUARTQsys\testbench\AvalonUARTQsys.ipx
+Progress: Loading Anyadir_perifericos/AvalonMasterUART_hw.tcl
+Progress: Loading Anyadir_perifericos/AvalonUARTQsys.qsys
+Progress: Loading Anyadir_perifericos/avalon_displays7seg_hw.tcl
+Progress: Loading Anyadir_perifericos/avalon_displays7seg_qsys.qsys
+Progress: Loading Anyadir_perifericos/Avalon_MM_Master_test_hw.tcl
+Progress: Loading Anyadir_perifericos/avalon_timer_hw.tcl
+Progress: Loading Anyadir_perifericos/avalon_timer_qsys.qsys
+Progress: Loading Anyadir_perifericos/prueba_Master.qsys
+Progress: Loading Anyadir_perifericos/UART.qsys
+Info: C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/* matched 65 files in 0,25 seconds
+Progress: Loading ip/avalon_displays7seg_hw.tcl
+Progress: Loading ip/avalon_timer_hw.tcl
+Info: C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/ip/**/* matched 9 files in 0,13 seconds
+Progress: Loading ip/avalon_displays7seg_hw.tcl
+Progress: Loading ip/avalon_timer_hw.tcl
+Info: C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/*/* matched 174 files in 0,15 seconds
+Info: C:\Users\Pablo\Desktop\TFG\CHS\Anyadir_perifericos\AvalonUARTQsys\testbench\AvalonUARTQsys.ipx described 0 plugins, 3 paths, in 0,52 seconds
+Progress: Loading testbench/AvalonUARTQsys_tb.qsys
+Info: C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/* matched 12 files in 0,53 seconds
+Info: C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/*/* matched 9 files in 0,01 seconds
+Info: C:/Users/Pablo/.altera.quartus/ip/17.1/**/* matched 0 files in 0,00 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0,00 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0,00 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0,00 seconds
+Info: Reading index C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx
+Info: C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx described 2005 plugins, 0 paths, in 0,27 seconds
+Info: C:/intelfpga_lite/17.1/ip/**/* matched 138 files in 0,29 seconds
+Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0,00 seconds
+Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0,01 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/**/* matched 8 files in 0,01 seconds
+Info: Reading index C:\intelfpga_lite\17.1\quartus\common\librarian\factories\index.ipx
+Info: C:\intelfpga_lite\17.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0,01 seconds
+Info: C:/intelfpga_lite/17.1/quartus/common/librarian/factories/**/* matched 4 files in 0,02 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0,00 seconds
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0,86 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0,86 seconds
+Progress: 
+Progress: 
+Progress: 
+Info: Running script C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/tbgen.tcl
+Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: get_module_property NAME
+Info: send_message Info TB_Gen: System design is: AvalonUARTQsys
+Info: TB_Gen: System design is: AvalonUARTQsys
+Info: get_interfaces 
+Info: get_connections 
+Info: get_interface_property avalon_timer_0_external_interface EXPORT_OF
+Info: get_instance_property avalon_timer_0 CLASS_NAME
+Info: get_instance_assignment avalon_timer_0 testbench.partner.map.external_interface
+Info: get_interface_property avalonmasteruart_0_control EXPORT_OF
+Info: get_instance_property AvalonMasterUART_0 CLASS_NAME
+Info: get_instance_assignment AvalonMasterUART_0 testbench.partner.map.control
+Info: get_interface_property avalonmasteruart_0_rs232 EXPORT_OF
+Info: get_instance_property AvalonMasterUART_0 CLASS_NAME
+Info: get_instance_assignment AvalonMasterUART_0 testbench.partner.map.rs232
+Info: get_interface_property clk EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in
+Info: get_interface_property reset EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in_reset
+Info: send_message Info TB_Gen: Creating testbench system : AvalonUARTQsys_tb with all standard BFMs
+Info: TB_Gen: Creating testbench system : AvalonUARTQsys_tb with all standard BFMs
+Info: create_system AvalonUARTQsys_tb
+Info: add_instance AvalonUARTQsys_inst AvalonUARTQsys 
+Info: set_use_testbench_naming_pattern true AvalonUARTQsys
+Info: get_instance_interfaces AvalonUARTQsys_inst
+Info: get_instance_interface_property AvalonUARTQsys_inst avalon_timer_0_external_interface CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst avalonmasteruart_0_control CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst avalonmasteruart_0_rs232 CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst reset CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst clk CLASS_NAME
+Info: send_message Info TB_Gen: clock_sink found: clk
+Info: TB_Gen: clock_sink found: clk
+Info: get_instance_interface_property AvalonUARTQsys_inst clk CLASS_NAME
+Info: add_instance AvalonUARTQsys_inst_clk_bfm altera_avalon_clock_source 
+Info: get_instance_property AvalonUARTQsys_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonUARTQsys_inst clk clockRate
+Info: set_instance_parameter_value AvalonUARTQsys_inst_clk_bfm CLOCK_RATE 50000000.0
+Info: set_instance_parameter_value AvalonUARTQsys_inst_clk_bfm CLOCK_UNIT 1
+Info: get_instance_property AvalonUARTQsys_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst clk CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_clk_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_clk_bfm clk CLASS_NAME
+Info: add_connection AvalonUARTQsys_inst_clk_bfm.clk AvalonUARTQsys_inst.clk
+Info: get_instance_interface_property AvalonUARTQsys_inst reset CLASS_NAME
+Info: send_message Info TB_Gen: reset_sink found: reset
+Info: TB_Gen: reset_sink found: reset
+Info: get_instance_interface_property AvalonUARTQsys_inst reset CLASS_NAME
+Info: add_instance AvalonUARTQsys_inst_reset_bfm altera_avalon_reset_source 
+Info: get_instance_property AvalonUARTQsys_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_ports AvalonUARTQsys_inst reset
+Info: get_instance_interface_port_property AvalonUARTQsys_inst reset reset_reset_n ROLE
+Info: get_instance_interface_port_property AvalonUARTQsys_inst reset reset_reset_n ROLE
+Info: set_instance_parameter_value AvalonUARTQsys_inst_reset_bfm ASSERT_HIGH_RESET 0
+Info: set_instance_parameter_value AvalonUARTQsys_inst_reset_bfm INITIAL_RESET_CYCLES 50
+Info: get_instance_property AvalonUARTQsys_inst_reset_bfm CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_reset_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_reset_bfm reset CLASS_NAME
+Info: get_instance_property AvalonUARTQsys_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonUARTQsys_inst reset associatedClock
+Info: get_instance_interfaces AvalonUARTQsys_inst_clk_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_clk_bfm clk CLASS_NAME
+Info: send_message Warning TB_Gen: AvalonUARTQsys_inst_reset_bfm is not associated to any clock; connecting AvalonUARTQsys_inst_reset_bfm to 'AvalonUARTQsys_inst_clk_bfm.clk'
+Warning: TB_Gen: AvalonUARTQsys_inst_reset_bfm is not associated to any clock; connecting AvalonUARTQsys_inst_reset_bfm to 'AvalonUARTQsys_inst_clk_bfm.clk'
+Info: add_connection AvalonUARTQsys_inst_clk_bfm.clk AvalonUARTQsys_inst_reset_bfm.clk
+Info: get_instance_interface_property AvalonUARTQsys_inst reset CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_reset_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_reset_bfm reset CLASS_NAME
+Info: add_connection AvalonUARTQsys_inst_reset_bfm.reset AvalonUARTQsys_inst.reset
+Info: get_instance_interface_property AvalonUARTQsys_inst avalon_timer_0_external_interface CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: avalon_timer_0_external_interface
+Info: TB_Gen: conduit_end found: avalon_timer_0_external_interface
+Info: get_instance_interface_property AvalonUARTQsys_inst avalon_timer_0_external_interface CLASS_NAME
+Info: add_instance AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm altera_conduit_bfm 
+Info: get_instance_property AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonUARTQsys_inst avalon_timer_0_external_interface associatedClock
+Info: get_instance_interface_parameter_value AvalonUARTQsys_inst avalon_timer_0_external_interface associatedReset
+Info: get_instance_interface_ports AvalonUARTQsys_inst avalon_timer_0_external_interface
+Info: get_instance_interface_port_property AvalonUARTQsys_inst avalon_timer_0_external_interface avalon_timer_0_external_interface_conduit ROLE
+Info: get_instance_interface_port_property AvalonUARTQsys_inst avalon_timer_0_external_interface avalon_timer_0_external_interface_conduit WIDTH
+Info: get_instance_interface_port_property AvalonUARTQsys_inst avalon_timer_0_external_interface avalon_timer_0_external_interface_conduit DIRECTION
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm CLOCKED_SIGNAL 1
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm ENABLE_RESET 1
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm SIGNAL_ROLES conduit
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm SIGNAL_WIDTHS 1
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm SIGNAL_DIRECTIONS input
+Info: get_instance_property AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm reset CLASS_NAME
+Info: get_instance_property AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonUARTQsys_inst avalon_timer_0_external_interface associatedClock
+Info: get_instance_interface_property AvalonUARTQsys_inst clk CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_clk_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_clk_bfm clk CLASS_NAME
+Info: add_connection AvalonUARTQsys_inst_clk_bfm.clk AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm.clk
+Info: get_instance_interfaces AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm reset CLASS_NAME
+Info: get_instance_property AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonUARTQsys_inst avalon_timer_0_external_interface associatedReset
+Info: get_instance_interface_property AvalonUARTQsys_inst reset CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_reset_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_reset_bfm reset CLASS_NAME
+Info: add_connection AvalonUARTQsys_inst_reset_bfm.reset AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm.reset
+Info: get_instance_interface_property AvalonUARTQsys_inst avalon_timer_0_external_interface CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm reset CLASS_NAME
+Info: add_connection AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm.conduit AvalonUARTQsys_inst.avalon_timer_0_external_interface
+Info: get_instance_interface_property AvalonUARTQsys_inst avalonmasteruart_0_control CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: avalonmasteruart_0_control
+Info: TB_Gen: conduit_end found: avalonmasteruart_0_control
+Info: get_instance_interface_property AvalonUARTQsys_inst avalonmasteruart_0_control CLASS_NAME
+Info: add_instance AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm altera_conduit_bfm 
+Info: get_instance_property AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonUARTQsys_inst avalonmasteruart_0_control associatedClock
+Info: get_instance_interface_parameter_value AvalonUARTQsys_inst avalonmasteruart_0_control associatedReset
+Info: get_instance_interface_ports AvalonUARTQsys_inst avalonmasteruart_0_control
+Info: get_instance_interface_port_property AvalonUARTQsys_inst avalonmasteruart_0_control avalonmasteruart_0_control_flag_tx ROLE
+Info: get_instance_interface_port_property AvalonUARTQsys_inst avalonmasteruart_0_control avalonmasteruart_0_control_flag_tx WIDTH
+Info: get_instance_interface_port_property AvalonUARTQsys_inst avalonmasteruart_0_control avalonmasteruart_0_control_flag_tx DIRECTION
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm CLOCKED_SIGNAL 1
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm ENABLE_RESET 1
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm SIGNAL_ROLES flag_tx
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm SIGNAL_WIDTHS 1
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm SIGNAL_DIRECTIONS output
+Info: get_instance_property AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm reset CLASS_NAME
+Info: get_instance_property AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonUARTQsys_inst avalonmasteruart_0_control associatedClock
+Info: get_instance_interface_property AvalonUARTQsys_inst clk CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_clk_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_clk_bfm clk CLASS_NAME
+Info: add_connection AvalonUARTQsys_inst_clk_bfm.clk AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm.clk
+Info: get_instance_interfaces AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm reset CLASS_NAME
+Info: get_instance_property AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonUARTQsys_inst avalonmasteruart_0_control associatedReset
+Info: get_instance_interface_property AvalonUARTQsys_inst reset CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_reset_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_reset_bfm reset CLASS_NAME
+Info: add_connection AvalonUARTQsys_inst_reset_bfm.reset AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm.reset
+Info: get_instance_interface_property AvalonUARTQsys_inst avalonmasteruart_0_control CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm reset CLASS_NAME
+Info: add_connection AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm.conduit AvalonUARTQsys_inst.avalonmasteruart_0_control
+Info: get_instance_interface_property AvalonUARTQsys_inst avalonmasteruart_0_rs232 CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: avalonmasteruart_0_rs232
+Info: TB_Gen: conduit_end found: avalonmasteruart_0_rs232
+Info: get_instance_interface_property AvalonUARTQsys_inst avalonmasteruart_0_rs232 CLASS_NAME
+Info: add_instance AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm altera_conduit_bfm 
+Info: get_instance_property AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonUARTQsys_inst avalonmasteruart_0_rs232 associatedClock
+Info: get_instance_interface_parameter_value AvalonUARTQsys_inst avalonmasteruart_0_rs232 associatedReset
+Info: get_instance_interface_ports AvalonUARTQsys_inst avalonmasteruart_0_rs232
+Info: get_instance_interface_port_property AvalonUARTQsys_inst avalonmasteruart_0_rs232 avalonmasteruart_0_rs232_rx ROLE
+Info: get_instance_interface_port_property AvalonUARTQsys_inst avalonmasteruart_0_rs232 avalonmasteruart_0_rs232_rx WIDTH
+Info: get_instance_interface_port_property AvalonUARTQsys_inst avalonmasteruart_0_rs232 avalonmasteruart_0_rs232_rx DIRECTION
+Info: get_instance_interface_port_property AvalonUARTQsys_inst avalonmasteruart_0_rs232 avalonmasteruart_0_rs232_tx ROLE
+Info: get_instance_interface_port_property AvalonUARTQsys_inst avalonmasteruart_0_rs232 avalonmasteruart_0_rs232_tx WIDTH
+Info: get_instance_interface_port_property AvalonUARTQsys_inst avalonmasteruart_0_rs232 avalonmasteruart_0_rs232_tx DIRECTION
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm CLOCKED_SIGNAL 1
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm ENABLE_RESET 1
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm SIGNAL_ROLES rx tx
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm SIGNAL_WIDTHS 1 1
+Info: set_instance_parameter_value AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm SIGNAL_DIRECTIONS output input
+Info: get_instance_property AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm reset CLASS_NAME
+Info: get_instance_property AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonUARTQsys_inst avalonmasteruart_0_rs232 associatedClock
+Info: get_instance_interface_property AvalonUARTQsys_inst clk CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_clk_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_clk_bfm clk CLASS_NAME
+Info: add_connection AvalonUARTQsys_inst_clk_bfm.clk AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm.clk
+Info: get_instance_interfaces AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm reset CLASS_NAME
+Info: get_instance_property AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonUARTQsys_inst avalonmasteruart_0_rs232 associatedReset
+Info: get_instance_interface_property AvalonUARTQsys_inst reset CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_reset_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_reset_bfm reset CLASS_NAME
+Info: add_connection AvalonUARTQsys_inst_reset_bfm.reset AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm.reset
+Info: get_instance_interface_property AvalonUARTQsys_inst avalonmasteruart_0_rs232 CLASS_NAME
+Info: get_instance_interfaces AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm reset CLASS_NAME
+Info: add_connection AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm.conduit AvalonUARTQsys_inst.avalonmasteruart_0_rs232
+Info: send_message Info TB_Gen: Saving testbench system: AvalonUARTQsys_tb.qsys
+Info: TB_Gen: Saving testbench system: AvalonUARTQsys_tb.qsys
+Info: save_system AvalonUARTQsys_tb.qsys
+Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
+Info: TB_Gen: TBGEN SUCCESSFUL
+Info: Testbench system: C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/AvalonUARTQsys_tb.qsys
+Info: Done
+Info: qsys-generate C:\Users\Pablo\Desktop\TFG\CHS\Anyadir_perifericos\AvalonUARTQsys.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=C:\Users\Pablo\Desktop\TFG\CHS\Anyadir_perifericos\AvalonUARTQsys\testbench\AvalonUARTQsys_tb\simulation --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading testbench/AvalonUARTQsys_tb.qsys
+Progress: Reading input file
+Progress: Adding AvalonUARTQsys_inst [AvalonUARTQsys 1.0]
+Progress: Parameterizing module AvalonUARTQsys_inst
+Progress: Adding AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm [altera_conduit_bfm 17.1]
+Progress: Parameterizing module AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm
+Progress: Adding AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm [altera_conduit_bfm 17.1]
+Progress: Parameterizing module AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm
+Progress: Adding AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm [altera_conduit_bfm 17.1]
+Progress: Parameterizing module AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm
+Progress: Adding AvalonUARTQsys_inst_clk_bfm [altera_avalon_clock_source 17.1]
+Progress: Parameterizing module AvalonUARTQsys_inst_clk_bfm
+Progress: Adding AvalonUARTQsys_inst_reset_bfm [altera_avalon_reset_source 17.1]
+Progress: Parameterizing module AvalonUARTQsys_inst_reset_bfm
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: AvalonUARTQsys_tb.AvalonUARTQsys_inst.avalon_timer_0: Interrupt sender avalon_timer_0.interrupt_sender is not connected to an interrupt receiver
+Info: AvalonUARTQsys_tb.AvalonUARTQsys_inst_clk_bfm: Elaborate: altera_clock_source
+Info: AvalonUARTQsys_tb.AvalonUARTQsys_inst_clk_bfm:            $Revision: #3 $
+Info: AvalonUARTQsys_tb.AvalonUARTQsys_inst_clk_bfm:            $Date: 2017/09/19 $
+Info: AvalonUARTQsys_tb.AvalonUARTQsys_inst_reset_bfm: Elaborate: altera_reset_source
+Info: AvalonUARTQsys_tb.AvalonUARTQsys_inst_reset_bfm:            $Revision: #3 $
+Info: AvalonUARTQsys_tb.AvalonUARTQsys_inst_reset_bfm:            $Date: 2017/09/19 $
+Info: AvalonUARTQsys_tb.AvalonUARTQsys_inst_reset_bfm: Reset is negatively asserted.
+Info: AvalonUARTQsys_tb: Generating AvalonUARTQsys_tb "AvalonUARTQsys_tb" for SIM_VERILOG
+Info: Interconnect is inserted between master AvalonMasterUART_0.avalon_master and slave avalon_timer_0.avalon_slave because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master AvalonMasterUART_0.avalon_master and slave avalon_timer_0.avalon_slave because the master has address signal 32 bit wide, but the slave is 3 bit wide.
+Info: Interconnect is inserted between master AvalonMasterUART_0.avalon_master and slave avalon_timer_0.avalon_slave because the master has lock signal 1 bit wide, but the slave is 0 bit wide.
+Warning: AvalonUARTQsys_inst: "No matching role found for AvalonMasterUART_0:avalon_master:BEGINTRANSFER (flush)"
+Info: AvalonUARTQsys_inst: "AvalonUARTQsys_tb" instantiated AvalonUARTQsys "AvalonUARTQsys_inst"
+Info: AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm: "AvalonUARTQsys_tb" instantiated altera_conduit_bfm "AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm"
+Info: AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm: "AvalonUARTQsys_tb" instantiated altera_conduit_bfm "AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm"
+Info: Reusing file C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv
+Info: AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm: "AvalonUARTQsys_tb" instantiated altera_conduit_bfm "AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm"
+Info: Reusing file C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv
+Info: AvalonUARTQsys_inst_clk_bfm: "AvalonUARTQsys_tb" instantiated altera_avalon_clock_source "AvalonUARTQsys_inst_clk_bfm"
+Info: Reusing file C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv
+Info: AvalonUARTQsys_inst_reset_bfm: "AvalonUARTQsys_tb" instantiated altera_avalon_reset_source "AvalonUARTQsys_inst_reset_bfm"
+Info: Reusing file C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv
+Info: AvalonMasterUART_0: "AvalonUARTQsys_inst" instantiated AvalonMasterUART "AvalonMasterUART_0"
+Info: avalon_timer_0: "AvalonUARTQsys_inst" instantiated avalon_timer "avalon_timer_0"
+Info: mm_interconnect_0: "AvalonUARTQsys_inst" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "AvalonUARTQsys_inst" instantiated altera_reset_controller "rst_controller"
+Info: AvalonMasterUART_0_avalon_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "AvalonMasterUART_0_avalon_master_translator"
+Info: avalon_timer_0_avalon_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "avalon_timer_0_avalon_slave_translator"
+Info: AvalonUARTQsys_tb: Done "AvalonUARTQsys_tb" with 13 modules, 22 files
+Info: qsys-generate succeeded.
+Info: sim-script-gen --spd=C:\Users\Pablo\Desktop\TFG\CHS\Anyadir_perifericos\AvalonUARTQsys_tb.spd --output-directory=C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\Users\Pablo\Desktop\TFG\CHS\Anyadir_perifericos\AvalonUARTQsys_tb.spd --output-directory=C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	13 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create testbench Platform Designer system
