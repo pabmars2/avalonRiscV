@@ -1,4 +1,4 @@
-module UART(CLK, TX, RX, data_rx, done_rx, data_tx, flag_tx, controlBits);
+module UART(CLK, TX, RX, data_rx, done_rx, data_tx, flag_tx, controlBits, done_tx);
 
 //baudRate = 115200;
 //clkSpeed = 50000000;
@@ -13,7 +13,7 @@ input [31 : 0] data_tx;
 
 output [31 : 0] data_rx; 
 output [1 : 0] controlBits;
-output done_rx;
+output done_rx, done_tx;
 output TX;
 
 reg [33 : 0] data_recieved;
@@ -34,7 +34,7 @@ assign controlBits = data_recieved[33:32];
      .i_Tx_Byte(data_tx),
      .o_Tx_Active(),
      .o_Tx_Serial(TX),
-     .o_Tx_Done()
+     .o_Tx_Done(done_tx)
      );
   
 	  

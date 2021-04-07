@@ -8,9 +8,9 @@
 			avalon_displays7seg_0_external_interface_conduit5 : out std_logic_vector(6 downto 0);        -- conduit5
 			avalon_displays7seg_0_external_interface_conduit6 : out std_logic_vector(6 downto 0);        -- conduit6
 			avalon_displays7seg_0_external_interface_conduit7 : out std_logic_vector(6 downto 0);        -- conduit7
-			avalonmasteruart_0_rs232_rx                       : in  std_logic                    := 'X'; -- rx
-			avalonmasteruart_0_rs232_tx                       : out std_logic;                           -- tx
 			clk_clk                                           : in  std_logic                    := 'X'; -- clk
+			masteruart_rs232_rx_rx                            : in  std_logic                    := 'X'; -- rx
+			masteruart_rs232_tx_tx                            : out std_logic;                           -- tx
 			reset_reset_n                                     : in  std_logic                    := 'X'  -- reset_n
 		);
 	end component AvalonRiscV_QSYS;

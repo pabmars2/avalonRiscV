@@ -23,12 +23,12 @@ wire [31 : 0] reg0_internal, reg1_internal, reg2_internal;
 wire [31 : 0] data_internal;
 wire we_internal;
 
-assign debug = 1'b0; //temporal
-assign enable_pc_ext = 1'b1; //temporal
-assign enable_ext = 4'b1111; //temporal
+assign debug = reg0_internal[0]; 
+//assign enable_pc_ext = 1'b1; //temporal
+//assign enable_ext = 4'b1111; //temporal
+assign tx_flag = 1'b0;
 
-
-enum {IDLE, RECEPT, SEND, DONE} state;
+enum {INITIAL, IDLE, DEBUG, DONE} state;
 
 avalon_slave_MM_interface	slave_debug(
 	.reset(RST),
@@ -39,7 +39,7 @@ avalon_slave_MM_interface	slave_debug(
    .writedata(writedata_debug),
    .read(read_debug),                                     
    .readdata(readdata_debug), 
-   .reg0(reg0_internal), //bits de control
+   .reg0(reg0_internal), //bits de control	[0]nDebug
 	.reg1(reg1_internal), //address a usar en  instrucciones
 	.reg2(reg2_internal), //address a usar en externos
    .data(data_internal), 
@@ -50,35 +50,38 @@ avalon_slave_MM_interface	slave_debug(
 always_ff @(posedge CLK or posedge RST)
 begin
 	if(RST)
-		state <= IDLE;
+		state <= INITIAL;
 	else
 	begin
 		case(state)
 			
+			INITIAL:
+				begin
+					if(reg0_internal[0] == 1'b0)
+						state <= INITIAL;
+					else
+						state <= IDLE;
+				end
+			
 			IDLE:
 				begin
-					
+					if(chipselect_debug == 1'b1)
+						state <= DEBUG;
+					else
+						state <= IDLE;
 				end
 			
-			RECEPT:
+			DEBUG:
 				begin
-				
+					if(reg0_internal[0] == 1'b1)
+						state <= DONE;
+					else
+						state <= DEBUG;
 				end
 			
-			SEND:
-				begin
+			DONE:	state <= IDLE;
 				
-				end
-			
-			DONE:
-				begin
-				
-				end
-				
-			default:
-				begin
-				
-				end
+			default:	state <= INITIAL;
 			
 		endcase
 		
@@ -88,36 +91,93 @@ end
 always_comb
 begin
 	if(RST)
-		begin
-		
-		end
+	begin
+		enable_pc_ext = 1'b0;
+		enable_ext = 3'b000;
+	end
 	else
 	begin
 		case(state)
 			
+			INITIAL:
+				begin
+					enable_pc_ext = 1'b0;
+					enable_ext = 3'b000;
+ 				end
+			
 			IDLE:
 				begin
-				
+					enable_pc_ext = 1'b1;
+					enable_ext = 3'b111;
 				end
 			
-			RECEPT:
+			DEBUG:
 				begin
-				
-				end
-			
-			SEND:
-				begin
-				
+					if(reg0_internal[1] == 1'b0) //si el micro esta parado podemos leer y escribir
+					begin
+						case(reg0_internal[5:3])
+							
+							3'b000:
+								begin
+								
+								end
+							
+							3'b001:
+								begin
+								
+								end
+							
+							3'b010:
+								begin
+								
+								end
+							
+							3'b011:
+								begin
+								
+								end
+							
+							3'b100:
+								begin
+								
+								end
+							
+							default:
+								begin
+								
+								end
+							
+						endcase
+						
+						enable_pc_ext = 1'b0;
+						enable_ext = 3'b000;
+						
+					end
+					else
+					begin
+						if(reg0_internal[0] == 1'b1)	//ejecucion por pasos
+							begin
+								enable_pc_ext = 1'b1; //CAMBIAR
+								enable_ext = 3'b111;	//CAMBIAR						
+							end
+							else	//ejecucion continua
+							begin
+								enable_pc_ext = 1'b1;
+								enable_ext = 3'b111;
+							end
+					end
 				end
 			
 			DONE:
 				begin
-				
+					enable_pc_ext = 1'b1;
+					enable_ext = 3'b111;
 				end
 				
 			default:
 				begin
-				
+					enable_pc_ext = 1'b1;
+					enable_ext = 3'b111;
 				end
 			
 		endcase

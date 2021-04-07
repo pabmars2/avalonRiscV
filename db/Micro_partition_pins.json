@@ -636,6 +636,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "writedata_debug[0]",
+					"strict" : false
+				},
+				{
+					"name" : "write_debug",
+					"strict" : false
+				},
+				{
+					"name" : "writedata_debug[1]",
+					"strict" : false
+				},
+				{
 					"name" : "ReadData_ext[31]",
 					"strict" : false
 				},
@@ -761,18 +773,6 @@
 				},
 				{
 					"name" : "ReadData_ext[0]",
-					"strict" : false
-				},
-				{
-					"name" : "writedata_debug[0]",
-					"strict" : false
-				},
-				{
-					"name" : "write_debug",
-					"strict" : false
-				},
-				{
-					"name" : "writedata_debug[1]",
 					"strict" : false
 				},
 				{

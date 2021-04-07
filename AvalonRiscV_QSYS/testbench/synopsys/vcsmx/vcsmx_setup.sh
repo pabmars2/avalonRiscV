@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 17.1 590 win32 2021.04.06.20:59:31
+# ACDS 17.1 590 win32 2021.04.07.12:54:59
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -107,7 +107,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 17.1 590 win32 2021.04.06.20:59:31
+# ACDS 17.1 590 win32 2021.04.07.12:54:59
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="AvalonRiscV_QSYS_tb"
@@ -171,8 +171,9 @@ mkdir -p ./libraries/avalon_displays7seg_0/
 mkdir -p ./libraries/RISC_V_AVALON_0/
 mkdir -p ./libraries/MasterUART/
 mkdir -p ./libraries/AvalonRiscV_QSYS_inst_reset_bfm/
+mkdir -p ./libraries/AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm/
+mkdir -p ./libraries/AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm/
 mkdir -p ./libraries/AvalonRiscV_QSYS_inst_clk_bfm/
-mkdir -p ./libraries/AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm/
 mkdir -p ./libraries/AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm/
 mkdir -p ./libraries/AvalonRiscV_QSYS_inst/
 mkdir -p ./libraries/altera_ver/
@@ -258,8 +259,9 @@ if [ $SKIP_COM -eq 0 ]; then
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/uart_rx.sv"                                                              -work MasterUART                                                        
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/uart_tx.sv"                                                              -work MasterUART                                                        
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_reset_source.sv"                                           -work AvalonRiscV_QSYS_inst_reset_bfm                                   
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm_0003.sv"                                              -work AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm                     
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                              -work AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm                     
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_clock_source.sv"                                           -work AvalonRiscV_QSYS_inst_clk_bfm                                     
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                              -work AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm                
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm.sv"                                                   -work AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS.v"                                                      -work AvalonRiscV_QSYS_inst                                             
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/AvalonRiscV_QSYS_tb.v"                                                                                                                                      

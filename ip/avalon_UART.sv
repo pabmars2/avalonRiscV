@@ -1,4 +1,4 @@
-module avalon_UART(CLK, RST, flag_tx, TX, RX, READDATA, WAITREQUEST, ADDRESS, WRITEDATA, BEGINTRANSFER, READ, WRITE, LOCK);
+module avalon_UART(CLK, RST, flag_tx, TX, RX, READDATA, WAITREQUEST, ADDRESS, WRITEDATA, BEGINTRANSFER, READ, WRITE, LOCK, doneSending);
 
 parameter c_CLKS_PER_BIT = 434;
 
@@ -10,6 +10,7 @@ input CLK, RST;
 input flag_tx;
 input RX;
 output TX;
+output doneSending;
 
 //////////////////
 //AVALON SIGNALS//
@@ -44,7 +45,8 @@ UART #(.c_CLKS_PER_BIT(c_CLKS_PER_BIT)) UART(
 	.done_rx(doneRecieved), 
 	.data_tx(dataToSend), 
 	.flag_tx(flag_tx_UART), 
-	.controlBits(control));
+	.controlBits(control),
+	.done_tx(doneSending));
 
 
 

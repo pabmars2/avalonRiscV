@@ -12,12 +12,13 @@ module AvalonRiscV_QSYS (
 		output wire [6:0] avalon_displays7seg_0_external_interface_conduit5, //                                         .conduit5
 		output wire [6:0] avalon_displays7seg_0_external_interface_conduit6, //                                         .conduit6
 		output wire [6:0] avalon_displays7seg_0_external_interface_conduit7, //                                         .conduit7
-		input  wire       avalonmasteruart_0_rs232_rx,                       //                 avalonmasteruart_0_rs232.rx
-		output wire       avalonmasteruart_0_rs232_tx,                       //                                         .tx
 		input  wire       clk_clk,                                           //                                      clk.clk
+		input  wire       masteruart_rs232_rx_rx,                            //                      masteruart_rs232_rx.rx
+		output wire       masteruart_rs232_tx_tx,                            //                      masteruart_rs232_tx.tx
 		input  wire       reset_reset_n                                      //                                    reset.reset_n
 	);
 
+	wire         masteruart_donesending_donesending;                              // MasterUART:doneSending -> RISC_V_AVALON_0:doneSending
 	wire         risc_v_avalon_0_control_debug_flag_tx;                           // RISC_V_AVALON_0:tx_flag -> MasterUART:flag_tx
 	wire  [31:0] masteruart_avalon_master_readdata;                               // mm_interconnect_0:MasterUART_avalon_master_readdata -> MasterUART:READDATA
 	wire         masteruart_avalon_master_waitrequest;                            // mm_interconnect_0:MasterUART_avalon_master_waitrequest -> MasterUART:WAITREQUEST
@@ -84,8 +85,9 @@ module AvalonRiscV_QSYS (
 		.LOCK          (masteruart_avalon_master_lock),         //              .lock
 		.RST           (rst_controller_reset_out_reset),        //         reset.reset
 		.flag_tx       (risc_v_avalon_0_control_debug_flag_tx), //       control.flag_tx
-		.RX            (avalonmasteruart_0_rs232_rx),           //         rs232.rx
-		.TX            (avalonmasteruart_0_rs232_tx)            //              .tx
+		.TX            (masteruart_rs232_tx_tx),                //      rs232_tx.tx
+		.RX            (masteruart_rs232_rx_rx),                //      rs232_rx.rx
+		.doneSending   (masteruart_donesending_donesending)     //   DoneSending.donesending
 	);
 
 	top_Avalon risc_v_avalon_0 (
@@ -113,7 +115,8 @@ module AvalonRiscV_QSYS (
 		.WRITE_instr         (risc_v_avalon_0_master_instruccions_write),          //                    .write
 		.WriteData_instr     (risc_v_avalon_0_master_instruccions_writedata),      //                    .writedata
 		.waitRqst_instr      (risc_v_avalon_0_master_instruccions_waitrequest),    //                    .waitrequest
-		.tx_flag             (risc_v_avalon_0_control_debug_flag_tx)               //       control_debug.flag_tx
+		.tx_flag             (risc_v_avalon_0_control_debug_flag_tx),              //       control_debug.flag_tx
+		.doneSending         (masteruart_donesending_donesending)                  //         DoneSending.donesending
 	);
 
 	avalon_displays7seg #(

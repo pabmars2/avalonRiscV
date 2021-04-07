@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 17.1 590 win32 2021.04.06.20:59:31
+# ACDS 17.1 590 win32 2021.04.07.12:54:59
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 17.1 590 win32 2021.04.06.20:59:31
+# ACDS 17.1 590 win32 2021.04.07.12:54:59
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="AvalonRiscV_QSYS_tb"
@@ -193,8 +193,9 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/uart_rx.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/uart_tx.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_reset_source.sv \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_clock_source.sv \
+  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm_0003.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm_0002.sv \
+  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_clock_source.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS.v \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/AvalonRiscV_QSYS_tb.v \

@@ -115,17 +115,23 @@
    internal="avalon_displays7seg_0.external_interface"
    type="conduit"
    dir="end" />
+ <interface name="avalonmasteruart_0_rs232" internal="MasterUART.rs232" />
+ <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
-   name="avalonmasteruart_0_rs232"
-   internal="MasterUART.rs232"
+   name="masteruart_rs232_rx"
+   internal="MasterUART.rs232_rx"
    type="conduit"
    dir="end" />
- <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
+ <interface
+   name="masteruart_rs232_tx"
+   internal="MasterUART.rs232_tx"
+   type="conduit"
+   dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
- <module name="MasterUART" kind="AvalonMasterUART" version="2.1" enabled="1">
+ <module name="MasterUART" kind="AvalonMasterUART" version="2.2" enabled="1">
   <parameter name="c_CLKS_PER_BIT" value="434" />
  </module>
- <module name="RISC_V_AVALON_0" kind="RISC_V_AVALON" version="1.3" enabled="1" />
+ <module name="RISC_V_AVALON_0" kind="RISC_V_AVALON" version="1.4" enabled="1" />
  <module
    name="avalon_displays7seg_0"
    kind="avalon_displays7seg"
@@ -260,6 +266,17 @@
    version="17.1"
    start="clk_0.clk"
    end="avalon_displays7seg_0.clock_sink" />
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="RISC_V_AVALON_0.DoneSending"
+   end="MasterUART.DoneSending">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
  <connection
    kind="conduit"
    version="17.1"

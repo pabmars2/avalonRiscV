@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 17.1 590 win32 2021.04.06.20:59:31
+# ACDS 17.1 590 win32 2021.04.07.12:55:00
 # ----------------------------------------
 # Auto-generated simulation script rivierapro_setup.tcl
 # ----------------------------------------
@@ -222,10 +222,12 @@ ensure_lib                                                                    ./
 vmap       MasterUART                                                         ./libraries/MasterUART                                                        
 ensure_lib                                                                    ./libraries/AvalonRiscV_QSYS_inst_reset_bfm                                   
 vmap       AvalonRiscV_QSYS_inst_reset_bfm                                    ./libraries/AvalonRiscV_QSYS_inst_reset_bfm                                   
+ensure_lib                                                                    ./libraries/AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm                     
+vmap       AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm                      ./libraries/AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm                     
+ensure_lib                                                                    ./libraries/AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm                     
+vmap       AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm                      ./libraries/AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm                     
 ensure_lib                                                                    ./libraries/AvalonRiscV_QSYS_inst_clk_bfm                                     
 vmap       AvalonRiscV_QSYS_inst_clk_bfm                                      ./libraries/AvalonRiscV_QSYS_inst_clk_bfm                                     
-ensure_lib                                                                    ./libraries/AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm                
-vmap       AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm                 ./libraries/AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm                
 ensure_lib                                                                    ./libraries/AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm
 vmap       AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm ./libraries/AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm
 ensure_lib                                                                    ./libraries/AvalonRiscV_QSYS_inst                                             
@@ -302,8 +304,9 @@ alias com {
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/uart_rx.sv"                                                              -l altera_common_sv_packages -work MasterUART                                                        
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/uart_tx.sv"                                                              -l altera_common_sv_packages -work MasterUART                                                        
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_reset_source.sv"                                           -l altera_common_sv_packages -work AvalonRiscV_QSYS_inst_reset_bfm                                   
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm_0003.sv"                                              -l altera_common_sv_packages -work AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm                     
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                              -l altera_common_sv_packages -work AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm                     
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_clock_source.sv"                                           -l altera_common_sv_packages -work AvalonRiscV_QSYS_inst_clk_bfm                                     
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                              -l altera_common_sv_packages -work AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm                
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm.sv"                                                   -l altera_common_sv_packages -work AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS.v"                                                                                   -work AvalonRiscV_QSYS_inst                                             
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/AvalonRiscV_QSYS_tb.v"                                                                                                                                                                   
@@ -313,14 +316,14 @@ alias com {
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  eval vsim +access +r -t ps $ELAB_OPTIONS -L work -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux -L rsp_demux -L cmd_mux -L cmd_demux -L router_001 -L router -L avalon_displays7seg_0_avalon_slave_agent_rsp_fifo -L avalon_displays7seg_0_avalon_slave_agent -L RISC_V_AVALON_0_master_external_agent -L RISC_V_AVALON_0_debug_translator -L MasterUART_avalon_master_translator -L rst_controller -L mm_interconnect_2 -L mm_interconnect_1 -L mm_interconnect_0 -L instruccionMemory -L externalMemory -L avalon_displays7seg_0 -L RISC_V_AVALON_0 -L MasterUART -L AvalonRiscV_QSYS_inst_reset_bfm -L AvalonRiscV_QSYS_inst_clk_bfm -L AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm -L AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm -L AvalonRiscV_QSYS_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
+  eval vsim +access +r -t ps $ELAB_OPTIONS -L work -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux -L rsp_demux -L cmd_mux -L cmd_demux -L router_001 -L router -L avalon_displays7seg_0_avalon_slave_agent_rsp_fifo -L avalon_displays7seg_0_avalon_slave_agent -L RISC_V_AVALON_0_master_external_agent -L RISC_V_AVALON_0_debug_translator -L MasterUART_avalon_master_translator -L rst_controller -L mm_interconnect_2 -L mm_interconnect_1 -L mm_interconnect_0 -L instruccionMemory -L externalMemory -L avalon_displays7seg_0 -L RISC_V_AVALON_0 -L MasterUART -L AvalonRiscV_QSYS_inst_reset_bfm -L AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm -L AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm -L AvalonRiscV_QSYS_inst_clk_bfm -L AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm -L AvalonRiscV_QSYS_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with -dbg -O2 option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  eval vsim -dbg -O2 +access +r -t ps $ELAB_OPTIONS -L work -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux -L rsp_demux -L cmd_mux -L cmd_demux -L router_001 -L router -L avalon_displays7seg_0_avalon_slave_agent_rsp_fifo -L avalon_displays7seg_0_avalon_slave_agent -L RISC_V_AVALON_0_master_external_agent -L RISC_V_AVALON_0_debug_translator -L MasterUART_avalon_master_translator -L rst_controller -L mm_interconnect_2 -L mm_interconnect_1 -L mm_interconnect_0 -L instruccionMemory -L externalMemory -L avalon_displays7seg_0 -L RISC_V_AVALON_0 -L MasterUART -L AvalonRiscV_QSYS_inst_reset_bfm -L AvalonRiscV_QSYS_inst_clk_bfm -L AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm -L AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm -L AvalonRiscV_QSYS_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
+  eval vsim -dbg -O2 +access +r -t ps $ELAB_OPTIONS -L work -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux -L rsp_demux -L cmd_mux -L cmd_demux -L router_001 -L router -L avalon_displays7seg_0_avalon_slave_agent_rsp_fifo -L avalon_displays7seg_0_avalon_slave_agent -L RISC_V_AVALON_0_master_external_agent -L RISC_V_AVALON_0_debug_translator -L MasterUART_avalon_master_translator -L rst_controller -L mm_interconnect_2 -L mm_interconnect_1 -L mm_interconnect_0 -L instruccionMemory -L externalMemory -L avalon_displays7seg_0 -L RISC_V_AVALON_0 -L MasterUART -L AvalonRiscV_QSYS_inst_reset_bfm -L AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm -L AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm -L AvalonRiscV_QSYS_inst_clk_bfm -L AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm -L AvalonRiscV_QSYS_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

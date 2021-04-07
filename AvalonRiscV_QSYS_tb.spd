@@ -234,13 +234,17 @@
    type="SYSTEM_VERILOG"
    library="AvalonRiscV_QSYS_inst_reset_bfm" />
  <file
-   path="AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_clock_source.sv"
+   path="AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm_0003.sv"
    type="SYSTEM_VERILOG"
-   library="AvalonRiscV_QSYS_inst_clk_bfm" />
+   library="AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm" />
  <file
    path="AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm_0002.sv"
    type="SYSTEM_VERILOG"
-   library="AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm" />
+   library="AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm" />
+ <file
+   path="AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_clock_source.sv"
+   type="SYSTEM_VERILOG"
+   library="AvalonRiscV_QSYS_inst_clk_bfm" />
  <file
    path="AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm.sv"
    type="SYSTEM_VERILOG"

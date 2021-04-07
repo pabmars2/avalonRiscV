@@ -2,10 +2,11 @@ module top_Avalon(CLK, RST, ADDRESS_instr, ADDRESS_ext, BeginTransfer_instr,
 BeginTransfer_ext, READ_instr, READ_ext, WRITE_instr, WRITE_ext, WriteData_instr, 
 WriteData_ext, LOCK_instr, LOCK_ext, ReadData_instr, ReadData_ext, waitRqst_instr, 
 waitRqst_ext, chipselect_debug, write_debug, writedata_debug, read_debug, adress_debug, 
-readdata_debug, tx_flag);
+readdata_debug, tx_flag, doneSending);
 
 //General Inputs
 input CLK, RST;
+input doneSending;
 output tx_flag;  
 
 //AVALON MASTERS connections
@@ -64,7 +65,7 @@ top top_RISC(
 	.ddata_w(data_write_ext), 
 	.WRam(WRam), 
 	.RRam(RRam),
-	.debug(debug), 
+	.debug(~debug), //cambio por comodidad en modulo debug
 	.enable_ext(enable_ext), 
 	.enable_pc_ext(enable_pc_ext), 
 	.done_instr(done_instr), 

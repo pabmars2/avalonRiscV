@@ -26,8 +26,9 @@ avalon_displays7seg_0:                                              ./libraries/
 RISC_V_AVALON_0:                                                    ./libraries/RISC_V_AVALON_0/                                                   
 MasterUART:                                                         ./libraries/MasterUART/                                                        
 AvalonRiscV_QSYS_inst_reset_bfm:                                    ./libraries/AvalonRiscV_QSYS_inst_reset_bfm/                                   
+AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm:                      ./libraries/AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm/                     
+AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm:                      ./libraries/AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm/                     
 AvalonRiscV_QSYS_inst_clk_bfm:                                      ./libraries/AvalonRiscV_QSYS_inst_clk_bfm/                                     
-AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm:                 ./libraries/AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm/                
 AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm: ./libraries/AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm/
 AvalonRiscV_QSYS_inst:                                              ./libraries/AvalonRiscV_QSYS_inst/                                             
 altera_ver:                                                         ./libraries/altera_ver/                                                        
