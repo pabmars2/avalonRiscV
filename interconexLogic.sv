@@ -1,7 +1,7 @@
 module interconexLogic(mode, uPAddressExt, uPAddressInstr, debugAddress, dataReadExt, dataReadInstr, uPdataWriteExt, 
 uPdataWriteInstr, DEBUGWrite, dataPC, read_Ext, read_Instr, write_Ext, write_Instr, doneExt, doneInstr, startInputInstr, startInputExt,
 AddressExt, AddressInstr, uPdataReadExt, uPdataReadInstr, dataReadDebug, dataWriteExt, dataWriteInstr, readExt, readInstr, 
-writeExt, writeInstr, startInstr, startExt);
+writeExt, writeInstr, startInstr, startExt, chipselect_debug);
 
 input [2 : 0] mode;
 input [31 : 0] uPAddressExt, uPAddressInstr;
@@ -13,6 +13,7 @@ input [31 : 0] dataPC;
 input read_Ext, read_Instr, write_Ext, write_Instr;
 input doneExt, doneInstr;
 input startInputInstr, startInputExt;
+input chipselect_debug;
 
 output reg [31 : 0] AddressExt, AddressInstr;
 output reg [31 : 0] uPdataReadExt, uPdataReadInstr;
@@ -165,9 +166,17 @@ begin
 			readInstr = 1'b0;
 			writeExt = 1'b0;
 			writeInstr = 1'b0;
-				
-			startInstr = 1'b0; 
-			startExt = 1'b1;	
+			
+			if(chipselect_debug)
+			begin
+				startInstr = 1'b0; 
+				startExt = 1'b1;	
+			end
+			else
+			begin
+				startInstr = 1'b0; 
+				startExt = 1'b0;	
+			end
 		end
 	
 		READINSTR:
@@ -177,8 +186,16 @@ begin
 			writeExt = 1'b0;
 			writeInstr = 1'b0;
 				
-			startInstr = 1'b1; 
-			startExt = 1'b0;	
+			if(chipselect_debug)
+			begin
+				startInstr = 1'b1; 
+				startExt = 1'b0;		
+			end
+			else
+			begin
+				startInstr = 1'b0; 
+				startExt = 1'b0;	
+			end				
 		end
 		
 		WREXT:
@@ -188,8 +205,17 @@ begin
 			writeExt = 1'b1;
 			writeInstr = 1'b0;
 				
-			startInstr = 1'b0; 
-			startExt = 1'b1;	
+			if(chipselect_debug)
+			begin
+				startInstr = 1'b0; 
+				startExt = 1'b1;	
+			end
+			else
+			begin
+				startInstr = 1'b0; 
+				startExt = 1'b0;	
+			end	
+				
 		end
 		
 		WRINSTR:
@@ -198,9 +224,19 @@ begin
 			readInstr = 1'b0;
 			writeExt = 1'b0;
 			writeInstr = 1'b1;
-				
-			startInstr = 1'b1; 
-			startExt = 1'b0;	
+			
+			if(chipselect_debug)
+			begin
+				startInstr = 1'b1; 
+				startExt = 1'b0;		
+			end
+			else
+			begin
+				startInstr = 1'b0; 
+				startExt = 1'b0;	
+			end
+		
+			
 		end
 		
 		READPC:

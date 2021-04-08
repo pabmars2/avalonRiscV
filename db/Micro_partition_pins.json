@@ -680,6 +680,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "chipselect_debug",
+					"strict" : false
+				},
+				{
 					"name" : "RST",
 					"strict" : false
 				},
@@ -696,10 +700,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "chipselect_debug",
-					"strict" : false
-				},
-				{
 					"name" : "write_debug",
 					"strict" : false
 				},
@@ -712,22 +712,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "writedata_debug[4]",
-					"strict" : false
-				},
-				{
-					"name" : "writedata_debug[1]",
-					"strict" : false
-				},
-				{
-					"name" : "writedata_debug[5]",
-					"strict" : false
-				},
-				{
-					"name" : "writedata_debug[3]",
-					"strict" : false
-				},
-				{
 					"name" : "waitRqst_instr",
 					"strict" : false
 				},
@@ -736,7 +720,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "writedata_debug[1]",
+					"strict" : false
+				},
+				{
 					"name" : "writedata_debug[2]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata_debug[3]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata_debug[4]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata_debug[5]",
 					"strict" : false
 				},
 				{
@@ -1044,15 +1044,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "ReadData_instr[8]",
-					"strict" : false
-				},
-				{
 					"name" : "ReadData_instr[7]",
 					"strict" : false
 				},
 				{
-					"name" : "ReadData_instr[10]",
+					"name" : "ReadData_instr[8]",
 					"strict" : false
 				},
 				{
@@ -1060,39 +1056,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "ReadData_instr[10]",
+					"strict" : false
+				},
+				{
 					"name" : "ReadData_instr[11]",
 					"strict" : false
 				},
 				{
-					"name" : "ReadData_instr[31]",
-					"strict" : false
-				},
-				{
-					"name" : "ReadData_instr[30]",
-					"strict" : false
-				},
-				{
-					"name" : "ReadData_instr[29]",
-					"strict" : false
-				},
-				{
-					"name" : "ReadData_instr[28]",
-					"strict" : false
-				},
-				{
-					"name" : "ReadData_instr[27]",
-					"strict" : false
-				},
-				{
-					"name" : "ReadData_instr[26]",
-					"strict" : false
-				},
-				{
-					"name" : "ReadData_instr[25]",
-					"strict" : false
-				},
-				{
-					"name" : "ReadData_instr[14]",
+					"name" : "ReadData_instr[12]",
 					"strict" : false
 				},
 				{
@@ -1100,7 +1072,35 @@
 					"strict" : false
 				},
 				{
-					"name" : "ReadData_instr[12]",
+					"name" : "ReadData_instr[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData_instr[25]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData_instr[26]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData_instr[27]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData_instr[28]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData_instr[29]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData_instr[30]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData_instr[31]",
 					"strict" : false
 				}
 			]

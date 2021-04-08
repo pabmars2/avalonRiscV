@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Micro
-Thu Apr 08 14:06:12 2021
+Thu Apr 08 18:09:58 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -14,22 +14,25 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
+  9. General Register Statistics
+ 10. Inverted Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: top:top_RISC|memoryControl:controlInstr
  13. Parameter Settings for User Entity Instance: top:top_RISC|memoryControl:controlExt
  14. Parameter Settings for User Entity Instance: avalon_mm_master:master_instr
  15. Parameter Settings for User Entity Instance: avalon_mm_master:master_ext
- 16. Port Connectivity Checks: "interconexLogic:connectLogic"
- 17. Port Connectivity Checks: "debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug"
- 18. Port Connectivity Checks: "avalon_mm_master:master_instr"
- 19. Port Connectivity Checks: "top:top_RISC|MUX9b:MuxContr"
- 20. Port Connectivity Checks: "top:top_RISC|adder:Add"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
- 24. Analysis & Synthesis Suppressed Messages
+ 16. Parameter Settings for User Entity Instance: debugMode:SystemDebug
+ 17. Parameter Settings for Inferred Entity Instance: debugMode:SystemDebug|lpm_mult:Mult0
+ 18. lpm_mult Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "interconexLogic:connectLogic"
+ 20. Port Connectivity Checks: "debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug"
+ 21. Port Connectivity Checks: "avalon_mm_master:master_instr"
+ 22. Port Connectivity Checks: "top:top_RISC|MUX9b:MuxContr"
+ 23. Port Connectivity Checks: "top:top_RISC|adder:Add"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -55,15 +58,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 08 14:06:12 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 08 18:09:58 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Micro                                       ;
 ; Top-level Entity Name              ; top_Avalon                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,075                                       ;
-;     Total combinational functions  ; 2,919                                       ;
-;     Dedicated logic registers      ; 1,615                                       ;
-; Total registers                    ; 1615                                        ;
+; Total logic elements               ; 4,317                                       ;
+;     Total combinational functions  ; 3,161                                       ;
+;     Dedicated logic registers      ; 1,685                                       ;
+; Total registers                    ; 1685                                        ;
 ; Total pins                         ; 276                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -205,6 +208,29 @@ refer to the applicable agreement for further details.
 ; memoryControl.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/memoryControl.sv            ;         ;
 ; debugMode.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv                ;         ;
 ; interconexLogic.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/interconexLogic.sv          ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf                 ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc               ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc              ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.inc                 ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/bypassff.inc                 ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.inc                 ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.tdf                 ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/csa_add.inc                  ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.inc                 ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/muleabz.inc                  ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mul_lfrg.inc                 ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mul_boothc.inc               ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/alt_ded_mult.inc             ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc           ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/dffpipe.inc                  ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.tdf                 ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.tdf              ;         ;
+; addcore.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/addcore.inc                  ;         ;
+; look_add.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/look_add.inc                 ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc      ;         ;
+; db/add_sub_lgh.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/db/add_sub_lgh.tdf          ;         ;
+; db/add_sub_pgh.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/db/add_sub_pgh.tdf          ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.tdf                 ;         ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
 
 
@@ -213,20 +239,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 4,075     ;
+; Estimated Total logic elements              ; 4,317     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2919      ;
+; Total combinational functions               ; 3161      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 2270      ;
-;     -- 3 input functions                    ; 441       ;
-;     -- <=2 input functions                  ; 208       ;
+;     -- 4 input functions                    ; 2382      ;
+;     -- 3 input functions                    ; 553       ;
+;     -- <=2 input functions                  ; 226       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2796      ;
-;     -- arithmetic mode                      ; 123       ;
+;     -- normal mode                          ; 2957      ;
+;     -- arithmetic mode                      ; 204       ;
 ;                                             ;           ;
-; Total registers                             ; 1615      ;
-;     -- Dedicated logic registers            ; 1615      ;
+; Total registers                             ; 1685      ;
+;     -- Dedicated logic registers            ; 1685      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 276       ;
@@ -234,110 +260,107 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 1615      ;
-; Total fan-out                               ; 17676     ;
-; Average fan-out                             ; 3.48      ;
+; Maximum fan-out                             ; 1685      ;
+; Total fan-out                               ; 18732     ;
+; Average fan-out                             ; 3.47      ;
 +---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                           ;
-+-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------------+--------------+
-; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Entity Name               ; Library Name ;
-+-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------------+--------------+
-; |top_Avalon                                   ; 2919 (0)            ; 1615 (0)                  ; 0           ; 0            ; 0       ; 0         ; 276  ; 0            ; |top_Avalon                                                             ; top_Avalon                ; work         ;
-;    |avalon_mm_master:master_ext|              ; 74 (74)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|avalon_mm_master:master_ext                                 ; avalon_mm_master          ; work         ;
-;    |avalon_mm_master:master_instr|            ; 73 (73)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|avalon_mm_master:master_instr                               ; avalon_mm_master          ; work         ;
-;    |debugMode:SystemDebug|                    ; 78 (8)              ; 130 (2)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug                                       ; debugMode                 ; work         ;
-;       |avalon_slave_MM_interface:slave_debug| ; 70 (70)             ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug ; avalon_slave_MM_interface ; work         ;
-;    |interconexLogic:connectLogic|             ; 44 (44)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|interconexLogic:connectLogic                                ; interconexLogic           ; work         ;
-;    |top:top_RISC|                             ; 2650 (2)            ; 1481 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC                                                ; top                       ; work         ;
-;       |ALU:ALU|                               ; 668 (668)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|ALU:ALU                                        ; ALU                       ; work         ;
-;       |ALUControl:ALUControl|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|ALUControl:ALUControl                          ; ALUControl                ; work         ;
-;       |FUnit:FUnit|                           ; 39 (39)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|FUnit:FUnit                                    ; FUnit                     ; work         ;
-;       |HazardDet:HazardDet|                   ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|HazardDet:HazardDet                            ; HazardDet                 ; work         ;
-;       |ImmGen:ImmGen|                         ; 121 (121)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|ImmGen:ImmGen                                  ; ImmGen                    ; work         ;
-;       |MUX3:Mux_reg2|                         ; 66 (66)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX3:Mux_reg2                                  ; MUX3                      ; work         ;
-;       |MUX9b:MuxContr|                        ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX9b:MuxContr                                 ; MUX9b                     ; work         ;
-;       |MUX:MUXAddSum|                         ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX:MUXAddSum                                  ; MUX                       ; work         ;
-;       |MUX:MUXRam|                            ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX:MUXRam                                     ; MUX                       ; work         ;
-;       |MUX:MUXReg1|                           ; 69 (69)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX:MUXReg1                                    ; MUX                       ; work         ;
-;       |MUX:MUXReg2|                           ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX:MUXReg2                                    ; MUX                       ; work         ;
-;       |adder:Add|                             ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|adder:Add                                      ; adder                     ; work         ;
-;       |control:conrtol|                       ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|control:conrtol                                ; control                   ; work         ;
-;       |memoryControl:controlExt|              ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|memoryControl:controlExt                       ; memoryControl             ; work         ;
-;       |memoryControl:controlInstr|            ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|memoryControl:controlInstr                     ; memoryControl             ; work         ;
-;       |regEX_MEM:EX_MEM|                      ; 32 (32)             ; 107 (107)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regEX_MEM:EX_MEM                               ; regEX_MEM                 ; work         ;
-;       |regID_EX:ID_EX|                        ; 12 (12)             ; 185 (185)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regID_EX:ID_EX                                 ; regID_EX                  ; work         ;
-;       |regIF_ID:IF_ID|                        ; 96 (96)             ; 94 (94)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regIF_ID:IF_ID                                 ; regIF_ID                  ; work         ;
-;       |regMEM_WB:MEM_WB|                      ; 0 (0)               ; 71 (71)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regMEM_WB:MEM_WB                               ; regMEM_WB                 ; work         ;
-;       |regPC:PC_a|                            ; 1 (1)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regPC:PC_a                                     ; regPC                     ; work         ;
-;       |registers:Registers|                   ; 1382 (1382)         ; 992 (992)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|registers:Registers                            ; registers                 ; work         ;
-+-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                ;
++---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                      ; Entity Name               ; Library Name ;
++---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+; |top_Avalon                                       ; 3161 (0)            ; 1685 (0)                  ; 0           ; 0            ; 0       ; 0         ; 276  ; 0            ; |top_Avalon                                                                                                                                              ; top_Avalon                ; work         ;
+;    |avalon_mm_master:master_ext|                  ; 75 (75)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|avalon_mm_master:master_ext                                                                                                                  ; avalon_mm_master          ; work         ;
+;    |avalon_mm_master:master_instr|                ; 72 (72)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|avalon_mm_master:master_instr                                                                                                                ; avalon_mm_master          ; work         ;
+;    |debugMode:SystemDebug|                        ; 320 (66)            ; 200 (40)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug                                                                                                                        ; debugMode                 ; work         ;
+;       |avalon_slave_MM_interface:slave_debug|     ; 165 (165)           ; 160 (160)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug                                                                                  ; avalon_slave_MM_interface ; work         ;
+;       |lpm_mult:Mult0|                            ; 89 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug|lpm_mult:Mult0                                                                                                         ; lpm_mult                  ; work         ;
+;          |multcore:mult_core|                     ; 89 (37)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug|lpm_mult:Mult0|multcore:mult_core                                                                                      ; multcore                  ; work         ;
+;             |mpar_add:padder|                     ; 52 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add                  ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub               ; work         ;
+;                   |add_sub_lgh:auto_generated|    ; 28 (28)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_lgh:auto_generated                      ; add_sub_lgh               ; work         ;
+;                |mpar_add:sub_par_add|             ; 24 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add                  ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 24 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub               ; work         ;
+;                      |add_sub_pgh:auto_generated| ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_pgh:auto_generated ; add_sub_pgh               ; work         ;
+;    |interconexLogic:connectLogic|                 ; 48 (48)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|interconexLogic:connectLogic                                                                                                                 ; interconexLogic           ; work         ;
+;    |top:top_RISC|                                 ; 2646 (1)            ; 1481 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC                                                                                                                                 ; top                       ; work         ;
+;       |ALU:ALU|                                   ; 665 (665)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|ALU:ALU                                                                                                                         ; ALU                       ; work         ;
+;       |ALUControl:ALUControl|                     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|ALUControl:ALUControl                                                                                                           ; ALUControl                ; work         ;
+;       |FUnit:FUnit|                               ; 39 (39)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|FUnit:FUnit                                                                                                                     ; FUnit                     ; work         ;
+;       |HazardDet:HazardDet|                       ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|HazardDet:HazardDet                                                                                                             ; HazardDet                 ; work         ;
+;       |ImmGen:ImmGen|                             ; 121 (121)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|ImmGen:ImmGen                                                                                                                   ; ImmGen                    ; work         ;
+;       |MUX3:Mux_reg2|                             ; 66 (66)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX3:Mux_reg2                                                                                                                   ; MUX3                      ; work         ;
+;       |MUX9b:MuxContr|                            ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX9b:MuxContr                                                                                                                  ; MUX9b                     ; work         ;
+;       |MUX:MUXAddSum|                             ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX:MUXAddSum                                                                                                                   ; MUX                       ; work         ;
+;       |MUX:MUXRam|                                ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX:MUXRam                                                                                                                      ; MUX                       ; work         ;
+;       |MUX:MUXReg1|                               ; 69 (69)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX:MUXReg1                                                                                                                     ; MUX                       ; work         ;
+;       |MUX:MUXReg2|                               ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX:MUXReg2                                                                                                                     ; MUX                       ; work         ;
+;       |adder:Add|                                 ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|adder:Add                                                                                                                       ; adder                     ; work         ;
+;       |control:conrtol|                           ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|control:conrtol                                                                                                                 ; control                   ; work         ;
+;       |memoryControl:controlExt|                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|memoryControl:controlExt                                                                                                        ; memoryControl             ; work         ;
+;       |memoryControl:controlInstr|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|memoryControl:controlInstr                                                                                                      ; memoryControl             ; work         ;
+;       |regEX_MEM:EX_MEM|                          ; 32 (32)             ; 107 (107)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regEX_MEM:EX_MEM                                                                                                                ; regEX_MEM                 ; work         ;
+;       |regID_EX:ID_EX|                            ; 12 (12)             ; 185 (185)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regID_EX:ID_EX                                                                                                                  ; regID_EX                  ; work         ;
+;       |regIF_ID:IF_ID|                            ; 96 (96)             ; 94 (94)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regIF_ID:IF_ID                                                                                                                  ; regIF_ID                  ; work         ;
+;       |regMEM_WB:MEM_WB|                          ; 0 (0)               ; 71 (71)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regMEM_WB:MEM_WB                                                                                                                ; regMEM_WB                 ; work         ;
+;       |regPC:PC_a|                                ; 1 (1)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regPC:PC_a                                                                                                                      ; regPC                     ; work         ;
+;       |registers:Registers|                       ; 1382 (1382)         ; 992 (992)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|registers:Registers                                                                                                             ; registers                 ; work         ;
++---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                        ;
-+-------------------------------------------------------------------------+---------------------------------------------------------------------------------+
-; Register name                                                           ; Reason for Removal                                                              ;
-+-------------------------------------------------------------------------+---------------------------------------------------------------------------------+
-; debugMode:SystemDebug|state[2..31]                                      ; Stuck at GND due to stuck port data_in                                          ;
-; avalon_mm_master:master_ext|state[2..31]                                ; Stuck at GND due to stuck port data_in                                          ;
-; avalon_mm_master:master_instr|state[2..31]                              ; Stuck at GND due to stuck port data_in                                          ;
-; top:top_RISC|regEX_MEM:EX_MEM|aMemtoReg                                 ; Merged with top:top_RISC|regEX_MEM:EX_MEM|aMemRead                              ;
-; top:top_RISC|regID_EX:ID_EX|aMemtoReg                                   ; Merged with top:top_RISC|regID_EX:ID_EX|aMemRead                                ;
-; top:top_RISC|regID_EX:ID_EX|aPCRead                                     ; Merged with top:top_RISC|regID_EX:ID_EX|aAddPC                                  ;
-; top:top_RISC|regID_EX:ID_EX|aPC[1]                                      ; Merged with top:top_RISC|regID_EX:ID_EX|aAdd1[1]                                ;
-; top:top_RISC|regID_EX:ID_EX|aPC[0]                                      ; Merged with top:top_RISC|regID_EX:ID_EX|aAdd1[0]                                ;
-; debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg3[1..31] ; Merged with debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg3[0] ;
-; top:top_RISC|regIF_ID:IF_ID|auxPC[1]                                    ; Merged with top:top_RISC|regIF_ID:IF_ID|aAdd1[1]                                ;
-; top:top_RISC|regIF_ID:IF_ID|auxPC[0]                                    ; Merged with top:top_RISC|regIF_ID:IF_ID|aAdd1[0]                                ;
-; debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg3[0]     ; Stuck at GND due to stuck port data_in                                          ;
-; top:top_RISC|registers:Registers|regis[0][0]                            ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][1]                            ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][2]                            ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][3]                            ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][4]                            ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][5]                            ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][6]                            ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][7]                            ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][8]                            ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][9]                            ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][10]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][11]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][12]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][13]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][14]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][15]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][16]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][17]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][18]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][19]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][20]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][21]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][22]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][23]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][24]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][25]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][26]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][27]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][28]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][29]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][30]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; top:top_RISC|registers:Registers|regis[0][31]                           ; Stuck at GND due to stuck port clock_enable                                     ;
-; Total Number of Removed Registers = 161                                 ;                                                                                 ;
-+-------------------------------------------------------------------------+---------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                       ;
-+---------------------------------+---------------------------+---------------------------------------------------------------------+
-; Register name                   ; Reason for Removal        ; Registers Removed due to This Register                              ;
-+---------------------------------+---------------------------+---------------------------------------------------------------------+
-; debugMode:SystemDebug|state[31] ; Stuck at GND              ; debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg3[0] ;
-;                                 ; due to stuck port data_in ;                                                                     ;
-+---------------------------------+---------------------------+---------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                 ;
++-----------------------------------------------+----------------------------------------------------+
+; Register name                                 ; Reason for Removal                                 ;
++-----------------------------------------------+----------------------------------------------------+
+; debugMode:SystemDebug|state[2..31]            ; Stuck at GND due to stuck port data_in             ;
+; avalon_mm_master:master_ext|state[2..31]      ; Stuck at GND due to stuck port data_in             ;
+; avalon_mm_master:master_instr|state[2..31]    ; Stuck at GND due to stuck port data_in             ;
+; debugMode:SystemDebug|enable_ext[0..3]        ; Merged with debugMode:SystemDebug|enable_pc_ext    ;
+; top:top_RISC|regIF_ID:IF_ID|auxPC[0]          ; Merged with top:top_RISC|regIF_ID:IF_ID|aAdd1[0]   ;
+; top:top_RISC|regIF_ID:IF_ID|aAdd1[1]          ; Merged with top:top_RISC|regIF_ID:IF_ID|auxPC[1]   ;
+; top:top_RISC|regID_EX:ID_EX|aAdd1[1]          ; Merged with top:top_RISC|regID_EX:ID_EX|aPC[1]     ;
+; top:top_RISC|regID_EX:ID_EX|aAdd1[0]          ; Merged with top:top_RISC|regID_EX:ID_EX|aPC[0]     ;
+; top:top_RISC|regEX_MEM:EX_MEM|aMemtoReg       ; Merged with top:top_RISC|regEX_MEM:EX_MEM|aMemRead ;
+; top:top_RISC|regID_EX:ID_EX|aMemtoReg         ; Merged with top:top_RISC|regID_EX:ID_EX|aMemRead   ;
+; top:top_RISC|regID_EX:ID_EX|aPCRead           ; Merged with top:top_RISC|regID_EX:ID_EX|aAddPC     ;
+; top:top_RISC|registers:Registers|regis[0][0]  ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][1]  ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][2]  ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][3]  ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][4]  ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][5]  ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][6]  ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][7]  ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][8]  ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][9]  ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][10] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][11] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][12] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][13] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][14] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][15] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][16] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][17] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][18] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][19] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][20] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][21] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][22] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][23] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][24] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][25] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][26] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][27] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][28] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][29] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][30] ; Stuck at GND due to stuck port clock_enable        ;
+; top:top_RISC|registers:Registers|regis[0][31] ; Stuck at GND due to stuck port clock_enable        ;
+; Total Number of Removed Registers = 133       ;                                                    ;
++-----------------------------------------------+----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -345,14 +368,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1615  ;
-; Number of registers using Synchronous Clear  ; 32    ;
-; Number of registers using Synchronous Load   ; 32    ;
-; Number of registers using Asynchronous Clear ; 1486  ;
+; Total registers                              ; 1685  ;
+; Number of registers using Synchronous Clear  ; 64    ;
+; Number of registers using Synchronous Load   ; 30    ;
+; Number of registers using Asynchronous Clear ; 1524  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1601  ;
+; Number of registers using Clock Enable       ; 1633  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; debugMode:SystemDebug|mode[2]          ; 73      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -360,34 +393,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg0[18]     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg1[28]     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg2[25]     ;
-; 3:1                ; 62 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regIF_ID:IF_ID|aAdd1[20]                                    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regIF_ID:IF_ID|auxinstr[4]                                  ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[29]                                  ;
-; 10:1               ; 32 bits   ; 192 LEs       ; 64 LEs               ; 128 LEs                ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|readdata[30] ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg0[19]     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg1[15]     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg2[8]      ;
+; 3:1                ; 62 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regIF_ID:IF_ID|aAdd1[24]                                    ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg3[1]      ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 60 LEs               ; 90 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg3[4]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regIF_ID:IF_ID|auxinstr[31]                                 ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[28]                                  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|r_Clock_Count[12]                                  ;
+; 10:1               ; 32 bits   ; 192 LEs       ; 96 LEs               ; 96 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|readdata[21] ;
 ; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[13]                                  ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|ard1[18]                                     ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|ard2[9]                                      ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[9]                                   ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[7]                                   ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[2]                                   ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|ard1[9]                                      ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|ard2[18]                                     ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[8]                                   ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[5]                                   ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[3]                                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg0[25]     ;
 ; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; No         ; |top_Avalon|top:top_RISC|ImmGen:ImmGen|Mux30                                         ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_Avalon|top:top_RISC|MUX3:Mux_reg2|Mux15                                         ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top_Avalon|top:top_RISC|MUX:MUXReg1|out[27]                                         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_Avalon|avalon_mm_master:master_instr|ADDRESS[0]                                 ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |top_Avalon|avalon_mm_master:master_instr|ADDRESS[2]                                 ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_Avalon|avalon_mm_master:master_ext|ADDRESS[1]                                   ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top_Avalon|avalon_mm_master:master_ext|WRITEDATA[7]                                 ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; No         ; |top_Avalon|avalon_mm_master:master_instr|WRITEDATA[21]                              ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_Avalon|top:top_RISC|MUX3:Mux_reg2|Mux24                                         ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top_Avalon|top:top_RISC|MUX:MUXReg1|out[10]                                         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_Avalon|avalon_mm_master:master_instr|ADDRESS[1]                                 ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |top_Avalon|avalon_mm_master:master_instr|ADDRESS[9]                                 ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_Avalon|avalon_mm_master:master_ext|ADDRESS[28]                                  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top_Avalon|avalon_mm_master:master_ext|WRITEDATA[19]                                ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; No         ; |top_Avalon|avalon_mm_master:master_instr|WRITEDATA[28]                              ;
 ; 11:1               ; 3 bits    ; 21 LEs        ; 18 LEs               ; 3 LEs                  ; No         ; |top_Avalon|top:top_RISC|ALUControl:ALUControl|Mux0                                  ;
 ; 16:1               ; 8 bits    ; 80 LEs        ; 56 LEs               ; 24 LEs                 ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux8                                                ;
-; 16:1               ; 8 bits    ; 80 LEs        ; 56 LEs               ; 24 LEs                 ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux21                                               ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux7                                                ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 56 LEs               ; 24 LEs                 ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux16                                               ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux6                                                ;
 ; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux24                                               ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux3                                                ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux28                                               ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux2                                                ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux29                                               ;
 ; 19:1               ; 2 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux1                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
 
@@ -432,6 +469,71 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debugMode:SystemDebug ;
++----------------+----------+----------------------------------------+
+; Parameter Name ; Value    ; Type                                   ;
++----------------+----------+----------------------------------------+
+; freq           ; 50000000 ; Signed Integer                         ;
++----------------+----------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: debugMode:SystemDebug|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+-----------------------+
+; Parameter Name                                 ; Value        ; Type                  ;
++------------------------------------------------+--------------+-----------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY            ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY          ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE          ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE        ;
+; LPM_WIDTHA                                     ; 26           ; Untyped               ;
+; LPM_WIDTHB                                     ; 10           ; Untyped               ;
+; LPM_WIDTHP                                     ; 36           ; Untyped               ;
+; LPM_WIDTHR                                     ; 36           ; Untyped               ;
+; LPM_WIDTHS                                     ; 1            ; Untyped               ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped               ;
+; LPM_PIPELINE                                   ; 0            ; Untyped               ;
+; LATENCY                                        ; 0            ; Untyped               ;
+; INPUT_A_IS_CONSTANT                            ; YES          ; Untyped               ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped               ;
+; USE_EAB                                        ; OFF          ; Untyped               ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped               ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped               ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped               ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K   ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped               ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped               ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped               ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped               ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped               ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped               ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped               ;
++------------------------------------------------+--------------+-----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                               ;
++---------------------------------------+--------------------------------------+
+; Name                                  ; Value                                ;
++---------------------------------------+--------------------------------------+
+; Number of entity instances            ; 1                                    ;
+; Entity Instance                       ; debugMode:SystemDebug|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 26                                   ;
+;     -- LPM_WIDTHB                     ; 10                                   ;
+;     -- LPM_WIDTHP                     ; 36                                   ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                             ;
+;     -- INPUT_A_IS_CONSTANT            ; YES                                  ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                   ;
+;     -- USE_EAB                        ; OFF                                  ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                 ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                   ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                   ;
++---------------------------------------+--------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "interconexLogic:connectLogic"                                                                   ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -451,8 +553,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
-; reg0[31..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; reg0[2]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; reg0[21..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -491,24 +592,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 276                         ;
-; cycloneiii_ff         ; 1615                        ;
-;     CLR               ; 13                          ;
-;     ENA               ; 96                          ;
+; cycloneiii_ff         ; 1685                        ;
+;     CLR               ; 19                          ;
+;     CLR SCLR          ; 32                          ;
+;     ENA               ; 128                         ;
 ;     ENA CLR           ; 1473                        ;
-;     ENA SCLR SLD      ; 32                          ;
+;     ENA SCLR          ; 2                           ;
+;     ENA SCLR SLD      ; 30                          ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 2920                        ;
-;     arith             ; 123                         ;
-;         2 data inputs ; 30                          ;
-;         3 data inputs ; 93                          ;
-;     normal            ; 2797                        ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 177                         ;
-;         3 data inputs ; 348                         ;
-;         4 data inputs ; 2270                        ;
+; cycloneiii_lcell_comb ; 3161                        ;
+;     arith             ; 204                         ;
+;         2 data inputs ; 67                          ;
+;         3 data inputs ; 137                         ;
+;     normal            ; 2957                        ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 156                         ;
+;         3 data inputs ; 416                         ;
+;         4 data inputs ; 2382                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 22.00                       ;
-; Average LUT depth     ; 7.66                        ;
+; Max LUT depth         ; 23.00                       ;
+; Average LUT depth     ; 7.61                        ;
 +-----------------------+-----------------------------+
 
 
@@ -517,7 +620,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -527,7 +630,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Apr 08 14:05:53 2021
+    Info: Processing started: Thu Apr 08 18:09:36 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Micro -c Micro
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -600,23 +703,48 @@ Info (12128): Elaborating entity "memoryControl" for hierarchy "top:top_RISC|mem
 Info (12128): Elaborating entity "memoryControl" for hierarchy "top:top_RISC|memoryControl:controlExt" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 352
 Info (12128): Elaborating entity "avalon_mm_master" for hierarchy "avalon_mm_master:master_instr" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 93
 Info (12128): Elaborating entity "debugMode" for hierarchy "debugMode:SystemDebug" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 131
-Info (12128): Elaborating entity "avalon_slave_MM_interface" for hierarchy "debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 50
-Info (12128): Elaborating entity "interconexLogic" for hierarchy "interconexLogic:connectLogic" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 166
+Info (12128): Elaborating entity "avalon_slave_MM_interface" for hierarchy "debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 54
+Info (12128): Elaborating entity "interconexLogic" for hierarchy "interconexLogic:connectLogic" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 167
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "debugMode:SystemDebug|Mult0" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 215
+Info (12130): Elaborated megafunction instantiation "debugMode:SystemDebug|lpm_mult:Mult0" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 215
+Info (12133): Instantiated megafunction "debugMode:SystemDebug|lpm_mult:Mult0" with the following parameter: File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 215
+    Info (12134): Parameter "LPM_WIDTHA" = "26"
+    Info (12134): Parameter "LPM_WIDTHB" = "10"
+    Info (12134): Parameter "LPM_WIDTHP" = "36"
+    Info (12134): Parameter "LPM_WIDTHR" = "36"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "debugMode:SystemDebug|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "debugMode:SystemDebug|lpm_mult:Mult0" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "debugMode:SystemDebug|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "debugMode:SystemDebug|lpm_mult:Mult0" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "debugMode:SystemDebug|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "debugMode:SystemDebug|lpm_mult:Mult0" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_lgh.tdf
+    Info (12023): Found entity 1: add_sub_lgh File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/db/add_sub_lgh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "debugMode:SystemDebug|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "debugMode:SystemDebug|lpm_mult:Mult0" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "debugMode:SystemDebug|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "debugMode:SystemDebug|lpm_mult:Mult0" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_pgh.tdf
+    Info (12023): Found entity 1: add_sub_pgh File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/db/add_sub_pgh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "debugMode:SystemDebug|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "debugMode:SystemDebug|lpm_mult:Mult0" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 115
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/output_files/Micro.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "doneSending" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 9
-Info (21057): Implemented 4477 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4719 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 107 input pins
     Info (21059): Implemented 169 output pins
-    Info (21061): Implemented 4201 logic cells
+    Info (21061): Implemented 4443 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4792 megabytes
-    Info: Processing ended: Thu Apr 08 14:06:12 2021
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Peak virtual memory: 4802 megabytes
+    Info: Processing ended: Thu Apr 08 18:09:58 2021
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:38
 
 
 +------------------------------------------+

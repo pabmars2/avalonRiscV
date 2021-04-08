@@ -163,7 +163,8 @@ interconexLogic  connectLogic(
 	.writeExt(writeExtAux), 
 	.writeInstr(writeInstrAux), 
 	.startInstr(start_instr), 
-	.startExt(startExtAux));	
+	.startExt(startExtAux),
+	.chipselect_debug(chipselect_debug));	
 	
 	
 

@@ -6,15 +6,19 @@
 module AvalonRiscV_QSYS_tb (
 	);
 
-	wire        avalonriscv_qsys_inst_clk_bfm_clk_clk;                    // AvalonRiscV_QSYS_inst_clk_bfm:clk -> [AvalonRiscV_QSYS_inst:clk_clk, AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm:clk, AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm:clk, AvalonRiscV_QSYS_inst_reset_bfm:clk]
-	wire  [0:0] avalonriscv_qsys_inst_masteruart_rs232_rx_bfm_conduit_rx; // AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm:sig_rx -> AvalonRiscV_QSYS_inst:masteruart_rs232_rx_rx
-	wire        avalonriscv_qsys_inst_masteruart_rs232_tx_tx;             // AvalonRiscV_QSYS_inst:masteruart_rs232_tx_tx -> AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm:sig_tx
+	parameter c_CLOCK_PERIOD_NS = 20;
+	parameter c_CLKS_PER_BIT    = 434;
+	parameter c_BIT_PERIOD      = 8600;
+
+	wire        r_Clock;                    // AvalonRiscV_QSYS_inst_clk_bfm:clk -> [AvalonRiscV_QSYS_inst:clk_clk, AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm:clk, AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm:clk, AvalonRiscV_QSYS_inst_reset_bfm:clk]
+	reg r_Rx_Serial = 1; // AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm:sig_rx -> AvalonRiscV_QSYS_inst:masteruart_rs232_rx_rx
+	wire        TX;             // AvalonRiscV_QSYS_inst:masteruart_rs232_tx_tx -> AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm:sig_tx
 	wire        avalonriscv_qsys_inst_reset_bfm_reset_reset;              // AvalonRiscV_QSYS_inst_reset_bfm:reset -> [AvalonRiscV_QSYS_inst:reset_reset_n, AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm:reset, AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm:reset]
 
 	AvalonRiscV_QSYS avalonriscv_qsys_inst (
-		.clk_clk                (avalonriscv_qsys_inst_clk_bfm_clk_clk),                    //                 clk.clk
-		.masteruart_rs232_rx_rx (avalonriscv_qsys_inst_masteruart_rs232_rx_bfm_conduit_rx), // masteruart_rs232_rx.rx
-		.masteruart_rs232_tx_tx (avalonriscv_qsys_inst_masteruart_rs232_tx_tx),             // masteruart_rs232_tx.tx
+		.clk_clk                (r_Clock),                    //                 clk.clk
+		.masteruart_rs232_rx_rx (r_Rx_Serial), // masteruart_rs232_rx.rx
+		.masteruart_rs232_tx_tx (TX),             // masteruart_rs232_tx.tx
 		.reset_reset_n          (avalonriscv_qsys_inst_reset_bfm_reset_reset)               //               reset.reset_n
 	);
 
@@ -22,10 +26,10 @@ module AvalonRiscV_QSYS_tb (
 		.CLOCK_RATE (50000000),
 		.CLOCK_UNIT (1)
 	) avalonriscv_qsys_inst_clk_bfm (
-		.clk (avalonriscv_qsys_inst_clk_bfm_clk_clk)  // clk.clk
+		.clk (r_Clock)  // clk.clk
 	);
 
-	altera_conduit_bfm avalonriscv_qsys_inst_masteruart_rs232_rx_bfm (
+	/*altera_conduit_bfm avalonriscv_qsys_inst_masteruart_rs232_rx_bfm (
 		.clk    (avalonriscv_qsys_inst_clk_bfm_clk_clk),                    //     clk.clk
 		.reset  (~avalonriscv_qsys_inst_reset_bfm_reset_reset),             //   reset.reset
 		.sig_rx (avalonriscv_qsys_inst_masteruart_rs232_rx_bfm_conduit_rx)  // conduit.rx
@@ -35,14 +39,126 @@ module AvalonRiscV_QSYS_tb (
 		.clk    (avalonriscv_qsys_inst_clk_bfm_clk_clk),        //     clk.clk
 		.reset  (~avalonriscv_qsys_inst_reset_bfm_reset_reset), //   reset.reset
 		.sig_tx (avalonriscv_qsys_inst_masteruart_rs232_tx_tx)  // conduit.tx
-	);
+	);*/
 
 	altera_avalon_reset_source #(
 		.ASSERT_HIGH_RESET    (0),
 		.INITIAL_RESET_CYCLES (50)
 	) avalonriscv_qsys_inst_reset_bfm (
 		.reset (avalonriscv_qsys_inst_reset_bfm_reset_reset), // reset.reset_n
-		.clk   (avalonriscv_qsys_inst_clk_bfm_clk_clk)        //   clk.clk
+		.clk   (r_Clock)        //   clk.clk
 	);
+
+
+// Takes in input byte and serializes it 
+  task UART_WRITE_BYTE;
+    input [33:0] i_Data;
+    integer     ii;
+    begin
+       
+      // Send Start Bit
+      r_Rx_Serial <= 1'b0;
+      #(c_BIT_PERIOD);
+      //#1000;
+      repeat(c_CLKS_PER_BIT) @(posedge r_Clock);
+       
+      // Send Data Byte
+      for (ii=0; ii<34; ii=ii+1)
+        begin
+          r_Rx_Serial <= i_Data[ii];
+		  #(c_BIT_PERIOD);
+		  repeat(c_CLKS_PER_BIT) @(posedge r_Clock);
+          
+        end
+       
+      // Send Stop Bit
+      r_Rx_Serial <= 1'b1;
+      #(c_BIT_PERIOD);
+	  repeat(c_CLKS_PER_BIT) @(posedge r_Clock);
+     end
+  endtask // UART_WRITE_BYTE
+   
+   
+  // Main Testing:
+  initial
+    begin
+       wait(avalonriscv_qsys_inst_reset_bfm_reset_reset)
+      // Tell UART to send a command (exercise Tx)
+      @(posedge r_Clock);
+
+       
+      // Send a command to the UART (exercise Rx)
+     
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b0100000000000000000000000000000000);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b1000100011000101111000011110010011);
+      @(posedge r_Clock);
+	  
+	   @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b0000000000000000000000000000000000);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b0100000000000000000000000000000100);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b1000000000100100000000010110010011);
+      @(posedge r_Clock);
+	  
+	   @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b0000000000000000000000000000000000);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b0100000000000000000000000000001000);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b1000000000111101111010000000100011);
+      @(posedge r_Clock);
+	  
+	   @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b0000000000000000000000000000000000);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b0100000000000000000000000000001100);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b1000100011000101111000011110010011);
+      @(posedge r_Clock);
+	  
+	   @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b0000000000000000000000000000000000);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b0100000000000000000000000000010000);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b1000100011000101111000011110010011);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b0000000000000000000000000000000000);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(34'b0000000000000000000000000000000001);
+      @(posedge r_Clock);
+
+	  
+      repeat(40*c_CLKS_PER_BIT) @(posedge r_Clock);       
+      // Check that the correct command was received
+	$stop;
+    end
+
 
 endmodule

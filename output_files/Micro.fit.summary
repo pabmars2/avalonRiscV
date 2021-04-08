@@ -1,14 +1,14 @@
-Fitter Status : Successful - Thu Apr 08 14:07:02 2021
+Fitter Status : Successful - Thu Apr 08 18:10:53 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Micro
 Top-level Entity Name : top_Avalon
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 2,997 / 114,480 ( 3 % )
-    Total combinational functions : 2,919 / 114,480 ( 3 % )
-    Dedicated logic registers : 1,615 / 114,480 ( 1 % )
-Total registers : 1615
+Total logic elements : 3,217 / 114,480 ( 3 % )
+    Total combinational functions : 3,161 / 114,480 ( 3 % )
+    Dedicated logic registers : 1,685 / 114,480 ( 1 % )
+Total registers : 1685
 Total pins : 276 / 529 ( 52 % )
 Total virtual pins : 0
 Total memory bits : 0 / 3,981,312 ( 0 % )
