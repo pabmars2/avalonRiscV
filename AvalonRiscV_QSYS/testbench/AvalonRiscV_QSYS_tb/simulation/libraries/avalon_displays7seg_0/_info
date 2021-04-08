@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
 vavalon_displays7seg
-Z1 !s110 1617735210
+Z1 !s110 1617883389
 !i10b 1
 !s100 7JlmIR]XcnL@fC?J_6cQ]0
 Im;L`N]RLW8f_mQGZUZU3i3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1617734394
+Z3 w1617792891
 8../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_displays7seg.v
 F../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_displays7seg.v
 L0 1
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1617735210.000000
+Z5 !s108 1617883389.000000
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_displays7seg.v|
 !s90 -reportprogress|300|../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_displays7seg.v|-work|avalon_displays7seg_0|
 !i113 1
@@ -36,7 +36,7 @@ R1
 ID6?c]6Qo;=nU2WNAoaVe60
 R2
 R0
-R3
+w1617883374
 8../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_slave_MM_interface.v
 F../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_slave_MM_interface.v
 L0 1
@@ -52,7 +52,7 @@ R6
 R7
 navalon_slave_@m@m_interface
 vhex7seg
-R1
+!s110 1617883390
 !i10b 1
 !s100 L5LkV?oLhW]]ZJUQOh;J51
 IN8K^g`X3=eWAh>@a[4z?l0

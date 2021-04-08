@@ -1,0 +1,15 @@
+module interconexLogic();
+
+input [2 : 0] mode;
+input [31 : 0] uPAddressExt, uPDataExt, uPAddressInstr, uPDataInstr;
+input [31 : 0] debugAddress, debugData;
+input read_Ext, read_Instr, write_Ext, write_Instr;
+
+
+output readExt, readInstr, writeExt, writeInstr;
+
+
+
+
+
+endmodule 

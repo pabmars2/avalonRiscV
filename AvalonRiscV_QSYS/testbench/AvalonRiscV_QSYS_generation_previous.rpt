@@ -3,12 +3,10 @@ Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/t
 Info: qsys-generate C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS.qsys --testbench=STANDARD --output-directory=C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored --family="Cyclone IV E" --part=EP4CE115F29C7
 Progress: Loading MicroV3Final_restored/AvalonRiscV_QSYS.qsys
 Progress: Reading input file
-Progress: Adding MasterUART [AvalonMasterUART 2.1]
+Progress: Adding MasterUART [AvalonMasterUART 2.2]
 Progress: Parameterizing module MasterUART
-Progress: Adding RISC_V_AVALON_0 [RISC_V_AVALON 1.3]
+Progress: Adding RISC_V_AVALON_0 [RISC_V_AVALON 1.6]
 Progress: Parameterizing module RISC_V_AVALON_0
-Progress: Adding avalon_displays7seg_0 [avalon_displays7seg 1.0]
-Progress: Parameterizing module avalon_displays7seg_0
 Progress: Adding clk_0 [clock_source 17.1]
 Progress: Parameterizing module clk_0
 Progress: Adding externalMemory [altera_avalon_onchip_memory2 17.1]
@@ -34,36 +32,36 @@ Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/t
 Info: Reading index C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS\testbench\AvalonRiscV_QSYS.ipx
 Progress: Loading MicroV3Final_restored/AvalonRiscV_QSYS.qsys
 Progress: Loading MicroV3Final_restored/RISC_V_AVALON_hw.tcl
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/* matched 55 files in 0,05 seconds
+Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/* matched 57 files in 0,05 seconds
 Progress: Loading ip/AvalonMasterUART_hw.tcl
 Progress: Loading ip/avalon_displays7seg_hw.tcl
 Progress: Loading ip/avalon_timer_hw.tcl
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/ip/**/* matched 16 files in 0,11 seconds
+Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/ip/**/* matched 16 files in 0,09 seconds
 Progress: Loading ip/AvalonMasterUART_hw.tcl
 Progress: Loading ip/avalon_displays7seg_hw.tcl
 Progress: Loading ip/avalon_timer_hw.tcl
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/*/* matched 178 files in 0,09 seconds
-Info: C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS\testbench\AvalonRiscV_QSYS.ipx described 0 plugins, 3 paths, in 0,25 seconds
+Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/*/* matched 180 files in 0,09 seconds
+Info: C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS\testbench\AvalonRiscV_QSYS.ipx described 0 plugins, 3 paths, in 0,23 seconds
 Progress: Loading testbench/AvalonRiscV_QSYS_tb.qsys
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/* matched 12 files in 0,25 seconds
+Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/* matched 12 files in 0,23 seconds
 Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/*/* matched 9 files in 0,00 seconds
 Info: C:/Users/Pablo/.altera.quartus/ip/17.1/**/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0,00 seconds
 Info: Reading index C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx
-Info: C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx described 2005 plugins, 0 paths, in 0,13 seconds
+Info: C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx described 2005 plugins, 0 paths, in 0,09 seconds
 Info: C:/intelfpga_lite/17.1/ip/**/* matched 138 files in 0,13 seconds
 Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0,00 seconds
 Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx
-Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0,02 seconds
-Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/**/* matched 8 files in 0,02 seconds
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0,00 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/**/* matched 8 files in 0,00 seconds
 Info: Reading index C:\intelfpga_lite\17.1\quartus\common\librarian\factories\index.ipx
 Info: C:\intelfpga_lite\17.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0,02 seconds
 Info: C:/intelfpga_lite/17.1/quartus/common/librarian/factories/**/* matched 4 files in 0,02 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0,00 seconds
-Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0,41 seconds
-Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0,41 seconds
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0,38 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0,38 seconds
 Progress: 
 Progress: 
 Progress: 
@@ -75,15 +73,15 @@ Info: send_message Info TB_Gen: System design is: AvalonRiscV_QSYS
 Info: TB_Gen: System design is: AvalonRiscV_QSYS
 Info: get_interfaces 
 Info: get_connections 
-Info: get_interface_property avalon_displays7seg_0_external_interface EXPORT_OF
-Info: get_instance_property avalon_displays7seg_0 CLASS_NAME
-Info: get_instance_assignment avalon_displays7seg_0 testbench.partner.map.external_interface
-Info: get_interface_property avalonmasteruart_0_rs232 EXPORT_OF
-Info: get_instance_property MasterUART CLASS_NAME
-Info: get_instance_assignment MasterUART testbench.partner.map.rs232
 Info: get_interface_property clk EXPORT_OF
 Info: get_instance_property clk_0 CLASS_NAME
 Info: get_instance_assignment clk_0 testbench.partner.map.clk_in
+Info: get_interface_property masteruart_rs232_rx EXPORT_OF
+Info: get_instance_property MasterUART CLASS_NAME
+Info: get_instance_assignment MasterUART testbench.partner.map.rs232_rx
+Info: get_interface_property masteruart_rs232_tx EXPORT_OF
+Info: get_instance_property MasterUART CLASS_NAME
+Info: get_instance_assignment MasterUART testbench.partner.map.rs232_tx
 Info: get_interface_property reset EXPORT_OF
 Info: get_instance_property clk_0 CLASS_NAME
 Info: get_instance_assignment clk_0 testbench.partner.map.clk_in_reset
@@ -93,9 +91,9 @@ Info: create_system AvalonRiscV_QSYS_tb
 Info: add_instance AvalonRiscV_QSYS_inst AvalonRiscV_QSYS 
 Info: set_use_testbench_naming_pattern true AvalonRiscV_QSYS
 Info: get_instance_interfaces AvalonRiscV_QSYS_inst
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface CLASS_NAME
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232 CLASS_NAME
 Info: get_instance_interface_property AvalonRiscV_QSYS_inst clk CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst masteruart_rs232_rx CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst masteruart_rs232_tx CLASS_NAME
 Info: get_instance_interface_property AvalonRiscV_QSYS_inst reset CLASS_NAME
 Info: get_instance_interface_property AvalonRiscV_QSYS_inst clk CLASS_NAME
 Info: send_message Info TB_Gen: clock_sink found: clk
@@ -138,97 +136,96 @@ Info: get_instance_interfaces AvalonRiscV_QSYS_inst_reset_bfm
 Info: get_instance_interface_property AvalonRiscV_QSYS_inst_reset_bfm clk CLASS_NAME
 Info: get_instance_interface_property AvalonRiscV_QSYS_inst_reset_bfm reset CLASS_NAME
 Info: add_connection AvalonRiscV_QSYS_inst_reset_bfm.reset AvalonRiscV_QSYS_inst.reset
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface CLASS_NAME
-Info: send_message Info TB_Gen: conduit_end found: avalon_displays7seg_0_external_interface
-Info: TB_Gen: conduit_end found: avalon_displays7seg_0_external_interface
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface CLASS_NAME
-Info: add_instance AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm altera_conduit_bfm 
-Info: get_instance_property AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm CLASS_NAME
-Info: get_instance_interface_parameter_value AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface associatedClock
-Info: get_instance_interface_parameter_value AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface associatedReset
-Info: get_instance_interface_ports AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit0 ROLE
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit0 WIDTH
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit0 DIRECTION
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit1 ROLE
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit1 WIDTH
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit1 DIRECTION
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit2 ROLE
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit2 WIDTH
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit2 DIRECTION
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit3 ROLE
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit3 WIDTH
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit3 DIRECTION
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit4 ROLE
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit4 WIDTH
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit4 DIRECTION
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit5 ROLE
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit5 WIDTH
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit5 DIRECTION
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit6 ROLE
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit6 WIDTH
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit6 DIRECTION
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit7 ROLE
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit7 WIDTH
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface avalon_displays7seg_0_external_interface_conduit7 DIRECTION
-Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm CLOCKED_SIGNAL 0
-Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm ENABLE_RESET 0
-Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm SIGNAL_ROLES conduit0 conduit1 conduit2 conduit3 conduit4 conduit5 conduit6 conduit7
-Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm SIGNAL_WIDTHS 7 7 7 7 7 7 7 7
-Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm SIGNAL_DIRECTIONS input input input input input input input input
-Info: get_instance_property AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm CLASS_NAME
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst avalon_displays7seg_0_external_interface CLASS_NAME
-Info: get_instance_interfaces AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm conduit CLASS_NAME
-Info: add_connection AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm.conduit AvalonRiscV_QSYS_inst.avalon_displays7seg_0_external_interface
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232 CLASS_NAME
-Info: send_message Info TB_Gen: conduit_end found: avalonmasteruart_0_rs232
-Info: TB_Gen: conduit_end found: avalonmasteruart_0_rs232
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232 CLASS_NAME
-Info: add_instance AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm altera_conduit_bfm 
-Info: get_instance_property AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm CLASS_NAME
-Info: get_instance_interface_parameter_value AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232 associatedClock
-Info: get_instance_interface_parameter_value AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232 associatedReset
-Info: get_instance_interface_ports AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232 avalonmasteruart_0_rs232_rx ROLE
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232 avalonmasteruart_0_rs232_rx WIDTH
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232 avalonmasteruart_0_rs232_rx DIRECTION
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232 avalonmasteruart_0_rs232_tx ROLE
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232 avalonmasteruart_0_rs232_tx WIDTH
-Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232 avalonmasteruart_0_rs232_tx DIRECTION
-Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm CLOCKED_SIGNAL 1
-Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm ENABLE_RESET 1
-Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm SIGNAL_ROLES rx tx
-Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm SIGNAL_WIDTHS 1 1
-Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm SIGNAL_DIRECTIONS output input
-Info: get_instance_property AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm CLASS_NAME
-Info: get_instance_interfaces AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm clk CLASS_NAME
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm conduit CLASS_NAME
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm reset CLASS_NAME
-Info: get_instance_property AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm CLASS_NAME
-Info: get_instance_interface_parameter_value AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232 associatedClock
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst masteruart_rs232_rx CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: masteruart_rs232_rx
+Info: TB_Gen: conduit_end found: masteruart_rs232_rx
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst masteruart_rs232_rx CLASS_NAME
+Info: add_instance AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm altera_conduit_bfm 
+Info: get_instance_property AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonRiscV_QSYS_inst masteruart_rs232_rx associatedClock
+Info: get_instance_interface_parameter_value AvalonRiscV_QSYS_inst masteruart_rs232_rx associatedReset
+Info: get_instance_interface_ports AvalonRiscV_QSYS_inst masteruart_rs232_rx
+Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst masteruart_rs232_rx masteruart_rs232_rx_rx ROLE
+Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst masteruart_rs232_rx masteruart_rs232_rx_rx WIDTH
+Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst masteruart_rs232_rx masteruart_rs232_rx_rx DIRECTION
+Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm CLOCKED_SIGNAL 1
+Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm ENABLE_RESET 1
+Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm SIGNAL_ROLES rx
+Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm SIGNAL_WIDTHS 1
+Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm SIGNAL_DIRECTIONS output
+Info: get_instance_property AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm CLASS_NAME
+Info: get_instance_interfaces AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm reset CLASS_NAME
+Info: get_instance_property AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonRiscV_QSYS_inst masteruart_rs232_rx associatedClock
 Info: get_instance_interface_property AvalonRiscV_QSYS_inst clk CLASS_NAME
 Info: get_instance_interfaces AvalonRiscV_QSYS_inst_clk_bfm
 Info: get_instance_interface_property AvalonRiscV_QSYS_inst_clk_bfm clk CLASS_NAME
-Info: add_connection AvalonRiscV_QSYS_inst_clk_bfm.clk AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm.clk
-Info: get_instance_interfaces AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm clk CLASS_NAME
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm conduit CLASS_NAME
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm reset CLASS_NAME
-Info: get_instance_property AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm CLASS_NAME
-Info: get_instance_interface_parameter_value AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232 associatedReset
+Info: add_connection AvalonRiscV_QSYS_inst_clk_bfm.clk AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm.clk
+Info: get_instance_interfaces AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm reset CLASS_NAME
+Info: get_instance_property AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonRiscV_QSYS_inst masteruart_rs232_rx associatedReset
 Info: get_instance_interface_property AvalonRiscV_QSYS_inst reset CLASS_NAME
 Info: get_instance_interfaces AvalonRiscV_QSYS_inst_reset_bfm
 Info: get_instance_interface_property AvalonRiscV_QSYS_inst_reset_bfm clk CLASS_NAME
 Info: get_instance_interface_property AvalonRiscV_QSYS_inst_reset_bfm reset CLASS_NAME
-Info: add_connection AvalonRiscV_QSYS_inst_reset_bfm.reset AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm.reset
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst avalonmasteruart_0_rs232 CLASS_NAME
-Info: get_instance_interfaces AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm clk CLASS_NAME
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm conduit CLASS_NAME
-Info: get_instance_interface_property AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm reset CLASS_NAME
-Info: add_connection AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm.conduit AvalonRiscV_QSYS_inst.avalonmasteruart_0_rs232
+Info: add_connection AvalonRiscV_QSYS_inst_reset_bfm.reset AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm.reset
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst masteruart_rs232_rx CLASS_NAME
+Info: get_instance_interfaces AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm reset CLASS_NAME
+Info: add_connection AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm.conduit AvalonRiscV_QSYS_inst.masteruart_rs232_rx
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst masteruart_rs232_tx CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: masteruart_rs232_tx
+Info: TB_Gen: conduit_end found: masteruart_rs232_tx
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst masteruart_rs232_tx CLASS_NAME
+Info: add_instance AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm altera_conduit_bfm 
+Info: get_instance_property AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonRiscV_QSYS_inst masteruart_rs232_tx associatedClock
+Info: get_instance_interface_parameter_value AvalonRiscV_QSYS_inst masteruart_rs232_tx associatedReset
+Info: get_instance_interface_ports AvalonRiscV_QSYS_inst masteruart_rs232_tx
+Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst masteruart_rs232_tx masteruart_rs232_tx_tx ROLE
+Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst masteruart_rs232_tx masteruart_rs232_tx_tx WIDTH
+Info: get_instance_interface_port_property AvalonRiscV_QSYS_inst masteruart_rs232_tx masteruart_rs232_tx_tx DIRECTION
+Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm CLOCKED_SIGNAL 1
+Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm ENABLE_RESET 1
+Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm SIGNAL_ROLES tx
+Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm SIGNAL_WIDTHS 1
+Info: set_instance_parameter_value AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm SIGNAL_DIRECTIONS input
+Info: get_instance_property AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm CLASS_NAME
+Info: get_instance_interfaces AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm reset CLASS_NAME
+Info: get_instance_property AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonRiscV_QSYS_inst masteruart_rs232_tx associatedClock
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst clk CLASS_NAME
+Info: get_instance_interfaces AvalonRiscV_QSYS_inst_clk_bfm
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_clk_bfm clk CLASS_NAME
+Info: add_connection AvalonRiscV_QSYS_inst_clk_bfm.clk AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm.clk
+Info: get_instance_interfaces AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm reset CLASS_NAME
+Info: get_instance_property AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AvalonRiscV_QSYS_inst masteruart_rs232_tx associatedReset
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst reset CLASS_NAME
+Info: get_instance_interfaces AvalonRiscV_QSYS_inst_reset_bfm
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_reset_bfm reset CLASS_NAME
+Info: add_connection AvalonRiscV_QSYS_inst_reset_bfm.reset AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm.reset
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst masteruart_rs232_tx CLASS_NAME
+Info: get_instance_interfaces AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm clk CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm conduit CLASS_NAME
+Info: get_instance_interface_property AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm reset CLASS_NAME
+Info: add_connection AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm.conduit AvalonRiscV_QSYS_inst.masteruart_rs232_tx
 Info: send_message Info TB_Gen: Saving testbench system: AvalonRiscV_QSYS_tb.qsys
 Info: TB_Gen: Saving testbench system: AvalonRiscV_QSYS_tb.qsys
 Info: save_system AvalonRiscV_QSYS_tb.qsys
@@ -241,12 +238,12 @@ Progress: Loading testbench/AvalonRiscV_QSYS_tb.qsys
 Progress: Reading input file
 Progress: Adding AvalonRiscV_QSYS_inst [AvalonRiscV_QSYS 1.0]
 Progress: Parameterizing module AvalonRiscV_QSYS_inst
-Progress: Adding AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm [altera_conduit_bfm 17.1]
-Progress: Parameterizing module AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm
-Progress: Adding AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm [altera_conduit_bfm 17.1]
-Progress: Parameterizing module AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm
 Progress: Adding AvalonRiscV_QSYS_inst_clk_bfm [altera_avalon_clock_source 17.1]
 Progress: Parameterizing module AvalonRiscV_QSYS_inst_clk_bfm
+Progress: Adding AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm [altera_conduit_bfm 17.1]
+Progress: Parameterizing module AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm
+Progress: Adding AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm [altera_conduit_bfm 17.1]
+Progress: Parameterizing module AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm
 Progress: Adding AvalonRiscV_QSYS_inst_reset_bfm [altera_avalon_reset_source 17.1]
 Progress: Parameterizing module AvalonRiscV_QSYS_inst_reset_bfm
 Progress: Building connections
@@ -264,6 +261,10 @@ Info: AvalonRiscV_QSYS_tb: Generating AvalonRiscV_QSYS_tb "AvalonRiscV_QSYS_tb" 
 Info: Interconnect is inserted between master MasterUART.avalon_master and slave RISC_V_AVALON_0.debug because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
 Info: Interconnect is inserted between master MasterUART.avalon_master and slave RISC_V_AVALON_0.debug because the master has address signal 32 bit wide, but the slave is 3 bit wide.
 Info: Interconnect is inserted between master MasterUART.avalon_master and slave RISC_V_AVALON_0.debug because the master has lock signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master RISC_V_AVALON_0.master_external and slave externalMemory.s1 because the master has address signal 32 bit wide, but the slave is 10 bit wide.
+Info: Interconnect is inserted between master RISC_V_AVALON_0.master_external and slave externalMemory.s1 because the master has read signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master RISC_V_AVALON_0.master_external and slave externalMemory.s1 because the master has lock signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master RISC_V_AVALON_0.master_external and slave externalMemory.s1 because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
 Info: Interconnect is inserted between master RISC_V_AVALON_0.master_instruccions and slave instruccionMemory.s1 because the master has address signal 32 bit wide, but the slave is 10 bit wide.
 Info: Interconnect is inserted between master RISC_V_AVALON_0.master_instruccions and slave instruccionMemory.s1 because the master has lock signal 1 bit wide, but the slave is 0 bit wide.
 Info: Interconnect is inserted between master RISC_V_AVALON_0.master_instruccions and slave instruccionMemory.s1 because the master has read signal 1 bit wide, but the slave is 0 bit wide.
@@ -272,47 +273,31 @@ Warning: AvalonRiscV_QSYS_inst: "No matching role found for MasterUART:avalon_ma
 Warning: AvalonRiscV_QSYS_inst: "No matching role found for RISC_V_AVALON_0:master_external:BeginTransfer_ext (flush)"
 Warning: AvalonRiscV_QSYS_inst: "No matching role found for RISC_V_AVALON_0:master_instruccions:BeginTransfer_instr (flush)"
 Info: AvalonRiscV_QSYS_inst: "AvalonRiscV_QSYS_tb" instantiated AvalonRiscV_QSYS "AvalonRiscV_QSYS_inst"
-Info: AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm: "AvalonRiscV_QSYS_tb" instantiated altera_conduit_bfm "AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm"
-Info: AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm: "AvalonRiscV_QSYS_tb" instantiated altera_conduit_bfm "AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm"
-Info: Reusing file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/verbosity_pkg.sv
 Info: AvalonRiscV_QSYS_inst_clk_bfm: "AvalonRiscV_QSYS_tb" instantiated altera_avalon_clock_source "AvalonRiscV_QSYS_inst_clk_bfm"
+Info: AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm: "AvalonRiscV_QSYS_tb" instantiated altera_conduit_bfm "AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm"
+Info: Reusing file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/verbosity_pkg.sv
+Info: AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm: "AvalonRiscV_QSYS_tb" instantiated altera_conduit_bfm "AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm"
 Info: Reusing file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/verbosity_pkg.sv
 Info: AvalonRiscV_QSYS_inst_reset_bfm: "AvalonRiscV_QSYS_tb" instantiated altera_avalon_reset_source "AvalonRiscV_QSYS_inst_reset_bfm"
 Info: Reusing file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/verbosity_pkg.sv
 Info: MasterUART: "AvalonRiscV_QSYS_inst" instantiated AvalonMasterUART "MasterUART"
 Info: RISC_V_AVALON_0: "AvalonRiscV_QSYS_inst" instantiated RISC_V_AVALON "RISC_V_AVALON_0"
 Info: Reusing file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv
-Info: avalon_displays7seg_0: "AvalonRiscV_QSYS_inst" instantiated avalon_displays7seg "avalon_displays7seg_0"
-Info: Reusing file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_slave_MM_interface.v
 Info: externalMemory: Starting RTL generation for module 'AvalonRiscV_QSYS_externalMemory'
-Info: externalMemory:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AvalonRiscV_QSYS_externalMemory --dir=C:/Users/Pablo/AppData/Local/Temp/alt8723_5865470668987480808.dir/0009_externalMemory_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Pablo/AppData/Local/Temp/alt8723_5865470668987480808.dir/0009_externalMemory_gen//AvalonRiscV_QSYS_externalMemory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Pablo/AppData/Local/Temp/alt8723_5865470668987480808.dir/0009_externalMemory_gen/  ]
+Info: externalMemory:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AvalonRiscV_QSYS_externalMemory --dir=C:/Users/Pablo/AppData/Local/Temp/alt8725_5363313723696463240.dir/0009_externalMemory_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Pablo/AppData/Local/Temp/alt8725_5363313723696463240.dir/0009_externalMemory_gen//AvalonRiscV_QSYS_externalMemory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Pablo/AppData/Local/Temp/alt8725_5363313723696463240.dir/0009_externalMemory_gen/  ]
 Info: externalMemory: Done RTL generation for module 'AvalonRiscV_QSYS_externalMemory'
 Info: externalMemory: "AvalonRiscV_QSYS_inst" instantiated altera_avalon_onchip_memory2 "externalMemory"
 Info: instruccionMemory: Starting RTL generation for module 'AvalonRiscV_QSYS_instruccionMemory'
-Info: instruccionMemory:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AvalonRiscV_QSYS_instruccionMemory --dir=C:/Users/Pablo/AppData/Local/Temp/alt8723_5865470668987480808.dir/0010_instruccionMemory_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Pablo/AppData/Local/Temp/alt8723_5865470668987480808.dir/0010_instruccionMemory_gen//AvalonRiscV_QSYS_instruccionMemory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Pablo/AppData/Local/Temp/alt8723_5865470668987480808.dir/0010_instruccionMemory_gen/  ]
+Info: instruccionMemory:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AvalonRiscV_QSYS_instruccionMemory --dir=C:/Users/Pablo/AppData/Local/Temp/alt8725_5363313723696463240.dir/0010_instruccionMemory_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Pablo/AppData/Local/Temp/alt8725_5363313723696463240.dir/0010_instruccionMemory_gen//AvalonRiscV_QSYS_instruccionMemory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Pablo/AppData/Local/Temp/alt8725_5363313723696463240.dir/0010_instruccionMemory_gen/  ]
 Info: instruccionMemory: Done RTL generation for module 'AvalonRiscV_QSYS_instruccionMemory'
 Info: instruccionMemory: "AvalonRiscV_QSYS_inst" instantiated altera_avalon_onchip_memory2 "instruccionMemory"
 Info: mm_interconnect_0: "AvalonRiscV_QSYS_inst" instantiated altera_mm_interconnect "mm_interconnect_0"
-Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_1: "AvalonRiscV_QSYS_inst" instantiated altera_mm_interconnect "mm_interconnect_1"
 Info: mm_interconnect_2: "AvalonRiscV_QSYS_inst" instantiated altera_mm_interconnect "mm_interconnect_2"
 Info: rst_controller: "AvalonRiscV_QSYS_inst" instantiated altera_reset_controller "rst_controller"
 Info: MasterUART_avalon_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "MasterUART_avalon_master_translator"
 Info: RISC_V_AVALON_0_debug_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "RISC_V_AVALON_0_debug_translator"
-Info: RISC_V_AVALON_0_master_external_agent: "mm_interconnect_1" instantiated altera_merlin_master_agent "RISC_V_AVALON_0_master_external_agent"
-Info: avalon_displays7seg_0_avalon_slave_agent: "mm_interconnect_1" instantiated altera_merlin_slave_agent "avalon_displays7seg_0_avalon_slave_agent"
-Info: avalon_displays7seg_0_avalon_slave_agent_rsp_fifo: "mm_interconnect_1" instantiated altera_avalon_sc_fifo "avalon_displays7seg_0_avalon_slave_agent_rsp_fifo"
-Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
-Info: router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
-Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
-Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
-Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_arbitrator.sv
-Info: avalon_st_adapter: "mm_interconnect_1" instantiated altera_avalon_st_adapter "avalon_st_adapter"
-Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: AvalonRiscV_QSYS_tb: Done "AvalonRiscV_QSYS_tb" with 28 modules, 60 files
+Info: AvalonRiscV_QSYS_tb: Done "AvalonRiscV_QSYS_tb" with 16 modules, 46 files
 Info: qsys-generate succeeded.
 Info: sim-script-gen --spd=C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS_tb.spd --output-directory=C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/ --use-relative-paths=true
 Info: Doing: ip-make-simscript --spd=C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS_tb.spd --output-directory=C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/ --use-relative-paths=true
@@ -327,7 +312,7 @@ Info: Generating the following file(s) for NCSIM simulator in C:/Users/Pablo/Des
 Info: 	cadence/cds.lib
 Info: 	cadence/hdl.var
 Info: 	cadence/ncsim_setup.sh
-Info: 	28 .cds.lib files in cadence/cds_libs/ directory
+Info: 	16 .cds.lib files in cadence/cds_libs/ directory
 Info: Generating the following file(s) for RIVIERA simulator in C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/ directory:
 Info: 	aldec/rivierapro_setup.tcl
 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/.

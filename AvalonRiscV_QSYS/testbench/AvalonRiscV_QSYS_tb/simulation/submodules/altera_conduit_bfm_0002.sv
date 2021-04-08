@@ -28,7 +28,7 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm_0002
-// role:width:direction:                              rx:1:output
+// role:width:direction:                              tx:1:input
 // 1
 //-----------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
@@ -38,7 +38,7 @@ module altera_conduit_bfm_0002
    clk,
    reset,
    reset_n,
-   sig_rx
+   sig_tx
 );
 
    //--------------------------------------------------------------------------
@@ -48,15 +48,15 @@ module altera_conduit_bfm_0002
    input clk;
    input reset;
    input reset_n;
-   output sig_rx;
+   input sig_tx;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic ROLE_rx_t;
+   typedef logic ROLE_tx_t;
 
-   reg sig_rx_temp;
-   reg sig_rx_out;
+   logic [0 : 0] sig_tx_in;
+   logic [0 : 0] sig_tx_local;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -77,6 +77,7 @@ module altera_conduit_bfm_0002
    //--------------------------------------------------------------------------
    
    event signal_reset_asserted;
+   event signal_input_tx_change;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -85,30 +86,32 @@ module altera_conduit_bfm_0002
    endfunction
 
    // -------------------------------------------------------
-   // rx
+   // tx
    // -------------------------------------------------------
-
-   function automatic void set_rx (
-      ROLE_rx_t new_value
-   );
-      // Drive the new value to rx.
-      
-      $sformat(message, "%m: method called arg0 %0d", new_value); 
+   function automatic ROLE_tx_t get_tx();
+   
+      // Gets the tx input value.
+      $sformat(message, "%m: called get_tx");
       print(VERBOSITY_DEBUG, message);
+      return sig_tx_in;
       
-      sig_rx_temp = new_value;
    endfunction
 
    always @(posedge clk) begin
-      sig_rx_out <= sig_rx_temp;
+      sig_tx_in <= sig_tx;
    end
    
-   assign sig_rx = sig_rx_out;
 
    always @(posedge reset or negedge reset_n) begin
       -> signal_reset_asserted;
    end
 
+   always @(sig_tx_in) begin
+      if (sig_tx_local != sig_tx_in)
+         -> signal_input_tx_change;
+      sig_tx_local = sig_tx_in;
+   end
+   
 
 
 // synthesis translate_on

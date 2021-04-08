@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 17.1 590 win32 2021.04.07.12:54:59
+# ACDS 17.1 590 win32 2021.04.08.14:08:47
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 17.1 590 win32 2021.04.07.12:54:59
+# ACDS 17.1 590 win32 2021.04.08.14:08:47
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="AvalonRiscV_QSYS_tb"
@@ -142,19 +142,6 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_lnsim.sv \
   -v $QUARTUS_INSTALL_DIR/eda/sim_lib/cycloneive_atoms.v \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/verbosity_pkg.sv \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_avalon_st_adapter_error_adapter_0.sv \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_avalon_st_adapter.v \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_rsp_mux.sv \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_arbitrator.sv \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_rsp_demux.sv \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_cmd_mux.sv \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_cmd_demux.sv \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_router_001.sv \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_router.sv \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_sc_fifo.v \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_slave_agent.sv \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_burst_uncompressor.sv \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_master_agent.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_slave_translator.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_master_translator.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_reset_controller.v \
@@ -164,9 +151,6 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_0.v \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_instruccionMemory.v \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_externalMemory.v \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_displays7seg.v \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_slave_MM_interface.v \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/hex7seg.v \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/top_Avalon.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/ALU.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/ALUControl.sv \
@@ -178,6 +162,7 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/MUX9b.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/adder.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv \
+  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_slave_MM_interface.v \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/control.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/debugMode.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/memoryControl.sv \
@@ -188,15 +173,15 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/regPC.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/registers.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/top.sv \
+  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/interconexLogic.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_UART.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/UART.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/uart_rx.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/uart_tx.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_reset_source.sv \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm_0003.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm_0002.sv \
-  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_clock_source.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm.sv \
+  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_clock_source.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS.v \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/AvalonRiscV_QSYS_tb.v \
   -top $TOP_LEVEL_NAME

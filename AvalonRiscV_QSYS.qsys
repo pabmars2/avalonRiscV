@@ -9,6 +9,22 @@
    categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element AvalonRiscV_QSYS
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element AvalonRiscV_QSYS
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
    element MasterUART
    {
       datum _sortIndex
@@ -30,22 +46,6 @@
       datum baseAddress
       {
          value = "0";
-         type = "String";
-      }
-   }
-   element avalon_displays7seg_0
-   {
-      datum _sortIndex
-      {
-         value = "5";
-         type = "int";
-      }
-   }
-   element avalon_displays7seg_0.avalon_slave
-   {
-      datum baseAddress
-      {
-         value = "4096";
          type = "String";
       }
    }
@@ -110,11 +110,6 @@
  <parameter name="timeStamp" value="0" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
- <interface
-   name="avalon_displays7seg_0_external_interface"
-   internal="avalon_displays7seg_0.external_interface"
-   type="conduit"
-   dir="end" />
  <interface name="avalonmasteruart_0_rs232" internal="MasterUART.rs232" />
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
@@ -131,14 +126,7 @@
  <module name="MasterUART" kind="AvalonMasterUART" version="2.2" enabled="1">
   <parameter name="c_CLKS_PER_BIT" value="434" />
  </module>
- <module name="RISC_V_AVALON_0" kind="RISC_V_AVALON" version="1.4" enabled="1" />
- <module
-   name="avalon_displays7seg_0"
-   kind="avalon_displays7seg"
-   version="1.0"
-   enabled="1">
-  <parameter name="invert" value="0" />
- </module>
+ <module name="RISC_V_AVALON_0" kind="RISC_V_AVALON" version="1.6" enabled="1" />
  <module name="clk_0" kind="clock_source" version="17.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -222,15 +210,6 @@
    kind="avalon"
    version="17.1"
    start="RISC_V_AVALON_0.master_external"
-   end="avalon_displays7seg_0.avalon_slave">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="17.1"
-   start="RISC_V_AVALON_0.master_external"
    end="externalMemory.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
@@ -261,11 +240,6 @@
    version="17.1"
    start="clk_0.clk"
    end="RISC_V_AVALON_0.clock" />
- <connection
-   kind="clock"
-   version="17.1"
-   start="clk_0.clk"
-   end="avalon_displays7seg_0.clock_sink" />
  <connection
    kind="conduit"
    version="17.1"
@@ -308,11 +282,6 @@
    version="17.1"
    start="clk_0.clk_reset"
    end="RISC_V_AVALON_0.reset_sink" />
- <connection
-   kind="reset"
-   version="17.1"
-   start="clk_0.clk_reset"
-   end="avalon_displays7seg_0.reset_sink" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />

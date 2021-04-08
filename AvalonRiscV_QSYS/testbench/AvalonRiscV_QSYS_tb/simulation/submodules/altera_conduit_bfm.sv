@@ -28,64 +28,35 @@
 // This BFM's HDL is been generated through terp file in Qsys/SOPC Builder.
 // Generation parameters:
 // output_name:                                       altera_conduit_bfm
-// role:width:direction:                              conduit0:7:input,conduit1:7:input,conduit2:7:input,conduit3:7:input,conduit4:7:input,conduit5:7:input,conduit6:7:input,conduit7:7:input
-// 0
+// role:width:direction:                              rx:1:output
+// 1
 //-----------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
 module altera_conduit_bfm
 (
-   sig_conduit0,
-   sig_conduit1,
-   sig_conduit2,
-   sig_conduit3,
-   sig_conduit4,
-   sig_conduit5,
-   sig_conduit6,
-   sig_conduit7
+   clk,
+   reset,
+   reset_n,
+   sig_rx
 );
 
    //--------------------------------------------------------------------------
    // =head1 PINS 
    // =head2 User defined interface
    //--------------------------------------------------------------------------
-   input [6 : 0] sig_conduit0;
-   input [6 : 0] sig_conduit1;
-   input [6 : 0] sig_conduit2;
-   input [6 : 0] sig_conduit3;
-   input [6 : 0] sig_conduit4;
-   input [6 : 0] sig_conduit5;
-   input [6 : 0] sig_conduit6;
-   input [6 : 0] sig_conduit7;
+   input clk;
+   input reset;
+   input reset_n;
+   output sig_rx;
 
    // synthesis translate_off
    import verbosity_pkg::*;
    
-   typedef logic [6 : 0] ROLE_conduit0_t;
-   typedef logic [6 : 0] ROLE_conduit1_t;
-   typedef logic [6 : 0] ROLE_conduit2_t;
-   typedef logic [6 : 0] ROLE_conduit3_t;
-   typedef logic [6 : 0] ROLE_conduit4_t;
-   typedef logic [6 : 0] ROLE_conduit5_t;
-   typedef logic [6 : 0] ROLE_conduit6_t;
-   typedef logic [6 : 0] ROLE_conduit7_t;
+   typedef logic ROLE_rx_t;
 
-   logic [6 : 0] sig_conduit0_in;
-   logic [6 : 0] sig_conduit0_local;
-   logic [6 : 0] sig_conduit1_in;
-   logic [6 : 0] sig_conduit1_local;
-   logic [6 : 0] sig_conduit2_in;
-   logic [6 : 0] sig_conduit2_local;
-   logic [6 : 0] sig_conduit3_in;
-   logic [6 : 0] sig_conduit3_local;
-   logic [6 : 0] sig_conduit4_in;
-   logic [6 : 0] sig_conduit4_local;
-   logic [6 : 0] sig_conduit5_in;
-   logic [6 : 0] sig_conduit5_local;
-   logic [6 : 0] sig_conduit6_in;
-   logic [6 : 0] sig_conduit6_local;
-   logic [6 : 0] sig_conduit7_in;
-   logic [6 : 0] sig_conduit7_local;
+   reg sig_rx_temp;
+   reg sig_rx_out;
 
    //--------------------------------------------------------------------------
    // =head1 Public Methods API
@@ -105,14 +76,7 @@ module altera_conduit_bfm
    // =cut
    //--------------------------------------------------------------------------
    
-   event signal_input_conduit0_change;
-   event signal_input_conduit1_change;
-   event signal_input_conduit2_change;
-   event signal_input_conduit3_change;
-   event signal_input_conduit4_change;
-   event signal_input_conduit5_change;
-   event signal_input_conduit6_change;
-   event signal_input_conduit7_change;
+   event signal_reset_asserted;
    
    function automatic string get_version();  // public
       // Return BFM version string. For example, version 9.1 sp1 is "9.1sp1" 
@@ -121,159 +85,30 @@ module altera_conduit_bfm
    endfunction
 
    // -------------------------------------------------------
-   // conduit0
+   // rx
    // -------------------------------------------------------
-   function automatic ROLE_conduit0_t get_conduit0();
-   
-      // Gets the conduit0 input value.
-      $sformat(message, "%m: called get_conduit0");
-      print(VERBOSITY_DEBUG, message);
-      return sig_conduit0_in;
+
+   function automatic void set_rx (
+      ROLE_rx_t new_value
+   );
+      // Drive the new value to rx.
       
+      $sformat(message, "%m: method called arg0 %0d", new_value); 
+      print(VERBOSITY_DEBUG, message);
+      
+      sig_rx_temp = new_value;
    endfunction
 
-   // -------------------------------------------------------
-   // conduit1
-   // -------------------------------------------------------
-   function automatic ROLE_conduit1_t get_conduit1();
-   
-      // Gets the conduit1 input value.
-      $sformat(message, "%m: called get_conduit1");
-      print(VERBOSITY_DEBUG, message);
-      return sig_conduit1_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // conduit2
-   // -------------------------------------------------------
-   function automatic ROLE_conduit2_t get_conduit2();
-   
-      // Gets the conduit2 input value.
-      $sformat(message, "%m: called get_conduit2");
-      print(VERBOSITY_DEBUG, message);
-      return sig_conduit2_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // conduit3
-   // -------------------------------------------------------
-   function automatic ROLE_conduit3_t get_conduit3();
-   
-      // Gets the conduit3 input value.
-      $sformat(message, "%m: called get_conduit3");
-      print(VERBOSITY_DEBUG, message);
-      return sig_conduit3_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // conduit4
-   // -------------------------------------------------------
-   function automatic ROLE_conduit4_t get_conduit4();
-   
-      // Gets the conduit4 input value.
-      $sformat(message, "%m: called get_conduit4");
-      print(VERBOSITY_DEBUG, message);
-      return sig_conduit4_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // conduit5
-   // -------------------------------------------------------
-   function automatic ROLE_conduit5_t get_conduit5();
-   
-      // Gets the conduit5 input value.
-      $sformat(message, "%m: called get_conduit5");
-      print(VERBOSITY_DEBUG, message);
-      return sig_conduit5_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // conduit6
-   // -------------------------------------------------------
-   function automatic ROLE_conduit6_t get_conduit6();
-   
-      // Gets the conduit6 input value.
-      $sformat(message, "%m: called get_conduit6");
-      print(VERBOSITY_DEBUG, message);
-      return sig_conduit6_in;
-      
-   endfunction
-
-   // -------------------------------------------------------
-   // conduit7
-   // -------------------------------------------------------
-   function automatic ROLE_conduit7_t get_conduit7();
-   
-      // Gets the conduit7 input value.
-      $sformat(message, "%m: called get_conduit7");
-      print(VERBOSITY_DEBUG, message);
-      return sig_conduit7_in;
-      
-   endfunction
-
-   assign sig_conduit0_in = sig_conduit0;
-   assign sig_conduit1_in = sig_conduit1;
-   assign sig_conduit2_in = sig_conduit2;
-   assign sig_conduit3_in = sig_conduit3;
-   assign sig_conduit4_in = sig_conduit4;
-   assign sig_conduit5_in = sig_conduit5;
-   assign sig_conduit6_in = sig_conduit6;
-   assign sig_conduit7_in = sig_conduit7;
-
-
-   always @(sig_conduit0_in) begin
-      if (sig_conduit0_local != sig_conduit0_in)
-         -> signal_input_conduit0_change;
-      sig_conduit0_local = sig_conduit0_in;
+   always @(posedge clk) begin
+      sig_rx_out <= sig_rx_temp;
    end
    
-   always @(sig_conduit1_in) begin
-      if (sig_conduit1_local != sig_conduit1_in)
-         -> signal_input_conduit1_change;
-      sig_conduit1_local = sig_conduit1_in;
+   assign sig_rx = sig_rx_out;
+
+   always @(posedge reset or negedge reset_n) begin
+      -> signal_reset_asserted;
    end
-   
-   always @(sig_conduit2_in) begin
-      if (sig_conduit2_local != sig_conduit2_in)
-         -> signal_input_conduit2_change;
-      sig_conduit2_local = sig_conduit2_in;
-   end
-   
-   always @(sig_conduit3_in) begin
-      if (sig_conduit3_local != sig_conduit3_in)
-         -> signal_input_conduit3_change;
-      sig_conduit3_local = sig_conduit3_in;
-   end
-   
-   always @(sig_conduit4_in) begin
-      if (sig_conduit4_local != sig_conduit4_in)
-         -> signal_input_conduit4_change;
-      sig_conduit4_local = sig_conduit4_in;
-   end
-   
-   always @(sig_conduit5_in) begin
-      if (sig_conduit5_local != sig_conduit5_in)
-         -> signal_input_conduit5_change;
-      sig_conduit5_local = sig_conduit5_in;
-   end
-   
-   always @(sig_conduit6_in) begin
-      if (sig_conduit6_local != sig_conduit6_in)
-         -> signal_input_conduit6_change;
-      sig_conduit6_local = sig_conduit6_in;
-   end
-   
-   always @(sig_conduit7_in) begin
-      if (sig_conduit7_local != sig_conduit7_in)
-         -> signal_input_conduit7_change;
-      sig_conduit7_local = sig_conduit7_in;
-   end
-   
+
 
 
 // synthesis translate_on

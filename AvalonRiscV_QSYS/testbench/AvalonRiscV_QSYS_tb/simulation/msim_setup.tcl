@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 17.1 590 win32 2021.04.06.20:09:15
+# ACDS 17.1 590 win32 2021.04.08.14:08:47
 
 # ----------------------------------------
 # Initialize variables
@@ -141,6 +141,7 @@ if ![ string match "*-64 vsim*" [ vsim -version ] ] {
 # Copy ROM/RAM files to simulation directory
 alias file_copy {
   echo "\[exec\] file_copy"
+  file copy -force $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_instruccionMemory.hex ./
   file copy -force $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_externalMemory.hex ./
 }
 
@@ -165,62 +166,38 @@ if ![ string match "*ModelSim ALTERA*" [ vsim -version ] ] {
   ensure_lib                  ./libraries/cycloneive_ver/  
   vmap       cycloneive_ver   ./libraries/cycloneive_ver/  
 }
-ensure_lib                                                                    ./libraries/altera_common_sv_packages/                                         
-vmap       altera_common_sv_packages                                          ./libraries/altera_common_sv_packages/                                         
-ensure_lib                                                                    ./libraries/error_adapter_0/                                                   
-vmap       error_adapter_0                                                    ./libraries/error_adapter_0/                                                   
-ensure_lib                                                                    ./libraries/avalon_st_adapter/                                                 
-vmap       avalon_st_adapter                                                  ./libraries/avalon_st_adapter/                                                 
-ensure_lib                                                                    ./libraries/rsp_mux/                                                           
-vmap       rsp_mux                                                            ./libraries/rsp_mux/                                                           
-ensure_lib                                                                    ./libraries/rsp_demux/                                                         
-vmap       rsp_demux                                                          ./libraries/rsp_demux/                                                         
-ensure_lib                                                                    ./libraries/cmd_mux/                                                           
-vmap       cmd_mux                                                            ./libraries/cmd_mux/                                                           
-ensure_lib                                                                    ./libraries/cmd_demux/                                                         
-vmap       cmd_demux                                                          ./libraries/cmd_demux/                                                         
-ensure_lib                                                                    ./libraries/router_001/                                                        
-vmap       router_001                                                         ./libraries/router_001/                                                        
-ensure_lib                                                                    ./libraries/router/                                                            
-vmap       router                                                             ./libraries/router/                                                            
-ensure_lib                                                                    ./libraries/avalon_displays7seg_0_avalon_slave_agent_rsp_fifo/                 
-vmap       avalon_displays7seg_0_avalon_slave_agent_rsp_fifo                  ./libraries/avalon_displays7seg_0_avalon_slave_agent_rsp_fifo/                 
-ensure_lib                                                                    ./libraries/avalon_displays7seg_0_avalon_slave_agent/                          
-vmap       avalon_displays7seg_0_avalon_slave_agent                           ./libraries/avalon_displays7seg_0_avalon_slave_agent/                          
-ensure_lib                                                                    ./libraries/RISC_V_AVALON_0_master_external_agent/                             
-vmap       RISC_V_AVALON_0_master_external_agent                              ./libraries/RISC_V_AVALON_0_master_external_agent/                             
-ensure_lib                                                                    ./libraries/RISC_V_AVALON_0_debug_translator/                                  
-vmap       RISC_V_AVALON_0_debug_translator                                   ./libraries/RISC_V_AVALON_0_debug_translator/                                  
-ensure_lib                                                                    ./libraries/MasterUART_avalon_master_translator/                               
-vmap       MasterUART_avalon_master_translator                                ./libraries/MasterUART_avalon_master_translator/                               
-ensure_lib                                                                    ./libraries/rst_controller/                                                    
-vmap       rst_controller                                                     ./libraries/rst_controller/                                                    
-ensure_lib                                                                    ./libraries/mm_interconnect_2/                                                 
-vmap       mm_interconnect_2                                                  ./libraries/mm_interconnect_2/                                                 
-ensure_lib                                                                    ./libraries/mm_interconnect_1/                                                 
-vmap       mm_interconnect_1                                                  ./libraries/mm_interconnect_1/                                                 
-ensure_lib                                                                    ./libraries/mm_interconnect_0/                                                 
-vmap       mm_interconnect_0                                                  ./libraries/mm_interconnect_0/                                                 
-ensure_lib                                                                    ./libraries/instruccionMemory/                                                 
-vmap       instruccionMemory                                                  ./libraries/instruccionMemory/                                                 
-ensure_lib                                                                    ./libraries/externalMemory/                                                    
-vmap       externalMemory                                                     ./libraries/externalMemory/                                                    
-ensure_lib                                                                    ./libraries/avalon_displays7seg_0/                                             
-vmap       avalon_displays7seg_0                                              ./libraries/avalon_displays7seg_0/                                             
-ensure_lib                                                                    ./libraries/RISC_V_AVALON_0/                                                   
-vmap       RISC_V_AVALON_0                                                    ./libraries/RISC_V_AVALON_0/                                                   
-ensure_lib                                                                    ./libraries/MasterUART/                                                        
-vmap       MasterUART                                                         ./libraries/MasterUART/                                                        
-ensure_lib                                                                    ./libraries/AvalonRiscV_QSYS_inst_reset_bfm/                                   
-vmap       AvalonRiscV_QSYS_inst_reset_bfm                                    ./libraries/AvalonRiscV_QSYS_inst_reset_bfm/                                   
-ensure_lib                                                                    ./libraries/AvalonRiscV_QSYS_inst_clk_bfm/                                     
-vmap       AvalonRiscV_QSYS_inst_clk_bfm                                      ./libraries/AvalonRiscV_QSYS_inst_clk_bfm/                                     
-ensure_lib                                                                    ./libraries/AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm/                
-vmap       AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm                 ./libraries/AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm/                
-ensure_lib                                                                    ./libraries/AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm/
-vmap       AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm ./libraries/AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm/
-ensure_lib                                                                    ./libraries/AvalonRiscV_QSYS_inst/                                             
-vmap       AvalonRiscV_QSYS_inst                                              ./libraries/AvalonRiscV_QSYS_inst/                                             
+ensure_lib                                               ./libraries/altera_common_sv_packages/                    
+vmap       altera_common_sv_packages                     ./libraries/altera_common_sv_packages/                    
+ensure_lib                                               ./libraries/RISC_V_AVALON_0_debug_translator/             
+vmap       RISC_V_AVALON_0_debug_translator              ./libraries/RISC_V_AVALON_0_debug_translator/             
+ensure_lib                                               ./libraries/MasterUART_avalon_master_translator/          
+vmap       MasterUART_avalon_master_translator           ./libraries/MasterUART_avalon_master_translator/          
+ensure_lib                                               ./libraries/rst_controller/                               
+vmap       rst_controller                                ./libraries/rst_controller/                               
+ensure_lib                                               ./libraries/mm_interconnect_2/                            
+vmap       mm_interconnect_2                             ./libraries/mm_interconnect_2/                            
+ensure_lib                                               ./libraries/mm_interconnect_1/                            
+vmap       mm_interconnect_1                             ./libraries/mm_interconnect_1/                            
+ensure_lib                                               ./libraries/mm_interconnect_0/                            
+vmap       mm_interconnect_0                             ./libraries/mm_interconnect_0/                            
+ensure_lib                                               ./libraries/instruccionMemory/                            
+vmap       instruccionMemory                             ./libraries/instruccionMemory/                            
+ensure_lib                                               ./libraries/externalMemory/                               
+vmap       externalMemory                                ./libraries/externalMemory/                               
+ensure_lib                                               ./libraries/RISC_V_AVALON_0/                              
+vmap       RISC_V_AVALON_0                               ./libraries/RISC_V_AVALON_0/                              
+ensure_lib                                               ./libraries/MasterUART/                                   
+vmap       MasterUART                                    ./libraries/MasterUART/                                   
+ensure_lib                                               ./libraries/AvalonRiscV_QSYS_inst_reset_bfm/              
+vmap       AvalonRiscV_QSYS_inst_reset_bfm               ./libraries/AvalonRiscV_QSYS_inst_reset_bfm/              
+ensure_lib                                               ./libraries/AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm/
+vmap       AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm ./libraries/AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm/
+ensure_lib                                               ./libraries/AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm/
+vmap       AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm ./libraries/AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm/
+ensure_lib                                               ./libraries/AvalonRiscV_QSYS_inst_clk_bfm/                
+vmap       AvalonRiscV_QSYS_inst_clk_bfm                 ./libraries/AvalonRiscV_QSYS_inst_clk_bfm/                
+ensure_lib                                               ./libraries/AvalonRiscV_QSYS_inst/                        
+vmap       AvalonRiscV_QSYS_inst                         ./libraries/AvalonRiscV_QSYS_inst/                        
 
 # ----------------------------------------
 # Compile device library files
@@ -240,80 +217,64 @@ alias dev_com {
 # Compile the design files in correct order
 alias com {
   echo "\[exec\] com"
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/verbosity_pkg.sv"                                                                                     -work altera_common_sv_packages                                         
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_avalon_st_adapter_error_adapter_0.sv" -L altera_common_sv_packages -work error_adapter_0                                                   
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_avalon_st_adapter.v"                                               -work avalon_st_adapter                                                 
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_rsp_mux.sv"                           -L altera_common_sv_packages -work rsp_mux                                                           
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                             -L altera_common_sv_packages -work rsp_mux                                                           
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_rsp_demux.sv"                         -L altera_common_sv_packages -work rsp_demux                                                         
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_cmd_mux.sv"                           -L altera_common_sv_packages -work cmd_mux                                                           
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                             -L altera_common_sv_packages -work cmd_mux                                                           
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_cmd_demux.sv"                         -L altera_common_sv_packages -work cmd_demux                                                         
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_router_001.sv"                        -L altera_common_sv_packages -work router_001                                                        
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1_router.sv"                            -L altera_common_sv_packages -work router                                                            
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_sc_fifo.v"                                                                              -work avalon_displays7seg_0_avalon_slave_agent_rsp_fifo                 
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_slave_agent.sv"                                            -L altera_common_sv_packages -work avalon_displays7seg_0_avalon_slave_agent                          
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_burst_uncompressor.sv"                                     -L altera_common_sv_packages -work avalon_displays7seg_0_avalon_slave_agent                          
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_master_agent.sv"                                           -L altera_common_sv_packages -work RISC_V_AVALON_0_master_external_agent                             
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_slave_translator.sv"                                       -L altera_common_sv_packages -work RISC_V_AVALON_0_debug_translator                                  
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_master_translator.sv"                                      -L altera_common_sv_packages -work MasterUART_avalon_master_translator                               
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_reset_controller.v"                                                                            -work rst_controller                                                    
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_reset_synchronizer.v"                                                                          -work rst_controller                                                    
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_2.v"                                                                 -work mm_interconnect_2                                                 
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1.v"                                                                 -work mm_interconnect_1                                                 
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_0.v"                                                                 -work mm_interconnect_0                                                 
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_instruccionMemory.v"                                                                 -work instruccionMemory                                                 
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_externalMemory.v"                                                                    -work externalMemory                                                    
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_displays7seg.v"                                                                                -work avalon_displays7seg_0                                             
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_slave_MM_interface.v"                                                                          -work avalon_displays7seg_0                                             
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/hex7seg.v"                                                                                            -work avalon_displays7seg_0                                             
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/top_Avalon.sv"                                                           -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/ALU.sv"                                                                  -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/ALUControl.sv"                                                           -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/FUnit.sv"                                                                -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/HazardDet.sv"                                                            -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/ImmGen.sv"                                                               -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/MUX.sv"                                                                  -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/MUX3.sv"                                                                 -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/MUX9b.sv"                                                                -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/adder.sv"                                                                -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv"                                                     -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_slave_MM_interface.v"                                                                          -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/control.sv"                                                              -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/debugMode.sv"                                                            -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/memoryControl.sv"                                                        -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/regEX_MEM.sv"                                                            -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/regID_EX.sv"                                                             -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/regIF_ID.sv"                                                             -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/regMEM_WB.sv"                                                            -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/regPC.sv"                                                                -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/registers.sv"                                                            -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/top.sv"                                                                  -L altera_common_sv_packages -work RISC_V_AVALON_0                                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_UART.sv"                                                          -L altera_common_sv_packages -work MasterUART                                                        
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/UART.sv"                                                                 -L altera_common_sv_packages -work MasterUART                                                        
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv"                                                     -L altera_common_sv_packages -work MasterUART                                                        
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/uart_rx.sv"                                                              -L altera_common_sv_packages -work MasterUART                                                        
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/uart_tx.sv"                                                              -L altera_common_sv_packages -work MasterUART                                                        
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_reset_source.sv"                                           -L altera_common_sv_packages -work AvalonRiscV_QSYS_inst_reset_bfm                                   
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_clock_source.sv"                                           -L altera_common_sv_packages -work AvalonRiscV_QSYS_inst_clk_bfm                                     
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                              -L altera_common_sv_packages -work AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm                
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm.sv"                                                   -L altera_common_sv_packages -work AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS.v"                                                                                   -work AvalonRiscV_QSYS_inst                                             
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/AvalonRiscV_QSYS_tb.v"                                                                                                                                                                   
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/verbosity_pkg.sv"                                                  -work altera_common_sv_packages                    
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_slave_translator.sv"    -L altera_common_sv_packages -work RISC_V_AVALON_0_debug_translator             
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_merlin_master_translator.sv"   -L altera_common_sv_packages -work MasterUART_avalon_master_translator          
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_reset_controller.v"                                         -work rst_controller                               
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_reset_synchronizer.v"                                       -work rst_controller                               
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_2.v"                              -work mm_interconnect_2                            
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_1.v"                              -work mm_interconnect_1                            
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_mm_interconnect_0.v"                              -work mm_interconnect_0                            
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_instruccionMemory.v"                              -work instruccionMemory                            
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_externalMemory.v"                                 -work externalMemory                               
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/top_Avalon.sv"                        -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/ALU.sv"                               -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/ALUControl.sv"                        -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/FUnit.sv"                             -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/HazardDet.sv"                         -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/ImmGen.sv"                            -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/MUX.sv"                               -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/MUX3.sv"                              -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/MUX9b.sv"                             -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/adder.sv"                             -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv"                  -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_slave_MM_interface.v"                                       -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/control.sv"                           -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/debugMode.sv"                         -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/memoryControl.sv"                     -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/regEX_MEM.sv"                         -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/regID_EX.sv"                          -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/regIF_ID.sv"                          -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/regMEM_WB.sv"                         -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/regPC.sv"                             -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/registers.sv"                         -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/top.sv"                               -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/interconexLogic.sv"                   -L altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_UART.sv"                       -L altera_common_sv_packages -work MasterUART                                   
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/UART.sv"                              -L altera_common_sv_packages -work MasterUART                                   
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv"                  -L altera_common_sv_packages -work MasterUART                                   
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/uart_rx.sv"                           -L altera_common_sv_packages -work MasterUART                                   
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/uart_tx.sv"                           -L altera_common_sv_packages -work MasterUART                                   
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_reset_source.sv"        -L altera_common_sv_packages -work AvalonRiscV_QSYS_inst_reset_bfm              
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm_0002.sv"           -L altera_common_sv_packages -work AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm.sv"                -L altera_common_sv_packages -work AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/altera_avalon_clock_source.sv"        -L altera_common_sv_packages -work AvalonRiscV_QSYS_inst_clk_bfm                
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS.v"                                                -work AvalonRiscV_QSYS_inst                        
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/AvalonRiscV_QSYS_tb.v"                                                                                                           
 }
 
 # ----------------------------------------
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  eval vsim -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux -L rsp_demux -L cmd_mux -L cmd_demux -L router_001 -L router -L avalon_displays7seg_0_avalon_slave_agent_rsp_fifo -L avalon_displays7seg_0_avalon_slave_agent -L RISC_V_AVALON_0_master_external_agent -L RISC_V_AVALON_0_debug_translator -L MasterUART_avalon_master_translator -L rst_controller -L mm_interconnect_2 -L mm_interconnect_1 -L mm_interconnect_0 -L instruccionMemory -L externalMemory -L avalon_displays7seg_0 -L RISC_V_AVALON_0 -L MasterUART -L AvalonRiscV_QSYS_inst_reset_bfm -L AvalonRiscV_QSYS_inst_clk_bfm -L AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm -L AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm -L AvalonRiscV_QSYS_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
+  eval vsim -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L RISC_V_AVALON_0_debug_translator -L MasterUART_avalon_master_translator -L rst_controller -L mm_interconnect_2 -L mm_interconnect_1 -L mm_interconnect_0 -L instruccionMemory -L externalMemory -L RISC_V_AVALON_0 -L MasterUART -L AvalonRiscV_QSYS_inst_reset_bfm -L AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm -L AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm -L AvalonRiscV_QSYS_inst_clk_bfm -L AvalonRiscV_QSYS_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with novopt option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  eval vsim -novopt -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux -L rsp_demux -L cmd_mux -L cmd_demux -L router_001 -L router -L avalon_displays7seg_0_avalon_slave_agent_rsp_fifo -L avalon_displays7seg_0_avalon_slave_agent -L RISC_V_AVALON_0_master_external_agent -L RISC_V_AVALON_0_debug_translator -L MasterUART_avalon_master_translator -L rst_controller -L mm_interconnect_2 -L mm_interconnect_1 -L mm_interconnect_0 -L instruccionMemory -L externalMemory -L avalon_displays7seg_0 -L RISC_V_AVALON_0 -L MasterUART -L AvalonRiscV_QSYS_inst_reset_bfm -L AvalonRiscV_QSYS_inst_clk_bfm -L AvalonRiscV_QSYS_inst_avalonmasteruart_0_rs232_bfm -L AvalonRiscV_QSYS_inst_avalon_displays7seg_0_external_interface_bfm -L AvalonRiscV_QSYS_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
+  eval vsim -novopt -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L RISC_V_AVALON_0_debug_translator -L MasterUART_avalon_master_translator -L rst_controller -L mm_interconnect_2 -L mm_interconnect_1 -L mm_interconnect_0 -L instruccionMemory -L externalMemory -L RISC_V_AVALON_0 -L MasterUART -L AvalonRiscV_QSYS_inst_reset_bfm -L AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm -L AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm -L AvalonRiscV_QSYS_inst_clk_bfm -L AvalonRiscV_QSYS_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

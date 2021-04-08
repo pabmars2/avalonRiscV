@@ -4,72 +4,57 @@
 
 `timescale 1 ps / 1 ps
 module AvalonRiscV_QSYS (
-		output wire [6:0] avalon_displays7seg_0_external_interface_conduit1, // avalon_displays7seg_0_external_interface.conduit1
-		output wire [6:0] avalon_displays7seg_0_external_interface_conduit0, //                                         .conduit0
-		output wire [6:0] avalon_displays7seg_0_external_interface_conduit2, //                                         .conduit2
-		output wire [6:0] avalon_displays7seg_0_external_interface_conduit3, //                                         .conduit3
-		output wire [6:0] avalon_displays7seg_0_external_interface_conduit4, //                                         .conduit4
-		output wire [6:0] avalon_displays7seg_0_external_interface_conduit5, //                                         .conduit5
-		output wire [6:0] avalon_displays7seg_0_external_interface_conduit6, //                                         .conduit6
-		output wire [6:0] avalon_displays7seg_0_external_interface_conduit7, //                                         .conduit7
-		input  wire       clk_clk,                                           //                                      clk.clk
-		input  wire       masteruart_rs232_rx_rx,                            //                      masteruart_rs232_rx.rx
-		output wire       masteruart_rs232_tx_tx,                            //                      masteruart_rs232_tx.tx
-		input  wire       reset_reset_n                                      //                                    reset.reset_n
+		input  wire  clk_clk,                //                 clk.clk
+		input  wire  masteruart_rs232_rx_rx, // masteruart_rs232_rx.rx
+		output wire  masteruart_rs232_tx_tx, // masteruart_rs232_tx.tx
+		input  wire  reset_reset_n           //               reset.reset_n
 	);
 
-	wire         masteruart_donesending_donesending;                              // MasterUART:doneSending -> RISC_V_AVALON_0:doneSending
-	wire         risc_v_avalon_0_control_debug_flag_tx;                           // RISC_V_AVALON_0:tx_flag -> MasterUART:flag_tx
-	wire  [31:0] masteruart_avalon_master_readdata;                               // mm_interconnect_0:MasterUART_avalon_master_readdata -> MasterUART:READDATA
-	wire         masteruart_avalon_master_waitrequest;                            // mm_interconnect_0:MasterUART_avalon_master_waitrequest -> MasterUART:WAITREQUEST
-	wire  [31:0] masteruart_avalon_master_address;                                // MasterUART:ADDRESS -> mm_interconnect_0:MasterUART_avalon_master_address
-	wire         masteruart_avalon_master_read;                                   // MasterUART:READ -> mm_interconnect_0:MasterUART_avalon_master_read
-	wire         masteruart_avalon_master_lock;                                   // MasterUART:LOCK -> mm_interconnect_0:MasterUART_avalon_master_lock
-	wire  [31:0] masteruart_avalon_master_writedata;                              // MasterUART:WRITEDATA -> mm_interconnect_0:MasterUART_avalon_master_writedata
-	wire         masteruart_avalon_master_write;                                  // MasterUART:WRITE -> mm_interconnect_0:MasterUART_avalon_master_write
-	wire         mm_interconnect_0_risc_v_avalon_0_debug_chipselect;              // mm_interconnect_0:RISC_V_AVALON_0_debug_chipselect -> RISC_V_AVALON_0:chipselect_debug
-	wire  [31:0] mm_interconnect_0_risc_v_avalon_0_debug_readdata;                // RISC_V_AVALON_0:readdata_debug -> mm_interconnect_0:RISC_V_AVALON_0_debug_readdata
-	wire   [2:0] mm_interconnect_0_risc_v_avalon_0_debug_address;                 // mm_interconnect_0:RISC_V_AVALON_0_debug_address -> RISC_V_AVALON_0:adress_debug
-	wire         mm_interconnect_0_risc_v_avalon_0_debug_read;                    // mm_interconnect_0:RISC_V_AVALON_0_debug_read -> RISC_V_AVALON_0:read_debug
-	wire         mm_interconnect_0_risc_v_avalon_0_debug_write;                   // mm_interconnect_0:RISC_V_AVALON_0_debug_write -> RISC_V_AVALON_0:write_debug
-	wire  [31:0] mm_interconnect_0_risc_v_avalon_0_debug_writedata;               // mm_interconnect_0:RISC_V_AVALON_0_debug_writedata -> RISC_V_AVALON_0:writedata_debug
-	wire  [31:0] risc_v_avalon_0_master_external_readdata;                        // mm_interconnect_1:RISC_V_AVALON_0_master_external_readdata -> RISC_V_AVALON_0:ReadData_ext
-	wire         risc_v_avalon_0_master_external_waitrequest;                     // mm_interconnect_1:RISC_V_AVALON_0_master_external_waitrequest -> RISC_V_AVALON_0:waitRqst_ext
-	wire  [31:0] risc_v_avalon_0_master_external_address;                         // RISC_V_AVALON_0:ADDRESS_ext -> mm_interconnect_1:RISC_V_AVALON_0_master_external_address
-	wire         risc_v_avalon_0_master_external_read;                            // RISC_V_AVALON_0:READ_ext -> mm_interconnect_1:RISC_V_AVALON_0_master_external_read
-	wire         risc_v_avalon_0_master_external_lock;                            // RISC_V_AVALON_0:LOCK_ext -> mm_interconnect_1:RISC_V_AVALON_0_master_external_lock
-	wire         risc_v_avalon_0_master_external_write;                           // RISC_V_AVALON_0:WRITE_ext -> mm_interconnect_1:RISC_V_AVALON_0_master_external_write
-	wire  [31:0] risc_v_avalon_0_master_external_writedata;                       // RISC_V_AVALON_0:WriteData_ext -> mm_interconnect_1:RISC_V_AVALON_0_master_external_writedata
-	wire         mm_interconnect_1_avalon_displays7seg_0_avalon_slave_chipselect; // mm_interconnect_1:avalon_displays7seg_0_avalon_slave_chipselect -> avalon_displays7seg_0:chipselect
-	wire  [31:0] mm_interconnect_1_avalon_displays7seg_0_avalon_slave_readdata;   // avalon_displays7seg_0:readdata -> mm_interconnect_1:avalon_displays7seg_0_avalon_slave_readdata
-	wire   [2:0] mm_interconnect_1_avalon_displays7seg_0_avalon_slave_address;    // mm_interconnect_1:avalon_displays7seg_0_avalon_slave_address -> avalon_displays7seg_0:address
-	wire         mm_interconnect_1_avalon_displays7seg_0_avalon_slave_read;       // mm_interconnect_1:avalon_displays7seg_0_avalon_slave_read -> avalon_displays7seg_0:read
-	wire         mm_interconnect_1_avalon_displays7seg_0_avalon_slave_write;      // mm_interconnect_1:avalon_displays7seg_0_avalon_slave_write -> avalon_displays7seg_0:write
-	wire  [31:0] mm_interconnect_1_avalon_displays7seg_0_avalon_slave_writedata;  // mm_interconnect_1:avalon_displays7seg_0_avalon_slave_writedata -> avalon_displays7seg_0:writedata
-	wire         mm_interconnect_1_externalmemory_s1_chipselect;                  // mm_interconnect_1:externalMemory_s1_chipselect -> externalMemory:chipselect
-	wire  [31:0] mm_interconnect_1_externalmemory_s1_readdata;                    // externalMemory:readdata -> mm_interconnect_1:externalMemory_s1_readdata
-	wire   [9:0] mm_interconnect_1_externalmemory_s1_address;                     // mm_interconnect_1:externalMemory_s1_address -> externalMemory:address
-	wire   [3:0] mm_interconnect_1_externalmemory_s1_byteenable;                  // mm_interconnect_1:externalMemory_s1_byteenable -> externalMemory:byteenable
-	wire         mm_interconnect_1_externalmemory_s1_write;                       // mm_interconnect_1:externalMemory_s1_write -> externalMemory:write
-	wire  [31:0] mm_interconnect_1_externalmemory_s1_writedata;                   // mm_interconnect_1:externalMemory_s1_writedata -> externalMemory:writedata
-	wire         mm_interconnect_1_externalmemory_s1_clken;                       // mm_interconnect_1:externalMemory_s1_clken -> externalMemory:clken
-	wire  [31:0] risc_v_avalon_0_master_instruccions_readdata;                    // mm_interconnect_2:RISC_V_AVALON_0_master_instruccions_readdata -> RISC_V_AVALON_0:ReadData_instr
-	wire         risc_v_avalon_0_master_instruccions_waitrequest;                 // mm_interconnect_2:RISC_V_AVALON_0_master_instruccions_waitrequest -> RISC_V_AVALON_0:waitRqst_instr
-	wire  [31:0] risc_v_avalon_0_master_instruccions_address;                     // RISC_V_AVALON_0:ADDRESS_instr -> mm_interconnect_2:RISC_V_AVALON_0_master_instruccions_address
-	wire         risc_v_avalon_0_master_instruccions_read;                        // RISC_V_AVALON_0:READ_instr -> mm_interconnect_2:RISC_V_AVALON_0_master_instruccions_read
-	wire         risc_v_avalon_0_master_instruccions_lock;                        // RISC_V_AVALON_0:LOCK_instr -> mm_interconnect_2:RISC_V_AVALON_0_master_instruccions_lock
-	wire         risc_v_avalon_0_master_instruccions_write;                       // RISC_V_AVALON_0:WRITE_instr -> mm_interconnect_2:RISC_V_AVALON_0_master_instruccions_write
-	wire  [31:0] risc_v_avalon_0_master_instruccions_writedata;                   // RISC_V_AVALON_0:WriteData_instr -> mm_interconnect_2:RISC_V_AVALON_0_master_instruccions_writedata
-	wire         mm_interconnect_2_instruccionmemory_s1_chipselect;               // mm_interconnect_2:instruccionMemory_s1_chipselect -> instruccionMemory:chipselect
-	wire  [31:0] mm_interconnect_2_instruccionmemory_s1_readdata;                 // instruccionMemory:readdata -> mm_interconnect_2:instruccionMemory_s1_readdata
-	wire   [9:0] mm_interconnect_2_instruccionmemory_s1_address;                  // mm_interconnect_2:instruccionMemory_s1_address -> instruccionMemory:address
-	wire   [3:0] mm_interconnect_2_instruccionmemory_s1_byteenable;               // mm_interconnect_2:instruccionMemory_s1_byteenable -> instruccionMemory:byteenable
-	wire         mm_interconnect_2_instruccionmemory_s1_write;                    // mm_interconnect_2:instruccionMemory_s1_write -> instruccionMemory:write
-	wire  [31:0] mm_interconnect_2_instruccionmemory_s1_writedata;                // mm_interconnect_2:instruccionMemory_s1_writedata -> instruccionMemory:writedata
-	wire         mm_interconnect_2_instruccionmemory_s1_clken;                    // mm_interconnect_2:instruccionMemory_s1_clken -> instruccionMemory:clken
-	wire         rst_controller_reset_out_reset;                                  // rst_controller:reset_out -> [MasterUART:RST, RISC_V_AVALON_0:RST, externalMemory:reset, instruccionMemory:reset, mm_interconnect_0:MasterUART_reset_reset_bridge_in_reset_reset, mm_interconnect_1:RISC_V_AVALON_0_reset_sink_reset_bridge_in_reset_reset, mm_interconnect_1:avalon_displays7seg_0_reset_sink_reset_bridge_in_reset_reset, mm_interconnect_2:RISC_V_AVALON_0_reset_sink_reset_bridge_in_reset_reset, rst_translator:in_reset]
-	wire         rst_controller_reset_out_reset_req;                              // rst_controller:reset_req -> [externalMemory:reset_req, instruccionMemory:reset_req, rst_translator:reset_req_in]
-	wire         rst_controller_001_reset_out_reset;                              // rst_controller_001:reset_out -> avalon_displays7seg_0:reset
+	wire         masteruart_donesending_donesending;                 // MasterUART:doneSending -> RISC_V_AVALON_0:doneSending
+	wire         risc_v_avalon_0_control_debug_flag_tx;              // RISC_V_AVALON_0:tx_flag -> MasterUART:flag_tx
+	wire  [31:0] masteruart_avalon_master_readdata;                  // mm_interconnect_0:MasterUART_avalon_master_readdata -> MasterUART:READDATA
+	wire         masteruart_avalon_master_waitrequest;               // mm_interconnect_0:MasterUART_avalon_master_waitrequest -> MasterUART:WAITREQUEST
+	wire  [31:0] masteruart_avalon_master_address;                   // MasterUART:ADDRESS -> mm_interconnect_0:MasterUART_avalon_master_address
+	wire         masteruart_avalon_master_read;                      // MasterUART:READ -> mm_interconnect_0:MasterUART_avalon_master_read
+	wire         masteruart_avalon_master_lock;                      // MasterUART:LOCK -> mm_interconnect_0:MasterUART_avalon_master_lock
+	wire  [31:0] masteruart_avalon_master_writedata;                 // MasterUART:WRITEDATA -> mm_interconnect_0:MasterUART_avalon_master_writedata
+	wire         masteruart_avalon_master_write;                     // MasterUART:WRITE -> mm_interconnect_0:MasterUART_avalon_master_write
+	wire         mm_interconnect_0_risc_v_avalon_0_debug_chipselect; // mm_interconnect_0:RISC_V_AVALON_0_debug_chipselect -> RISC_V_AVALON_0:chipselect_debug
+	wire  [31:0] mm_interconnect_0_risc_v_avalon_0_debug_readdata;   // RISC_V_AVALON_0:readdata_debug -> mm_interconnect_0:RISC_V_AVALON_0_debug_readdata
+	wire   [2:0] mm_interconnect_0_risc_v_avalon_0_debug_address;    // mm_interconnect_0:RISC_V_AVALON_0_debug_address -> RISC_V_AVALON_0:adress_debug
+	wire         mm_interconnect_0_risc_v_avalon_0_debug_read;       // mm_interconnect_0:RISC_V_AVALON_0_debug_read -> RISC_V_AVALON_0:read_debug
+	wire         mm_interconnect_0_risc_v_avalon_0_debug_write;      // mm_interconnect_0:RISC_V_AVALON_0_debug_write -> RISC_V_AVALON_0:write_debug
+	wire  [31:0] mm_interconnect_0_risc_v_avalon_0_debug_writedata;  // mm_interconnect_0:RISC_V_AVALON_0_debug_writedata -> RISC_V_AVALON_0:writedata_debug
+	wire  [31:0] risc_v_avalon_0_master_external_readdata;           // mm_interconnect_1:RISC_V_AVALON_0_master_external_readdata -> RISC_V_AVALON_0:ReadData_ext
+	wire         risc_v_avalon_0_master_external_waitrequest;        // mm_interconnect_1:RISC_V_AVALON_0_master_external_waitrequest -> RISC_V_AVALON_0:waitRqst_ext
+	wire  [31:0] risc_v_avalon_0_master_external_address;            // RISC_V_AVALON_0:ADDRESS_ext -> mm_interconnect_1:RISC_V_AVALON_0_master_external_address
+	wire         risc_v_avalon_0_master_external_read;               // RISC_V_AVALON_0:READ_ext -> mm_interconnect_1:RISC_V_AVALON_0_master_external_read
+	wire         risc_v_avalon_0_master_external_lock;               // RISC_V_AVALON_0:LOCK_ext -> mm_interconnect_1:RISC_V_AVALON_0_master_external_lock
+	wire         risc_v_avalon_0_master_external_write;              // RISC_V_AVALON_0:WRITE_ext -> mm_interconnect_1:RISC_V_AVALON_0_master_external_write
+	wire  [31:0] risc_v_avalon_0_master_external_writedata;          // RISC_V_AVALON_0:WriteData_ext -> mm_interconnect_1:RISC_V_AVALON_0_master_external_writedata
+	wire         mm_interconnect_1_externalmemory_s1_chipselect;     // mm_interconnect_1:externalMemory_s1_chipselect -> externalMemory:chipselect
+	wire  [31:0] mm_interconnect_1_externalmemory_s1_readdata;       // externalMemory:readdata -> mm_interconnect_1:externalMemory_s1_readdata
+	wire   [9:0] mm_interconnect_1_externalmemory_s1_address;        // mm_interconnect_1:externalMemory_s1_address -> externalMemory:address
+	wire   [3:0] mm_interconnect_1_externalmemory_s1_byteenable;     // mm_interconnect_1:externalMemory_s1_byteenable -> externalMemory:byteenable
+	wire         mm_interconnect_1_externalmemory_s1_write;          // mm_interconnect_1:externalMemory_s1_write -> externalMemory:write
+	wire  [31:0] mm_interconnect_1_externalmemory_s1_writedata;      // mm_interconnect_1:externalMemory_s1_writedata -> externalMemory:writedata
+	wire         mm_interconnect_1_externalmemory_s1_clken;          // mm_interconnect_1:externalMemory_s1_clken -> externalMemory:clken
+	wire  [31:0] risc_v_avalon_0_master_instruccions_readdata;       // mm_interconnect_2:RISC_V_AVALON_0_master_instruccions_readdata -> RISC_V_AVALON_0:ReadData_instr
+	wire         risc_v_avalon_0_master_instruccions_waitrequest;    // mm_interconnect_2:RISC_V_AVALON_0_master_instruccions_waitrequest -> RISC_V_AVALON_0:waitRqst_instr
+	wire  [31:0] risc_v_avalon_0_master_instruccions_address;        // RISC_V_AVALON_0:ADDRESS_instr -> mm_interconnect_2:RISC_V_AVALON_0_master_instruccions_address
+	wire         risc_v_avalon_0_master_instruccions_read;           // RISC_V_AVALON_0:READ_instr -> mm_interconnect_2:RISC_V_AVALON_0_master_instruccions_read
+	wire         risc_v_avalon_0_master_instruccions_lock;           // RISC_V_AVALON_0:LOCK_instr -> mm_interconnect_2:RISC_V_AVALON_0_master_instruccions_lock
+	wire         risc_v_avalon_0_master_instruccions_write;          // RISC_V_AVALON_0:WRITE_instr -> mm_interconnect_2:RISC_V_AVALON_0_master_instruccions_write
+	wire  [31:0] risc_v_avalon_0_master_instruccions_writedata;      // RISC_V_AVALON_0:WriteData_instr -> mm_interconnect_2:RISC_V_AVALON_0_master_instruccions_writedata
+	wire         mm_interconnect_2_instruccionmemory_s1_chipselect;  // mm_interconnect_2:instruccionMemory_s1_chipselect -> instruccionMemory:chipselect
+	wire  [31:0] mm_interconnect_2_instruccionmemory_s1_readdata;    // instruccionMemory:readdata -> mm_interconnect_2:instruccionMemory_s1_readdata
+	wire   [9:0] mm_interconnect_2_instruccionmemory_s1_address;     // mm_interconnect_2:instruccionMemory_s1_address -> instruccionMemory:address
+	wire   [3:0] mm_interconnect_2_instruccionmemory_s1_byteenable;  // mm_interconnect_2:instruccionMemory_s1_byteenable -> instruccionMemory:byteenable
+	wire         mm_interconnect_2_instruccionmemory_s1_write;       // mm_interconnect_2:instruccionMemory_s1_write -> instruccionMemory:write
+	wire  [31:0] mm_interconnect_2_instruccionmemory_s1_writedata;   // mm_interconnect_2:instruccionMemory_s1_writedata -> instruccionMemory:writedata
+	wire         mm_interconnect_2_instruccionmemory_s1_clken;       // mm_interconnect_2:instruccionMemory_s1_clken -> instruccionMemory:clken
+	wire         rst_controller_reset_out_reset;                     // rst_controller:reset_out -> [MasterUART:RST, RISC_V_AVALON_0:RST, externalMemory:reset, instruccionMemory:reset, mm_interconnect_0:MasterUART_reset_reset_bridge_in_reset_reset, mm_interconnect_1:RISC_V_AVALON_0_reset_sink_reset_bridge_in_reset_reset, mm_interconnect_2:RISC_V_AVALON_0_reset_sink_reset_bridge_in_reset_reset, rst_translator:in_reset]
+	wire         rst_controller_reset_out_reset_req;                 // rst_controller:reset_req -> [externalMemory:reset_req, instruccionMemory:reset_req, rst_translator:reset_req_in]
 
 	avalon_UART #(
 		.c_CLKS_PER_BIT (434)
@@ -119,27 +104,6 @@ module AvalonRiscV_QSYS (
 		.doneSending         (masteruart_donesending_donesending)                  //         DoneSending.donesending
 	);
 
-	avalon_displays7seg #(
-		.invert (0)
-	) avalon_displays7seg_0 (
-		.chipselect (mm_interconnect_1_avalon_displays7seg_0_avalon_slave_chipselect), //       avalon_slave.chipselect
-		.address    (mm_interconnect_1_avalon_displays7seg_0_avalon_slave_address),    //                   .address
-		.write      (mm_interconnect_1_avalon_displays7seg_0_avalon_slave_write),      //                   .write
-		.writedata  (mm_interconnect_1_avalon_displays7seg_0_avalon_slave_writedata),  //                   .writedata
-		.read       (mm_interconnect_1_avalon_displays7seg_0_avalon_slave_read),       //                   .read
-		.readdata   (mm_interconnect_1_avalon_displays7seg_0_avalon_slave_readdata),   //                   .readdata
-		.HEX1       (avalon_displays7seg_0_external_interface_conduit1),               // external_interface.conduit1
-		.HEX0       (avalon_displays7seg_0_external_interface_conduit0),               //                   .conduit0
-		.HEX2       (avalon_displays7seg_0_external_interface_conduit2),               //                   .conduit2
-		.HEX3       (avalon_displays7seg_0_external_interface_conduit3),               //                   .conduit3
-		.HEX4       (avalon_displays7seg_0_external_interface_conduit4),               //                   .conduit4
-		.HEX5       (avalon_displays7seg_0_external_interface_conduit5),               //                   .conduit5
-		.HEX6       (avalon_displays7seg_0_external_interface_conduit6),               //                   .conduit6
-		.HEX7       (avalon_displays7seg_0_external_interface_conduit7),               //                   .conduit7
-		.reset      (rst_controller_001_reset_out_reset),                              //         reset_sink.reset
-		.clock      (clk_clk)                                                          //         clock_sink.clk
-	);
-
 	AvalonRiscV_QSYS_externalMemory externalmemory (
 		.clk        (clk_clk),                                        //   clk1.clk
 		.address    (mm_interconnect_1_externalmemory_s1_address),    //     s1.address
@@ -187,29 +151,22 @@ module AvalonRiscV_QSYS (
 	);
 
 	AvalonRiscV_QSYS_mm_interconnect_1 mm_interconnect_1 (
-		.clk_0_clk_clk                                                (clk_clk),                                                         //                                              clk_0_clk.clk
-		.avalon_displays7seg_0_reset_sink_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                                  // avalon_displays7seg_0_reset_sink_reset_bridge_in_reset.reset
-		.RISC_V_AVALON_0_reset_sink_reset_bridge_in_reset_reset       (rst_controller_reset_out_reset),                                  //       RISC_V_AVALON_0_reset_sink_reset_bridge_in_reset.reset
-		.RISC_V_AVALON_0_master_external_address                      (risc_v_avalon_0_master_external_address),                         //                        RISC_V_AVALON_0_master_external.address
-		.RISC_V_AVALON_0_master_external_waitrequest                  (risc_v_avalon_0_master_external_waitrequest),                     //                                                       .waitrequest
-		.RISC_V_AVALON_0_master_external_read                         (risc_v_avalon_0_master_external_read),                            //                                                       .read
-		.RISC_V_AVALON_0_master_external_readdata                     (risc_v_avalon_0_master_external_readdata),                        //                                                       .readdata
-		.RISC_V_AVALON_0_master_external_write                        (risc_v_avalon_0_master_external_write),                           //                                                       .write
-		.RISC_V_AVALON_0_master_external_writedata                    (risc_v_avalon_0_master_external_writedata),                       //                                                       .writedata
-		.RISC_V_AVALON_0_master_external_lock                         (risc_v_avalon_0_master_external_lock),                            //                                                       .lock
-		.avalon_displays7seg_0_avalon_slave_address                   (mm_interconnect_1_avalon_displays7seg_0_avalon_slave_address),    //                     avalon_displays7seg_0_avalon_slave.address
-		.avalon_displays7seg_0_avalon_slave_write                     (mm_interconnect_1_avalon_displays7seg_0_avalon_slave_write),      //                                                       .write
-		.avalon_displays7seg_0_avalon_slave_read                      (mm_interconnect_1_avalon_displays7seg_0_avalon_slave_read),       //                                                       .read
-		.avalon_displays7seg_0_avalon_slave_readdata                  (mm_interconnect_1_avalon_displays7seg_0_avalon_slave_readdata),   //                                                       .readdata
-		.avalon_displays7seg_0_avalon_slave_writedata                 (mm_interconnect_1_avalon_displays7seg_0_avalon_slave_writedata),  //                                                       .writedata
-		.avalon_displays7seg_0_avalon_slave_chipselect                (mm_interconnect_1_avalon_displays7seg_0_avalon_slave_chipselect), //                                                       .chipselect
-		.externalMemory_s1_address                                    (mm_interconnect_1_externalmemory_s1_address),                     //                                      externalMemory_s1.address
-		.externalMemory_s1_write                                      (mm_interconnect_1_externalmemory_s1_write),                       //                                                       .write
-		.externalMemory_s1_readdata                                   (mm_interconnect_1_externalmemory_s1_readdata),                    //                                                       .readdata
-		.externalMemory_s1_writedata                                  (mm_interconnect_1_externalmemory_s1_writedata),                   //                                                       .writedata
-		.externalMemory_s1_byteenable                                 (mm_interconnect_1_externalmemory_s1_byteenable),                  //                                                       .byteenable
-		.externalMemory_s1_chipselect                                 (mm_interconnect_1_externalmemory_s1_chipselect),                  //                                                       .chipselect
-		.externalMemory_s1_clken                                      (mm_interconnect_1_externalmemory_s1_clken)                        //                                                       .clken
+		.clk_0_clk_clk                                          (clk_clk),                                        //                                        clk_0_clk.clk
+		.RISC_V_AVALON_0_reset_sink_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                 // RISC_V_AVALON_0_reset_sink_reset_bridge_in_reset.reset
+		.RISC_V_AVALON_0_master_external_address                (risc_v_avalon_0_master_external_address),        //                  RISC_V_AVALON_0_master_external.address
+		.RISC_V_AVALON_0_master_external_waitrequest            (risc_v_avalon_0_master_external_waitrequest),    //                                                 .waitrequest
+		.RISC_V_AVALON_0_master_external_read                   (risc_v_avalon_0_master_external_read),           //                                                 .read
+		.RISC_V_AVALON_0_master_external_readdata               (risc_v_avalon_0_master_external_readdata),       //                                                 .readdata
+		.RISC_V_AVALON_0_master_external_write                  (risc_v_avalon_0_master_external_write),          //                                                 .write
+		.RISC_V_AVALON_0_master_external_writedata              (risc_v_avalon_0_master_external_writedata),      //                                                 .writedata
+		.RISC_V_AVALON_0_master_external_lock                   (risc_v_avalon_0_master_external_lock),           //                                                 .lock
+		.externalMemory_s1_address                              (mm_interconnect_1_externalmemory_s1_address),    //                                externalMemory_s1.address
+		.externalMemory_s1_write                                (mm_interconnect_1_externalmemory_s1_write),      //                                                 .write
+		.externalMemory_s1_readdata                             (mm_interconnect_1_externalmemory_s1_readdata),   //                                                 .readdata
+		.externalMemory_s1_writedata                            (mm_interconnect_1_externalmemory_s1_writedata),  //                                                 .writedata
+		.externalMemory_s1_byteenable                           (mm_interconnect_1_externalmemory_s1_byteenable), //                                                 .byteenable
+		.externalMemory_s1_chipselect                           (mm_interconnect_1_externalmemory_s1_chipselect), //                                                 .chipselect
+		.externalMemory_s1_clken                                (mm_interconnect_1_externalmemory_s1_clken)       //                                                 .clken
 	);
 
 	AvalonRiscV_QSYS_mm_interconnect_2 mm_interconnect_2 (
@@ -261,69 +218,6 @@ module AvalonRiscV_QSYS (
 		.clk            (clk_clk),                            //       clk.clk
 		.reset_out      (rst_controller_reset_out_reset),     // reset_out.reset
 		.reset_req      (rst_controller_reset_out_reset_req), //          .reset_req
-		.reset_req_in0  (1'b0),                               // (terminated)
-		.reset_in1      (1'b0),                               // (terminated)
-		.reset_req_in1  (1'b0),                               // (terminated)
-		.reset_in2      (1'b0),                               // (terminated)
-		.reset_req_in2  (1'b0),                               // (terminated)
-		.reset_in3      (1'b0),                               // (terminated)
-		.reset_req_in3  (1'b0),                               // (terminated)
-		.reset_in4      (1'b0),                               // (terminated)
-		.reset_req_in4  (1'b0),                               // (terminated)
-		.reset_in5      (1'b0),                               // (terminated)
-		.reset_req_in5  (1'b0),                               // (terminated)
-		.reset_in6      (1'b0),                               // (terminated)
-		.reset_req_in6  (1'b0),                               // (terminated)
-		.reset_in7      (1'b0),                               // (terminated)
-		.reset_req_in7  (1'b0),                               // (terminated)
-		.reset_in8      (1'b0),                               // (terminated)
-		.reset_req_in8  (1'b0),                               // (terminated)
-		.reset_in9      (1'b0),                               // (terminated)
-		.reset_req_in9  (1'b0),                               // (terminated)
-		.reset_in10     (1'b0),                               // (terminated)
-		.reset_req_in10 (1'b0),                               // (terminated)
-		.reset_in11     (1'b0),                               // (terminated)
-		.reset_req_in11 (1'b0),                               // (terminated)
-		.reset_in12     (1'b0),                               // (terminated)
-		.reset_req_in12 (1'b0),                               // (terminated)
-		.reset_in13     (1'b0),                               // (terminated)
-		.reset_req_in13 (1'b0),                               // (terminated)
-		.reset_in14     (1'b0),                               // (terminated)
-		.reset_req_in14 (1'b0),                               // (terminated)
-		.reset_in15     (1'b0),                               // (terminated)
-		.reset_req_in15 (1'b0)                                // (terminated)
-	);
-
-	altera_reset_controller #(
-		.NUM_RESET_INPUTS          (1),
-		.OUTPUT_RESET_SYNC_EDGES   ("both"),
-		.SYNC_DEPTH                (2),
-		.RESET_REQUEST_PRESENT     (0),
-		.RESET_REQ_WAIT_TIME       (1),
-		.MIN_RST_ASSERTION_TIME    (3),
-		.RESET_REQ_EARLY_DSRT_TIME (1),
-		.USE_RESET_REQUEST_IN0     (0),
-		.USE_RESET_REQUEST_IN1     (0),
-		.USE_RESET_REQUEST_IN2     (0),
-		.USE_RESET_REQUEST_IN3     (0),
-		.USE_RESET_REQUEST_IN4     (0),
-		.USE_RESET_REQUEST_IN5     (0),
-		.USE_RESET_REQUEST_IN6     (0),
-		.USE_RESET_REQUEST_IN7     (0),
-		.USE_RESET_REQUEST_IN8     (0),
-		.USE_RESET_REQUEST_IN9     (0),
-		.USE_RESET_REQUEST_IN10    (0),
-		.USE_RESET_REQUEST_IN11    (0),
-		.USE_RESET_REQUEST_IN12    (0),
-		.USE_RESET_REQUEST_IN13    (0),
-		.USE_RESET_REQUEST_IN14    (0),
-		.USE_RESET_REQUEST_IN15    (0),
-		.ADAPT_RESET_REQUEST       (0)
-	) rst_controller_001 (
-		.reset_in0      (~reset_reset_n),                     // reset_in0.reset
-		.clk            (clk_clk),                            //       clk.clk
-		.reset_out      (rst_controller_001_reset_out_reset), // reset_out.reset
-		.reset_req      (),                                   // (terminated)
 		.reset_req_in0  (1'b0),                               // (terminated)
 		.reset_in1      (1'b0),                               // (terminated)
 		.reset_req_in1  (1'b0),                               // (terminated)
