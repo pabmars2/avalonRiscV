@@ -37,7 +37,6 @@ wire control_instr, control_ext;
 wire start_instr, start_ext;
 wire done_instr, done_ext;
 wire WRam, RRam;
-wire we_internal;
 
 //Connections debug
 wire debug;
@@ -128,7 +127,8 @@ debugMode  SystemDebug(
 	.address_bridged(address_debug_master),
 	.data_bridged(dataRxDebug), 
 	.mode(mode),
-	.data_internal(dataTxDebug));	
+	.data_internal(dataTxDebug),
+	.doneSending(doneSending));	
 	
 	
 	

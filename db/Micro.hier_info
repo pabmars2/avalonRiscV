@@ -274,7 +274,7 @@ readdata_debug[29] << debugMode:SystemDebug.readdata_debug
 readdata_debug[30] << debugMode:SystemDebug.readdata_debug
 readdata_debug[31] << debugMode:SystemDebug.readdata_debug
 tx_flag << debugMode:SystemDebug.tx_flag
-doneSending => ~NO_FANOUT~
+doneSending => doneSending.IN1
 
 
 |top_Avalon|top:top_RISC
@@ -11687,6 +11687,7 @@ data_internal[28] => data_internal[28].IN1
 data_internal[29] => data_internal[29].IN1
 data_internal[30] => data_internal[30].IN1
 data_internal[31] => data_internal[31].IN1
+doneSending => doneSendingAux.OUTPUTSELECT
 
 
 |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug
