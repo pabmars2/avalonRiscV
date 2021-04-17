@@ -1,6 +1,6 @@
 //Versión 4
 
-module top(CLK, RST_N, debug, enable_ext, enable_pc_ext, done_instr, done_ext, idata, ddata_r, iaddr, daddr, ddata_w, WRam, RRam);
+module top(CLK, RST_N, debug, enable_ext, enable_pc_ext, done_instr, done_ext, idata, ddata_r, iaddr, daddr, ddata_w, WRam, RRam, enableStep);
 
 input CLK, RST_N;
 input debug, enable_pc_ext, done_instr, done_ext;
@@ -11,21 +11,19 @@ input [3 : 0] enable_ext;
 output [31 : 0] iaddr, daddr;
 output [31 : 0] ddata_w;
 output WRam, RRam;
+output enableStep;
 
 //COEXIONES DEBUG//
-
 wire [3 : 0] enable_int;
 wire [3 : 0] generalEnable;
 wire enable_pc_int;
 wire enable_pc;
 
-//CONEXIONES MEMORIAS//
-
-wire enable_pc_aux;
-wire [3 : 0] generalEnable_aux;
+//CONEXIONES ENABLE//
+wire enable_pc_aux, enable_pc_aux_ext, enable_pc_aux_instr;
+wire [3 : 0] generalEnable_aux, generalEnable_aux_ext, generalEnable_aux_instr;
 
 //CONEXIONES INTERNAS//
-
 wire Zero, RegWrite;
 wire [3 : 0] OP;
 wire [31 : 0] AluRes, AluIn1, AluIn2;
@@ -92,15 +90,17 @@ wire BrachC, PCReadC, MemtoRegC, MemWriteC, ALUSrcC, RegWriteC, AddPCC, ctrC, Me
 wire [9:0] senyales_aux_in, senyales_aux_out;
 
 //ASIGNACIONES//
-assign enable_pc = (debug == 1'b1) ? ((enable_pc_int == 1'b0) ? enable_pc_int : enable_pc_ext) : enable_pc_int;
+assign enable_pc = enable_pc_int & enable_pc_ext;
 assign enable_int[3:1] = 3'b111;
-assign generalEnable = (debug == 1'b1) ? ((enable_int[0] == 1'b0) ? enable_int : enable_ext) : enable_int;
+assign generalEnable = enable_int & enable_ext;
+
+assign generalEnable_aux = (done_ext) ? generalEnable_aux_ext : generalEnable_aux_ext & generalEnable_aux_instr;
+assign enable_pc_aux = (done_ext) ? enable_pc_aux_ext : enable_pc_aux_ext & enable_pc_aux_instr;
+assign enableStep = enable_pc_aux;
 
 assign ctrAddSum = (AddPC_reg2 || (Zero_MEM && ctrAddSum_auxMEM)) ? 1'b1 : 1'b0;
 assign daddr = daddr_MEM;
 assign ddata_w = Reg2_reg_MEM;
-assign WRam = WRam_MEM;
-assign RRam = oMemRead;
 assign iaddr = {PC[31:2],2'b00}; 
 
 assign {clrIF_ID, clrID_EX, clrMEM_WB, clrEX_MEM} = clr;
@@ -337,18 +337,37 @@ MUX9b MuxContr(
 	.out(senyales_aux_out));
 
 
-//Control de memorias (de momento solo para leer)
+//Control de memorias 
 
-memoryControl #(.n(1)) controlInstr(
+memoryControl #(.n(5)) controlInstr(
+	.CLK(CLK),
+	.RST_N(RST_N),
 	.start(enable_pc), 
 	.done(done_instr), 
-	.enable_in(enable_pc), 
-	.enable_out(enable_pc_aux));
+	.enable_in({generalEnable, enable_pc}), 
+	.enable_out({generalEnable_aux_instr, enable_pc_aux_instr}));
 
-memoryControl #(.n(4)) controlExt(
+memoryControl #(.n(5)) controlExt(
+	.CLK(CLK),
+	.RST_N(RST_N),
 	.start(RRam), 
 	.done(done_ext), 
-	.enable_in(generalEnable), 
-	.enable_out(generalEnable_aux));	
+	.enable_in({generalEnable, enable_pc}), 
+	.enable_out({generalEnable_aux_ext, enable_pc_aux_ext}));	
+		
+		
+readControl RdControl(
+	.CLK(CLK), 
+	.RST_N(RST_N), 
+	.RReadIn(oMemRead), 
+	.RReadOut(RRam), 
+	.Done(done_ext));	
+	
+readControl WrControl(
+	.CLK(CLK), 
+	.RST_N(RST_N), 
+	.RReadIn(WRam_MEM), 
+	.RReadOut(WRam), 
+	.Done(done_ext));	
 
 endmodule 

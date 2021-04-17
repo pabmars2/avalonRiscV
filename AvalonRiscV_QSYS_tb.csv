@@ -1,12 +1,12 @@
-# system info AvalonRiscV_QSYS_tb on 2021.04.11.18:37:24
+# system info AvalonRiscV_QSYS_tb on 2021.04.17.18:12:25
 system_info:
 name,value
 DEVICE,EP4CE115F29C7
 DEVICE_FAMILY,Cyclone IV E
-GENERATION_ID,1618159018
+GENERATION_ID,1618675936
 #
 #
-# Files generated for AvalonRiscV_QSYS_tb on 2021.04.11.18:37:24
+# Files generated for AvalonRiscV_QSYS_tb on 2021.04.17.18:12:25
 files:
 filepath,kind,attributes,module,is_top
 AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/AvalonRiscV_QSYS_tb.v,VERILOG,,AvalonRiscV_QSYS_tb,true
@@ -47,6 +47,7 @@ AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/regPC.sv,SY
 AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/registers.sv,SYSTEM_VERILOG,,top_Avalon,false
 AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/top.sv,SYSTEM_VERILOG,,top_Avalon,false
 AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/interconexLogic.sv,SYSTEM_VERILOG,,top_Avalon,false
+AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/readControl.sv,SYSTEM_VERILOG,,top_Avalon,false
 AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_externalMemory.hex,HEX,,AvalonRiscV_QSYS_externalMemory,false
 AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_externalMemory.v,VERILOG,,AvalonRiscV_QSYS_externalMemory,false
 AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/AvalonRiscV_QSYS_instruccionMemory.hex,HEX,,AvalonRiscV_QSYS_instruccionMemory,false

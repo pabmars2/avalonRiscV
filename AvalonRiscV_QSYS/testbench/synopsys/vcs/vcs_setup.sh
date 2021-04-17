@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 17.1 590 win32 2021.04.11.18:37:27
+# ACDS 17.1 590 win32 2021.04.17.18:12:26
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 17.1 590 win32 2021.04.11.18:37:27
+# ACDS 17.1 590 win32 2021.04.17.18:12:26
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="AvalonRiscV_QSYS_tb"
@@ -174,6 +174,7 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/registers.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/top.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/interconexLogic.sv \
+  $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/readControl.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_UART.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/UART.sv \
   $QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/uart_rx.sv \

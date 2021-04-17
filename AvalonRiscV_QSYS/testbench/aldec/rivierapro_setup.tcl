@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 17.1 590 win32 2021.04.11.18:37:27
+# ACDS 17.1 590 win32 2021.04.17.18:12:26
 # ----------------------------------------
 # Auto-generated simulation script rivierapro_setup.tcl
 # ----------------------------------------
@@ -256,6 +256,7 @@ alias com {
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/registers.sv"                         -l altera_common_sv_packages -work RISC_V_AVALON_0                              
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/top.sv"                               -l altera_common_sv_packages -work RISC_V_AVALON_0                              
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/interconexLogic.sv"                   -l altera_common_sv_packages -work RISC_V_AVALON_0                              
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/readControl.sv"                       -l altera_common_sv_packages -work RISC_V_AVALON_0                              
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_UART.sv"                       -l altera_common_sv_packages -work MasterUART                                   
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/UART.sv"                              -l altera_common_sv_packages -work MasterUART                                   
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv"                  -l altera_common_sv_packages -work MasterUART                                   

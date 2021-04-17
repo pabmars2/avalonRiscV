@@ -1,0 +1,20 @@
+module readControl(RReadIn, RReadOut, Done);
+
+input RReadIn, Done;
+
+output reg RReadOut;
+
+always_comb
+begin
+	if(!RReadIn)
+		RReadOut <= 1'b0;
+	else
+	begin
+		if(Done)
+			RReadOut <= 1'b0;
+		else
+			RReadOut <= RReadIn;
+	end
+end
+
+endmodule 

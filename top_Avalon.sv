@@ -41,6 +41,7 @@ wire WRam, RRam;
 //Connections debug
 wire debug;
 wire enable_pc_ext;
+wire enableStep;
 wire [3:0] enable_ext;
 
 wire readInstrAux, writeInstrAux, readExtAux, writeExtAux;
@@ -67,11 +68,11 @@ top top_RISC(
 	.ddata_w(data_write_ext_uP), 
 	.WRam(WRam), 
 	.RRam(RRam),
-	.debug(~debug), //cambio por comodidad en modulo debug
 	.enable_ext(enable_ext), 
 	.enable_pc_ext(enable_pc_ext), 
 	.done_instr(done_instr), 
-	.done_ext(done_ext));
+	.done_ext(done_ext),
+	.enableStep(enableStep));
 
 avalon_mm_master #(.width(32)) master_instr(
    .CLK(CLK), 
@@ -128,7 +129,8 @@ debugMode  SystemDebug(
 	.data_bridged(dataRxDebug), 
 	.mode(mode),
 	.data_internal(dataTxDebug),
-	.doneSending(doneSending));	
+	.doneSending(doneSending),
+	.enableStep(enableStep));	
 	
 	
 	

@@ -146,6 +146,10 @@
    type="SYSTEM_VERILOG"
    library="RISC_V_AVALON_0" />
  <file
+   path="AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/readControl.sv"
+   type="SYSTEM_VERILOG"
+   library="RISC_V_AVALON_0" />
+ <file
    path="AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_UART.sv"
    type="SYSTEM_VERILOG"
    library="MasterUART" />
