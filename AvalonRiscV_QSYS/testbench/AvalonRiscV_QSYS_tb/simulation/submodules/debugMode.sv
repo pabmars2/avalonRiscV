@@ -98,11 +98,6 @@ begin
 						default: state <= INITIAL;
 					
 					endcase
-					/*
-					if(reg0_internal[0] == 1'b0 & reg0_internal[1] == 1'b0)
-						state <= INITIAL;
-					else
-						state <= IDLE;*/
  				end
 			
 			IDLE:
@@ -194,6 +189,20 @@ begin
 									else
 										tx_flag = 1'b1;
 								end
+								
+							3'b110:	
+								begin
+									mode = 3'b110;
+									we_internal = 1'b1;
+									
+									if(doneSending)
+										doneSendingAux = 1'b1;
+										
+									if(doneSendingAux == 1'b1)
+										tx_flag = 1'b0;
+									else
+										tx_flag = 1'b1;
+								end	
 							
 							default:	
 								begin
@@ -230,24 +239,7 @@ begin
 									
 									if(enableStep)
 										r_Clock_Count = r_Clock_Count + 1;
-									
-								end
-							
-							
-							
-							
-								/*if (r_Clock_Count == (freq - 1)*reg0_internal[31 : 22])
-								  begin
-									 	r_Clock_Count <= 0;  // reset counter
-										enable_pc_ext = 1'b1; 
-										enable_ext = 4'b1111;	
-									end
-								else
-								  begin
-									 r_Clock_Count <= r_Clock_Count + 1;
-									 enable_pc_ext = 1'b0; 
-									enable_ext = 4'b0000;	
-								  end	*/					
+								end				
 							end
 							else	//ejecucion continua
 							begin

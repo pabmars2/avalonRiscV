@@ -126,7 +126,7 @@
  <module name="MasterUART" kind="AvalonMasterUART" version="3.0" enabled="1">
   <parameter name="c_CLKS_PER_BIT" value="434" />
  </module>
- <module name="RISC_V_AVALON_0" kind="RISC_V_AVALON" version="2.4" enabled="1" />
+ <module name="RISC_V_AVALON_0" kind="RISC_V_AVALON" version="2.6" enabled="1" />
  <module name="clk_0" kind="clock_source" version="17.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />

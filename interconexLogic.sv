@@ -1,7 +1,7 @@
 module interconexLogic(mode, uPAddressExt, uPAddressInstr, debugAddress, dataReadExt, dataReadInstr, uPdataWriteExt, 
 uPdataWriteInstr, DEBUGWrite, dataPC, read_Ext, read_Instr, write_Ext, write_Instr, doneExt, doneInstr, startInputInstr, startInputExt,
 AddressExt, AddressInstr, uPdataReadExt, uPdataReadInstr, dataReadDebug, dataWriteExt, dataWriteInstr, readExt, readInstr, 
-writeExt, writeInstr, startInstr, startExt, chipselect_debug);
+writeExt, writeInstr, startInstr, startExt, chipselect_debug, dataPCNext);
 
 input [2 : 0] mode;
 input [31 : 0] uPAddressExt, uPAddressInstr;
@@ -9,7 +9,7 @@ input [31 : 0] debugAddress;
 input [31 : 0] dataReadExt, dataReadInstr;
 input [31 : 0] uPdataWriteExt, uPdataWriteInstr;
 input [31 : 0] DEBUGWrite;
-input [31 : 0] dataPC;
+input [31 : 0] dataPC, dataPCNext;
 input read_Ext, read_Instr, write_Ext, write_Instr;
 input doneExt, doneInstr;
 input startInputInstr, startInputExt;
@@ -128,6 +128,21 @@ begin
 				
 				state <= READPC;
 			end
+			
+		3'b110:
+			begin
+				AddressExt = uPAddressExt;
+				AddressInstr = uPAddressInstr;
+				
+				uPdataReadExt = dataReadExt;
+				uPdataReadInstr = dataReadInstr;
+				dataReadDebug = dataPCNext;
+				
+				dataWriteExt = uPdataWriteExt;
+				dataWriteInstr = uPdataWriteInstr;
+				
+				state <= READPC;
+			end	
 
 		default :
 			begin

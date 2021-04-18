@@ -1,14 +1,14 @@
-//Versión 4
+//Versión 5
 
-module top(CLK, RST_N, debug, enable_ext, enable_pc_ext, done_instr, done_ext, idata, ddata_r, iaddr, daddr, ddata_w, WRam, RRam, enableStep);
+module top(CLK, RST_N, enable_ext, enable_pc_ext, done_instr, done_ext, idata, ddata_r, iaddr, daddr, ddata_w, WRam, RRam, enableStep, dataPCNext);
 
 input CLK, RST_N;
-input debug, enable_pc_ext, done_instr, done_ext;
+input enable_pc_ext, done_instr, done_ext;
 input [31 : 0] idata;
 input [31 : 0] ddata_r;
 input [3 : 0] enable_ext; 
 
-output [31 : 0] iaddr, daddr;
+output [31 : 0] iaddr, daddr, dataPCNext;
 output [31 : 0] ddata_w;
 output WRam, RRam;
 output enableStep;
@@ -101,7 +101,8 @@ assign enableStep = enable_pc_aux;
 assign ctrAddSum = (AddPC_reg2 || (Zero_MEM && ctrAddSum_auxMEM)) ? 1'b1 : 1'b0;
 assign daddr = daddr_MEM;
 assign ddata_w = Reg2_reg_MEM;
-assign iaddr = {PC[31:2],2'b00}; 
+assign iaddr = {PC[31:2],2'b00};
+assign dataPCNext = {NeoPC[31:2],2'b00}; 
 
 assign {clrIF_ID, clrID_EX, clrMEM_WB, clrEX_MEM} = clr;
 

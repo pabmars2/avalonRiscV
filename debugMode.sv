@@ -189,6 +189,20 @@ begin
 									else
 										tx_flag = 1'b1;
 								end
+								
+							3'b110:	
+								begin
+									mode = 3'b110;
+									we_internal = 1'b1;
+									
+									if(doneSending)
+										doneSendingAux = 1'b1;
+										
+									if(doneSendingAux == 1'b1)
+										tx_flag = 1'b0;
+									else
+										tx_flag = 1'b1;
+								end	
 							
 							default:	
 								begin

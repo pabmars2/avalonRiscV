@@ -52,6 +52,8 @@ wire [31 : 0] dataTxDebug, dataRxDebug;
 wire [31 : 0] data_read_ext_uP, data_read_instr_uP;
 wire [31 : 0] data_write_ext_uP;
 
+wire [31 : 0] dataPCNext;
+
 //Assignations external
 assign control_ext = (writeExtAux == 1'b0) ? ((readExtAux == 1'b1) ? 1'b1 : 1'bX) : 1'b0;
 assign start_ext = WRam || RRam;
@@ -68,12 +70,12 @@ top top_RISC(
 	.ddata_w(data_write_ext_uP), 
 	.WRam(WRam), 
 	.RRam(RRam),
-	.debug(~debug), //cambio por comodidad en modulo debug
 	.enable_ext(enable_ext), 
 	.enable_pc_ext(enable_pc_ext), 
 	.done_instr(done_instr), 
 	.done_ext(done_ext),
-	.enableStep(enableStep));
+	.enableStep(enableStep),
+	.dataPCNext(dataPCNext));
 
 avalon_mm_master #(.width(32)) master_instr(
    .CLK(CLK), 
@@ -86,12 +88,12 @@ avalon_mm_master #(.width(32)) master_instr(
 	.LOCK(LOCK_instr), 
 	.done(done_instr), 
 	.data_read(data_read_instr),  
-	.READDATA(ReadData_instr), //ya
+	.READDATA(ReadData_instr), 
 	.WAITREQUEST(waitRqst_instr), 
-	.data_to_write(data_write_instr), //ya
+	.data_to_write(data_write_instr), 
    .rnw(control_instr), 
-	.start(start_instr),  //ya
-	.address_to_access(address_instr_master)); //ya
+	.start(start_instr),  
+	.address_to_access(address_instr_master)); 
 	
 	
 avalon_mm_master #(.width(32)) master_ext(
@@ -108,9 +110,9 @@ avalon_mm_master #(.width(32)) master_ext(
 	.READDATA(ReadData_ext), 
 	.WAITREQUEST(waitRqst_ext), 
 	.data_to_write(data_write_ext),
-   .rnw(control_ext), //ya
-	.start(startExtAux),  //ya
-	.address_to_access(address_ext_master)); //ya	
+   .rnw(control_ext), 
+	.start(startExtAux),  
+	.address_to_access(address_ext_master)); 
 
 
 debugMode  SystemDebug(
@@ -146,6 +148,7 @@ interconexLogic  connectLogic(
 	.uPdataWriteInstr(32'b0), 
 	.DEBUGWrite(dataRxDebug), 
 	.dataPC(adress_instr), 
+	.dataPCNext(dataPCNext),
 	.read_Ext(RRam), 
 	.read_Instr(1'b1), 
 	.write_Ext(WRam), 
