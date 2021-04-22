@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 17.1 590 win32 2021.04.18.16:26:15
+# ACDS 17.1 590 win32 2021.04.22.10:36:25
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,7 +106,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 17.1 590 win32 2021.04.18.16:26:15
+# ACDS 17.1 590 win32 2021.04.22.10:36:25
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="AvalonRiscV_QSYS_tb"

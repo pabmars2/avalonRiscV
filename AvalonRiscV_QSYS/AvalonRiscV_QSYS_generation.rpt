@@ -1,0 +1,74 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS.qsys --block-symbol-file --output-directory=C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading MicroV3Final_restored/AvalonRiscV_QSYS.qsys
+Progress: Reading input file
+Progress: Adding MasterUART [AvalonMasterUART 3.0]
+Progress: Parameterizing module MasterUART
+Progress: Adding RISC_V_AVALON_0 [RISC_V_AVALON 3.0]
+Progress: Parameterizing module RISC_V_AVALON_0
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding externalMemory [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module externalMemory
+Progress: Adding instruccionMemory [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module instruccionMemory
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS.qsys --synthesis=VERILOG --output-directory=C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading MicroV3Final_restored/AvalonRiscV_QSYS.qsys
+Progress: Reading input file
+Progress: Adding MasterUART [AvalonMasterUART 3.0]
+Progress: Parameterizing module MasterUART
+Progress: Adding RISC_V_AVALON_0 [RISC_V_AVALON 3.0]
+Progress: Parameterizing module RISC_V_AVALON_0
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding externalMemory [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module externalMemory
+Progress: Adding instruccionMemory [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module instruccionMemory
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: AvalonRiscV_QSYS: Generating AvalonRiscV_QSYS "AvalonRiscV_QSYS" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master MasterUART.avalon_master and slave RISC_V_AVALON_0.debug because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master MasterUART.avalon_master and slave RISC_V_AVALON_0.debug because the master has address signal 32 bit wide, but the slave is 3 bit wide.
+Info: Interconnect is inserted between master MasterUART.avalon_master and slave RISC_V_AVALON_0.debug because the master has lock signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master RISC_V_AVALON_0.master_external and slave externalMemory.s1 because the master has address signal 32 bit wide, but the slave is 10 bit wide.
+Info: Interconnect is inserted between master RISC_V_AVALON_0.master_external and slave externalMemory.s1 because the master has read signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master RISC_V_AVALON_0.master_external and slave externalMemory.s1 because the master has lock signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master RISC_V_AVALON_0.master_external and slave externalMemory.s1 because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master RISC_V_AVALON_0.master_instruccions and slave instruccionMemory.s1 because the master has address signal 32 bit wide, but the slave is 10 bit wide.
+Info: Interconnect is inserted between master RISC_V_AVALON_0.master_instruccions and slave instruccionMemory.s1 because the master has lock signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master RISC_V_AVALON_0.master_instruccions and slave instruccionMemory.s1 because the master has read signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master RISC_V_AVALON_0.master_instruccions and slave instruccionMemory.s1 because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Warning: AvalonRiscV_QSYS: "No matching role found for MasterUART:avalon_master:BEGINTRANSFER (flush)"
+Warning: AvalonRiscV_QSYS: "No matching role found for RISC_V_AVALON_0:master_external:BeginTransfer_ext (flush)"
+Warning: AvalonRiscV_QSYS: "No matching role found for RISC_V_AVALON_0:master_instruccions:BeginTransfer_instr (flush)"
+Info: MasterUART: "AvalonRiscV_QSYS" instantiated AvalonMasterUART "MasterUART"
+Info: RISC_V_AVALON_0: "AvalonRiscV_QSYS" instantiated RISC_V_AVALON "RISC_V_AVALON_0"
+Info: Reusing file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/synthesis/submodules/avalon_mm_master.sv
+Info: externalMemory: Starting RTL generation for module 'AvalonRiscV_QSYS_externalMemory'
+Info: externalMemory:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AvalonRiscV_QSYS_externalMemory --dir=C:/Users/Pablo/AppData/Local/Temp/alt8735_4886149212347277606.dir/0004_externalMemory_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Pablo/AppData/Local/Temp/alt8735_4886149212347277606.dir/0004_externalMemory_gen//AvalonRiscV_QSYS_externalMemory_component_configuration.pl  --do_build_sim=0  ]
+Info: externalMemory: Done RTL generation for module 'AvalonRiscV_QSYS_externalMemory'
+Info: externalMemory: "AvalonRiscV_QSYS" instantiated altera_avalon_onchip_memory2 "externalMemory"
+Info: instruccionMemory: Starting RTL generation for module 'AvalonRiscV_QSYS_instruccionMemory'
+Info: instruccionMemory:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AvalonRiscV_QSYS_instruccionMemory --dir=C:/Users/Pablo/AppData/Local/Temp/alt8735_4886149212347277606.dir/0005_instruccionMemory_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Pablo/AppData/Local/Temp/alt8735_4886149212347277606.dir/0005_instruccionMemory_gen//AvalonRiscV_QSYS_instruccionMemory_component_configuration.pl  --do_build_sim=0  ]
+Info: instruccionMemory: Done RTL generation for module 'AvalonRiscV_QSYS_instruccionMemory'
+Info: instruccionMemory: "AvalonRiscV_QSYS" instantiated altera_avalon_onchip_memory2 "instruccionMemory"
+Info: mm_interconnect_0: "AvalonRiscV_QSYS" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: mm_interconnect_1: "AvalonRiscV_QSYS" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: mm_interconnect_2: "AvalonRiscV_QSYS" instantiated altera_mm_interconnect "mm_interconnect_2"
+Info: rst_controller: "AvalonRiscV_QSYS" instantiated altera_reset_controller "rst_controller"
+Info: MasterUART_avalon_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "MasterUART_avalon_master_translator"
+Info: RISC_V_AVALON_0_debug_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "RISC_V_AVALON_0_debug_translator"
+Info: AvalonRiscV_QSYS: Done "AvalonRiscV_QSYS" with 11 modules, 41 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
