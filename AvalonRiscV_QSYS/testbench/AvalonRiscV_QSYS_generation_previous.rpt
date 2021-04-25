@@ -3,10 +3,9 @@ Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/t
 Info: qsys-generate C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS.qsys --testbench=STANDARD --output-directory=C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored --family="Cyclone IV E" --part=EP4CE115F29C7
 Progress: Loading MicroV3Final_restored/AvalonRiscV_QSYS.qsys
 Progress: Reading input file
-Progress: Adding MasterUART [AvalonMasterUART 3.0]
+Progress: Adding MasterUART [AvalonMasterUART 4.0]
 Progress: Parameterizing module MasterUART
-Progress: Adding RISC_V_AVALON_0 [RISC_V_AVALON 2.6]
-Warning: RISC_V_AVALON_0: Used RISC_V_AVALON 3.0 (instead of 2.6)
+Progress: Adding RISC_V_AVALON_0 [RISC_V_AVALON 3.0]
 Progress: Parameterizing module RISC_V_AVALON_0
 Progress: Adding clk_0 [clock_source 17.1]
 Progress: Parameterizing module clk_0
@@ -27,42 +26,42 @@ Progress: (2) searching C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_com
 Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx
 Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx: Loading now from components.ipx
 Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\ip_component_categories.ipx
-Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0,01 seconds
-Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0,01 seconds
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0,00 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0,00 seconds
 Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/ip/**/* matched 0 files in 0,00 seconds
 Info: Reading index C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS\testbench\AvalonRiscV_QSYS.ipx
 Progress: Loading MicroV3Final_restored/AvalonRiscV_QSYS.qsys
 Progress: Loading MicroV3Final_restored/RISC_V_AVALON_hw.tcl
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/* matched 62 files in 0,06 seconds
+Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/* matched 63 files in 0,05 seconds
 Progress: Loading ip/AvalonMasterUART_hw.tcl
 Progress: Loading ip/avalon_displays7seg_hw.tcl
 Progress: Loading ip/avalon_timer_hw.tcl
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/ip/**/* matched 17 files in 0,12 seconds
+Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/ip/**/* matched 17 files in 0,13 seconds
 Progress: Loading ip/AvalonMasterUART_hw.tcl
 Progress: Loading ip/avalon_displays7seg_hw.tcl
 Progress: Loading ip/avalon_timer_hw.tcl
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/*/* matched 202 files in 0,13 seconds
-Info: C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS\testbench\AvalonRiscV_QSYS.ipx described 0 plugins, 3 paths, in 0,31 seconds
+Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/*/* matched 206 files in 0,13 seconds
+Info: C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS\testbench\AvalonRiscV_QSYS.ipx described 0 plugins, 3 paths, in 0,30 seconds
 Progress: Loading testbench/AvalonRiscV_QSYS_tb.qsys
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/* matched 12 files in 0,32 seconds
+Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/* matched 12 files in 0,30 seconds
 Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/*/* matched 9 files in 0,00 seconds
 Info: C:/Users/Pablo/.altera.quartus/ip/17.1/**/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0,00 seconds
 Info: Reading index C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx
-Info: C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx described 2005 plugins, 0 paths, in 0,15 seconds
-Info: C:/intelfpga_lite/17.1/ip/**/* matched 138 files in 0,16 seconds
+Info: C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx described 2005 plugins, 0 paths, in 0,16 seconds
+Info: C:/intelfpga_lite/17.1/ip/**/* matched 138 files in 0,19 seconds
 Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0,00 seconds
 Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx
-Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0,01 seconds
-Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/**/* matched 8 files in 0,01 seconds
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0,00 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/**/* matched 8 files in 0,00 seconds
 Info: Reading index C:\intelfpga_lite\17.1\quartus\common\librarian\factories\index.ipx
-Info: C:\intelfpga_lite\17.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0,03 seconds
-Info: C:/intelfpga_lite/17.1/quartus/common/librarian/factories/**/* matched 4 files in 0,03 seconds
+Info: C:\intelfpga_lite\17.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0,02 seconds
+Info: C:/intelfpga_lite/17.1/quartus/common/librarian/factories/**/* matched 4 files in 0,02 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0,00 seconds
-Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0,53 seconds
-Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0,53 seconds
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0,50 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0,50 seconds
 Progress: 
 Progress: 
 Progress: 
@@ -285,11 +284,11 @@ Info: MasterUART: "AvalonRiscV_QSYS_inst" instantiated AvalonMasterUART "MasterU
 Info: RISC_V_AVALON_0: "AvalonRiscV_QSYS_inst" instantiated RISC_V_AVALON "RISC_V_AVALON_0"
 Info: Reusing file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv
 Info: externalMemory: Starting RTL generation for module 'AvalonRiscV_QSYS_externalMemory'
-Info: externalMemory:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AvalonRiscV_QSYS_externalMemory --dir=C:/Users/Pablo/AppData/Local/Temp/alt8735_8431345684441263254.dir/0009_externalMemory_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Pablo/AppData/Local/Temp/alt8735_8431345684441263254.dir/0009_externalMemory_gen//AvalonRiscV_QSYS_externalMemory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Pablo/AppData/Local/Temp/alt8735_8431345684441263254.dir/0009_externalMemory_gen/  ]
+Info: externalMemory:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AvalonRiscV_QSYS_externalMemory --dir=C:/Users/Pablo/AppData/Local/Temp/alt8741_8112376355260839519.dir/0008_externalMemory_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Pablo/AppData/Local/Temp/alt8741_8112376355260839519.dir/0008_externalMemory_gen//AvalonRiscV_QSYS_externalMemory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Pablo/AppData/Local/Temp/alt8741_8112376355260839519.dir/0008_externalMemory_gen/  ]
 Info: externalMemory: Done RTL generation for module 'AvalonRiscV_QSYS_externalMemory'
 Info: externalMemory: "AvalonRiscV_QSYS_inst" instantiated altera_avalon_onchip_memory2 "externalMemory"
 Info: instruccionMemory: Starting RTL generation for module 'AvalonRiscV_QSYS_instruccionMemory'
-Info: instruccionMemory:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AvalonRiscV_QSYS_instruccionMemory --dir=C:/Users/Pablo/AppData/Local/Temp/alt8735_8431345684441263254.dir/0010_instruccionMemory_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Pablo/AppData/Local/Temp/alt8735_8431345684441263254.dir/0010_instruccionMemory_gen//AvalonRiscV_QSYS_instruccionMemory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Pablo/AppData/Local/Temp/alt8735_8431345684441263254.dir/0010_instruccionMemory_gen/  ]
+Info: instruccionMemory:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AvalonRiscV_QSYS_instruccionMemory --dir=C:/Users/Pablo/AppData/Local/Temp/alt8741_8112376355260839519.dir/0009_instruccionMemory_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Pablo/AppData/Local/Temp/alt8741_8112376355260839519.dir/0009_instruccionMemory_gen//AvalonRiscV_QSYS_instruccionMemory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Pablo/AppData/Local/Temp/alt8741_8112376355260839519.dir/0009_instruccionMemory_gen/  ]
 Info: instruccionMemory: Done RTL generation for module 'AvalonRiscV_QSYS_instruccionMemory'
 Info: instruccionMemory: "AvalonRiscV_QSYS_inst" instantiated altera_avalon_onchip_memory2 "instruccionMemory"
 Info: mm_interconnect_0: "AvalonRiscV_QSYS_inst" instantiated altera_mm_interconnect "mm_interconnect_0"

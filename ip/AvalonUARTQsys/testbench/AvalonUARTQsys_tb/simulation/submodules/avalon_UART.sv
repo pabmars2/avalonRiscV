@@ -1,4 +1,4 @@
-module avalon_UART(CLK, RST, flag_tx, TX, RX, READDATA, WAITREQUEST, ADDRESS, WRITEDATA, BEGINTRANSFER, READ, WRITE, LOCK);
+module avalon_UART(CLK, RST, flag_tx, TX, RX, READDATA, WAITREQUEST, ADDRESS, WRITEDATA, BEGINTRANSFER, READ, WRITE, LOCK, doneSending);
 
 parameter c_CLKS_PER_BIT = 434;
 
@@ -10,6 +10,7 @@ input CLK, RST;
 input flag_tx;
 input RX;
 output TX;
+output doneSending;
 
 //////////////////
 //AVALON SIGNALS//
@@ -34,6 +35,8 @@ reg [31 : 0] dataRecieved;
 reg [31 : 0] dataToSend;//, data_to_send;
 reg [31 : 0] data_to_write;
 
+reg flagTx_aux = 0;
+
 enum {IDLE, RECIEVE, TRANSMIT, DONE} state;
 
 UART #(.c_CLKS_PER_BIT(c_CLKS_PER_BIT)) UART(
@@ -44,7 +47,8 @@ UART #(.c_CLKS_PER_BIT(c_CLKS_PER_BIT)) UART(
 	.done_rx(doneRecieved), 
 	.data_tx(dataToSend), 
 	.flag_tx(flag_tx_UART), 
-	.controlBits(control));
+	.controlBits(control),
+	.done_tx(doneSending));
 
 
 
@@ -97,7 +101,7 @@ begin
 			
 			TRANSMIT: 
 			begin
-				if(doneAvalon)
+				if(doneSending)
 					state <= DONE;
 				else
 					state <= TRANSMIT;
@@ -111,16 +115,17 @@ begin
 	end
 end	
 	
-always_comb
+always @(state or control or flag_tx_UART or flag_tx)
 begin	
 	if(RST)
 	begin
 		addressAvalon = 0;
 		ctrAvalon = 1'b1;
 		startTransfer = 1'b0;
-		//dataToSend = 0;
 		data_to_write = 0;
 		flag_tx_UART = 1'b0;
+		
+		flagTx_aux = 1'b0;
 	end
 	else
 	begin
@@ -131,9 +136,10 @@ begin
 				addressAvalon = 0;
 				ctrAvalon = 1'b1;
 				startTransfer = 1'b0;
-				//dataToSend = 0;
 				data_to_write = 0;
 				flag_tx_UART = 1'b0;
+				
+				flagTx_aux = 1'b0;
 			end
 			
 			RECIEVE: 
@@ -145,26 +151,34 @@ begin
 					
 					2'b10: addressAvalon = 32'h00000008;
 					
-					//2'b11: addressAvalon = 32'h00000010;
-					
 					default: addressAvalon = 32'h00000000;
 					
 				endcase
 				ctrAvalon = 1'b0;
 				startTransfer = 1'b1;
-				//dataToSend = 0;
-				data_to_write = dataRecieved; //hmmm
+				data_to_write = dataRecieved; 
 				flag_tx_UART = 1'b0;
+				
+				flagTx_aux = 1'b0;
 			end
 			
 			TRANSMIT: 
 			begin
 				addressAvalon = 32'h0000000C;
 				ctrAvalon = 1'b1;
-				startTransfer = 1'b1;
-				//dataToSend = data_to_send;
+				//startTransfer = 1'b1;
 				data_to_write = 0;
 				flag_tx_UART = 1'b1;
+				
+				if(flag_tx)
+					flagTx_aux <= 1'b1;
+										
+				if(flagTx_aux == 1'b1)
+					startTransfer = 1'b0;
+				else
+					startTransfer = 1'b1;
+				
+				
 			end
 			
 			DONE:
@@ -172,9 +186,10 @@ begin
 				addressAvalon = 0;
 				ctrAvalon = 1'b1;
 				startTransfer = 1'b0;
-				//dataToSend = dataToSend; //
 				data_to_write = dataRecieved;
 				flag_tx_UART = 1'b0;
+				
+				flagTx_aux = 1'b0;
 			end
 			
 			default:
@@ -182,9 +197,10 @@ begin
 				addressAvalon = 0;
 				ctrAvalon = 1'b1;
 				startTransfer = 1'b0;
-				//dataToSend = 0;
 				data_to_write = 0;
 				flag_tx_UART = 1'b0;
+				
+				flagTx_aux = 1'b0;
 			end		
 		endcase
 	end	

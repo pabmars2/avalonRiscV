@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2021.04.06.14:43:57</td>
+    <td class="l">2021.04.24.18:13:39</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -131,7 +131,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">AUTO_GENERATION_ID</td>
-        <td class="parametervalue">1617713037</td>
+        <td class="parametervalue">1619280819</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_UNIQUE_ID</td>
@@ -183,7 +183,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   <a name="module_AvalonUARTQsys_inst_AvalonMasterUART_0"> </a>
   <div>
    <hr/>
-   <h2>AvalonUARTQsys_inst_AvalonMasterUART_0</h2>AvalonMasterUART v2.1
+   <h2>AvalonUARTQsys_inst_AvalonMasterUART_0</h2>AvalonMasterUART v4.1
    <br/>
    <div class="greydiv">
     <table class="connectionboxes">
@@ -192,7 +192,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_AvalonUARTQsys_inst_clk_0">AvalonUARTQsys_inst_clk_0</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="12">AvalonUARTQsys_inst_AvalonMasterUART_0</td>
+      <td class="main" rowspan="15">AvalonUARTQsys_inst_AvalonMasterUART_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clock</td>
@@ -208,7 +208,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="neighbor" rowspan="2">
-       <a href="#module_AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm">AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm</a>
+       <a
+               href="#module_AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm">AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm</a>
       </td>
       <td class="from">conduit&#160;&#160;</td>
      </tr>
@@ -220,12 +221,24 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="neighbor" rowspan="2">
-       <a href="#module_AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm">AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm</a>
+       <a href="#module_AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm">AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm</a>
       </td>
       <td class="from">conduit&#160;&#160;</td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;rs232</td>
+      <td class="to">&#160;&#160;rs232_rx</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm">AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm</a>
+      </td>
+      <td class="from">conduit&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;rs232_tx</td>
      </tr>
      <tr>
       <td></td>
@@ -561,10 +574,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
-  <a name="module_AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm"> </a>
+  <a
+     name="module_AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm"> </a>
   <div>
    <hr/>
-   <h2>AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm</h2>altera_conduit_bfm v17.1
+   <h2>AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm</h2>altera_conduit_bfm v17.1
    <br/>
    <div class="greydiv">
     <table class="connectionboxes">
@@ -573,7 +587,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_AvalonUARTQsys_inst_clk_bfm">AvalonUARTQsys_inst_clk_bfm</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="7">AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm</td>
+      <td class="main" rowspan="7">AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
@@ -651,10 +665,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
-  <a name="module_AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm"> </a>
+  <a name="module_AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm"> </a>
   <div>
    <hr/>
-   <h2>AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm</h2>altera_conduit_bfm v17.1
+   <h2>AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm</h2>altera_conduit_bfm v17.1
    <br/>
    <div class="greydiv">
     <table class="connectionboxes">
@@ -663,7 +677,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_AvalonUARTQsys_inst_clk_bfm">AvalonUARTQsys_inst_clk_bfm</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="7">AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm</td>
+      <td class="main" rowspan="7">AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
@@ -691,7 +705,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
-      <td class="to">&#160;&#160;rs232</td>
+      <td class="to">&#160;&#160;rs232_rx</td>
      </tr>
     </table>
    </div>
@@ -712,15 +726,105 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">SIGNAL_ROLES</td>
-        <td class="parametervalue">rx,tx</td>
+        <td class="parametervalue">rx</td>
        </tr>
        <tr>
         <td class="parametername">SIGNAL_WIDTHS</td>
-        <td class="parametervalue">1,1</td>
+        <td class="parametervalue">1</td>
        </tr>
        <tr>
         <td class="parametername">SIGNAL_DIRECTIONS</td>
-        <td class="parametervalue">output,input</td>
+        <td class="parametervalue">output</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>(none)</td>
+    </tr>
+   </table>
+  </div>
+  <a name="module_AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm"> </a>
+  <div>
+   <hr/>
+   <h2>AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm</h2>altera_conduit_bfm v17.1
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_AvalonUARTQsys_inst_clk_bfm">AvalonUARTQsys_inst_clk_bfm</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+      <td class="main" rowspan="7">AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_AvalonUARTQsys_inst_reset_bfm">AvalonUARTQsys_inst_reset_bfm</a>
+      </td>
+      <td class="from">reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">conduit&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_AvalonUARTQsys_inst_AvalonMasterUART_0">AvalonUARTQsys_inst_AvalonMasterUART_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;rs232_tx</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">CLOCKED_SIGNAL</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">ENABLE_RESET</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">SIGNAL_ROLES</td>
+        <td class="parametervalue">tx</td>
+       </tr>
+       <tr>
+        <td class="parametername">SIGNAL_WIDTHS</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">SIGNAL_DIRECTIONS</td>
+        <td class="parametervalue">input</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -792,7 +896,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_AvalonUARTQsys_inst_clk_bfm">AvalonUARTQsys_inst_clk_bfm</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="13">AvalonUARTQsys_inst_reset_bfm</td>
+      <td class="main" rowspan="16">AvalonUARTQsys_inst_reset_bfm</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
@@ -835,7 +939,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">reset&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm">AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm</a>
+       <a
+               href="#module_AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm">AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm</a>
       </td>
      </tr>
      <tr>
@@ -851,7 +956,23 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">reset&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm">AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm</a>
+       <a href="#module_AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm">AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">reset&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm">AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm</a>
       </td>
      </tr>
      <tr>

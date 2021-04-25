@@ -16,7 +16,7 @@ module uart_tx
   (
    input        i_Clock,
    input        i_Tx_DV,
-   input [31:0] i_Tx_Byte, 
+   input [7:0] i_Tx_Byte, 
    output       o_Tx_Active,
    output reg   o_Tx_Serial,
    output       o_Tx_Done
@@ -25,8 +25,8 @@ module uart_tx
   enum {s_IDLE, s_TX_START_BIT, s_TX_DATA_BITS, s_TX_STOP_BIT, s_CLEANUP} r_SM_Main;
 	
   reg [8:0]    r_Clock_Count = 0;
-  reg [4:0]    r_Bit_Index   = 0;
-  reg [31:0]   r_Tx_Data     = 0;
+  reg [2:0]    r_Bit_Index   = 0;
+  reg [7:0]   r_Tx_Data     = 0;
   reg          r_Tx_Done     = 0;
   reg          r_Tx_Active   = 0;
      
@@ -86,7 +86,7 @@ module uart_tx
                 r_Clock_Count <= 0;
                  
                 // Check if we have sent out all bits
-                if (r_Bit_Index < 31)
+                if (r_Bit_Index < 7)
                   begin
                     r_Bit_Index <= r_Bit_Index + 1;
                     r_SM_Main   <= s_TX_DATA_BITS;
@@ -124,7 +124,7 @@ module uart_tx
         // Stay here 1 clock
         s_CLEANUP :
           begin
-            r_Tx_Done <= 1'b1;
+            r_Tx_Done <= 1'b0;
             r_SM_Main <= s_IDLE;
           end
          

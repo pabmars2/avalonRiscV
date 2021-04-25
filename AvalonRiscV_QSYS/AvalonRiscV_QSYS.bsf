@@ -60,7 +60,7 @@ refer to the applicable agreement for further details.
 		(text "tx" (rect 149 147 310 304)(font "Arial" (color 0 0 0)))
 		(text "reset" (rect 115 163 260 339)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "reset_n" (rect 149 187 340 384)(font "Arial" (color 0 0 0)))
-		(text " AvalonRiscV_QSYS " (rect 258 208 624 426)(font "Arial" ))
+		(text " system " (rect 317 208 682 426)(font "Arial" ))
 		(line (pt 144 32)(pt 208 32)(line_width 1))
 		(line (pt 208 32)(pt 208 208)(line_width 1))
 		(line (pt 144 208)(pt 208 208)(line_width 1))

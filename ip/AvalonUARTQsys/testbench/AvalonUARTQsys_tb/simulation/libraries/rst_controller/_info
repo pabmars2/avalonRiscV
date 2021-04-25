@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation
 valtera_reset_controller
-Z1 !s110 1617713266
+Z1 !s110 1619167751
 !i10b 1
 !s100 z[H_hRO9gO=:^2E3_jWH03
 I6_B[cQHUR]KG^=o;410>:2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1617713045
+Z3 w1619167316
 8../../AvalonUARTQsys_tb/simulation/submodules/altera_reset_controller.v
 F../../AvalonUARTQsys_tb/simulation/submodules/altera_reset_controller.v
 L0 42
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1617713266.000000
+Z5 !s108 1619167751.000000
 !s107 ../../AvalonUARTQsys_tb/simulation/submodules/altera_reset_controller.v|
 !s90 -reportprogress|300|../../AvalonUARTQsys_tb/simulation/submodules/altera_reset_controller.v|-work|rst_controller|
 !i113 1

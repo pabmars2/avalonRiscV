@@ -4,12 +4,12 @@
 
 `timescale 1 ps / 1 ps
 module AvalonUARTQsys (
-		output wire  avalon_timer_0_external_interface_conduit, // avalon_timer_0_external_interface.conduit
-		input  wire  avalonmasteruart_0_control_flag_tx,        //        avalonmasteruart_0_control.flag_tx
-		input  wire  avalonmasteruart_0_rs232_rx,               //          avalonmasteruart_0_rs232.rx
-		output wire  avalonmasteruart_0_rs232_tx,               //                                  .tx
-		input  wire  clk_clk,                                   //                               clk.clk
-		input  wire  reset_reset_n                              //                             reset.reset_n
+		output wire  avalon_timer_0_external_interface_conduit,  //  avalon_timer_0_external_interface.conduit
+		input  wire  avalonmasteruart_0_control_flag_tx_flag_tx, // avalonmasteruart_0_control_flag_tx.flag_tx
+		input  wire  avalonmasteruart_0_rs232_rx_rx,             //        avalonmasteruart_0_rs232_rx.rx
+		output wire  avalonmasteruart_0_rs232_tx_tx,             //        avalonmasteruart_0_rs232_tx.tx
+		input  wire  clk_clk,                                    //                                clk.clk
+		input  wire  reset_reset_n                               //                              reset.reset_n
 	);
 
 	wire  [31:0] avalonmasteruart_0_avalon_master_readdata;                // mm_interconnect_0:AvalonMasterUART_0_avalon_master_readdata -> AvalonMasterUART_0:READDATA
@@ -41,9 +41,10 @@ module AvalonUARTQsys (
 		.WRITE         (avalonmasteruart_0_avalon_master_write),       //              .write
 		.LOCK          (avalonmasteruart_0_avalon_master_lock),        //              .lock
 		.RST           (rst_controller_reset_out_reset),               //         reset.reset
-		.flag_tx       (avalonmasteruart_0_control_flag_tx),           //       control.flag_tx
-		.RX            (avalonmasteruart_0_rs232_rx),                  //         rs232.rx
-		.TX            (avalonmasteruart_0_rs232_tx)                   //              .tx
+		.flag_tx       (avalonmasteruart_0_control_flag_tx_flag_tx),   //       control.flag_tx
+		.TX            (avalonmasteruart_0_rs232_tx_tx),               //      rs232_tx.tx
+		.RX            (avalonmasteruart_0_rs232_rx_rx),               //      rs232_rx.rx
+		.doneSending   ()                                              //   DoneSending.donesending
 	);
 
 	avalon_timer avalon_timer_0 (

@@ -17,7 +17,7 @@ module uart_rx
    input        i_Clock,
    input        i_Rx_Serial,
    output       o_Rx_DV,
-   output [33:0] o_Rx_Byte
+   output [7:0] o_Rx_Byte
    );
   
   enum {s_IDLE, s_RX_START_BIT, s_RX_DATA_BITS, s_RX_STOP_BIT, s_CLEANUP} r_SM_Main;
@@ -26,8 +26,8 @@ module uart_rx
   reg           r_Rx_Data   = 1'b1;
    
   reg [8:0]     r_Clock_Count = 0;
-  reg [5:0]     r_Bit_Index   = 0; //8 bits total
-  reg [33:0]    r_Rx_Byte     = 0;
+  reg [3:0]     r_Bit_Index   = 0; //8 bits total
+  reg [7:0]    r_Rx_Byte     = 0;
   reg           r_Rx_DV       = 0;
    
   // Purpose: Double-register the incoming data.
@@ -92,7 +92,7 @@ module uart_rx
                 r_Rx_Byte[r_Bit_Index] <= r_Rx_Data;
                  
                 // Check if we have received all bits
-                if (r_Bit_Index < 33)
+                if (r_Bit_Index < 7)
                   begin
                     r_Bit_Index <= r_Bit_Index + 1;
                     r_SM_Main   <= s_RX_DATA_BITS;

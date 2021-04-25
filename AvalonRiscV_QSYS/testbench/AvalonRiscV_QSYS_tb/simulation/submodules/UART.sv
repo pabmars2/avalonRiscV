@@ -13,29 +13,229 @@ input [31 : 0] data_tx;
 
 output [31 : 0] data_rx; 
 output [1 : 0] controlBits;
-output done_rx, done_tx;
+output reg done_rx, done_tx;
 output TX;
 
-reg [33 : 0] data_recieved;
 
-assign data_rx = data_recieved[31:0];
-assign controlBits = data_recieved[33:32]; 
+reg [7 : 0] data_to_recieve [4 : 0];
+reg [7 : 0] data_to_send [3 : 0];
+
+reg flag_tx_aux;
+reg done_rx_aux, done_tx_aux;
+reg [7 : 0] data_recieved_aux, data_tx_aux;
+
+reg [3 : 0] indexCount = 0;
+reg WrAux;
+
+assign data_rx = {data_to_recieve[3][7:0], data_to_recieve[2][7:0], data_to_recieve[1][7:0], data_to_recieve[0][7:0]};
+assign controlBits = data_to_recieve[4][1:0];
+
+enum {IDLE, SAVE_READ, READ, SAVE_WRITE, WRITE, DONE} state;
 
   uart_rx #(.CLKS_PER_BIT(c_CLKS_PER_BIT)) UART_RX_INST
     (.i_Clock(CLK),
      .i_Rx_Serial(RX),
-     .o_Rx_DV(done_rx),		//DONE
-     .o_Rx_Byte(data_recieved)
+     .o_Rx_DV(done_rx_aux),		
+     .o_Rx_Byte(data_recieved_aux)
      );
    
   uart_tx #(.CLKS_PER_BIT(c_CLKS_PER_BIT)) UART_TX_INST
     (.i_Clock(CLK),
-     .i_Tx_DV(flag_tx),
-     .i_Tx_Byte(data_tx),
+     .i_Tx_DV(flag_tx_aux),
+     .i_Tx_Byte(data_tx_aux),
      .o_Tx_Active(),
      .o_Tx_Serial(TX),
-     .o_Tx_Done(done_tx)
+     .o_Tx_Done(done_tx_aux)
      );
   
-	  
+ 
+
+
+always @(posedge CLK)
+begin
+	case(state)
+	
+		IDLE:
+			begin
+				
+				if(RX == 1'b0)
+					state <= READ;
+				else
+				begin
+					if(flag_tx)
+						state <= SAVE_WRITE;
+					else
+						state <= IDLE;
+				end
+				
+				indexCount = 0;
+				flag_tx_aux = 1'b0;
+				
+				done_rx <= 1'b0; 
+				done_tx <= 1'b0;
+				
+				WrAux = 1'b0;
+			end
+
+			
+		
+		READ:
+			begin
+				flag_tx_aux = 1'b0;
+				
+				
+				
+				if(indexCount < 5)
+				begin
+					state <= READ;
+					
+					done_rx <= 1'b0; 
+					done_tx <= 1'b0;
+					
+					if(done_rx_aux | WrAux)
+					begin	
+						data_to_recieve[indexCount][7:0] = data_recieved_aux;
+						indexCount = indexCount + 1;
+						WrAux = 1'b0;
+					end	
+				end	
+				else
+				begin
+					data_to_recieve[indexCount][7:0] = data_recieved_aux;
+					indexCount = 0;
+					state <= DONE;
+					
+					done_rx <= 1'b1; 
+					done_tx <= 1'b0;
+				end	
+			
+			end
+		
+		SAVE_WRITE:
+			begin
+				state <= WRITE;
+				
+				indexCount = 0;
+				flag_tx_aux = 1'b0;
+				
+				done_rx <= 1'b0; 
+				done_tx <= 1'b0;
+				
+				WrAux = 1'b0;
+			end
+		
+		WRITE:
+			begin
+				WrAux = 1'b0;
+				
+				data_to_send[0][7:0] = data_tx[7 : 0];
+				data_to_send[1][7:0] = data_tx[15 : 8];
+				data_to_send[2][7:0] = data_tx[23 : 16];
+				data_to_send[3][7:0] = data_tx[31 : 24];
+				
+				if(done_tx_aux)
+					indexCount = indexCount + 1;
+				
+				case(indexCount)
+				
+					0:
+					begin
+						flag_tx_aux = 1'b1;
+						data_tx_aux = data_to_send[0][7:0];
+					
+						state <= WRITE;
+						
+						done_rx <= 1'b0; 
+						done_tx <= 1'b0;
+					end
+					
+					1:
+					begin
+						flag_tx_aux = 1'b1;
+						data_tx_aux = data_to_send[1][7:0];
+						
+						state <= WRITE;
+						
+						done_rx <= 1'b0; 
+						done_tx <= 1'b0;
+					end
+					
+					2:
+					begin
+						flag_tx_aux = 1'b1;
+						data_tx_aux = data_to_send[2][7:0];
+					
+						state <= WRITE;
+						
+						done_rx <= 1'b0; 
+						done_tx <= 1'b0;
+					end
+					
+					3:
+					begin
+						flag_tx_aux = 1'b1;
+						data_tx_aux = data_to_send[3][7:0];
+					
+						state <= WRITE;
+						
+						done_rx <= 1'b0; 
+						done_tx <= 1'b0;
+					end
+					
+					4:
+					begin
+						flag_tx_aux = 1'b0;
+						data_tx_aux = data_to_send[0][7:0];
+					
+						state <= DONE;
+						
+						done_rx <= 1'b0; 
+						done_tx <= 1'b1;
+					end
+				
+					
+					default:
+					begin
+						flag_tx_aux = 1'b0;
+						data_tx_aux = data_to_send[indexCount][7:0];
+					
+						state <= WRITE;
+						
+						done_rx <= 1'b0; 
+						done_tx <= 1'b0;
+					end
+				
+				endcase
+				
+			end
+		
+		DONE:
+			begin
+				state <= IDLE;
+			
+				indexCount = 0;
+				flag_tx_aux = 1'b0;
+				
+				done_rx <= 1'b0; 
+				done_tx <= 1'b0;
+				
+				WrAux = 1'b0;
+			end
+		
+		default:	
+			begin
+				state <= IDLE;
+			
+				indexCount = 0;
+				flag_tx_aux = 1'b0;
+				
+				done_rx <= 1'b0; 
+				done_tx <= 1'b0;
+				
+				WrAux = 1'b0;
+			end
+	
+	endcase
+end
+  
 endmodule 

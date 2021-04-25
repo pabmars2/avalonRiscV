@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 17.1 590 win32 2021.04.06.14:44:07
+# ACDS 17.1 590 win32 2021.04.24.18:13:44
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -107,7 +107,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 17.1 590 win32 2021.04.06.14:44:07
+# ACDS 17.1 590 win32 2021.04.24.18:13:44
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="AvalonUARTQsys_tb"
@@ -156,8 +156,9 @@ mkdir -p ./libraries/avalon_timer_0/
 mkdir -p ./libraries/AvalonMasterUART_0/
 mkdir -p ./libraries/AvalonUARTQsys_inst_reset_bfm/
 mkdir -p ./libraries/AvalonUARTQsys_inst_clk_bfm/
-mkdir -p ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm/
-mkdir -p ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm/
+mkdir -p ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm/
+mkdir -p ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm/
+mkdir -p ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm/
 mkdir -p ./libraries/AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm/
 mkdir -p ./libraries/AvalonUARTQsys_inst/
 mkdir -p ./libraries/altera_ver/
@@ -184,27 +185,28 @@ fi
 # ----------------------------------------
 # compile design files in correct order
 if [ $SKIP_COM -eq 0 ]; then
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv"                   -work altera_common_sv_packages                                
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_merlin_slave_translator.sv"  -work avalon_timer_0_avalon_slave_translator                   
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_merlin_master_translator.sv" -work AvalonMasterUART_0_avalon_master_translator              
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_reset_controller.v"          -work rst_controller                                           
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_reset_synchronizer.v"        -work rst_controller                                           
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/AvalonUARTQsys_mm_interconnect_0.v" -work mm_interconnect_0                                        
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_timer.v"                     -work avalon_timer_0                                           
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_slave_MM_interface.v"        -work avalon_timer_0                                           
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/timer.v"                            -work avalon_timer_0                                           
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_UART.sv"                     -work AvalonMasterUART_0                                       
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/UART.sv"                            -work AvalonMasterUART_0                                       
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_mm_master.sv"                -work AvalonMasterUART_0                                       
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/uart_rx.sv"                         -work AvalonMasterUART_0                                       
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/uart_tx.sv"                         -work AvalonMasterUART_0                                       
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_avalon_reset_source.sv"      -work AvalonUARTQsys_inst_reset_bfm                            
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_avalon_clock_source.sv"      -work AvalonUARTQsys_inst_clk_bfm                              
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_conduit_bfm_0003.sv"         -work AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm         
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_conduit_bfm_0002.sv"         -work AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm       
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_conduit_bfm.sv"              -work AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/AvalonUARTQsys.v"                   -work AvalonUARTQsys_inst                                      
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/AvalonUARTQsys_tb.v"                                                                                          
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv"                   -work altera_common_sv_packages                                 
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_merlin_slave_translator.sv"  -work avalon_timer_0_avalon_slave_translator                    
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_merlin_master_translator.sv" -work AvalonMasterUART_0_avalon_master_translator               
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_reset_controller.v"          -work rst_controller                                            
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_reset_synchronizer.v"        -work rst_controller                                            
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/AvalonUARTQsys_mm_interconnect_0.v" -work mm_interconnect_0                                         
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_timer.v"                     -work avalon_timer_0                                            
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_slave_MM_interface.v"        -work avalon_timer_0                                            
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/timer.v"                            -work avalon_timer_0                                            
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_UART.sv"                     -work AvalonMasterUART_0                                        
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/UART.sv"                            -work AvalonMasterUART_0                                        
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_mm_master.sv"                -work AvalonMasterUART_0                                        
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/uart_rx.sv"                         -work AvalonMasterUART_0                                        
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/uart_tx.sv"                         -work AvalonMasterUART_0                                        
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_avalon_reset_source.sv"      -work AvalonUARTQsys_inst_reset_bfm                             
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_avalon_clock_source.sv"      -work AvalonUARTQsys_inst_clk_bfm                               
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_conduit_bfm_0004.sv"         -work AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm       
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_conduit_bfm_0003.sv"         -work AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm       
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_conduit_bfm_0002.sv"         -work AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_conduit_bfm.sv"              -work AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm 
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/AvalonUARTQsys.v"                   -work AvalonUARTQsys_inst                                       
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/AvalonUARTQsys_tb.v"                                                                                           
 fi
 
 # ----------------------------------------

@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 17.1 590 win32 2021.04.06.14:44:07
+# ACDS 17.1 590 win32 2021.04.24.18:13:44
 # ----------------------------------------
 # Auto-generated simulation script rivierapro_setup.tcl
 # ----------------------------------------
@@ -172,32 +172,34 @@ ensure_lib                  ./libraries/altera_lnsim_ver
 vmap       altera_lnsim_ver ./libraries/altera_lnsim_ver
 ensure_lib                  ./libraries/cycloneive_ver  
 vmap       cycloneive_ver   ./libraries/cycloneive_ver  
-ensure_lib                                                           ./libraries/altera_common_sv_packages                                
-vmap       altera_common_sv_packages                                 ./libraries/altera_common_sv_packages                                
-ensure_lib                                                           ./libraries/avalon_timer_0_avalon_slave_translator                   
-vmap       avalon_timer_0_avalon_slave_translator                    ./libraries/avalon_timer_0_avalon_slave_translator                   
-ensure_lib                                                           ./libraries/AvalonMasterUART_0_avalon_master_translator              
-vmap       AvalonMasterUART_0_avalon_master_translator               ./libraries/AvalonMasterUART_0_avalon_master_translator              
-ensure_lib                                                           ./libraries/rst_controller                                           
-vmap       rst_controller                                            ./libraries/rst_controller                                           
-ensure_lib                                                           ./libraries/mm_interconnect_0                                        
-vmap       mm_interconnect_0                                         ./libraries/mm_interconnect_0                                        
-ensure_lib                                                           ./libraries/avalon_timer_0                                           
-vmap       avalon_timer_0                                            ./libraries/avalon_timer_0                                           
-ensure_lib                                                           ./libraries/AvalonMasterUART_0                                       
-vmap       AvalonMasterUART_0                                        ./libraries/AvalonMasterUART_0                                       
-ensure_lib                                                           ./libraries/AvalonUARTQsys_inst_reset_bfm                            
-vmap       AvalonUARTQsys_inst_reset_bfm                             ./libraries/AvalonUARTQsys_inst_reset_bfm                            
-ensure_lib                                                           ./libraries/AvalonUARTQsys_inst_clk_bfm                              
-vmap       AvalonUARTQsys_inst_clk_bfm                               ./libraries/AvalonUARTQsys_inst_clk_bfm                              
-ensure_lib                                                           ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm         
-vmap       AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm          ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm         
-ensure_lib                                                           ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm       
-vmap       AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm        ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm       
-ensure_lib                                                           ./libraries/AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm
-vmap       AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm ./libraries/AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm
-ensure_lib                                                           ./libraries/AvalonUARTQsys_inst                                      
-vmap       AvalonUARTQsys_inst                                       ./libraries/AvalonUARTQsys_inst                                      
+ensure_lib                                                            ./libraries/altera_common_sv_packages                                 
+vmap       altera_common_sv_packages                                  ./libraries/altera_common_sv_packages                                 
+ensure_lib                                                            ./libraries/avalon_timer_0_avalon_slave_translator                    
+vmap       avalon_timer_0_avalon_slave_translator                     ./libraries/avalon_timer_0_avalon_slave_translator                    
+ensure_lib                                                            ./libraries/AvalonMasterUART_0_avalon_master_translator               
+vmap       AvalonMasterUART_0_avalon_master_translator                ./libraries/AvalonMasterUART_0_avalon_master_translator               
+ensure_lib                                                            ./libraries/rst_controller                                            
+vmap       rst_controller                                             ./libraries/rst_controller                                            
+ensure_lib                                                            ./libraries/mm_interconnect_0                                         
+vmap       mm_interconnect_0                                          ./libraries/mm_interconnect_0                                         
+ensure_lib                                                            ./libraries/avalon_timer_0                                            
+vmap       avalon_timer_0                                             ./libraries/avalon_timer_0                                            
+ensure_lib                                                            ./libraries/AvalonMasterUART_0                                        
+vmap       AvalonMasterUART_0                                         ./libraries/AvalonMasterUART_0                                        
+ensure_lib                                                            ./libraries/AvalonUARTQsys_inst_reset_bfm                             
+vmap       AvalonUARTQsys_inst_reset_bfm                              ./libraries/AvalonUARTQsys_inst_reset_bfm                             
+ensure_lib                                                            ./libraries/AvalonUARTQsys_inst_clk_bfm                               
+vmap       AvalonUARTQsys_inst_clk_bfm                                ./libraries/AvalonUARTQsys_inst_clk_bfm                               
+ensure_lib                                                            ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm       
+vmap       AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm        ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm       
+ensure_lib                                                            ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm       
+vmap       AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm        ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm       
+ensure_lib                                                            ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm
+vmap       AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm ./libraries/AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm
+ensure_lib                                                            ./libraries/AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm 
+vmap       AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm  ./libraries/AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm 
+ensure_lib                                                            ./libraries/AvalonUARTQsys_inst                                       
+vmap       AvalonUARTQsys_inst                                        ./libraries/AvalonUARTQsys_inst                                       
 
 # ----------------------------------------
 # Compile device library files
@@ -215,41 +217,42 @@ alias dev_com {
 # Compile the design files in correct order
 alias com {
   echo "\[exec\] com"
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv"                                                -work altera_common_sv_packages                                
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_merlin_slave_translator.sv"  -l altera_common_sv_packages -work avalon_timer_0_avalon_slave_translator                   
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_merlin_master_translator.sv" -l altera_common_sv_packages -work AvalonMasterUART_0_avalon_master_translator              
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_reset_controller.v"                                       -work rst_controller                                           
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_reset_synchronizer.v"                                     -work rst_controller                                           
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/AvalonUARTQsys_mm_interconnect_0.v"                              -work mm_interconnect_0                                        
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_timer.v"                                                  -work avalon_timer_0                                           
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_slave_MM_interface.v"                                     -work avalon_timer_0                                           
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/timer.v"                                                         -work avalon_timer_0                                           
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_UART.sv"                     -l altera_common_sv_packages -work AvalonMasterUART_0                                       
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/UART.sv"                            -l altera_common_sv_packages -work AvalonMasterUART_0                                       
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_mm_master.sv"                -l altera_common_sv_packages -work AvalonMasterUART_0                                       
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/uart_rx.sv"                         -l altera_common_sv_packages -work AvalonMasterUART_0                                       
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/uart_tx.sv"                         -l altera_common_sv_packages -work AvalonMasterUART_0                                       
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_avalon_reset_source.sv"      -l altera_common_sv_packages -work AvalonUARTQsys_inst_reset_bfm                            
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_avalon_clock_source.sv"      -l altera_common_sv_packages -work AvalonUARTQsys_inst_clk_bfm                              
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_conduit_bfm_0003.sv"         -l altera_common_sv_packages -work AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm         
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_conduit_bfm_0002.sv"         -l altera_common_sv_packages -work AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm       
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_conduit_bfm.sv"              -l altera_common_sv_packages -work AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/AvalonUARTQsys.v"                                                -work AvalonUARTQsys_inst                                      
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/AvalonUARTQsys_tb.v"                                                                                                                       
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv"                                                -work altera_common_sv_packages                                 
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_merlin_slave_translator.sv"  -l altera_common_sv_packages -work avalon_timer_0_avalon_slave_translator                    
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_merlin_master_translator.sv" -l altera_common_sv_packages -work AvalonMasterUART_0_avalon_master_translator               
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_reset_controller.v"                                       -work rst_controller                                            
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_reset_synchronizer.v"                                     -work rst_controller                                            
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/AvalonUARTQsys_mm_interconnect_0.v"                              -work mm_interconnect_0                                         
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_timer.v"                                                  -work avalon_timer_0                                            
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_slave_MM_interface.v"                                     -work avalon_timer_0                                            
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/timer.v"                                                         -work avalon_timer_0                                            
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_UART.sv"                     -l altera_common_sv_packages -work AvalonMasterUART_0                                        
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/UART.sv"                            -l altera_common_sv_packages -work AvalonMasterUART_0                                        
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/avalon_mm_master.sv"                -l altera_common_sv_packages -work AvalonMasterUART_0                                        
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/uart_rx.sv"                         -l altera_common_sv_packages -work AvalonMasterUART_0                                        
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/uart_tx.sv"                         -l altera_common_sv_packages -work AvalonMasterUART_0                                        
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_avalon_reset_source.sv"      -l altera_common_sv_packages -work AvalonUARTQsys_inst_reset_bfm                             
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_avalon_clock_source.sv"      -l altera_common_sv_packages -work AvalonUARTQsys_inst_clk_bfm                               
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_conduit_bfm_0004.sv"         -l altera_common_sv_packages -work AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm       
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_conduit_bfm_0003.sv"         -l altera_common_sv_packages -work AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm       
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_conduit_bfm_0002.sv"         -l altera_common_sv_packages -work AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/altera_conduit_bfm.sv"              -l altera_common_sv_packages -work AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm 
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/submodules/AvalonUARTQsys.v"                                                -work AvalonUARTQsys_inst                                       
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonUARTQsys_tb/simulation/AvalonUARTQsys_tb.v"                                                                                                                        
 }
 
 # ----------------------------------------
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  eval vsim +access +r -t ps $ELAB_OPTIONS -L work -L altera_common_sv_packages -L avalon_timer_0_avalon_slave_translator -L AvalonMasterUART_0_avalon_master_translator -L rst_controller -L mm_interconnect_0 -L avalon_timer_0 -L AvalonMasterUART_0 -L AvalonUARTQsys_inst_reset_bfm -L AvalonUARTQsys_inst_clk_bfm -L AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm -L AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm -L AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm -L AvalonUARTQsys_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
+  eval vsim +access +r -t ps $ELAB_OPTIONS -L work -L altera_common_sv_packages -L avalon_timer_0_avalon_slave_translator -L AvalonMasterUART_0_avalon_master_translator -L rst_controller -L mm_interconnect_0 -L avalon_timer_0 -L AvalonMasterUART_0 -L AvalonUARTQsys_inst_reset_bfm -L AvalonUARTQsys_inst_clk_bfm -L AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm -L AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm -L AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm -L AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm -L AvalonUARTQsys_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with -dbg -O2 option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  eval vsim -dbg -O2 +access +r -t ps $ELAB_OPTIONS -L work -L altera_common_sv_packages -L avalon_timer_0_avalon_slave_translator -L AvalonMasterUART_0_avalon_master_translator -L rst_controller -L mm_interconnect_0 -L avalon_timer_0 -L AvalonMasterUART_0 -L AvalonUARTQsys_inst_reset_bfm -L AvalonUARTQsys_inst_clk_bfm -L AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm -L AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm -L AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm -L AvalonUARTQsys_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
+  eval vsim -dbg -O2 +access +r -t ps $ELAB_OPTIONS -L work -L altera_common_sv_packages -L avalon_timer_0_avalon_slave_translator -L AvalonMasterUART_0_avalon_master_translator -L rst_controller -L mm_interconnect_0 -L avalon_timer_0 -L AvalonMasterUART_0 -L AvalonUARTQsys_inst_reset_bfm -L AvalonUARTQsys_inst_clk_bfm -L AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm -L AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm -L AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm -L AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm -L AvalonUARTQsys_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

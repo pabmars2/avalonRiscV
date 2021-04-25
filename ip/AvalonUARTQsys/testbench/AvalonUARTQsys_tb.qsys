@@ -25,7 +25,7 @@
          type = "int";
       }
    }
-   element AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm
+   element AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm
    {
       datum _sortIndex
       {
@@ -33,11 +33,19 @@
          type = "int";
       }
    }
-   element AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm
+   element AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm
    {
       datum _sortIndex
       {
          value = "5";
+         type = "int";
+      }
+   }
+   element AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm
+   {
+      datum _sortIndex
+      {
+         value = "6";
          type = "int";
       }
    }
@@ -104,7 +112,7 @@
   <parameter name="SIGNAL_WIDTHS" value="1" />
  </module>
  <module
-   name="AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm"
+   name="AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm"
    kind="altera_conduit_bfm"
    version="17.1"
    enabled="1">
@@ -115,15 +123,26 @@
   <parameter name="SIGNAL_WIDTHS" value="1" />
  </module>
  <module
-   name="AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm"
+   name="AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm"
    kind="altera_conduit_bfm"
    version="17.1"
    enabled="1">
   <parameter name="CLOCKED_SIGNAL" value="true" />
   <parameter name="ENABLE_RESET" value="true" />
-  <parameter name="SIGNAL_DIRECTIONS" value="output,input" />
-  <parameter name="SIGNAL_ROLES" value="rx,tx" />
-  <parameter name="SIGNAL_WIDTHS" value="1,1" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="rx" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm"
+   kind="altera_conduit_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="true" />
+  <parameter name="ENABLE_RESET" value="true" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="tx" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
  </module>
  <module
    name="AvalonUARTQsys_inst_clk_bfm"
@@ -160,12 +179,17 @@
    kind="clock"
    version="17.1"
    start="AvalonUARTQsys_inst_clk_bfm.clk"
-   end="AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm.clk" />
+   end="AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm.clk" />
  <connection
    kind="clock"
    version="17.1"
    start="AvalonUARTQsys_inst_clk_bfm.clk"
-   end="AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm.clk" />
+   end="AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="AvalonUARTQsys_inst_clk_bfm.clk"
+   end="AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm.clk" />
  <connection
    kind="conduit"
    version="17.1"
@@ -180,8 +204,8 @@
  <connection
    kind="conduit"
    version="17.1"
-   start="AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm.conduit"
-   end="AvalonUARTQsys_inst.avalonmasteruart_0_control">
+   start="AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm.conduit"
+   end="AvalonUARTQsys_inst.avalonmasteruart_0_control_flag_tx">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -191,8 +215,19 @@
  <connection
    kind="conduit"
    version="17.1"
-   start="AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm.conduit"
-   end="AvalonUARTQsys_inst.avalonmasteruart_0_rs232">
+   start="AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm.conduit"
+   end="AvalonUARTQsys_inst.avalonmasteruart_0_rs232_rx">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm.conduit"
+   end="AvalonUARTQsys_inst.avalonmasteruart_0_rs232_tx">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -213,12 +248,17 @@
    kind="reset"
    version="17.1"
    start="AvalonUARTQsys_inst_reset_bfm.reset"
-   end="AvalonUARTQsys_inst_avalonmasteruart_0_control_bfm.reset" />
+   end="AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm.reset" />
  <connection
    kind="reset"
    version="17.1"
    start="AvalonUARTQsys_inst_reset_bfm.reset"
-   end="AvalonUARTQsys_inst_avalonmasteruart_0_rs232_bfm.reset" />
+   end="AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="AvalonUARTQsys_inst_reset_bfm.reset"
+   end="AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
