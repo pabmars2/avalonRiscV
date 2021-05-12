@@ -39,7 +39,7 @@ assign debug = reg0_internal[0];
 assign data_bridged = reg2_internal;
 assign address_bridged = reg1_internal;
 
-enum {INITIAL, IDLE, DEBUG, DONE} state;
+enum {/*INITIAL,*/ IDLE, DEBUG, DONE} state;
 
 avalon_slave_MM_interface	slave_debug(
 	.reset(RST),
@@ -70,13 +70,13 @@ begin
 		
 		r_Clock_Count = 0;
 		
-		state <= INITIAL;
+		state <= IDLE;//INITIAL;
 	end
 	else
 	begin
 		case(state)
 			
-			INITIAL:
+			/*INITIAL:
 				begin
 					enable_pc_ext = 1'b0;
 					enable_ext = 4'b0000;
@@ -89,16 +89,16 @@ begin
 					
 					case({reg0_internal[0],reg0_internal[1]})
 						
-						2'b00: state <= INITIAL;
+						2'b01: state <= INITIAL;
 						
-						2'b01: state <= DEBUG;
+						2'b00: state <= DEBUG;
 						
 						2'b10: state <= IDLE;
 						
-						default: state <= INITIAL;
+						default: state <= IDLE;
 					
 					endcase
- 				end
+ 				end*/
 			
 			IDLE:
 				begin
@@ -111,10 +111,17 @@ begin
 					r_Clock_Count = 0;
 					doneSendingAux = 1'b0;
 					
-					if(reg0_internal[0] == 1'b0)
-						state <= DEBUG;
-					else
-						state <= IDLE;					
+					case({reg0_internal[0],reg0_internal[1]})
+						
+						//2'b01: state <= INITIAL;
+						
+						2'b00: state <= DEBUG;
+						
+						2'b10: state <= IDLE;
+						
+						default: state <= IDLE;
+					
+					endcase
 				end
 			
 			DEBUG:
@@ -227,7 +234,7 @@ begin
 						
 						if(reg0_internal[3] == 1'b1)	//ejecucion por pasos
 							begin
-								if (r_Clock_Count == reg0_internal[31 : 22])
+								if (r_Clock_Count == reg0_internal[31 : 24])
 								begin
 									enable_pc_ext = 1'b0;
 									enable_ext = 4'b0000;
@@ -267,7 +274,17 @@ begin
 					r_Clock_Count = 0;
 					doneSendingAux = 1'b0;
 					
-					state <= IDLE;
+					case({reg0_internal[0],reg0_internal[1]})
+						
+						//2'b01: state <= INITIAL;
+						
+						2'b00: state <= DEBUG;
+						
+						2'b10: state <= IDLE;
+						
+						default: state <= IDLE;
+					
+					endcase
 				end
 				
 			default:
@@ -280,7 +297,7 @@ begin
 					r_Clock_Count = 0;
 					doneSendingAux = 1'b0;
 					
-					state <= INITIAL;
+					state <= IDLE;//INITIAL;
 				end
 			
 		endcase

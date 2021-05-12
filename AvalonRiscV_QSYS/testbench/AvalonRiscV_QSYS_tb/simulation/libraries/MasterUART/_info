@@ -7,18 +7,18 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
+dC:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
 vavalon_mm_master
-Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1619514226
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1620820520
 !i10b 1
 !s100 ?RGHbm1hIdkV`kRQY`nb71
 IEE`R9C@E3^iKhZ8DNz`]22
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 avalon_mm_master_sv_unit
 S1
-R0
-Z4 w1619280933
+Z3 dF:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
+Z4 w1620819852
 8../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv
 F../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv
 L0 9
@@ -26,22 +26,22 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1619514226.000000
+Z6 !s108 1620820520.000000
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv|-L|altera_common_sv_packages|-work|MasterUART|
 !i113 1
 Z7 o-sv -L altera_common_sv_packages -work MasterUART
 Z8 tCvgOpt 0
 vavalon_UART
+R0
 R1
-R2
 !i10b 1
 !s100 3O7=oJn6ReV9ORGmQbib91
 Im4RG[POb9]3j0h4>[Ng`D2
-R3
+R2
 !s105 avalon_UART_sv_unit
 S1
-R0
+R3
 R4
 8../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_UART.sv
 F../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_UART.sv
@@ -58,15 +58,15 @@ R7
 R8
 navalon_@u@a@r@t
 vUART
+R0
 R1
-R2
 !i10b 1
 !s100 bJhZhQN=lWJKQMQKeYgPN2
 If0zQ^C@JnI393bXFLCgf>1
-R3
+R2
 !s105 UART_sv_unit
 S1
-R0
+R3
 R4
 8../../AvalonRiscV_QSYS_tb/simulation/submodules/UART.sv
 F../../AvalonRiscV_QSYS_tb/simulation/submodules/UART.sv
@@ -83,15 +83,15 @@ R7
 R8
 n@u@a@r@t
 vuart_rx
+R0
 R1
-R2
 !i10b 1
 !s100 84FQWa8Gf^RMG7UUZ;QzA3
 I?P3^A[K[>@XjE?3[PC2Ya2
-R3
+R2
 !s105 uart_rx_sv_unit
 S1
-R0
+R3
 R4
 8../../AvalonRiscV_QSYS_tb/simulation/submodules/uart_rx.sv
 F../../AvalonRiscV_QSYS_tb/simulation/submodules/uart_rx.sv
@@ -107,15 +107,15 @@ R6
 R7
 R8
 vuart_tx
+R0
 R1
-R2
 !i10b 1
 !s100 0JIcGT<=3Rm8YKjWjhkUI3
 I323?>a4e6cnP?Xb=2TFV_3
-R3
+R2
 !s105 uart_tx_sv_unit
 S1
-R0
+R3
 R4
 8../../AvalonRiscV_QSYS_tb/simulation/submodules/uart_tx.sv
 F../../AvalonRiscV_QSYS_tb/simulation/submodules/uart_tx.sv

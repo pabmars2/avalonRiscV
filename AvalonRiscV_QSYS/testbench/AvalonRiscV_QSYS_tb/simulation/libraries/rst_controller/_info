@@ -7,15 +7,15 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
+dC:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
 valtera_reset_controller
-Z1 !s110 1619514222
+Z0 !s110 1620820517
 !i10b 1
 !s100 z[H_hRO9gO=:^2E3_jWH03
 IZWja1:W]MoP2DI_<c@5Yo0
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-R0
-Z3 w1619280936
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dF:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
+Z3 w1620819855
 8../../AvalonRiscV_QSYS_tb/simulation/submodules/altera_reset_controller.v
 F../../AvalonRiscV_QSYS_tb/simulation/submodules/altera_reset_controller.v
 L0 42
@@ -23,19 +23,19 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1619514222.000000
+Z5 !s108 1620820517.000000
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/altera_reset_controller.v|
 !s90 -reportprogress|300|../../AvalonRiscV_QSYS_tb/simulation/submodules/altera_reset_controller.v|-work|rst_controller|
 !i113 1
 Z6 o-work rst_controller
 Z7 tCvgOpt 0
 valtera_reset_synchronizer
-R1
+R0
 !i10b 1
 !s100 oWLYmSO[EOX[G0PgQhZ2=0
 IHU4YNzmRQ=cb[ajVMdMWC1
+R1
 R2
-R0
 R3
 8../../AvalonRiscV_QSYS_tb/simulation/submodules/altera_reset_synchronizer.v
 F../../AvalonRiscV_QSYS_tb/simulation/submodules/altera_reset_synchronizer.v

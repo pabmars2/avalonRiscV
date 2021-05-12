@@ -7,19 +7,19 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
+dC:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
 valtera_conduit_bfm
 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
 DXx25 altera_common_sv_packages 13 verbosity_pkg 0 22 CJl0XWjOomk30^D]8Co_z3
-!s110 1619514227
+!s110 1620820520
 !i10b 1
 !s100 d?N7TTGAoF5Un1T`n2OT[0
 IOH<m6Q9II_a3Bz;PdoBLT3
 VDg1SIo80bB@j0V0VzS_@n1
 !s105 altera_conduit_bfm_sv_unit
 S1
-R0
-w1619280933
+dF:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
+w1620819852
 8../../AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm.sv
 F../../AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm.sv
 L0 36
@@ -27,7 +27,7 @@ OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1619514226.000000
+!s108 1620820520.000000
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/altera_conduit_bfm.sv|-L|altera_common_sv_packages|-work|AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm|
 !i113 1

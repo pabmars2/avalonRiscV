@@ -1,11 +1,11 @@
 Info: Starting: Create testbench Platform Designer system
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS.ipx
-Info: qsys-generate C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS.qsys --testbench=STANDARD --output-directory=C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored --family="Cyclone IV E" --part=EP4CE115F29C7
-Progress: Loading MicroV3Final_restored/AvalonRiscV_QSYS.qsys
+Info: F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS.ipx
+Info: qsys-generate F:\Datos\Doumentos\GitHub\avalonRiscV\AvalonRiscV_QSYS.qsys --testbench=STANDARD --output-directory=F:\Datos\Doumentos\GitHub\avalonRiscV --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading avalonRiscV/AvalonRiscV_QSYS.qsys
 Progress: Reading input file
-Progress: Adding MasterUART [AvalonMasterUART 4.0]
+Progress: Adding MasterUART [AvalonMasterUART 4.1]
 Progress: Parameterizing module MasterUART
-Progress: Adding RISC_V_AVALON_0 [RISC_V_AVALON 3.0]
+Progress: Adding RISC_V_AVALON_0 [RISC_V_AVALON 3.1]
 Progress: Parameterizing module RISC_V_AVALON_0
 Progress: Adding clk_0 [clock_source 17.1]
 Progress: Parameterizing module clk_0
@@ -28,40 +28,40 @@ Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx: Loadi
 Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\ip_component_categories.ipx
 Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0,00 seconds
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/ip/**/* matched 0 files in 0,00 seconds
-Info: Reading index C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS\testbench\AvalonRiscV_QSYS.ipx
-Progress: Loading MicroV3Final_restored/AvalonRiscV_QSYS.qsys
-Progress: Loading MicroV3Final_restored/RISC_V_AVALON_hw.tcl
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/* matched 63 files in 0,05 seconds
+Info: F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/ip/**/* matched 0 files in 0,00 seconds
+Info: Reading index F:\Datos\Doumentos\GitHub\avalonRiscV\AvalonRiscV_QSYS\testbench\AvalonRiscV_QSYS.ipx
+Progress: Loading avalonRiscV/AvalonRiscV_QSYS.qsys
+Progress: Loading avalonRiscV/RISC_V_AVALON_hw.tcl
+Info: F:/Datos/Doumentos/GitHub/avalonRiscV/* matched 62 files in 0,03 seconds
 Progress: Loading ip/AvalonMasterUART_hw.tcl
 Progress: Loading ip/avalon_displays7seg_hw.tcl
 Progress: Loading ip/avalon_timer_hw.tcl
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/ip/**/* matched 17 files in 0,13 seconds
+Info: F:/Datos/Doumentos/GitHub/avalonRiscV/ip/**/* matched 17 files in 0,07 seconds
 Progress: Loading ip/AvalonMasterUART_hw.tcl
 Progress: Loading ip/avalon_displays7seg_hw.tcl
 Progress: Loading ip/avalon_timer_hw.tcl
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/*/* matched 206 files in 0,13 seconds
-Info: C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS\testbench\AvalonRiscV_QSYS.ipx described 0 plugins, 3 paths, in 0,30 seconds
+Info: F:/Datos/Doumentos/GitHub/avalonRiscV/*/* matched 207 files in 0,07 seconds
+Info: F:\Datos\Doumentos\GitHub\avalonRiscV\AvalonRiscV_QSYS\testbench\AvalonRiscV_QSYS.ipx described 0 plugins, 3 paths, in 0,16 seconds
 Progress: Loading testbench/AvalonRiscV_QSYS_tb.qsys
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/* matched 12 files in 0,30 seconds
-Info: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/*/* matched 9 files in 0,00 seconds
+Info: F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/* matched 12 files in 0,16 seconds
+Info: F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/*/* matched 9 files in 0,00 seconds
 Info: C:/Users/Pablo/.altera.quartus/ip/17.1/**/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0,00 seconds
 Info: Reading index C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx
-Info: C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx described 2005 plugins, 0 paths, in 0,16 seconds
-Info: C:/intelfpga_lite/17.1/ip/**/* matched 138 files in 0,19 seconds
+Info: C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx described 2005 plugins, 0 paths, in 0,09 seconds
+Info: C:/intelfpga_lite/17.1/ip/**/* matched 138 files in 0,09 seconds
 Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0,00 seconds
 Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx
-Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0,00 seconds
-Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/**/* matched 8 files in 0,00 seconds
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0,03 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/**/* matched 8 files in 0,03 seconds
 Info: Reading index C:\intelfpga_lite\17.1\quartus\common\librarian\factories\index.ipx
-Info: C:\intelfpga_lite\17.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0,02 seconds
-Info: C:/intelfpga_lite/17.1/quartus/common/librarian/factories/**/* matched 4 files in 0,02 seconds
+Info: C:\intelfpga_lite\17.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0,01 seconds
+Info: C:/intelfpga_lite/17.1/quartus/common/librarian/factories/**/* matched 4 files in 0,01 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0,00 seconds
-Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0,50 seconds
-Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0,50 seconds
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0,30 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0,30 seconds
 Progress: 
 Progress: 
 Progress: 
@@ -231,9 +231,9 @@ Info: TB_Gen: Saving testbench system: AvalonRiscV_QSYS_tb.qsys
 Info: save_system AvalonRiscV_QSYS_tb.qsys
 Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
 Info: TB_Gen: TBGEN SUCCESSFUL
-Info: Testbench system: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb.qsys
+Info: Testbench system: F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb.qsys
 Info: Done
-Info: qsys-generate C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS\testbench\AvalonRiscV_QSYS_tb\simulation --family="Cyclone IV E" --part=EP4CE115F29C7
+Info: qsys-generate F:\Datos\Doumentos\GitHub\avalonRiscV\AvalonRiscV_QSYS.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=F:\Datos\Doumentos\GitHub\avalonRiscV\AvalonRiscV_QSYS\testbench\AvalonRiscV_QSYS_tb\simulation --family="Cyclone IV E" --part=EP4CE115F29C7
 Progress: Loading testbench/AvalonRiscV_QSYS_tb.qsys
 Progress: Reading input file
 Progress: Adding AvalonRiscV_QSYS_inst [AvalonRiscV_QSYS 1.0]
@@ -275,20 +275,20 @@ Warning: AvalonRiscV_QSYS_inst: "No matching role found for RISC_V_AVALON_0:mast
 Info: AvalonRiscV_QSYS_inst: "AvalonRiscV_QSYS_tb" instantiated AvalonRiscV_QSYS "AvalonRiscV_QSYS_inst"
 Info: AvalonRiscV_QSYS_inst_clk_bfm: "AvalonRiscV_QSYS_tb" instantiated altera_avalon_clock_source "AvalonRiscV_QSYS_inst_clk_bfm"
 Info: AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm: "AvalonRiscV_QSYS_tb" instantiated altera_conduit_bfm "AvalonRiscV_QSYS_inst_masteruart_rs232_rx_bfm"
-Info: Reusing file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/verbosity_pkg.sv
 Info: AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm: "AvalonRiscV_QSYS_tb" instantiated altera_conduit_bfm "AvalonRiscV_QSYS_inst_masteruart_rs232_tx_bfm"
-Info: Reusing file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/verbosity_pkg.sv
 Info: AvalonRiscV_QSYS_inst_reset_bfm: "AvalonRiscV_QSYS_tb" instantiated altera_avalon_reset_source "AvalonRiscV_QSYS_inst_reset_bfm"
-Info: Reusing file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/verbosity_pkg.sv
 Info: MasterUART: "AvalonRiscV_QSYS_inst" instantiated AvalonMasterUART "MasterUART"
 Info: RISC_V_AVALON_0: "AvalonRiscV_QSYS_inst" instantiated RISC_V_AVALON "RISC_V_AVALON_0"
-Info: Reusing file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv
+Info: Reusing file F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv
 Info: externalMemory: Starting RTL generation for module 'AvalonRiscV_QSYS_externalMemory'
-Info: externalMemory:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AvalonRiscV_QSYS_externalMemory --dir=C:/Users/Pablo/AppData/Local/Temp/alt8741_8112376355260839519.dir/0008_externalMemory_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Pablo/AppData/Local/Temp/alt8741_8112376355260839519.dir/0008_externalMemory_gen//AvalonRiscV_QSYS_externalMemory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Pablo/AppData/Local/Temp/alt8741_8112376355260839519.dir/0008_externalMemory_gen/  ]
+Info: externalMemory:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AvalonRiscV_QSYS_externalMemory --dir=C:/Users/Pablo/AppData/Local/Temp/alt8759_7182190606718340781.dir/0022_externalMemory_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Pablo/AppData/Local/Temp/alt8759_7182190606718340781.dir/0022_externalMemory_gen//AvalonRiscV_QSYS_externalMemory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Pablo/AppData/Local/Temp/alt8759_7182190606718340781.dir/0022_externalMemory_gen/  ]
 Info: externalMemory: Done RTL generation for module 'AvalonRiscV_QSYS_externalMemory'
 Info: externalMemory: "AvalonRiscV_QSYS_inst" instantiated altera_avalon_onchip_memory2 "externalMemory"
 Info: instruccionMemory: Starting RTL generation for module 'AvalonRiscV_QSYS_instruccionMemory'
-Info: instruccionMemory:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AvalonRiscV_QSYS_instruccionMemory --dir=C:/Users/Pablo/AppData/Local/Temp/alt8741_8112376355260839519.dir/0009_instruccionMemory_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Pablo/AppData/Local/Temp/alt8741_8112376355260839519.dir/0009_instruccionMemory_gen//AvalonRiscV_QSYS_instruccionMemory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Pablo/AppData/Local/Temp/alt8741_8112376355260839519.dir/0009_instruccionMemory_gen/  ]
+Info: instruccionMemory:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AvalonRiscV_QSYS_instruccionMemory --dir=C:/Users/Pablo/AppData/Local/Temp/alt8759_7182190606718340781.dir/0023_instruccionMemory_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/Pablo/AppData/Local/Temp/alt8759_7182190606718340781.dir/0023_instruccionMemory_gen//AvalonRiscV_QSYS_instruccionMemory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Pablo/AppData/Local/Temp/alt8759_7182190606718340781.dir/0023_instruccionMemory_gen/  ]
 Info: instruccionMemory: Done RTL generation for module 'AvalonRiscV_QSYS_instruccionMemory'
 Info: instruccionMemory: "AvalonRiscV_QSYS_inst" instantiated altera_avalon_onchip_memory2 "instruccionMemory"
 Info: mm_interconnect_0: "AvalonRiscV_QSYS_inst" instantiated altera_mm_interconnect "mm_interconnect_0"
@@ -299,22 +299,22 @@ Info: MasterUART_avalon_master_translator: "mm_interconnect_0" instantiated alte
 Info: RISC_V_AVALON_0_debug_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "RISC_V_AVALON_0_debug_translator"
 Info: AvalonRiscV_QSYS_tb: Done "AvalonRiscV_QSYS_tb" with 16 modules, 47 files
 Info: qsys-generate succeeded.
-Info: sim-script-gen --spd=C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS_tb.spd --output-directory=C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/ --use-relative-paths=true
-Info: Doing: ip-make-simscript --spd=C:\Users\Pablo\Desktop\TFG\ISDIGI\MicroV3Final_restored\AvalonRiscV_QSYS_tb.spd --output-directory=C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/ --use-relative-paths=true
-Info: Generating the following file(s) for MODELSIM simulator in C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/ directory:
+Info: sim-script-gen --spd=F:\Datos\Doumentos\GitHub\avalonRiscV\AvalonRiscV_QSYS_tb.spd --output-directory=F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=F:\Datos\Doumentos\GitHub\avalonRiscV\AvalonRiscV_QSYS_tb.spd --output-directory=F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/ directory:
 Info: 	mentor/msim_setup.tcl
-Info: Generating the following file(s) for VCS simulator in C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/ directory:
+Info: Generating the following file(s) for VCS simulator in F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/ directory:
 Info: 	synopsys/vcs/vcs_setup.sh
-Info: Generating the following file(s) for VCSMX simulator in C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/ directory:
+Info: Generating the following file(s) for VCSMX simulator in F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/ directory:
 Info: 	synopsys/vcsmx/synopsys_sim.setup
 Info: 	synopsys/vcsmx/vcsmx_setup.sh
-Info: Generating the following file(s) for NCSIM simulator in C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/ directory:
+Info: Generating the following file(s) for NCSIM simulator in F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/ directory:
 Info: 	cadence/cds.lib
 Info: 	cadence/hdl.var
 Info: 	cadence/ncsim_setup.sh
 Info: 	16 .cds.lib files in cadence/cds_libs/ directory
-Info: Generating the following file(s) for RIVIERA simulator in C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/ directory:
+Info: Generating the following file(s) for RIVIERA simulator in F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/ directory:
 Info: 	aldec/rivierapro_setup.tcl
-Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/.
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under F:/Datos/Doumentos/GitHub/avalonRiscV/AvalonRiscV_QSYS/testbench/.
 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
 Info: Finished: Create testbench Platform Designer system

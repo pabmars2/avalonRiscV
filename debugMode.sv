@@ -39,7 +39,7 @@ assign debug = reg0_internal[0];
 assign data_bridged = reg2_internal;
 assign address_bridged = reg1_internal;
 
-enum {/*INITIAL, */IDLE, DEBUG, DONE} state;
+enum {/*INITIAL,*/ IDLE, DEBUG, DONE} state;
 
 avalon_slave_MM_interface	slave_debug(
 	.reset(RST),
@@ -89,13 +89,13 @@ begin
 					
 					case({reg0_internal[0],reg0_internal[1]})
 						
-						2'b00: state <= INITIAL;
+						2'b01: state <= INITIAL;
 						
-						2'b01: state <= DEBUG;
+						2'b00: state <= DEBUG;
 						
 						2'b10: state <= IDLE;
 						
-						default: state <= INITIAL;
+						default: state <= IDLE;
 					
 					endcase
  				end*/
@@ -111,10 +111,17 @@ begin
 					r_Clock_Count = 0;
 					doneSendingAux = 1'b0;
 					
-					if(reg0_internal[0] == 1'b0)
-						state <= DEBUG;
-					else
-						state <= IDLE;					
+					case({reg0_internal[0],reg0_internal[1]})
+						
+						//2'b01: state <= INITIAL;
+						
+						2'b00: state <= DEBUG;
+						
+						2'b10: state <= IDLE;
+						
+						default: state <= IDLE;
+					
+					endcase
 				end
 			
 			DEBUG:
@@ -267,7 +274,17 @@ begin
 					r_Clock_Count = 0;
 					doneSendingAux = 1'b0;
 					
-					state <= IDLE;
+					case({reg0_internal[0],reg0_internal[1]})
+						
+						//2'b01: state <= INITIAL;
+						
+						2'b00: state <= DEBUG;
+						
+						2'b10: state <= IDLE;
+						
+						default: state <= IDLE;
+					
+					endcase
 				end
 				
 			default:
