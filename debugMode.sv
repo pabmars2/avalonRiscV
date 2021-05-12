@@ -227,7 +227,7 @@ begin
 						
 						if(reg0_internal[3] == 1'b1)	//ejecucion por pasos
 							begin
-								if (r_Clock_Count == reg0_internal[31 : 22])
+								if (r_Clock_Count == reg0_internal[31 : 24])
 								begin
 									enable_pc_ext = 1'b0;
 									enable_ext = 4'b0000;
