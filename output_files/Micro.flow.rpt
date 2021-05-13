@@ -1,5 +1,5 @@
 Flow report for Micro
-Wed May 12 19:33:11 2021
+Thu May 13 13:23:31 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,14 +40,14 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed May 12 19:33:11 2021       ;
+; Flow Status                        ; Successful - Thu May 13 13:23:31 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Micro                                       ;
 ; Top-level Entity Name              ; top_Avalon                                  ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 3,374 / 114,480 ( 3 % )                     ;
+; Total logic elements               ; 3,380 / 114,480 ( 3 % )                     ;
 ;     Total combinational functions  ; 3,359 / 114,480 ( 3 % )                     ;
 ;     Dedicated logic registers      ; 1,692 / 114,480 ( 1 % )                     ;
 ; Total registers                    ; 1692                                        ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/12/2021 19:31:18 ;
+; Start date & time ; 05/13/2021 13:21:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Micro               ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 106528728470721.162084067717828        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 245143939530735.162090491716652        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ROM_tb         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ImmGen_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_MUX         ;
@@ -135,12 +135,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 4853 MB             ; 00:00:35                           ;
-; Fitter                    ; 00:01:16     ; 1.1                     ; 6426 MB             ; 00:02:15                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4692 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.4                     ; 4974 MB             ; 00:00:05                           ;
-; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 4690 MB             ; 00:00:05                           ;
-; Total                     ; 00:01:50     ; --                      ; --                  ; 00:03:03                           ;
+; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 4797 MB             ; 00:00:38                           ;
+; Fitter                    ; 00:00:53     ; 1.0                     ; 5800 MB             ; 00:01:27                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4693 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.4                     ; 4886 MB             ; 00:00:05                           ;
+; EDA Netlist Writer        ; 00:00:06     ; 1.0                     ; 4692 MB             ; 00:00:06                           ;
+; Total                     ; 00:01:29     ; --                      ; --                  ; 00:02:20                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -149,11 +149,11 @@ refer to the applicable agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; PABLO-PC         ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; PABLO-PC         ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; PABLO-PC         ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; PABLO-PC         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer        ; PABLO-PC         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-14N1RI6E  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; LAPTOP-14N1RI6E  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; LAPTOP-14N1RI6E  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-14N1RI6E  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-14N1RI6E  ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 

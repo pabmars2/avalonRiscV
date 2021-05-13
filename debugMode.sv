@@ -35,7 +35,7 @@ reg doneSendingAux = 0;
 
 reg [31 : 0] r_Clock_Count = 0;
 
-assign debug = reg0_internal[0]; 
+assign debug = ~reg0_internal[0]; 
 assign data_bridged = reg2_internal;
 assign address_bridged = reg1_internal;
 assign clr_ext = (reg0_internal[8] == 1'b1) ? 4'b1111 : 4'b0000;
@@ -65,7 +65,7 @@ begin
 	begin
 		enable_pc_ext = 1'b0;
 		enable_ext = 4'b0000;
-		mode = 3'b100;
+		mode = 3'b000;
 		tx_flag = 1'b0;
 		we_internal = 1'b0;
 		
@@ -116,9 +116,9 @@ begin
 						
 						//2'b01: state <= INITIAL;
 						
-						2'b00: state <= DEBUG;
+						2'b10: state <= DEBUG;
 						
-						2'b10: state <= IDLE;
+						2'b00: state <= IDLE;
 						
 						default: state <= IDLE;
 					
@@ -258,7 +258,7 @@ begin
 							end
 					end
 					
-					if(reg0_internal[0] == 1'b1)
+					if(reg0_internal[0] == 1'b0)
 						state <= DONE;
 					else
 						state <= DEBUG;					
@@ -279,9 +279,9 @@ begin
 						
 						//2'b01: state <= INITIAL;
 						
-						2'b00: state <= DEBUG;
+						2'b10: state <= DEBUG;
 						
-						2'b10: state <= IDLE;
+						2'b00: state <= IDLE;
 						
 						default: state <= IDLE;
 					
