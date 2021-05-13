@@ -1,12 +1,12 @@
 //Versión 5
 
-module top(CLK, RST_N, enable_ext, enable_pc_ext, done_instr, done_ext, idata, ddata_r, iaddr, daddr, ddata_w, WRam, RRam, enableStep, dataPCNext);
+module top(CLK, RST_N, enable_ext, enable_pc_ext, done_instr, done_ext, idata, ddata_r, iaddr, daddr, ddata_w, WRam, RRam, enableStep, dataPCNext, clr_ext);
 
 input CLK, RST_N;
 input enable_pc_ext, done_instr, done_ext;
 input [31 : 0] idata;
 input [31 : 0] ddata_r;
-input [3 : 0] enable_ext; 
+input [3 : 0] enable_ext, clr_ext; 
 
 output [31 : 0] iaddr, daddr, dataPCNext;
 output [31 : 0] ddata_w;
@@ -104,7 +104,7 @@ assign ddata_w = Reg2_reg_MEM;
 assign iaddr = {PC[31:2],2'b00};
 assign dataPCNext = {NeoPC[31:2],2'b00}; 
 
-assign {clrIF_ID, clrID_EX, clrMEM_WB, clrEX_MEM} = clr;
+assign {clrIF_ID, clrID_EX, clrMEM_WB, clrEX_MEM} = clr | clr_ext;
 
 assign senyales_aux_in = {BrachC, PCReadC, MemtoRegC, ALUOPC, MemWriteC, ALUSrcC, RegWriteC, AddPCC, MemReadC};
 assign {ctrAddSum_aux, ctrReg1, ctrRam, AluOP, WRam_ID, ctrReg2, RegWrite, AddPC, MemRead} = senyales_aux_out;
