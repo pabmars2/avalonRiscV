@@ -212,7 +212,8 @@ regMEM_WB	MEM_WB(
 regPC PC_a(
 	.CLK(CLK), 
 	.RST_n(RST_N),
-	.Enable(enable_pc_aux), 
+	.Enable(enable_pc_aux),
+	.clr(clr_ext[0]),	
 	.IN(NeoPC), 
 	.OUT(PC)); 
 

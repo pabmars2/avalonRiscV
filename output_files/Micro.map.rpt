@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Micro
-Thu May 13 13:22:19 2021
+Thu May 13 19:16:13 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -56,13 +56,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 13 13:22:19 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 13 19:16:13 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Micro                                       ;
 ; Top-level Entity Name              ; top_Avalon                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,385                                       ;
-;     Total combinational functions  ; 3,359                                       ;
+; Total logic elements               ; 4,404                                       ;
+;     Total combinational functions  ; 3,380                                       ;
 ;     Dedicated logic registers      ; 1,692                                       ;
 ; Total registers                    ; 1692                                        ;
 ; Total pins                         ; 276                                         ;
@@ -164,50 +164,55 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
+;     Processor 7            ;   0.1%      ;
+;     Processor 8            ;   0.1%      ;
+;     Processors 9-12        ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                        ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
-; registers.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/registers.sv                ;         ;
-; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/ALU.sv                      ;         ;
-; adder.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/adder.sv                    ;         ;
-; regPC.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/regPC.sv                    ;         ;
-; ImmGen.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/ImmGen.sv                   ;         ;
-; MUX.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/MUX.sv                      ;         ;
-; ALUControl.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/ALUControl.sv               ;         ;
-; control.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/control.sv                  ;         ;
-; top.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv                      ;         ;
-; regIF_ID.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/regIF_ID.sv                 ;         ;
-; regID_EX.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/regID_EX.sv                 ;         ;
-; regMEM_WB.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/regMEM_WB.sv                ;         ;
-; regEX_MEM.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/regEX_MEM.sv                ;         ;
-; FUnit.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/FUnit.sv                    ;         ;
-; MUX3.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/MUX3.sv                     ;         ;
-; HazardDet.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/HazardDet.sv                ;         ;
-; MUX9b.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/MUX9b.sv                    ;         ;
-; top_Avalon.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv               ;         ;
-; avalon_mm_master.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/avalon_mm_master.sv         ;         ;
-; avalon_slave_MM_interface.v      ; yes             ; User Verilog HDL File        ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/avalon_slave_MM_interface.v ;         ;
-; memoryControl.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/memoryControl.sv            ;         ;
-; debugMode.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv                ;         ;
-; interconexLogic.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/interconexLogic.sv          ;         ;
-; readControl.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/readControl.sv              ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+; registers.sv                     ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/registers.sv                ;         ;
+; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/ALU.sv                      ;         ;
+; adder.sv                         ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/adder.sv                    ;         ;
+; regPC.sv                         ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/regPC.sv                    ;         ;
+; ImmGen.sv                        ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/ImmGen.sv                   ;         ;
+; MUX.sv                           ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/MUX.sv                      ;         ;
+; ALUControl.sv                    ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/ALUControl.sv               ;         ;
+; control.sv                       ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/control.sv                  ;         ;
+; top.sv                           ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv                      ;         ;
+; regIF_ID.sv                      ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/regIF_ID.sv                 ;         ;
+; regID_EX.sv                      ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/regID_EX.sv                 ;         ;
+; regMEM_WB.sv                     ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/regMEM_WB.sv                ;         ;
+; regEX_MEM.sv                     ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/regEX_MEM.sv                ;         ;
+; FUnit.sv                         ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/FUnit.sv                    ;         ;
+; MUX3.sv                          ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/MUX3.sv                     ;         ;
+; HazardDet.sv                     ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/HazardDet.sv                ;         ;
+; MUX9b.sv                         ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/MUX9b.sv                    ;         ;
+; top_Avalon.sv                    ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/top_Avalon.sv               ;         ;
+; avalon_mm_master.sv              ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/avalon_mm_master.sv         ;         ;
+; avalon_slave_MM_interface.v      ; yes             ; User Verilog HDL File        ; F:/Datos/Doumentos/GitHub/avalonRiscV/avalon_slave_MM_interface.v ;         ;
+; memoryControl.sv                 ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/memoryControl.sv            ;         ;
+; debugMode.sv                     ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/debugMode.sv                ;         ;
+; interconexLogic.sv               ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/interconexLogic.sv          ;         ;
+; readControl.sv                   ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/avalonRiscV/readControl.sv              ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -215,16 +220,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 4,385     ;
+; Estimated Total logic elements              ; 4,404     ;
 ;                                             ;           ;
-; Total combinational functions               ; 3359      ;
+; Total combinational functions               ; 3380      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 2451      ;
-;     -- 3 input functions                    ; 548       ;
-;     -- <=2 input functions                  ; 360       ;
+;     -- 4 input functions                    ; 2465      ;
+;     -- 3 input functions                    ; 577       ;
+;     -- <=2 input functions                  ; 338       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 3205      ;
+;     -- normal mode                          ; 3226      ;
 ;     -- arithmetic mode                      ; 154       ;
 ;                                             ;           ;
 ; Total registers                             ; 1692      ;
@@ -237,8 +242,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
 ; Maximum fan-out                             ; 1692      ;
-; Total fan-out                               ; 19349     ;
-; Average fan-out                             ; 3.45      ;
+; Total fan-out                               ; 19448     ;
+; Average fan-out                             ; 3.46      ;
 +---------------------------------------------+-----------+
 
 
@@ -247,34 +252,34 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Entity Name               ; Library Name ;
 +-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------------+--------------+
-; |top_Avalon                                   ; 3359 (0)            ; 1692 (0)                  ; 0           ; 0            ; 0       ; 0         ; 276  ; 0            ; |top_Avalon                                                             ; top_Avalon                ; work         ;
+; |top_Avalon                                   ; 3380 (0)            ; 1692 (0)                  ; 0           ; 0            ; 0       ; 0         ; 276  ; 0            ; |top_Avalon                                                             ; top_Avalon                ; work         ;
 ;    |avalon_mm_master:master_ext|              ; 75 (75)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|avalon_mm_master:master_ext                                 ; avalon_mm_master          ; work         ;
-;    |avalon_mm_master:master_instr|            ; 73 (73)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|avalon_mm_master:master_instr                               ; avalon_mm_master          ; work         ;
+;    |avalon_mm_master:master_instr|            ; 72 (72)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|avalon_mm_master:master_instr                               ; avalon_mm_master          ; work         ;
 ;    |debugMode:SystemDebug|                    ; 192 (58)            ; 201 (41)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug                                       ; debugMode                 ; work         ;
 ;       |avalon_slave_MM_interface:slave_debug| ; 134 (134)           ; 160 (160)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug ; avalon_slave_MM_interface ; work         ;
-;    |interconexLogic:connectLogic|             ; 105 (105)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|interconexLogic:connectLogic                                ; interconexLogic           ; work         ;
-;    |top:top_RISC|                             ; 2914 (4)            ; 1487 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC                                                ; top                       ; work         ;
-;       |ALU:ALU|                               ; 689 (689)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|ALU:ALU                                        ; ALU                       ; work         ;
+;    |interconexLogic:connectLogic|             ; 106 (106)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|interconexLogic:connectLogic                                ; interconexLogic           ; work         ;
+;    |top:top_RISC|                             ; 2935 (3)            ; 1487 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC                                                ; top                       ; work         ;
+;       |ALU:ALU|                               ; 681 (681)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|ALU:ALU                                        ; ALU                       ; work         ;
 ;       |ALUControl:ALUControl|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|ALUControl:ALUControl                          ; ALUControl                ; work         ;
-;       |FUnit:FUnit|                           ; 39 (39)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|FUnit:FUnit                                    ; FUnit                     ; work         ;
+;       |FUnit:FUnit|                           ; 37 (37)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|FUnit:FUnit                                    ; FUnit                     ; work         ;
 ;       |HazardDet:HazardDet|                   ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|HazardDet:HazardDet                            ; HazardDet                 ; work         ;
 ;       |ImmGen:ImmGen|                         ; 44 (44)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|ImmGen:ImmGen                                  ; ImmGen                    ; work         ;
-;       |MUX3:Mux_reg2|                         ; 50 (50)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX3:Mux_reg2                                  ; MUX3                      ; work         ;
+;       |MUX3:Mux_reg2|                         ; 52 (52)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX3:Mux_reg2                                  ; MUX3                      ; work         ;
 ;       |MUX:MUXAddSum|                         ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX:MUXAddSum                                  ; MUX                       ; work         ;
 ;       |MUX:MUXRam|                            ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX:MUXRam                                     ; MUX                       ; work         ;
-;       |MUX:MUXReg1|                           ; 69 (69)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX:MUXReg1                                    ; MUX                       ; work         ;
-;       |MUX:MUXReg2|                           ; 49 (49)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX:MUXReg2                                    ; MUX                       ; work         ;
+;       |MUX:MUXReg1|                           ; 70 (70)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX:MUXReg1                                    ; MUX                       ; work         ;
+;       |MUX:MUXReg2|                           ; 47 (47)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|MUX:MUXReg2                                    ; MUX                       ; work         ;
 ;       |adder:Add|                             ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|adder:Add                                      ; adder                     ; work         ;
 ;       |control:conrtol|                       ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|control:conrtol                                ; control                   ; work         ;
 ;       |memoryControl:controlExt|              ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|memoryControl:controlExt                       ; memoryControl             ; work         ;
 ;       |memoryControl:controlInstr|            ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|memoryControl:controlInstr                     ; memoryControl             ; work         ;
 ;       |readControl:RdControl|                 ; 3 (3)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|readControl:RdControl                          ; readControl               ; work         ;
 ;       |readControl:WrControl|                 ; 3 (3)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|readControl:WrControl                          ; readControl               ; work         ;
-;       |regEX_MEM:EX_MEM|                      ; 113 (113)           ; 107 (107)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regEX_MEM:EX_MEM                               ; regEX_MEM                 ; work         ;
+;       |regEX_MEM:EX_MEM|                      ; 110 (110)           ; 107 (107)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regEX_MEM:EX_MEM                               ; regEX_MEM                 ; work         ;
 ;       |regID_EX:ID_EX|                        ; 1526 (1526)         ; 185 (185)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regID_EX:ID_EX                                 ; regID_EX                  ; work         ;
 ;       |regIF_ID:IF_ID|                        ; 96 (96)             ; 94 (94)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regIF_ID:IF_ID                                 ; regIF_ID                  ; work         ;
 ;       |regMEM_WB:MEM_WB|                      ; 71 (71)             ; 71 (71)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regMEM_WB:MEM_WB                               ; regMEM_WB                 ; work         ;
-;       |regPC:PC_a|                            ; 1 (1)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regPC:PC_a                                     ; regPC                     ; work         ;
+;       |regPC:PC_a|                            ; 35 (35)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|regPC:PC_a                                     ; regPC                     ; work         ;
 ;       |registers:Registers|                   ; 38 (38)             ; 992 (992)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_Avalon|top:top_RISC|registers:Registers                            ; registers                 ; work         ;
 +-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -356,42 +361,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg0[7]      ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg1[23]     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg2[31]     ;
-; 3:1                ; 227 bits  ; 454 LEs       ; 227 LEs              ; 227 LEs                ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aPC[19]                                      ;
-; 3:1                ; 62 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regIF_ID:IF_ID|auxPC[23]                                    ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg3[1]      ;
-; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg3[6]      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regMEM_WB:MEM_WB|aData[27]                                  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regIF_ID:IF_ID|auxinstr[5]                                  ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aRegWrite                                    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |top_Avalon|debugMode:SystemDebug|tx_flag                                            ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|r_Clock_Count[27]                                  ;
-; 10:1               ; 32 bits   ; 192 LEs       ; 96 LEs               ; 96 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|readdata[30] ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[20]                                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg0[17]     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg1[26]     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg2[9]      ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regPC:PC_a|aux[11]                                          ;
+; 3:1                ; 227 bits  ; 454 LEs       ; 227 LEs              ; 227 LEs                ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aRs2[3]                                      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regPC:PC_a|aux[1]                                           ;
+; 3:1                ; 62 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regIF_ID:IF_ID|auxPC[8]                                     ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg3[0]      ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|reg3[4]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regMEM_WB:MEM_WB|aData[23]                                  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regIF_ID:IF_ID|auxinstr[20]                                 ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aMemRead                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |top_Avalon|debugMode:SystemDebug|doneSendingAux                                     ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|r_Clock_Count[24]                                  ;
+; 10:1               ; 32 bits   ; 192 LEs       ; 96 LEs               ; 96 LEs                 ; Yes        ; |top_Avalon|debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug|readdata[23] ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[27]                                  ;
 ; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[17]                                  ;
-; 34:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|ard1[11]                                     ;
-; 34:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|ard2[3]                                      ;
-; 10:1               ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[8]                                   ;
+; 34:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|ard1[22]                                     ;
+; 34:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|ard2[29]                                     ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[10]                                  ;
 ; 11:1               ; 3 bits    ; 21 LEs        ; 15 LEs               ; 6 LEs                  ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[5]                                   ;
-; 12:1               ; 4 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[4]                                   ;
+; 12:1               ; 4 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_Avalon|top:top_RISC|regID_EX:ID_EX|aImmGen[1]                                   ;
 ; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; No         ; |top_Avalon|top:top_RISC|ImmGen:ImmGen|Mux30                                         ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_Avalon|top:top_RISC|MUX3:Mux_reg2|Mux26                                         ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top_Avalon|top:top_RISC|MUX:MUXReg1|out[31]                                         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_Avalon|avalon_mm_master:master_instr|ADDRESS[1]                                 ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |top_Avalon|avalon_mm_master:master_instr|ADDRESS[2]                                 ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_Avalon|avalon_mm_master:master_ext|ADDRESS[18]                                  ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top_Avalon|avalon_mm_master:master_ext|WRITEDATA[26]                                ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; No         ; |top_Avalon|avalon_mm_master:master_instr|WRITEDATA[21]                              ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_Avalon|top:top_RISC|MUX3:Mux_reg2|Mux6                                          ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top_Avalon|top:top_RISC|MUX:MUXReg1|out[22]                                         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_Avalon|avalon_mm_master:master_instr|ADDRESS[0]                                 ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |top_Avalon|avalon_mm_master:master_instr|ADDRESS[12]                                ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_Avalon|avalon_mm_master:master_ext|ADDRESS[26]                                  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top_Avalon|avalon_mm_master:master_ext|WRITEDATA[8]                                 ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; No         ; |top_Avalon|avalon_mm_master:master_instr|WRITEDATA[12]                              ;
 ; 11:1               ; 3 bits    ; 21 LEs        ; 18 LEs               ; 3 LEs                  ; No         ; |top_Avalon|top:top_RISC|ALUControl:ALUControl|Mux2                                  ;
-; 16:1               ; 8 bits    ; 80 LEs        ; 56 LEs               ; 24 LEs                 ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux14                                               ;
-; 16:1               ; 8 bits    ; 80 LEs        ; 56 LEs               ; 24 LEs                 ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux21                                               ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 56 LEs               ; 24 LEs                 ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux12                                               ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 56 LEs               ; 24 LEs                 ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux23                                               ;
 ; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux4                                                ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux24                                               ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux25                                               ;
 ; 18:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux3                                                ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux29                                               ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux1                                                ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux28                                               ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |top_Avalon|top:top_RISC|ALU:ALU|Mux0                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
 
 
@@ -520,18 +527,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR SCLR      ; 149                         ;
 ;     ENA SCLR          ; 2                           ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 3359                        ;
+; cycloneiii_lcell_comb ; 3380                        ;
 ;     arith             ; 154                         ;
 ;         2 data inputs ; 61                          ;
 ;         3 data inputs ; 93                          ;
-;     normal            ; 3205                        ;
+;     normal            ; 3226                        ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 297                         ;
-;         3 data inputs ; 455                         ;
-;         4 data inputs ; 2451                        ;
+;         2 data inputs ; 275                         ;
+;         3 data inputs ; 484                         ;
+;         4 data inputs ; 2465                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 23.00                       ;
-; Average LUT depth     ; 7.42                        ;
+; Max LUT depth         ; 22.00                       ;
+; Average LUT depth     ; 7.36                        ;
 +-----------------------+-----------------------------+
 
 
@@ -540,7 +547,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -550,101 +557,101 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu May 13 13:21:57 2021
+    Info: Processing started: Thu May 13 19:15:53 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Micro -c Micro
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file registers.sv
-    Info (12023): Found entity 1: registers File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/registers.sv Line: 1
+    Info (12023): Found entity 1: registers File: F:/Datos/Doumentos/GitHub/avalonRiscV/registers.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: ALU File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/ALU.sv Line: 1
+    Info (12023): Found entity 1: ALU File: F:/Datos/Doumentos/GitHub/avalonRiscV/ALU.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
-    Info (12023): Found entity 1: adder File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/adder.sv Line: 1
+    Info (12023): Found entity 1: adder File: F:/Datos/Doumentos/GitHub/avalonRiscV/adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regpc.sv
-    Info (12023): Found entity 1: regPC File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/regPC.sv Line: 1
+    Info (12023): Found entity 1: regPC File: F:/Datos/Doumentos/GitHub/avalonRiscV/regPC.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file immgen.sv
-    Info (12023): Found entity 1: ImmGen File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/ImmGen.sv Line: 1
-Warning (12090): Entity "MUX" obtained from "MUX.sv" instead of from Quartus Prime megafunction library File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/MUX.sv Line: 1
+    Info (12023): Found entity 1: ImmGen File: F:/Datos/Doumentos/GitHub/avalonRiscV/ImmGen.sv Line: 1
+Warning (12090): Entity "MUX" obtained from "MUX.sv" instead of from Quartus Prime megafunction library File: F:/Datos/Doumentos/GitHub/avalonRiscV/MUX.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux.sv
-    Info (12023): Found entity 1: MUX File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/MUX.sv Line: 1
+    Info (12023): Found entity 1: MUX File: F:/Datos/Doumentos/GitHub/avalonRiscV/MUX.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alucontrol.sv
-    Info (12023): Found entity 1: ALUControl File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/ALUControl.sv Line: 1
+    Info (12023): Found entity 1: ALUControl File: F:/Datos/Doumentos/GitHub/avalonRiscV/ALUControl.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file control.sv
-    Info (12023): Found entity 1: control File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/control.sv Line: 1
+    Info (12023): Found entity 1: control File: F:/Datos/Doumentos/GitHub/avalonRiscV/control.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top.sv
-    Info (12023): Found entity 1: top File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 3
+    Info (12023): Found entity 1: top File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file regif_id.sv
-    Info (12023): Found entity 1: regIF_ID File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/regIF_ID.sv Line: 1
+    Info (12023): Found entity 1: regIF_ID File: F:/Datos/Doumentos/GitHub/avalonRiscV/regIF_ID.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regid_ex.sv
-    Info (12023): Found entity 1: regID_EX File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/regID_EX.sv Line: 1
+    Info (12023): Found entity 1: regID_EX File: F:/Datos/Doumentos/GitHub/avalonRiscV/regID_EX.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regmem_wb.sv
-    Info (12023): Found entity 1: regMEM_WB File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/regMEM_WB.sv Line: 1
+    Info (12023): Found entity 1: regMEM_WB File: F:/Datos/Doumentos/GitHub/avalonRiscV/regMEM_WB.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regex_mem.sv
-    Info (12023): Found entity 1: regEX_MEM File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/regEX_MEM.sv Line: 1
+    Info (12023): Found entity 1: regEX_MEM File: F:/Datos/Doumentos/GitHub/avalonRiscV/regEX_MEM.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file funit.sv
-    Info (12023): Found entity 1: FUnit File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/FUnit.sv Line: 1
+    Info (12023): Found entity 1: FUnit File: F:/Datos/Doumentos/GitHub/avalonRiscV/FUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux3.sv
-    Info (12023): Found entity 1: MUX3 File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/MUX3.sv Line: 1
+    Info (12023): Found entity 1: MUX3 File: F:/Datos/Doumentos/GitHub/avalonRiscV/MUX3.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hazarddet.sv
-    Info (12023): Found entity 1: HazardDet File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/HazardDet.sv Line: 1
+    Info (12023): Found entity 1: HazardDet File: F:/Datos/Doumentos/GitHub/avalonRiscV/HazardDet.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux9b.sv
-    Info (12023): Found entity 1: MUX9b File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/MUX9b.sv Line: 1
+    Info (12023): Found entity 1: MUX9b File: F:/Datos/Doumentos/GitHub/avalonRiscV/MUX9b.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top_avalon.sv
-    Info (12023): Found entity 1: top_Avalon File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 1
+    Info (12023): Found entity 1: top_Avalon File: F:/Datos/Doumentos/GitHub/avalonRiscV/top_Avalon.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file avalon_mm_master.sv
-    Info (12023): Found entity 1: avalon_mm_master File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/avalon_mm_master.sv Line: 9
+    Info (12023): Found entity 1: avalon_mm_master File: F:/Datos/Doumentos/GitHub/avalonRiscV/avalon_mm_master.sv Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file avalon_slave_mm_interface.v
-    Info (12023): Found entity 1: avalon_slave_MM_interface File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/avalon_slave_MM_interface.v Line: 1
+    Info (12023): Found entity 1: avalon_slave_MM_interface File: F:/Datos/Doumentos/GitHub/avalonRiscV/avalon_slave_MM_interface.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memorycontrol.sv
-    Info (12023): Found entity 1: memoryControl File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/memoryControl.sv Line: 1
+    Info (12023): Found entity 1: memoryControl File: F:/Datos/Doumentos/GitHub/avalonRiscV/memoryControl.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file debugmode.sv
-    Info (12023): Found entity 1: debugMode File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 1
+    Info (12023): Found entity 1: debugMode File: F:/Datos/Doumentos/GitHub/avalonRiscV/debugMode.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file interconexlogic.sv
-    Info (12023): Found entity 1: interconexLogic File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/interconexLogic.sv Line: 1
+    Info (12023): Found entity 1: interconexLogic File: F:/Datos/Doumentos/GitHub/avalonRiscV/interconexLogic.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file readcontrol.sv
-    Info (12023): Found entity 1: readControl File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/readControl.sv Line: 1
+    Info (12023): Found entity 1: readControl File: F:/Datos/Doumentos/GitHub/avalonRiscV/readControl.sv Line: 1
 Info (12127): Elaborating entity "top_Avalon" for the top level hierarchy
-Info (12128): Elaborating entity "top" for hierarchy "top:top_RISC" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 79
-Info (12128): Elaborating entity "regIF_ID" for hierarchy "top:top_RISC|regIF_ID:IF_ID" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 122
-Info (12128): Elaborating entity "regID_EX" for hierarchy "top:top_RISC|regID_EX:ID_EX" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 164
-Info (12128): Elaborating entity "regEX_MEM" for hierarchy "top:top_RISC|regEX_MEM:EX_MEM" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 192
-Info (12128): Elaborating entity "regMEM_WB" for hierarchy "top:top_RISC|regMEM_WB:MEM_WB" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 208
-Info (12128): Elaborating entity "regPC" for hierarchy "top:top_RISC|regPC:PC_a" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 217
-Info (12128): Elaborating entity "ALU" for hierarchy "top:top_RISC|ALU:ALU" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 224
-Info (12128): Elaborating entity "registers" for hierarchy "top:top_RISC|registers:Registers" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 235
-Info (12128): Elaborating entity "ImmGen" for hierarchy "top:top_RISC|ImmGen:ImmGen" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 239
-Info (12128): Elaborating entity "adder" for hierarchy "top:top_RISC|adder:Add" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 244
-Info (12128): Elaborating entity "MUX" for hierarchy "top:top_RISC|MUX:MUXAddSum" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 255
-Info (12128): Elaborating entity "ALUControl" for hierarchy "top:top_RISC|ALUControl:ALUControl" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 280
-Info (12128): Elaborating entity "control" for hierarchy "top:top_RISC|control:conrtol" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 292
-Info (12128): Elaborating entity "FUnit" for hierarchy "top:top_RISC|FUnit:FUnit" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 304
-Info (12128): Elaborating entity "MUX3" for hierarchy "top:top_RISC|MUX3:Mux_reg1" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 311
-Info (12128): Elaborating entity "HazardDet" for hierarchy "top:top_RISC|HazardDet:HazardDet" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 332
-Info (12128): Elaborating entity "MUX9b" for hierarchy "top:top_RISC|MUX9b:MuxContr" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 338
-Info (12128): Elaborating entity "memoryControl" for hierarchy "top:top_RISC|memoryControl:controlInstr" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 349
-Info (12128): Elaborating entity "readControl" for hierarchy "top:top_RISC|readControl:RdControl" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top.sv Line: 365
-Info (12128): Elaborating entity "avalon_mm_master" for hierarchy "avalon_mm_master:master_instr" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 97
-Info (12128): Elaborating entity "debugMode" for hierarchy "debugMode:SystemDebug" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 138
-Info (12128): Elaborating entity "avalon_slave_MM_interface" for hierarchy "debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/debugMode.sv Line: 58
-Info (12128): Elaborating entity "interconexLogic" for hierarchy "interconexLogic:connectLogic" File: C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/top_Avalon.sv Line: 175
+Info (12128): Elaborating entity "top" for hierarchy "top:top_RISC" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top_Avalon.sv Line: 79
+Info (12128): Elaborating entity "regIF_ID" for hierarchy "top:top_RISC|regIF_ID:IF_ID" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 122
+Info (12128): Elaborating entity "regID_EX" for hierarchy "top:top_RISC|regID_EX:ID_EX" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 164
+Info (12128): Elaborating entity "regEX_MEM" for hierarchy "top:top_RISC|regEX_MEM:EX_MEM" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 192
+Info (12128): Elaborating entity "regMEM_WB" for hierarchy "top:top_RISC|regMEM_WB:MEM_WB" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 208
+Info (12128): Elaborating entity "regPC" for hierarchy "top:top_RISC|regPC:PC_a" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 218
+Info (12128): Elaborating entity "ALU" for hierarchy "top:top_RISC|ALU:ALU" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 225
+Info (12128): Elaborating entity "registers" for hierarchy "top:top_RISC|registers:Registers" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 236
+Info (12128): Elaborating entity "ImmGen" for hierarchy "top:top_RISC|ImmGen:ImmGen" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 240
+Info (12128): Elaborating entity "adder" for hierarchy "top:top_RISC|adder:Add" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 245
+Info (12128): Elaborating entity "MUX" for hierarchy "top:top_RISC|MUX:MUXAddSum" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 256
+Info (12128): Elaborating entity "ALUControl" for hierarchy "top:top_RISC|ALUControl:ALUControl" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 281
+Info (12128): Elaborating entity "control" for hierarchy "top:top_RISC|control:conrtol" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 293
+Info (12128): Elaborating entity "FUnit" for hierarchy "top:top_RISC|FUnit:FUnit" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 305
+Info (12128): Elaborating entity "MUX3" for hierarchy "top:top_RISC|MUX3:Mux_reg1" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 312
+Info (12128): Elaborating entity "HazardDet" for hierarchy "top:top_RISC|HazardDet:HazardDet" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 333
+Info (12128): Elaborating entity "MUX9b" for hierarchy "top:top_RISC|MUX9b:MuxContr" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 339
+Info (12128): Elaborating entity "memoryControl" for hierarchy "top:top_RISC|memoryControl:controlInstr" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 350
+Info (12128): Elaborating entity "readControl" for hierarchy "top:top_RISC|readControl:RdControl" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top.sv Line: 366
+Info (12128): Elaborating entity "avalon_mm_master" for hierarchy "avalon_mm_master:master_instr" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top_Avalon.sv Line: 97
+Info (12128): Elaborating entity "debugMode" for hierarchy "debugMode:SystemDebug" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top_Avalon.sv Line: 138
+Info (12128): Elaborating entity "avalon_slave_MM_interface" for hierarchy "debugMode:SystemDebug|avalon_slave_MM_interface:slave_debug" File: F:/Datos/Doumentos/GitHub/avalonRiscV/debugMode.sv Line: 58
+Info (12128): Elaborating entity "interconexLogic" for hierarchy "interconexLogic:connectLogic" File: F:/Datos/Doumentos/GitHub/avalonRiscV/top_Avalon.sv Line: 175
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/output_files/Micro.map.smsg
+Info (144001): Generated suppressed messages file F:/Datos/Doumentos/GitHub/avalonRiscV/output_files/Micro.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4756 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4745 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 107 input pins
     Info (21059): Implemented 169 output pins
-    Info (21061): Implemented 4480 logic cells
+    Info (21061): Implemented 4469 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4797 megabytes
-    Info: Processing ended: Thu May 13 13:22:19 2021
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:38
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Thu May 13 19:16:13 2021
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:34
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/output_files/Micro.map.smsg.
+The suppressed messages can be found in F:/Datos/Doumentos/GitHub/avalonRiscV/output_files/Micro.map.smsg.
 
 

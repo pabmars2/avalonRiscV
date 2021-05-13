@@ -22,7 +22,7 @@ output reg [31 : 0] dataWriteExt, dataWriteInstr;
 output reg readExt, readInstr, writeExt, writeInstr;
 output reg startInstr, startExt;
 
-enum {uP, READEXT, READINSTR, WREXT, WRINSTR, READPC, DONE} state;
+enum {uP, READEXT, READINSTR, WREXT, WRINSTR, READPC, IDLE, DONE} state;
 
 always_comb
 begin
@@ -143,6 +143,23 @@ begin
 				
 				state <= READPC;
 			end	
+			
+		3'b111:
+			begin
+				AddressExt = uPAddressExt;
+				AddressInstr = uPAddressInstr;
+				
+				uPdataReadExt = dataReadExt;
+				uPdataReadInstr = dataReadInstr;
+				dataReadDebug = 32'b0;
+				
+				dataWriteExt = uPdataWriteExt;
+				dataWriteInstr = uPdataWriteInstr;
+				
+				state <= IDLE;
+			end			
+			
+			
 
 		default :
 			begin
@@ -264,6 +281,18 @@ begin
 			startInstr = 1'b0; 
 			startExt = 1'b0;	
 		end
+		
+		IDLE:
+		begin
+			readExt = 1'b0;
+			readInstr = 1'b0;
+			writeExt = 1'b0;
+			writeInstr = 1'b0;
+				
+			startInstr = 1'b0; 
+			startExt = 1'b0;	
+		end		
+		
 		
 		DONE:
 		begin

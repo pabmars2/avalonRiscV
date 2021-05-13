@@ -134,7 +134,7 @@ begin
 							
 							3'b000:	
 								begin
-									mode = 3'b000;
+									mode = 3'b111;
 									tx_flag = 1'b0;
 									we_internal = 1'b0;
 									doneSendingAux = 1'b0;
