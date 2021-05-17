@@ -46,64 +46,64 @@ always_ff @(posedge CLK, negedge RST_n)
 begin
 	if(!RST_n)
 		begin
-			aPC = 0; 
-			ard1 = 0; 
-			ard2 = 0; 
-			aImmGen = 0; 
-			aBrach = 0; 
-			aPCRead = 0; 
-			aMemtoReg = 0; 
-			aALUSrc = 0; 
-			aRegWrite = 0; 
-			aALUOP = 0; 
-			ainstr4b = 0; 
-			ainstr5b = 0;
-			aAdd1 = 0;
-			aAddPC = 0;
-			aRs1 = 0; 
-			aRs2 = 0;
-			aMemRead = 0;
+			aPC <= 0; 
+			ard1 <= 0; 
+			ard2 <= 0; 
+			aImmGen <= 0; 
+			aBrach <= 0; 
+			aPCRead <= 0; 
+			aMemtoReg <= 0; 
+			aALUSrc <= 0; 
+			aRegWrite <= 0; 
+			aALUOP <= 0; 
+			ainstr4b <= 0; 
+			ainstr5b <= 0;
+			aAdd1 <= 0;
+			aAddPC <= 0;
+			aRs1 <= 0; 
+			aRs2 <= 0;
+			aMemRead <= 0;
 		end
 	else	if(clr)
 		begin
-			aPC = 0; 
-			ard1 = 0; 
-			ard2 = 0; 
-			aImmGen = 0; 
-			aBrach = 0; 
-			aPCRead = 0; 
-			aMemtoReg = 0; 
-			aALUSrc = 0; 
-			aRegWrite = 0; 
-			aALUOP = 0; 
-			ainstr4b = 0; 
-			ainstr5b = 0; 
-			aAdd1 = 0;
-			aAddPC = 0;
-			aRs1 = 0; 
-			aRs2 = 0;
-			aMemRead = 0;
+			aPC <= 0; 
+			ard1 <= 0; 
+			ard2 <= 0; 
+			aImmGen <= 0; 
+			aBrach <= 0; 
+			aPCRead <= 0; 
+			aMemtoReg <= 0; 
+			aALUSrc <= 0; 
+			aRegWrite <= 0; 
+			aALUOP <= 0; 
+			ainstr4b <= 0; 
+			ainstr5b <= 0; 
+			aAdd1 <= 0;
+			aAddPC <= 0;
+			aRs1 <= 0; 
+			aRs2 <= 0;
+			aMemRead <= 0;
 		end
 	else if(Enable)
 		begin
-			aPC = PC; 
-			ard1 = rd1; 
-			ard2 = rd2; 
-			aImmGen = ImmGen; 
-			aBrach = Brach; 
-			aPCRead = PCRead; 
-			aMemtoReg = MemtoReg;
-			aMemWrite = MemWrite; 
-			aALUSrc = ALUSrc; 
-			aRegWrite = RegWrite; 
-			aALUOP = ALUOP; 
-			ainstr4b = instr4b; 
-			ainstr5b = instr5b;
-			aAdd1 = Add1;
-			aAddPC = AddPC;
-			aRs1 = Rs1; 
-			aRs2 = Rs2;
-			aMemRead = MemRead;
+			aPC <= PC; 
+			ard1 <= rd1; 
+			ard2 <= rd2; 
+			aImmGen <= ImmGen; 
+			aBrach <= Brach; 
+			aPCRead <= PCRead; 
+			aMemtoReg <= MemtoReg;
+			aMemWrite <= MemWrite; 
+			aALUSrc <= ALUSrc; 
+			aRegWrite <= RegWrite; 
+			aALUOP <= ALUOP; 
+			ainstr4b <= instr4b; 
+			ainstr5b <= instr5b;
+			aAdd1 <= Add1;
+			aAddPC <= AddPC;
+			aRs1 <= Rs1; 
+			aRs2 <= Rs2;
+			aMemRead <= MemRead;
 		end		
 end
 endmodule 

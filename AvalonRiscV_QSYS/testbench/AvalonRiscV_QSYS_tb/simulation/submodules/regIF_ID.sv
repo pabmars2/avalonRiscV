@@ -15,21 +15,21 @@ always_ff @(posedge CLK, negedge RST_n)
 begin
 	if(!RST_n)
 		begin
-			auxinstr = 0;
-			auxPC = 0;
-			aAdd1 = 0;
+			auxinstr <= 32'd0;
+			auxPC <= 32'd0;
+			aAdd1 <= 32'd0;
 		end
 	else if(clr)
 		begin
-			auxinstr = 0;
-			auxPC = 0;
-			aAdd1 = 0;
+			auxinstr <= 32'd0;
+			auxPC <= 32'd0;
+			aAdd1 <= 32'd0;
 		end
 	else if(Enable)
 		begin
-			auxinstr = instr;
-			auxPC = PC;
-			aAdd1 = Add1;
+			auxinstr <= instr;
+			auxPC <= PC;
+			aAdd1 <= Add1;
 		end		
 end
 endmodule 
