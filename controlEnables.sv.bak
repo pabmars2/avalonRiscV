@@ -1,0 +1,12 @@
+module controlEnables(CLK, RST_N, WExt, flagDoneExt, );
+
+
+
+
+
+
+
+
+
+
+endmodule 

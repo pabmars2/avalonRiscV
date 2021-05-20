@@ -281,9 +281,9 @@ doneSending => doneSending.IN1
 CLK => CLK.IN10
 RST_N => RST_N.IN10
 enable_ext[0] => generalEnable.IN1
-enable_ext[1] => generalEnable[1].IN2
-enable_ext[2] => generalEnable[2].IN2
-enable_ext[3] => generalEnable[3].IN2
+enable_ext[1] => generalEnable[1].IN1
+enable_ext[2] => generalEnable[2].IN1
+enable_ext[3] => generalEnable[3].IN1
 enable_pc_ext => enable_pc.IN1
 done_instr => done_instr.IN1
 done_ext => done_ext.IN3
@@ -2308,11 +2308,11 @@ CLK => ainstr5b[2].CLK
 CLK => ainstr5b[3].CLK
 CLK => ainstr5b[4].CLK
 CLK => aZero.CLK
-CLK => aMemRead.CLK
 CLK => aMemWrite.CLK
 CLK => aBrach.CLK
 CLK => aMemtoReg.CLK
 CLK => aRegWrite.CLK
+CLK => aMemRead.CLK
 RST_n => aAddPC.ACLR
 RST_n => aReg2[0].ACLR
 RST_n => aReg2[1].ACLR
@@ -2416,11 +2416,11 @@ RST_n => ainstr5b[2].ACLR
 RST_n => ainstr5b[3].ACLR
 RST_n => ainstr5b[4].ACLR
 RST_n => aZero.ACLR
-RST_n => aMemRead.ACLR
 RST_n => aMemWrite.ACLR
 RST_n => aBrach.ACLR
 RST_n => aMemtoReg.ACLR
 RST_n => aRegWrite.ACLR
+RST_n => aMemRead.ACLR
 clr => aRegWrite.OUTPUTSELECT
 clr => aMemtoReg.OUTPUTSELECT
 clr => aBrach.OUTPUTSELECT
@@ -10436,7 +10436,25 @@ out[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_Avalon|top:top_RISC|HazardDet:HazardDet
-EnPC <= EnPC.DB_MAX_OUTPUT_PORT_TYPE
+CLK => ctrMux~reg0.CLK
+CLK => EnPC~reg0.CLK
+CLK => en~reg0.CLK
+CLK => clr[0]~reg0.CLK
+CLK => clr[1]~reg0.CLK
+CLK => clr[2]~reg0.CLK
+CLK => clr[3]~reg0.CLK
+RST_N => ctrMux~reg0.ACLR
+RST_N => EnPC~reg0.PRESET
+RST_N => en~reg0.PRESET
+RST_N => clr[0]~reg0.ACLR
+RST_N => clr[1]~reg0.ACLR
+RST_N => clr[2]~reg0.ACLR
+RST_N => clr[3]~reg0.ACLR
+enable => clr.OUTPUTSELECT
+enable => en.OUTPUTSELECT
+enable => EnPC.OUTPUTSELECT
+enable => ctrMux.OUTPUTSELECT
+EnPC <= EnPC~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Instr[0] => ~NO_FANOUT~
 Instr[1] => ~NO_FANOUT~
 Instr[2] => ~NO_FANOUT~
@@ -10469,7 +10487,7 @@ Instr[28] => ~NO_FANOUT~
 Instr[29] => ~NO_FANOUT~
 Instr[30] => ~NO_FANOUT~
 Instr[31] => ~NO_FANOUT~
-ctrMux <= ctrMux.DB_MAX_OUTPUT_PORT_TYPE
+ctrMux <= ctrMux~reg0.DB_MAX_OUTPUT_PORT_TYPE
 RegD[0] => Equal0.IN9
 RegD[0] => Equal1.IN9
 RegD[1] => Equal0.IN8
@@ -10485,11 +10503,11 @@ N => EnPC.IN1
 N => ctrMux.DATAB
 O => EnPC.IN1
 P => ctrMux.IN1
-en <= ctrMux.DB_MAX_OUTPUT_PORT_TYPE
-clr[0] <= <GND>
-clr[1] <= <GND>
-clr[2] <= <GND>
-clr[3] <= EnPC.DB_MAX_OUTPUT_PORT_TYPE
+en <= en~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr[0] <= clr[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr[1] <= clr[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr[2] <= clr[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr[3] <= clr[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_Avalon|top:top_RISC|MUX9b:MuxContr
@@ -10535,7 +10553,26 @@ out[8] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[9] <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_Avalon|top:top_RISC|memoryControl:controlInstr
+|top_Avalon|top:top_RISC|controlEnables:CtrEnable
+CLK => CLK.IN2
+RST_N => RST_N.IN2
+startInstr => startInstr.IN1
+startExt => startExt.IN1
+doneInstr => doneInstr.IN1
+doneExt => doneExt.IN1
+EnableInPC => EnableInPC.IN2
+EnableInEtapas[0] => EnableInEtapas[0].IN2
+EnableInEtapas[1] => EnableInEtapas[1].IN2
+EnableInEtapas[2] => EnableInEtapas[2].IN2
+EnableInEtapas[3] => EnableInEtapas[3].IN2
+EnableOutPC <= EnableOutPC.DB_MAX_OUTPUT_PORT_TYPE
+EnableOutEtapas[0] <= EnableOutEtapas.DB_MAX_OUTPUT_PORT_TYPE
+EnableOutEtapas[1] <= EnableOutEtapas.DB_MAX_OUTPUT_PORT_TYPE
+EnableOutEtapas[2] <= EnableOutEtapas.DB_MAX_OUTPUT_PORT_TYPE
+EnableOutEtapas[3] <= EnableOutEtapas.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_Avalon|top:top_RISC|controlEnables:CtrEnable|memoryControl:controlInstr
 CLK => state[0].CLK
 CLK => state[1].CLK
 CLK => state[2].CLK
@@ -10624,7 +10661,7 @@ enable_out[3] <= ctr.DB_MAX_OUTPUT_PORT_TYPE
 enable_out[4] <= ctr.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_Avalon|top:top_RISC|memoryControl:controlExt
+|top_Avalon|top:top_RISC|controlEnables:CtrEnable|memoryControl:controlExt
 CLK => state[0].CLK
 CLK => state[1].CLK
 CLK => state[2].CLK

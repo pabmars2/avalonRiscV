@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 17.1 590 win32 2021.05.17.13:27:30
+# ACDS 17.1 590 win32 2021.05.20.09:43:10
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,7 +106,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 17.1 590 win32 2021.05.17.13:27:30
+# ACDS 17.1 590 win32 2021.05.20.09:43:10
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="AvalonRiscV_QSYS_tb"
@@ -224,6 +224,7 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/top.sv"                               -work RISC_V_AVALON_0                               -cdslib ./cds_libs/RISC_V_AVALON_0.cds.lib                              
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/interconexLogic.sv"                   -work RISC_V_AVALON_0                               -cdslib ./cds_libs/RISC_V_AVALON_0.cds.lib                              
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/readControl.sv"                       -work RISC_V_AVALON_0                               -cdslib ./cds_libs/RISC_V_AVALON_0.cds.lib                              
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/controlEnables.sv"                    -work RISC_V_AVALON_0                               -cdslib ./cds_libs/RISC_V_AVALON_0.cds.lib                              
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_UART.sv"                       -work MasterUART                                    -cdslib ./cds_libs/MasterUART.cds.lib                                   
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/UART.sv"                              -work MasterUART                                    -cdslib ./cds_libs/MasterUART.cds.lib                                   
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv"                  -work MasterUART                                    -cdslib ./cds_libs/MasterUART.cds.lib                                   

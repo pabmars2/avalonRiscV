@@ -1,0 +1,91 @@
+
+
+do msim_setup.tcl
+ld
+add wave -position insertpoint  \
+sim:/AvalonRiscV_QSYS_tb/r_Clock \
+sim:/AvalonRiscV_QSYS_tb/r_Rx_Serial \
+sim:/AvalonRiscV_QSYS_tb/TX \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst_reset_bfm_reset_reset	\
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/SystemDebug/slave_debug/reg0 \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/SystemDebug/slave_debug/reg1 \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/SystemDebug/slave_debug/reg2 \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/SystemDebug/slave_debug/reg3	\
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/done_instr \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/done_ext \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/idata \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/ddata_r \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/iaddr \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/daddr \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/ddata_w	\
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/PC_a/Enable \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/PC_a/IN \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/PC_a/OUT	\
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/clr	\
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/clr_ext	\
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/Registers/regis \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/Mux_reg1/* \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/Mux_reg2/* \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/HazardDet/* \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/FUnit/*
+run -all
+
+
+
+
+
+
+
+
+
+
+
+addi x19,x0,0x123
+addi x17,x0,0x100
+
+lui x18 0x2faf
+sw x19,4(x17)
+
+loop2:
+addi x20,x20,1
+add x1,x0,x0
+sw x20,0(x17)
+loop:
+addi x1,x1,1
+beq x1,x18,loop2
+nop
+bne x1,x18,loop
+
+
+
+
+do msim_setup.tcl
+ld
+add wave -position insertpoint  \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/CLK \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/RST_N \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/enable_pc_ext \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/done_instr \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/done_ext \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/idata \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/ddata_r \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/enable_ext \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/clr_ext \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/iaddr \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/daddr \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/ddata_w \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/WRam \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/RRam \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/enable_int \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/generalEnable \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/clrIF_ID \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/clrID_EX \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/clrMEM_WB \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/ALU/Op \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/ALU/Op1 \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/ALU/Op2 \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/ALU/Zero \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/ALU/sol \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/HazardDet/* \
+sim:/AvalonRiscV_QSYS_tb/avalonriscv_qsys_inst/risc_v_avalon_0/top_RISC/Registers/regis
+run -all

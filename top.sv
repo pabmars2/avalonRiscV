@@ -94,8 +94,8 @@ assign enable_pc = enable_pc_int & enable_pc_ext;
 assign enable_int[3:1] = 3'b111;
 assign generalEnable = enable_int & enable_ext;
 
-assign generalEnable_aux = (done_ext) ? generalEnable_aux_ext : generalEnable_aux_ext & generalEnable_aux_instr;
-assign enable_pc_aux = (done_ext) ? enable_pc_aux_ext : enable_pc_aux_ext & enable_pc_aux_instr;
+//assign generalEnable_aux = (done_ext) ? generalEnable_aux_ext : generalEnable_aux_ext & generalEnable_aux_instr;
+//assign enable_pc_aux = (done_ext) ? enable_pc_aux_ext : enable_pc_aux_ext & enable_pc_aux_instr;
 assign enableStep = enable_pc_aux;
 
 assign ctrAddSum = (AddPC_reg2 || (Zero_MEM && ctrAddSum_auxMEM)) ? 1'b1 : 1'b0;
@@ -321,6 +321,8 @@ MUX3 Mux_reg2(
 //Riesgo de control
 
 HazardDet	HazardDet(
+	.CLK(CLK),
+	.RST_N(RST_N),
 	.EnPC(enable_pc_int), 
 	.Instr(instr), 
 	.ctrMux(ctrC), 
@@ -330,7 +332,8 @@ HazardDet	HazardDet(
 	.O(ctrAddSum_auxEX),
 	.P(ctrAddSum),     
 	.en(enable_int[0]), 
-	.clr(clr));
+	.clr(clr),
+	.enable(enable_pc_aux));
 
 MUX9b MuxContr(
 	.in1(senyales_aux_in), 
@@ -341,21 +344,19 @@ MUX9b MuxContr(
 
 //Control de memorias 
 
-memoryControl #(.n(5)) controlInstr(
-	.CLK(CLK),
-	.RST_N(RST_N),
-	.start(enable_pc), 
-	.done(done_instr), 
-	.enable_in({generalEnable, enable_pc}), 
-	.enable_out({generalEnable_aux_instr, enable_pc_aux_instr}));
 
-memoryControl #(.n(5)) controlExt(
-	.CLK(CLK),
-	.RST_N(RST_N),
-	.start(RRam), 
-	.done(done_ext), 
-	.enable_in({generalEnable, enable_pc}), 
-	.enable_out({generalEnable_aux_ext, enable_pc_aux_ext}));	
+controlEnables CtrEnable(
+	.CLK(CLK), 
+	.RST_N(RST_N), 
+	.startInstr(enable_pc), 
+	.startExt(RRam), 
+	.doneInstr(done_instr), 
+	.doneExt(done_ext), 
+	.EnableInPC(enable_pc), 
+	.EnableInEtapas(generalEnable), 
+	.EnableOutPC(enable_pc_aux), 
+	.EnableOutEtapas(generalEnable_aux));
+
 		
 		
 readControl RdControl(

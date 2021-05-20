@@ -29,45 +29,45 @@ always_ff @(posedge CLK, negedge RST_n)
 begin
 	if(!RST_n)
 		begin 
-			aRegWrite = 0;
-			aMemtoReg = 0;
-			aBrach = 0;
-			aMemWrite = 0;
+			aRegWrite <= 0;
+			aMemtoReg <= 0;
+			aBrach <= 0;
+			aMemWrite <= 0;
 			aMemRead = 0;
-			aZero = 0;
-			ainstr5b = 0;
-			aAddSum = 0;
-			aAluRes = 0;
-			aReg2 = 0;
-			aAddPC = 0;
+			aZero <= 0;
+			ainstr5b <= 0;
+			aAddSum <= 0;
+			aAluRes <= 0;
+			aReg2 <= 0;
+			aAddPC <= 0;
 		end
 	else if(clr)
 		begin 
-			aRegWrite = 0;
-			aMemtoReg = 0;
-			aBrach = 0;
-			aMemWrite = 0;
-			aMemRead = 0;
-			aZero = 0;
-			ainstr5b = 0;
-			aAddSum = 0;
-			aAluRes = 0;
-			aReg2 = 0;
-			aAddPC = 0;
+			aRegWrite <= 0;
+			aMemtoReg <= 0;
+			aBrach <= 0;
+			aMemWrite <= 0;
+			aMemRead <= 0;
+			aZero <= 0;
+			ainstr5b <= 0;
+			aAddSum <= 0;
+			aAluRes <= 0;
+			aReg2 <= 0;
+			aAddPC <= 0;
 		end
 	else if(Enable)	
 		begin 
-				aRegWrite = RegWrite;
-				aMemtoReg = MemtoReg;
-				aBrach = Brach;
-				aMemWrite = MemWrite;
-				aMemRead = MemRead;
-				aZero = Zero;
-				ainstr5b = instr5b;
-				aAddSum = AddSum;
-				aAluRes = AluRes;
-				aReg2 = Reg2;
-				aAddPC = AddPC;
+				aRegWrite <= RegWrite;
+				aMemtoReg <= MemtoReg;
+				aBrach <= Brach;
+				aMemWrite <= MemWrite;
+				aMemRead <= MemRead;
+				aZero <= Zero;
+				ainstr5b <= instr5b;
+				aAddSum <= AddSum;
+				aAluRes <= AluRes;
+				aReg2 <= Reg2;
+				aAddPC <= AddPC;
 		end
 end
 endmodule  

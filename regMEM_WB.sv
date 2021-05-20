@@ -23,27 +23,27 @@ always_ff @(posedge CLK, negedge RST_n)
 begin
 	if(!RST_n)
 		begin
-			aData = 0;
-			aAddress = 0;
-			ainstr5b = 0;
-			aMemtoReg = 0; 
-			aRegWrite = 0;
+			aData <= 0;
+			aAddress <= 0;
+			ainstr5b <= 0;
+			aMemtoReg <= 0; 
+			aRegWrite <= 0;
 		end
 	else if(clr)
 		begin
-			aData = 0;
-			aAddress = 0;
-			ainstr5b = 0;
-			aMemtoReg = 0; 
-			aRegWrite = 0;
+			aData <= 0;
+			aAddress <= 0;
+			ainstr5b <= 0;
+			aMemtoReg <= 0; 
+			aRegWrite <= 0;
 		end
 	else if(Enable)
 		begin
-			aData = Data;
-			aAddress = Address;
-			ainstr5b = instr5b;
-			aMemtoReg = MemtoReg; 
-			aRegWrite = RegWrite;
+			aData <= Data;
+			aAddress <= Address;
+			ainstr5b <= instr5b;
+			aMemtoReg <= MemtoReg; 
+			aRegWrite <= RegWrite;
 		end		
 end
 endmodule 
