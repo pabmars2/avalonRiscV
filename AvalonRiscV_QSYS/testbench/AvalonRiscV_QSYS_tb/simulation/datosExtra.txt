@@ -43,7 +43,7 @@ run -all
 addi x19,x0,0x123
 addi x17,x0,0x100
 
-lui x18 0x2faf
+lui x18 0x2ff
 sw x19,4(x17)
 
 loop2:
