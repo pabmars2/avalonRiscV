@@ -321,6 +321,8 @@ MUX3 Mux_reg2(
 //Riesgo de control
 
 HazardDet	HazardDet(
+	.CLK(CLK),
+	.RST_N(RST_N),
 	.EnPC(enable_pc_int), 
 	.Instr(instr), 
 	.ctrMux(ctrC), 
@@ -331,9 +333,7 @@ HazardDet	HazardDet(
 	.P(ctrAddSum),     
 	.en(enable_int[0]), 
 	.clr(clr),
-	.enable(enable_pc_aux),
-	.CLK(CLK),
-	.RST_N(RST_N));
+	.enable(enable_pc_aux));
 
 MUX9b MuxContr(
 	.in1(senyales_aux_in), 
@@ -343,25 +343,6 @@ MUX9b MuxContr(
 
 
 //Control de memorias 
-
-
-/*
-memoryControl #(.n(5)) controlInstr(
-	.CLK(CLK),
-	.RST_N(RST_N),
-	.start(enable_pc), 
-	.done(done_instr), 
-	.enable_in({generalEnable, enable_pc}), 
-	.enable_out({generalEnable_aux_instr, enable_pc_aux_instr}));
-
-memoryControl #(.n(5)) controlExt(
-	.CLK(CLK),
-	.RST_N(RST_N),
-	.start(RRam), 
-	.done(done_ext), 
-	.enable_in({generalEnable, enable_pc}), 
-	.enable_out({generalEnable_aux_ext, enable_pc_aux_ext}));	
-*/
 
 
 controlEnables CtrEnable(
@@ -375,9 +356,6 @@ controlEnables CtrEnable(
 	.EnableInEtapas(generalEnable), 
 	.EnableOutPC(enable_pc_aux), 
 	.EnableOutEtapas(generalEnable_aux));
-
-
-
 
 		
 		

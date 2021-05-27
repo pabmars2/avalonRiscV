@@ -123,6 +123,19 @@ module AvalonUARTQsys_tb (
 	  UART_WRITE_BYTE(8'b00000000);
       @(posedge r_Clock);
 	  
+	  
+	  
+	  @(posedge r_Clock);
+	  r_Tx_DV <= 1'b1;
+	  @(posedge r_Clock);
+	  repeat(40*c_CLKS_PER_BIT) @(posedge r_Clock);
+	  @(posedge r_Clock);
+	  r_Tx_DV <= 1'b0;
+	  @(posedge r_Clock);
+	  
+	  
+	  
+	  
 	  @(posedge r_Clock);
 	  UART_WRITE_BYTE(8'b11111111);
 	  @(posedge r_Clock);

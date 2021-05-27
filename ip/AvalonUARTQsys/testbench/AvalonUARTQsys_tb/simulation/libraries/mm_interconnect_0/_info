@@ -7,15 +7,15 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation
+dC:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation
 vAvalonUARTQsys_mm_interconnect_0
-!s110 1619167752
+!s110 1621536567
 !i10b 1
 !s100 HX?YWIUQJT^:P5dcIW]9Z2
 IP7]DTSCA>E6;f]DH8;>CU3
 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1619167316
+dF:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation
+w1621535328
 8../../AvalonUARTQsys_tb/simulation/submodules/AvalonUARTQsys_mm_interconnect_0.v
 F../../AvalonUARTQsys_tb/simulation/submodules/AvalonUARTQsys_mm_interconnect_0.v
 L0 9
@@ -23,7 +23,7 @@ OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1619167752.000000
+!s108 1621536567.000000
 !s107 ../../AvalonUARTQsys_tb/simulation/submodules/AvalonUARTQsys_mm_interconnect_0.v|
 !s90 -reportprogress|300|../../AvalonUARTQsys_tb/simulation/submodules/AvalonUARTQsys_mm_interconnect_0.v|-work|mm_interconnect_0|
 !i113 1

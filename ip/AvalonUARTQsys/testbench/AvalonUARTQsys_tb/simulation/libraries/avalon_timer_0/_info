@@ -7,15 +7,15 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation
+dC:/Users/Pablo/Desktop/TFG/CHS/Anyadir_perifericos/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation
 vavalon_slave_MM_interface
-Z1 !s110 1619167752
+Z0 !s110 1621536567
 !i10b 1
 !s100 5VM:@nQEHd9dH=7]GRO@f3
 Ic[R>_EFJ`acK`3<nLE;601
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-R0
-Z3 w1619167314
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dF:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation
+Z3 w1621535327
 8../../AvalonUARTQsys_tb/simulation/submodules/avalon_slave_MM_interface.v
 F../../AvalonUARTQsys_tb/simulation/submodules/avalon_slave_MM_interface.v
 L0 1
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1619167752.000000
+Z5 !s108 1621536567.000000
 !s107 ../../AvalonUARTQsys_tb/simulation/submodules/avalon_slave_MM_interface.v|
 !s90 -reportprogress|300|../../AvalonUARTQsys_tb/simulation/submodules/avalon_slave_MM_interface.v|-work|avalon_timer_0|
 !i113 1
@@ -31,12 +31,12 @@ Z6 o-work avalon_timer_0
 Z7 tCvgOpt 0
 navalon_slave_@m@m_interface
 vavalon_timer
-R1
+R0
 !i10b 1
 !s100 1z8]^]JCA=oVg3Y=jVM593
 IYz@`U1RIeWGTh4GhC;;581
+R1
 R2
-R0
 R3
 8../../AvalonUARTQsys_tb/simulation/submodules/avalon_timer.v
 F../../AvalonUARTQsys_tb/simulation/submodules/avalon_timer.v
@@ -52,12 +52,12 @@ R5
 R6
 R7
 vtimer
-R1
+R0
 !i10b 1
 !s100 ^4NATcCH]XQPH8<DYmaLA2
 I0:03PC_M;4LZOKAnPCZQ93
+R1
 R2
-R0
 R3
 8../../AvalonUARTQsys_tb/simulation/submodules/timer.v
 F../../AvalonUARTQsys_tb/simulation/submodules/timer.v
