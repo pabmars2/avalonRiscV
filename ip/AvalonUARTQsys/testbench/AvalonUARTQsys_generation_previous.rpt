@@ -3,8 +3,7 @@ Info: F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/AvalonUARTQsys.ipx
 Info: qsys-generate F:\Datos\Doumentos\GitHub\UART\AvalonUARTQsys.qsys --testbench=STANDARD --output-directory=F:\Datos\Doumentos\GitHub\UART --family="Cyclone IV E" --part=EP4CE115F29C7
 Progress: Loading UART/AvalonUARTQsys.qsys
 Progress: Reading input file
-Progress: Adding AvalonMasterUART_0 [AvalonMasterUART 4.1]
-Warning: AvalonMasterUART_0: Used AvalonMasterUART 4.2 (instead of 4.1)
+Progress: Adding AvalonMasterUART_0 [AvalonMasterUART 4.2]
 Progress: Parameterizing module AvalonMasterUART_0
 Progress: Adding avalon_timer_0 [avalon_timer 1.1]
 Progress: Parameterizing module avalon_timer_0
@@ -26,29 +25,29 @@ Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_compone
 Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx: Loading now from components.ipx
 Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\ip_component_categories.ipx
 Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0,00 seconds
-Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0,00 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0,01 seconds
 Info: F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/ip/**/* matched 0 files in 0,00 seconds
 Info: Reading index F:\Datos\Doumentos\GitHub\UART\AvalonUARTQsys\testbench\AvalonUARTQsys.ipx
 Progress: Loading UART/AvalonMasterUART_hw.tcl
 Progress: Loading UART/AvalonUARTQsys.qsys
-Info: F:/Datos/Doumentos/GitHub/UART/* matched 29 files in 0,04 seconds
+Info: F:/Datos/Doumentos/GitHub/UART/* matched 29 files in 0,03 seconds
 Progress: Loading ip/avalon_displays7seg_hw.tcl
 Progress: Loading ip/avalon_timer_hw.tcl
-Info: F:/Datos/Doumentos/GitHub/UART/ip/**/* matched 9 files in 0,06 seconds
+Info: F:/Datos/Doumentos/GitHub/UART/ip/**/* matched 9 files in 0,05 seconds
 Progress: Loading ip/avalon_displays7seg_hw.tcl
 Progress: Loading ip/avalon_timer_hw.tcl
-Info: F:/Datos/Doumentos/GitHub/UART/*/* matched 127 files in 0,06 seconds
-Info: F:\Datos\Doumentos\GitHub\UART\AvalonUARTQsys\testbench\AvalonUARTQsys.ipx described 0 plugins, 3 paths, in 0,16 seconds
+Info: F:/Datos/Doumentos/GitHub/UART/*/* matched 127 files in 0,05 seconds
+Info: F:\Datos\Doumentos\GitHub\UART\AvalonUARTQsys\testbench\AvalonUARTQsys.ipx described 0 plugins, 3 paths, in 0,14 seconds
 Progress: Loading testbench/AvalonUARTQsys_tb.qsys
-Info: F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/* matched 12 files in 0,16 seconds
+Info: F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/* matched 12 files in 0,14 seconds
 Info: F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/*/* matched 9 files in 0,00 seconds
 Info: C:/Users/Pablo/.altera.quartus/ip/17.1/**/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0,00 seconds
 Info: Reading index C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx
-Info: C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx described 2005 plugins, 0 paths, in 0,13 seconds
-Info: C:/intelfpga_lite/17.1/ip/**/* matched 138 files in 0,13 seconds
+Info: C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx described 2005 plugins, 0 paths, in 0,10 seconds
+Info: C:/intelfpga_lite/17.1/ip/**/* matched 138 files in 0,11 seconds
 Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0,00 seconds
 Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx
 Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0,01 seconds
@@ -57,8 +56,8 @@ Info: Reading index C:\intelfpga_lite\17.1\quartus\common\librarian\factories\in
 Info: C:\intelfpga_lite\17.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0,01 seconds
 Info: C:/intelfpga_lite/17.1/quartus/common/librarian/factories/**/* matched 4 files in 0,01 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0,00 seconds
-Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0,32 seconds
-Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0,32 seconds
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0,29 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0,29 seconds
 Progress: 
 Progress: 
 Progress: 

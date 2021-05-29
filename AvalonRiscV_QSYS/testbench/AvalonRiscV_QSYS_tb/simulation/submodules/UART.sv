@@ -25,12 +25,14 @@ reg done_rx_aux, done_tx_aux;
 reg [7 : 0] data_recieved_aux, data_tx_aux;
 
 reg [3 : 0] indexCount = 0;
+reg [3 : 0] indexCountTx = 0;
 reg WrAux;
 
 assign data_rx = {data_to_recieve[3][7:0], data_to_recieve[2][7:0], data_to_recieve[1][7:0], data_to_recieve[0][7:0]};
 assign controlBits = data_to_recieve[4][1:0];
 
-enum {IDLE, SAVE_READ, READ, SAVE_WRITE, WRITE, DONE} state;
+enum {IDLE, SAVE_READ, READ, DONE} state;
+enum {IDLEWr, SAVE_WRITE, WRITE, DONEWr} stateWr;
 
   uart_rx #(.CLKS_PER_BIT(c_CLKS_PER_BIT)) UART_RX_INST
     (.i_Clock(CLK),
@@ -51,7 +53,7 @@ enum {IDLE, SAVE_READ, READ, SAVE_WRITE, WRITE, DONE} state;
  
 
 
-always @(posedge CLK)
+always_ff @(posedge CLK)
 begin
 	case(state)
 	
@@ -61,18 +63,11 @@ begin
 				if(RX == 1'b0)
 					state <= READ;
 				else
-				begin
-					if(flag_tx)
-						state <= SAVE_WRITE;
-					else
-						state <= IDLE;
-				end
-				
+					state <= IDLE;
+					
 				indexCount = 0;
-				flag_tx_aux = 1'b0;
 				
 				done_rx <= 1'b0; 
-				done_tx <= 1'b0;
 				
 				WrAux = 1'b0;
 			end
@@ -81,16 +76,12 @@ begin
 		
 		READ:
 			begin
-				flag_tx_aux = 1'b0;
-				
-				
 				
 				if(indexCount < 5)
 				begin
 					state <= READ;
 					
 					done_rx <= 1'b0; 
-					done_tx <= 1'b0;
 					
 					if(done_rx_aux | WrAux)
 					begin	
@@ -106,27 +97,70 @@ begin
 					state <= DONE;
 					
 					done_rx <= 1'b1; 
-					done_tx <= 1'b0;
 				end	
 			
 			end
 		
-		SAVE_WRITE:
+
+		
+		DONE:
 			begin
-				state <= WRITE;
-				
+				state <= IDLE;
+			
 				indexCount = 0;
-				flag_tx_aux = 1'b0;
 				
 				done_rx <= 1'b0; 
-				done_tx <= 1'b0;
 				
 				WrAux = 1'b0;
 			end
 		
+		default:	
+			begin
+				state <= IDLE;
+			
+				indexCount = 0;
+				
+				done_rx <= 1'b0; 
+				
+				WrAux = 1'b0;
+			end
+	
+	endcase
+	
+	
+	case(stateWr)
+	
+		IDLEWr:
+			begin
+			
+				if(flag_tx)
+					stateWr <= SAVE_WRITE;
+				else
+					stateWr <= IDLEWr;
+				
+				indexCountTx = 0;
+				flag_tx_aux = 1'b0;
+				
+				done_tx <= 1'b0;
+				
+			end
+
+	
+	
+		SAVE_WRITE:
+			begin
+			
+				stateWr <= WRITE;
+				
+				indexCountTx = 0;
+				flag_tx_aux = 1'b0;
+				
+				done_tx <= 1'b0;
+				
+			end
+		
 		WRITE:
 			begin
-				WrAux = 1'b0;
 				
 				data_to_send[0][7:0] = data_tx[7 : 0];
 				data_to_send[1][7:0] = data_tx[15 : 8];
@@ -134,18 +168,17 @@ begin
 				data_to_send[3][7:0] = data_tx[31 : 24];
 				
 				if(done_tx_aux)
-					indexCount = indexCount + 1;
+					indexCountTx = indexCountTx + 1;
 				
-				case(indexCount)
+				case(indexCountTx)
 				
 					0:
 					begin
 						flag_tx_aux = 1'b1;
 						data_tx_aux = data_to_send[0][7:0];
 					
-						state <= WRITE;
+						stateWr <= WRITE;
 						
-						done_rx <= 1'b0; 
 						done_tx <= 1'b0;
 					end
 					
@@ -154,9 +187,8 @@ begin
 						flag_tx_aux = 1'b1;
 						data_tx_aux = data_to_send[1][7:0];
 						
-						state <= WRITE;
+						stateWr <= WRITE;
 						
-						done_rx <= 1'b0; 
 						done_tx <= 1'b0;
 					end
 					
@@ -165,7 +197,7 @@ begin
 						flag_tx_aux = 1'b1;
 						data_tx_aux = data_to_send[2][7:0];
 					
-						state <= WRITE;
+						stateWr <= WRITE;
 						
 						done_rx <= 1'b0; 
 						done_tx <= 1'b0;
@@ -176,9 +208,8 @@ begin
 						flag_tx_aux = 1'b1;
 						data_tx_aux = data_to_send[3][7:0];
 					
-						state <= WRITE;
+						stateWr <= WRITE;
 						
-						done_rx <= 1'b0; 
 						done_tx <= 1'b0;
 					end
 					
@@ -187,9 +218,8 @@ begin
 						flag_tx_aux = 1'b0;
 						data_tx_aux = data_to_send[0][7:0];
 					
-						state <= DONE;
+						stateWr <= DONEWr;
 						
-						done_rx <= 1'b0; 
 						done_tx <= 1'b1;
 					end
 				
@@ -197,45 +227,46 @@ begin
 					default:
 					begin
 						flag_tx_aux = 1'b0;
-						data_tx_aux = data_to_send[indexCount][7:0];
+						data_tx_aux = data_to_send[indexCountTx][7:0];
 					
-						state <= WRITE;
-						
-						done_rx <= 1'b0; 
+						stateWr <= WRITE;
+						 
 						done_tx <= 1'b0;
 					end
 				
 				endcase
 				
-			end
-		
-		DONE:
+			end	
+	
+	
+		DONEWr:
 			begin
-				state <= IDLE;
 			
-				indexCount = 0;
+				stateWr <= IDLEWr;
+				
+				indexCountTx = 0;
 				flag_tx_aux = 1'b0;
 				
-				done_rx <= 1'b0; 
 				done_tx <= 1'b0;
 				
-				WrAux = 1'b0;
 			end
+	
 		
-		default:	
+		
+		default:
 			begin
-				state <= IDLE;
 			
-				indexCount = 0;
+				stateWr <= IDLEWr;
+				
+				indexCountTx = 0;
 				flag_tx_aux = 1'b0;
 				
-				done_rx <= 1'b0; 
 				done_tx <= 1'b0;
 				
-				WrAux = 1'b0;
 			end
 	
 	endcase
+	
 end
   
 endmodule 

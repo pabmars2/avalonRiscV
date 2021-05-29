@@ -95,7 +95,7 @@ begin
 						state  <= RECIEVE;
 					else
 					begin
-						if(flag_tx)
+						if(flag_tx && (stateTransmit == IDLEWr))
 							state <= TRANS;
 						else
 							state <= IDLE;
