@@ -34,19 +34,16 @@ module AvalonUARTQsys_tb (
 		.reset       (~avalonuartqsys_inst_reset_bfm_reset_reset),                    //   reset.reset
 		.sig_conduit (avalonuartqsys_inst_avalon_timer_0_external_interface_conduit)  // conduit.conduit
 	);
-
 	altera_conduit_bfm_0002 avalonuartqsys_inst_avalonmasteruart_0_control_flag_tx_bfm (
 		.clk         (avalonuartqsys_inst_clk_bfm_clk_clk),                                        //     clk.clk
 		.reset       (~avalonuartqsys_inst_reset_bfm_reset_reset),                                 //   reset.reset
 		.sig_flag_tx (avalonuartqsys_inst_avalonmasteruart_0_control_flag_tx_bfm_conduit_flag_tx)  // conduit.flag_tx
 	);
-
 	altera_conduit_bfm_0003 avalonuartqsys_inst_avalonmasteruart_0_rs232_rx_bfm (
 		.clk    (avalonuartqsys_inst_clk_bfm_clk_clk),                            //     clk.clk
 		.reset  (~avalonuartqsys_inst_reset_bfm_reset_reset),                     //   reset.reset
 		.sig_rx (avalonuartqsys_inst_avalonmasteruart_0_rs232_rx_bfm_conduit_rx)  // conduit.rx
 	);
-
 	altera_conduit_bfm_0004 avalonuartqsys_inst_avalonmasteruart_0_rs232_tx_bfm (
 		.clk    (avalonuartqsys_inst_clk_bfm_clk_clk),                //     clk.clk
 		.reset  (~avalonuartqsys_inst_reset_bfm_reset_reset),         //   reset.reset

@@ -7,7 +7,7 @@ readdata_debug, tx_flag, doneSending);
 //General Inputs
 input CLK, RST;
 input doneSending;
-output tx_flag;  
+output tx_flag; 
 
 //AVALON MASTERS connections
 output [31:0] ADDRESS_instr, ADDRESS_ext;
@@ -135,7 +135,9 @@ debugMode  SystemDebug(
 	.data_internal(dataTxDebug),
 	.doneSending(doneSending),
 	.enableStep(enableStep),
-	.clr_ext(clr_ext));	
+	.clr_ext(clr_ext),
+	.doneInstr(done_instr), 
+	.doneExt(done_ext));	
 	
 	
 	

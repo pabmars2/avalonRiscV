@@ -1,6 +1,6 @@
 module debugMode(CLK, RST, chipselect_debug, write_debug, writedata_debug, read_debug, 
 adress_debug, readdata_debug, debug, enable_ext, enable_pc_ext, tx_flag, address_bridged,
-data_bridged, mode, data_internal, doneSending, enableStep, clr_ext);
+data_bridged, mode, data_internal, doneSending, enableStep, clr_ext, doneInstr, doneExt);
 
 parameter freq = 50000000;
 
@@ -27,6 +27,7 @@ output reg [2 : 0] mode;
 input [31 : 0] data_internal;
 input doneSending;
 input enableStep;
+input doneInstr, doneExt;
 
 //Internal connects
 wire [31 : 0] reg0_internal, reg1_internal, reg2_internal;
@@ -41,6 +42,8 @@ assign address_bridged = reg1_internal;
 assign clr_ext = (reg0_internal[8] == 1'b1) ? 4'b1111 : 4'b0000;
 
 enum {/*INITIAL,*/ IDLE, DEBUG, DONE} state;
+
+assign we_internal = ((((reg0_internal[6:4] == 3'b001) | (reg0_internal[6:4] == 3'b010)) & (doneInstr | doneExt)) | (reg0_internal[6:4] == 3'b110) | (reg0_internal[6:4] == 3'b101)) ? 1'b1 : 1'b0;
 
 avalon_slave_MM_interface	slave_debug(
 	.reset(RST),
@@ -67,7 +70,7 @@ begin
 		enable_ext = 4'b0000;
 		mode = 3'b000;
 		tx_flag = 1'b0;
-		we_internal = 1'b0;
+		//we_internal = 1'b0;
 		
 		r_Clock_Count = 0;
 		
@@ -107,7 +110,7 @@ begin
 					enable_ext = 4'b1111;
 					mode = 3'b000;
 					tx_flag = 1'b0;
-					we_internal = 1'b0;
+					//we_internal = 1'b0;
 					
 					r_Clock_Count = 0;
 					doneSendingAux = 1'b0;
@@ -136,14 +139,19 @@ begin
 								begin
 									mode = 3'b111;
 									tx_flag = 1'b0;
-									we_internal = 1'b0;
+									//we_internal = 1'b0;
 									doneSendingAux = 1'b0;
 								end
 							
 							3'b001:	
 								begin
 									mode = 3'b001;
-									we_internal = 1'b1;
+									
+									/*if(doneExt)
+										we_internal = 1'b1;
+									else
+										we_internal = 1'b0;*/
+																		
 									
 									if(doneSending)
 										doneSendingAux = 1'b1;
@@ -157,7 +165,13 @@ begin
 							3'b010:	
 								begin
 									mode = 3'b010;
-									we_internal = 1'b1;
+									
+									
+									/*if(doneInstr)
+										we_internal = 1'b1;
+									else
+										we_internal = 1'b0;*/
+																		
 									
 									if(doneSending)
 										doneSendingAux = 1'b1;
@@ -170,7 +184,7 @@ begin
 							
 							3'b011:	
 								begin
-									we_internal = 1'b0;
+									//we_internal = 1'b0;
 									mode = 3'b011;
 									tx_flag = 1'b0;
 									doneSendingAux = 1'b0;
@@ -178,7 +192,7 @@ begin
 							
 							3'b100:	
 								begin
-									we_internal = 1'b0;
+									//we_internal = 1'b0;
 									mode = 3'b100;
 									tx_flag = 1'b0;
 									doneSendingAux = 1'b0;
@@ -187,7 +201,7 @@ begin
 							3'b101:	
 								begin
 									mode = 3'b101;
-									we_internal = 1'b1;
+									//we_internal = 1'b1;
 									
 									if(doneSending)
 										doneSendingAux = 1'b1;
@@ -201,7 +215,7 @@ begin
 							3'b110:	
 								begin
 									mode = 3'b110;
-									we_internal = 1'b1;
+									//we_internal = 1'b1;
 									
 									if(doneSending)
 										doneSendingAux = 1'b1;
@@ -214,7 +228,7 @@ begin
 							
 							default:	
 								begin
-									we_internal = 1'b0;
+									//we_internal = 1'b0;
 									mode = 3'b000;
 									tx_flag = 1'b0;
 									doneSendingAux = 1'b0;
@@ -230,7 +244,7 @@ begin
 					begin
 						mode = 3'b000;
 						tx_flag = 1'b0;
-						we_internal = 1'b0;
+						//we_internal = 1'b0;
 						doneSendingAux = 1'b0;
 						
 						if(reg0_internal[3] == 1'b1)	//ejecucion por pasos
@@ -270,7 +284,7 @@ begin
 					enable_ext = 4'b1111;
 					mode = 3'b000;
 					tx_flag = 1'b0;
-					we_internal = 1'b0;
+					//we_internal = 1'b0;
 					
 					r_Clock_Count = 0;
 					doneSendingAux = 1'b0;

@@ -1,12 +1,12 @@
-# system info AvalonRiscV_QSYS_tb on 2021.05.29.14:37:25
+# system info AvalonRiscV_QSYS_tb on 2021.06.02.16:56:53
 system_info:
 name,value
 DEVICE,EP4CE115F29C7
 DEVICE_FAMILY,Cyclone IV E
-GENERATION_ID,1622291837
+GENERATION_ID,1622645803
 #
 #
-# Files generated for AvalonRiscV_QSYS_tb on 2021.05.29.14:37:25
+# Files generated for AvalonRiscV_QSYS_tb on 2021.06.02.16:56:53
 files:
 filepath,kind,attributes,module,is_top
 AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation/AvalonRiscV_QSYS_tb.v,VERILOG,,AvalonRiscV_QSYS_tb,true

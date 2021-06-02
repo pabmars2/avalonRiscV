@@ -1,9 +1,9 @@
 Info: Starting: Create testbench Platform Designer system
-Info: F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/AvalonUARTQsys.ipx
-Info: qsys-generate F:\Datos\Doumentos\GitHub\UART\AvalonUARTQsys.qsys --testbench=STANDARD --output-directory=F:\Datos\Doumentos\GitHub\UART --family="Cyclone IV E" --part=EP4CE115F29C7
+Info: C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/AvalonUARTQsys.ipx
+Info: qsys-generate C:\Users\Pablo\Desktop\TFG\CHS\UART\AvalonUARTQsys.qsys --testbench=STANDARD --output-directory=C:\Users\Pablo\Desktop\TFG\CHS\UART --family="Cyclone IV E" --part=EP4CE115F29C7
 Progress: Loading UART/AvalonUARTQsys.qsys
 Progress: Reading input file
-Progress: Adding AvalonMasterUART_0 [AvalonMasterUART 4.2]
+Progress: Adding AvalonMasterUART_0 [AvalonMasterUART 4.5]
 Progress: Parameterizing module AvalonMasterUART_0
 Progress: Adding avalon_timer_0 [avalon_timer 1.1]
 Progress: Parameterizing module avalon_timer_0
@@ -25,29 +25,29 @@ Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_compone
 Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx: Loading now from components.ipx
 Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\ip_component_categories.ipx
 Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0,00 seconds
-Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0,01 seconds
-Info: F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/ip/**/* matched 0 files in 0,00 seconds
-Info: Reading index F:\Datos\Doumentos\GitHub\UART\AvalonUARTQsys\testbench\AvalonUARTQsys.ipx
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0,00 seconds
+Info: C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/ip/**/* matched 0 files in 0,00 seconds
+Info: Reading index C:\Users\Pablo\Desktop\TFG\CHS\UART\AvalonUARTQsys\testbench\AvalonUARTQsys.ipx
 Progress: Loading UART/AvalonMasterUART_hw.tcl
 Progress: Loading UART/AvalonUARTQsys.qsys
-Info: F:/Datos/Doumentos/GitHub/UART/* matched 29 files in 0,03 seconds
+Info: C:/Users/Pablo/Desktop/TFG/CHS/UART/* matched 30 files in 0,04 seconds
 Progress: Loading ip/avalon_displays7seg_hw.tcl
 Progress: Loading ip/avalon_timer_hw.tcl
-Info: F:/Datos/Doumentos/GitHub/UART/ip/**/* matched 9 files in 0,05 seconds
+Info: C:/Users/Pablo/Desktop/TFG/CHS/UART/ip/**/* matched 9 files in 0,07 seconds
 Progress: Loading ip/avalon_displays7seg_hw.tcl
 Progress: Loading ip/avalon_timer_hw.tcl
-Info: F:/Datos/Doumentos/GitHub/UART/*/* matched 127 files in 0,05 seconds
-Info: F:\Datos\Doumentos\GitHub\UART\AvalonUARTQsys\testbench\AvalonUARTQsys.ipx described 0 plugins, 3 paths, in 0,14 seconds
+Info: C:/Users/Pablo/Desktop/TFG/CHS/UART/*/* matched 128 files in 0,07 seconds
+Info: C:\Users\Pablo\Desktop\TFG\CHS\UART\AvalonUARTQsys\testbench\AvalonUARTQsys.ipx described 0 plugins, 3 paths, in 0,19 seconds
 Progress: Loading testbench/AvalonUARTQsys_tb.qsys
-Info: F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/* matched 12 files in 0,14 seconds
-Info: F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/*/* matched 9 files in 0,00 seconds
+Info: C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/* matched 12 files in 0,19 seconds
+Info: C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/*/* matched 9 files in 0,00 seconds
 Info: C:/Users/Pablo/.altera.quartus/ip/17.1/**/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0,00 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0,00 seconds
 Info: Reading index C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx
-Info: C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx described 2005 plugins, 0 paths, in 0,10 seconds
-Info: C:/intelfpga_lite/17.1/ip/**/* matched 138 files in 0,11 seconds
+Info: C:\intelfpga_lite\17.1\ip\altera\altera_components.ipx described 2005 plugins, 0 paths, in 0,14 seconds
+Info: C:/intelfpga_lite/17.1/ip/**/* matched 138 files in 0,15 seconds
 Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0,00 seconds
 Info: Reading index C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx
 Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0,01 seconds
@@ -56,8 +56,8 @@ Info: Reading index C:\intelfpga_lite\17.1\quartus\common\librarian\factories\in
 Info: C:\intelfpga_lite\17.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0,01 seconds
 Info: C:/intelfpga_lite/17.1/quartus/common/librarian/factories/**/* matched 4 files in 0,01 seconds
 Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0,00 seconds
-Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0,29 seconds
-Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0,29 seconds
+Info: C:\intelfpga_lite\17.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0,37 seconds
+Info: C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0,37 seconds
 Progress: 
 Progress: 
 Progress: 
@@ -325,9 +325,9 @@ Info: TB_Gen: Saving testbench system: AvalonUARTQsys_tb.qsys
 Info: save_system AvalonUARTQsys_tb.qsys
 Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
 Info: TB_Gen: TBGEN SUCCESSFUL
-Info: Testbench system: F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/AvalonUARTQsys_tb.qsys
+Info: Testbench system: C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/AvalonUARTQsys_tb.qsys
 Info: Done
-Info: qsys-generate F:\Datos\Doumentos\GitHub\UART\AvalonUARTQsys.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=F:\Datos\Doumentos\GitHub\UART\AvalonUARTQsys\testbench\AvalonUARTQsys_tb\simulation --family="Cyclone IV E" --part=EP4CE115F29C7
+Info: qsys-generate C:\Users\Pablo\Desktop\TFG\CHS\UART\AvalonUARTQsys.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=C:\Users\Pablo\Desktop\TFG\CHS\UART\AvalonUARTQsys\testbench\AvalonUARTQsys_tb\simulation --family="Cyclone IV E" --part=EP4CE115F29C7
 Progress: Loading testbench/AvalonUARTQsys_tb.qsys
 Progress: Reading input file
 Progress: Adding AvalonUARTQsys_inst [AvalonUARTQsys 1.0]
@@ -365,15 +365,15 @@ Warning: AvalonUARTQsys_inst: "No matching role found for AvalonMasterUART_0:ava
 Info: AvalonUARTQsys_inst: "AvalonUARTQsys_tb" instantiated AvalonUARTQsys "AvalonUARTQsys_inst"
 Info: AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm: "AvalonUARTQsys_tb" instantiated altera_conduit_bfm "AvalonUARTQsys_inst_avalon_timer_0_external_interface_bfm"
 Info: AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm: "AvalonUARTQsys_tb" instantiated altera_conduit_bfm "AvalonUARTQsys_inst_avalonmasteruart_0_control_flag_tx_bfm"
-Info: Reusing file F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv
 Info: AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm: "AvalonUARTQsys_tb" instantiated altera_conduit_bfm "AvalonUARTQsys_inst_avalonmasteruart_0_rs232_rx_bfm"
-Info: Reusing file F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv
 Info: AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm: "AvalonUARTQsys_tb" instantiated altera_conduit_bfm "AvalonUARTQsys_inst_avalonmasteruart_0_rs232_tx_bfm"
-Info: Reusing file F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv
 Info: AvalonUARTQsys_inst_clk_bfm: "AvalonUARTQsys_tb" instantiated altera_avalon_clock_source "AvalonUARTQsys_inst_clk_bfm"
-Info: Reusing file F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv
 Info: AvalonUARTQsys_inst_reset_bfm: "AvalonUARTQsys_tb" instantiated altera_avalon_reset_source "AvalonUARTQsys_inst_reset_bfm"
-Info: Reusing file F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/submodules/verbosity_pkg.sv
 Info: AvalonMasterUART_0: "AvalonUARTQsys_inst" instantiated AvalonMasterUART "AvalonMasterUART_0"
 Info: avalon_timer_0: "AvalonUARTQsys_inst" instantiated avalon_timer "avalon_timer_0"
 Info: mm_interconnect_0: "AvalonUARTQsys_inst" instantiated altera_mm_interconnect "mm_interconnect_0"
@@ -382,22 +382,22 @@ Info: AvalonMasterUART_0_avalon_master_translator: "mm_interconnect_0" instantia
 Info: avalon_timer_0_avalon_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "avalon_timer_0_avalon_slave_translator"
 Info: AvalonUARTQsys_tb: Done "AvalonUARTQsys_tb" with 14 modules, 23 files
 Info: qsys-generate succeeded.
-Info: sim-script-gen --spd=F:\Datos\Doumentos\GitHub\UART\AvalonUARTQsys_tb.spd --output-directory=F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/ --use-relative-paths=true
-Info: Doing: ip-make-simscript --spd=F:\Datos\Doumentos\GitHub\UART\AvalonUARTQsys_tb.spd --output-directory=F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/ --use-relative-paths=true
-Info: Generating the following file(s) for MODELSIM simulator in F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/ directory:
+Info: sim-script-gen --spd=C:\Users\Pablo\Desktop\TFG\CHS\UART\AvalonUARTQsys_tb.spd --output-directory=C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\Users\Pablo\Desktop\TFG\CHS\UART\AvalonUARTQsys_tb.spd --output-directory=C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/ directory:
 Info: 	mentor/msim_setup.tcl
-Info: Generating the following file(s) for VCS simulator in F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/ directory:
+Info: Generating the following file(s) for VCS simulator in C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/ directory:
 Info: 	synopsys/vcs/vcs_setup.sh
-Info: Generating the following file(s) for VCSMX simulator in F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/ directory:
+Info: Generating the following file(s) for VCSMX simulator in C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/ directory:
 Info: 	synopsys/vcsmx/synopsys_sim.setup
 Info: 	synopsys/vcsmx/vcsmx_setup.sh
-Info: Generating the following file(s) for NCSIM simulator in F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/ directory:
+Info: Generating the following file(s) for NCSIM simulator in C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/ directory:
 Info: 	cadence/cds.lib
 Info: 	cadence/hdl.var
 Info: 	cadence/ncsim_setup.sh
 Info: 	14 .cds.lib files in cadence/cds_libs/ directory
-Info: Generating the following file(s) for RIVIERA simulator in F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/ directory:
+Info: Generating the following file(s) for RIVIERA simulator in C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/ directory:
 Info: 	aldec/rivierapro_setup.tcl
-Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under F:/Datos/Doumentos/GitHub/UART/AvalonUARTQsys/testbench/.
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/Pablo/Desktop/TFG/CHS/UART/AvalonUARTQsys/testbench/.
 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
 Info: Finished: Create testbench Platform Designer system
