@@ -147,7 +147,7 @@
    type="conduit"
    dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
- <module name="MasterUART" kind="AvalonMasterUART" version="4.6" enabled="1">
+ <module name="MasterUART" kind="AvalonMasterUART" version="5.0" enabled="1">
   <parameter name="c_CLKS_PER_BIT" value="434" />
  </module>
  <module name="RISC_V_AVALON_0" kind="RISC_V_AVALON" version="4.3" enabled="1" />

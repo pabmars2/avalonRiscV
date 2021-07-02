@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
 
-// DATE "06/02/2021 16:21:59"
+// DATE "07/02/2021 09:39:38"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -55,32 +55,32 @@ module top_Avalon (
 	readdata_debug,
 	tx_flag,
 	doneSending);
-input 	reg CLK ;
-input 	reg RST ;
-output 	logic [31:0] ADDRESS_instr ;
-output 	logic [31:0] ADDRESS_ext ;
-output 	reg BeginTransfer_instr ;
-output 	reg BeginTransfer_ext ;
-output 	reg READ_instr ;
-output 	reg READ_ext ;
-output 	reg WRITE_instr ;
-output 	reg WRITE_ext ;
-output 	logic [31:0] WriteData_instr ;
-output 	logic [31:0] WriteData_ext ;
-output 	reg LOCK_instr ;
-output 	reg LOCK_ext ;
-input 	logic [31:0] ReadData_instr ;
-input 	logic [31:0] ReadData_ext ;
-input 	reg waitRqst_instr ;
-input 	reg waitRqst_ext ;
-input 	reg chipselect_debug ;
-input 	reg write_debug ;
-input 	logic [31:0] writedata_debug ;
-input 	reg read_debug ;
-input 	logic [2:0] adress_debug ;
-output 	logic [31:0] readdata_debug ;
-output 	reg tx_flag ;
-input 	reg doneSending ;
+input 	CLK;
+input 	RST;
+output 	[31:0] ADDRESS_instr;
+output 	[31:0] ADDRESS_ext;
+output 	BeginTransfer_instr;
+output 	BeginTransfer_ext;
+output 	READ_instr;
+output 	READ_ext;
+output 	WRITE_instr;
+output 	WRITE_ext;
+output 	[31:0] WriteData_instr;
+output 	[31:0] WriteData_ext;
+output 	LOCK_instr;
+output 	LOCK_ext;
+input 	[31:0] ReadData_instr;
+input 	[31:0] ReadData_ext;
+input 	waitRqst_instr;
+input 	waitRqst_ext;
+input 	chipselect_debug;
+input 	write_debug;
+input 	[31:0] writedata_debug;
+input 	read_debug;
+input 	[2:0] adress_debug;
+output 	[31:0] readdata_debug;
+output 	tx_flag;
+input 	doneSending;
 
 // Design Ports Information
 // ADDRESS_instr[0]	=>  Location: PIN_G28,	 I/O Standard: 2.5 V,	 Current Strength: Default

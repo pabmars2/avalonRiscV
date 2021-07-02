@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Micro
-Wed Jun 02 16:21:54 2021
+Fri Jul 02 09:39:34 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -95,16 +95,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.33        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.54        ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  20.0%      ;
-;     Processors 3-4         ;   6.3%      ;
+;     Processor 2            ;  16.1%      ;
+;     Processor 3            ;   4.3%      ;
+;     Processors 4-12        ;   3.7%      ;
 +----------------------------+-------------+
 
 
@@ -306,6 +307,7 @@ No paths to report.
 ; 0.428 ; top:top_RISC|regIF_ID:IF_ID|auxPC[30]                                     ; top:top_RISC|regID_EX:ID_EX|aPC[30]                                       ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.695      ;
 ; 0.428 ; top:top_RISC|readControl:WrControl|state[1]                               ; top:top_RISC|readControl:WrControl|state[0]                               ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.694      ;
 ; 0.428 ; top:top_RISC|readControl:WrControl|state[0]                               ; top:top_RISC|readControl:WrControl|state[1]                               ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.694      ;
+; 0.429 ; top:top_RISC|regIF_ID:IF_ID|auxPC[13]                                     ; top:top_RISC|regID_EX:ID_EX|aPC[13]                                       ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.695      ;
 ; 0.429 ; top:top_RISC|regIF_ID:IF_ID|auxPC[6]                                      ; top:top_RISC|regID_EX:ID_EX|aPC[6]                                        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.696      ;
 ; 0.429 ; top:top_RISC|regIF_ID:IF_ID|auxPC[7]                                      ; top:top_RISC|regID_EX:ID_EX|aPC[7]                                        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.696      ;
 ; 0.429 ; top:top_RISC|regIF_ID:IF_ID|auxPC[15]                                     ; top:top_RISC|regID_EX:ID_EX|aPC[15]                                       ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.696      ;
@@ -314,10 +316,9 @@ No paths to report.
 ; 0.429 ; top:top_RISC|regIF_ID:IF_ID|aAdd1[23]                                     ; top:top_RISC|regID_EX:ID_EX|aAdd1[23]                                     ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.696      ;
 ; 0.429 ; top:top_RISC|regIF_ID:IF_ID|aAdd1[6]                                      ; top:top_RISC|regID_EX:ID_EX|aAdd1[6]                                      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.696      ;
 ; 0.429 ; top:top_RISC|readControl:RdControl|state[1]                               ; top:top_RISC|readControl:RdControl|state[0]                               ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.695      ;
-; 0.429 ; top:top_RISC|regIF_ID:IF_ID|auxPC[13]                                     ; top:top_RISC|regID_EX:ID_EX|aPC[13]                                       ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.695      ;
+; 0.430 ; top:top_RISC|regIF_ID:IF_ID|aAdd1[7]                                      ; top:top_RISC|regID_EX:ID_EX|aAdd1[7]                                      ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.696      ;
 ; 0.430 ; top:top_RISC|regIF_ID:IF_ID|aAdd1[28]                                     ; top:top_RISC|regID_EX:ID_EX|aAdd1[28]                                     ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.697      ;
 ; 0.430 ; top:top_RISC|regIF_ID:IF_ID|auxPC[2]                                      ; top:top_RISC|regID_EX:ID_EX|aPC[2]                                        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.697      ;
-; 0.430 ; top:top_RISC|regIF_ID:IF_ID|aAdd1[7]                                      ; top:top_RISC|regID_EX:ID_EX|aAdd1[7]                                      ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.696      ;
 ; 0.431 ; top:top_RISC|regIF_ID:IF_ID|auxPC[11]                                     ; top:top_RISC|regID_EX:ID_EX|aPC[11]                                       ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.698      ;
 ; 0.432 ; top:top_RISC|regIF_ID:IF_ID|auxPC[26]                                     ; top:top_RISC|regID_EX:ID_EX|aPC[26]                                       ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.699      ;
 ; 0.435 ; top:top_RISC|regIF_ID:IF_ID|auxinstr[9]                                   ; top:top_RISC|regID_EX:ID_EX|ainstr5b[2]                                   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.702      ;
@@ -326,8 +327,8 @@ No paths to report.
 ; 0.454 ; top:top_RISC|regID_EX:ID_EX|aBrach                                        ; top:top_RISC|HazardDet:HazardDet|EnPC                                     ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.720      ;
 ; 0.455 ; top:top_RISC|regID_EX:ID_EX|aBrach                                        ; top:top_RISC|HazardDet:HazardDet|en                                       ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.721      ;
 ; 0.455 ; top:top_RISC|regID_EX:ID_EX|aBrach                                        ; top:top_RISC|regEX_MEM:EX_MEM|aBrach                                      ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.721      ;
-; 0.465 ; top:top_RISC|regPC:PC_a|aux[24]                                           ; top:top_RISC|regIF_ID:IF_ID|auxPC[24]                                     ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.732      ;
 ; 0.465 ; top:top_RISC|regIF_ID:IF_ID|auxinstr[25]                                  ; top:top_RISC|regID_EX:ID_EX|aImmGen[5]                                    ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.732      ;
+; 0.465 ; top:top_RISC|regPC:PC_a|aux[24]                                           ; top:top_RISC|regIF_ID:IF_ID|auxPC[24]                                     ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.732      ;
 ; 0.546 ; debugMode:SystemDebug|doneSendingAux                                      ; debugMode:SystemDebug|tx_flag                                             ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.812      ;
 ; 0.561 ; top:top_RISC|regIF_ID:IF_ID|auxinstr[11]                                  ; top:top_RISC|regID_EX:ID_EX|ainstr5b[4]                                   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.828      ;
 ; 0.575 ; top:top_RISC|regIF_ID:IF_ID|auxinstr[8]                                   ; top:top_RISC|regID_EX:ID_EX|ainstr5b[1]                                   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.842      ;
@@ -342,9 +343,9 @@ No paths to report.
 ; 0.597 ; top:top_RISC|regIF_ID:IF_ID|auxPC[27]                                     ; top:top_RISC|regID_EX:ID_EX|aPC[27]                                       ; CLK          ; CLK         ; 0.000        ; 0.079      ; 0.862      ;
 ; 0.599 ; top:top_RISC|regIF_ID:IF_ID|auxPC[10]                                     ; top:top_RISC|regID_EX:ID_EX|aPC[10]                                       ; CLK          ; CLK         ; 0.000        ; 0.079      ; 0.864      ;
 ; 0.599 ; top:top_RISC|regIF_ID:IF_ID|auxPC[19]                                     ; top:top_RISC|regID_EX:ID_EX|aPC[19]                                       ; CLK          ; CLK         ; 0.000        ; 0.079      ; 0.864      ;
+; 0.602 ; top:top_RISC|regIF_ID:IF_ID|auxinstr[19]                                  ; top:top_RISC|regID_EX:ID_EX|ard1[21]                                      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.869      ;
 ; 0.602 ; top:top_RISC|regIF_ID:IF_ID|auxPC[18]                                     ; top:top_RISC|regID_EX:ID_EX|aPC[18]                                       ; CLK          ; CLK         ; 0.000        ; 0.078      ; 0.866      ;
 ; 0.602 ; top:top_RISC|regIF_ID:IF_ID|auxPC[23]                                     ; top:top_RISC|regID_EX:ID_EX|aPC[23]                                       ; CLK          ; CLK         ; 0.000        ; 0.079      ; 0.867      ;
-; 0.602 ; top:top_RISC|regIF_ID:IF_ID|auxinstr[19]                                  ; top:top_RISC|regID_EX:ID_EX|ard1[21]                                      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.869      ;
 ; 0.604 ; top:top_RISC|regIF_ID:IF_ID|auxinstr[19]                                  ; top:top_RISC|regID_EX:ID_EX|ard1[8]                                       ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.871      ;
 ; 0.608 ; top:top_RISC|regIF_ID:IF_ID|auxinstr[19]                                  ; top:top_RISC|regID_EX:ID_EX|ard1[3]                                       ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.875      ;
 ; 0.612 ; top:top_RISC|regIF_ID:IF_ID|auxinstr[19]                                  ; top:top_RISC|regID_EX:ID_EX|ard1[18]                                      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.879      ;
@@ -359,8 +360,8 @@ No paths to report.
 ; 0.637 ; top:top_RISC|regIF_ID:IF_ID|auxPC[5]                                      ; top:top_RISC|regID_EX:ID_EX|aPC[5]                                        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.904      ;
 ; 0.638 ; top:top_RISC|regIF_ID:IF_ID|auxPC[3]                                      ; top:top_RISC|regID_EX:ID_EX|aPC[3]                                        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.905      ;
 ; 0.638 ; top:top_RISC|regIF_ID:IF_ID|auxPC[8]                                      ; top:top_RISC|regID_EX:ID_EX|aPC[8]                                        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.905      ;
-; 0.639 ; top:top_RISC|regIF_ID:IF_ID|aAdd1[8]                                      ; top:top_RISC|regID_EX:ID_EX|aAdd1[8]                                      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.906      ;
 ; 0.639 ; top:top_RISC|regIF_ID:IF_ID|auxPC[12]                                     ; top:top_RISC|regID_EX:ID_EX|aPC[12]                                       ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.905      ;
+; 0.639 ; top:top_RISC|regIF_ID:IF_ID|aAdd1[8]                                      ; top:top_RISC|regID_EX:ID_EX|aAdd1[8]                                      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.906      ;
 ; 0.641 ; top:top_RISC|regIF_ID:IF_ID|auxPC[21]                                     ; top:top_RISC|regID_EX:ID_EX|aPC[21]                                       ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.908      ;
 ; 0.647 ; top:top_RISC|regIF_ID:IF_ID|auxinstr[9]                                   ; top:top_RISC|regID_EX:ID_EX|aImmGen[2]                                    ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.914      ;
 ; 0.648 ; top:top_RISC|readControl:RdControl|state[0]                               ; top:top_RISC|readControl:RdControl|state[1]                               ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.914      ;
@@ -2415,11 +2416,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Jun 02 16:21:49 2021
+    Info: Processing started: Fri Jul 02 09:39:29 2021
 Info: Command: quartus_sta Micro -c Micro
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Micro.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -2487,9 +2488,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Wed Jun 02 16:21:54 2021
+    Info: Peak virtual memory: 4974 megabytes
+    Info: Processing ended: Fri Jul 02 09:39:34 2021
     Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
 
 

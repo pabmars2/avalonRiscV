@@ -197,7 +197,7 @@ begin
 						
 						2'b10: addressAvalon = 32'h00000008;
 						
-						default: addressAvalon = 32'h00000000;
+						default: addressAvalon = 32'h00000010;
 					
 					endcase
 					
