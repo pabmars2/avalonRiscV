@@ -235,7 +235,7 @@ begin
 				
 					addressAvalon = 32'h0000000C;
 					ctrAvalon = 1'b1;
-					startTransfer = 1'b1;
+					startTransfer = 1'b0;
 					data_to_write = 0;
 						
 				end

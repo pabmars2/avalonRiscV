@@ -1381,6 +1381,29 @@ module AvalonRiscV_QSYS_tb (
 	  
 	  repeat(40*c_CLKS_PER_BIT) @(posedge r_Clock); 
 	  
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(8'h01);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(8'h00);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(8'h00);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(8'h00);
+      @(posedge r_Clock);
+	  
+	  @(posedge r_Clock);
+      UART_WRITE_BYTE(8'h00);
+      @(posedge r_Clock);
+	  
+	  
+	  
 	  @(posedge r_Clock);
       UART_WRITE_BYTE(8'h61);
       @(posedge r_Clock);

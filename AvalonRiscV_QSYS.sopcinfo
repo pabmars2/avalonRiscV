@@ -5,11 +5,11 @@
  version="1.0"
  fabric="QSYS">
  <!-- Format version 17.1 590 (Future versions may contain additional information.) -->
- <!-- 2021.07.02.09:37:40 -->
+ <!-- 2021.07.02.16:26:22 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1625211460</value>
+  <value>1625235982</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -102,7 +102,7 @@
  <module
    name="MasterUART"
    kind="AvalonMasterUART"
-   version="5.0"
+   version="5.1"
    path="MasterUART">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -4516,7 +4516,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>AvalonMasterUART</displayName>
-  <version>5.0</version>
+  <version>5.1</version>
  </plugin>
  <plugin>
   <instanceCount>4</instanceCount>
