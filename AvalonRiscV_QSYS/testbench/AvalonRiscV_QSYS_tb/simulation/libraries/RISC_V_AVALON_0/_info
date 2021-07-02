@@ -10,7 +10,7 @@ cModel Technology
 dC:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
 vadder
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1625236361
+Z1 !s110 1625239275
 !i10b 1
 !s100 `;?MRD;PM=FQ?@O2c40580
 IG6AId:5UVO<QLjSk>o5Qo1
@@ -26,7 +26,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1625236361.000000
+Z6 !s108 1625239275.000000
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/adder.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/adder.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -34,7 +34,7 @@ Z7 o-sv -L altera_common_sv_packages -work RISC_V_AVALON_0
 Z8 tCvgOpt 0
 vALU
 R0
-Z9 !s110 1625236360
+R1
 !i10b 1
 !s100 nL_JOoQ1:Z79bcODgFPbX1
 IYkWiAKlBHzT_FFYW<C@`z1
@@ -50,7 +50,7 @@ R5
 r1
 !s85 0
 31
-Z10 !s108 1625236360.000000
+R6
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/ALU.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/ALU.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -59,7 +59,7 @@ R8
 n@a@l@u
 vALUControl
 R0
-R9
+R1
 !i10b 1
 !s100 9:AOhCbQ`:JfCXX:X^2Xk0
 ISS?jDZ0e[3YYD87i3za[J0
@@ -75,7 +75,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/ALUControl.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/ALUControl.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -84,7 +84,7 @@ R8
 n@a@l@u@control
 vavalon_mm_master
 R0
-R1
+Z9 !s110 1625239276
 !i10b 1
 !s100 ?RGHbm1hIdkV`kRQY`nb71
 IT3FJD`[Ngm`YKCT>3m;CA2
@@ -100,14 +100,14 @@ R5
 r1
 !s85 0
 31
-R6
+Z10 !s108 1625239276.000000
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
 R7
 R8
 vavalon_slave_MM_interface
-R1
+R9
 !i10b 1
 !s100 5VM:@nQEHd9dH=7]GRO@f3
 I6IYe[Sl>aHTVi8SS3>S[Z1
@@ -121,7 +121,7 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_slave_MM_interface.v|
 !s90 -reportprogress|300|../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_slave_MM_interface.v|-work|RISC_V_AVALON_0|
 !i113 1
@@ -130,7 +130,7 @@ R8
 navalon_slave_@m@m_interface
 vcontrol
 R0
-R1
+R9
 !i10b 1
 !s100 ^GK5@hET=`5L:LSR31LY]2
 ImM@P=K?gYDXP_66XHJ0AW2
@@ -146,7 +146,7 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/control.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/control.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -154,7 +154,7 @@ R7
 R8
 vcontrolEnables
 R0
-Z11 !s110 1625236362
+Z11 !s110 1625239277
 !i10b 1
 !s100 2G]m5c`D9eWd>?@9ThhcQ1
 I<9OnT;`feF?;hYBU?]i6c3
@@ -170,7 +170,7 @@ R5
 r1
 !s85 0
 31
-Z12 !s108 1625236362.000000
+Z12 !s108 1625239277.000000
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/controlEnables.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/controlEnables.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -179,7 +179,7 @@ R8
 ncontrol@enables
 vdebugMode
 R0
-R1
+R9
 !i10b 1
 !s100 _`6RS91mZR?^zAZYV:3S23
 IB3mkDciAQH4HelPdLZ3UD0
@@ -195,7 +195,7 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/debugMode.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/debugMode.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -204,7 +204,7 @@ R8
 ndebug@mode
 vFUnit
 R0
-R9
+R1
 !i10b 1
 !s100 ;>aRM43U;lPSDU=Tdi`XE0
 IHRYmB_S@LA[i]<DG_A]iD0
@@ -220,7 +220,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/FUnit.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/FUnit.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -229,7 +229,7 @@ R8
 n@f@unit
 vHazardDet
 R0
-R9
+R1
 !i10b 1
 !s100 k37iGN2ZoFXTZgnD@P[;B2
 IF^:g6iTT;mcJcOU[RI;Ic2
@@ -245,7 +245,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/HazardDet.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/HazardDet.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -254,7 +254,7 @@ R8
 n@hazard@det
 vImmGen
 R0
-R9
+R1
 !i10b 1
 !s100 hSTgkGhC>eTSg;iNOU=5l0
 I5Ri@DHgfTXU19FCcLa@QK3
@@ -270,7 +270,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/ImmGen.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/ImmGen.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -304,7 +304,7 @@ R8
 ninterconex@logic
 vmemoryControl
 R0
-R1
+R9
 !i10b 1
 !s100 >j<7?ST3X5B1FX^RX[jCg0
 IY2W7ziG<9N9kgg]3XF^lP0
@@ -320,7 +320,7 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/memoryControl.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/memoryControl.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -429,7 +429,7 @@ R8
 nread@control
 vregEX_MEM
 R0
-R1
+R9
 !i10b 1
 !s100 :TfGd6A]X1`VLjmd4=_fk3
 IeS52[1Zl>KnTkbbYJOk9L3
@@ -445,7 +445,7 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/regEX_MEM.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/regEX_MEM.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -454,7 +454,7 @@ R8
 nreg@e@x_@m@e@m
 vregID_EX
 R0
-R11
+R9
 !i10b 1
 !s100 NBWIeQ>22eeAmPje`=:k33
 ImFDgZU`Nm_9?nE1EJQ2<S0
@@ -470,7 +470,7 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/regID_EX.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/regID_EX.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -479,7 +479,7 @@ R8
 nreg@i@d_@e@x
 vregIF_ID
 R0
-R11
+R9
 !i10b 1
 !s100 =YmoD?7_ckn[1je:3T<<i2
 IaRi:TS=_>hRRSN0CkfSWj0
@@ -495,7 +495,7 @@ R5
 r1
 !s85 0
 31
-R12
+R10
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/regIF_ID.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/regIF_ID.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -528,7 +528,7 @@ R7
 R8
 vregMEM_WB
 R0
-R11
+R9
 !i10b 1
 !s100 J82j:37ckRTb@7WOLVnVk3
 IKgSDJPIB5Qel05WNlMW713
@@ -544,7 +544,7 @@ R5
 r1
 !s85 0
 31
-R12
+R10
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/regMEM_WB.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/regMEM_WB.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -569,7 +569,7 @@ R5
 r1
 !s85 0
 31
-R12
+R10
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/regPC.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/regPC.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1
@@ -602,7 +602,7 @@ R7
 R8
 vtop_Avalon
 R0
-R9
+R1
 !i10b 1
 !s100 ?zc]hgOWh;AnLmfo05[NN0
 I=Nm@`6Af7mOiC@dhcGNF22
@@ -618,7 +618,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/top_Avalon.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/top_Avalon.sv|-L|altera_common_sv_packages|-work|RISC_V_AVALON_0|
 !i113 1

@@ -10,7 +10,7 @@ cModel Technology
 dC:/Users/Pablo/Desktop/TFG/ISDIGI/MicroV3Final_restored/AvalonRiscV_QSYS/testbench/AvalonRiscV_QSYS_tb/simulation
 vavalon_mm_master
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1625236363
+Z1 !s110 1625239277
 !i10b 1
 !s100 ?RGHbm1hIdkV`kRQY`nb71
 IEE`R9C@E3^iKhZ8DNz`]22
@@ -26,7 +26,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1625236363.000000
+Z6 !s108 1625239277.000000
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_mm_master.sv|-L|altera_common_sv_packages|-work|MasterUART|
 !i113 1
@@ -34,7 +34,7 @@ Z7 o-sv -L altera_common_sv_packages -work MasterUART
 Z8 tCvgOpt 0
 vavalon_UART
 R0
-!s110 1625236362
+R1
 !i10b 1
 !s100 XB0_:AP?A<h=[Ze<k5M<m3
 IANMj^Q1l];]Vd]`DJAA0J0
@@ -50,7 +50,7 @@ R5
 r1
 !s85 0
 31
-Z9 !s108 1625236362.000000
+R6
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_UART.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/avalon_UART.sv|-L|altera_common_sv_packages|-work|MasterUART|
 !i113 1
@@ -75,7 +75,7 @@ R5
 r1
 !s85 0
 31
-R9
+R6
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/UART.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/UART.sv|-L|altera_common_sv_packages|-work|MasterUART|
 !i113 1
@@ -84,7 +84,7 @@ R8
 n@u@a@r@t
 vuart_rx
 R0
-R1
+Z9 !s110 1625239278
 !i10b 1
 !s100 84FQWa8Gf^RMG7UUZ;QzA3
 I?P3^A[K[>@XjE?3[PC2Ya2
@@ -108,7 +108,7 @@ R7
 R8
 vuart_tx
 R0
-R1
+R9
 !i10b 1
 !s100 0JIcGT<=3Rm8YKjWjhkUI3
 I323?>a4e6cnP?Xb=2TFV_3
@@ -124,7 +124,7 @@ R5
 r1
 !s85 0
 31
-R6
+!s108 1625239278.000000
 !s107 ../../AvalonRiscV_QSYS_tb/simulation/submodules/uart_tx.sv|
 !s90 -reportprogress|300|-sv|../../AvalonRiscV_QSYS_tb/simulation/submodules/uart_tx.sv|-L|altera_common_sv_packages|-work|MasterUART|
 !i113 1
